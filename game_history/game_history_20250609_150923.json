@@ -1,0 +1,566 @@
+{
+  "game_config": {
+    "endowment": 10,
+    "r": 1.6,
+    "rounds": 10,
+    "num_players": 2
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "stats": {
+        "total_contribution": 9,
+        "public_pool": 14.4,
+        "share_per_player": 7.2
+      },
+      "agents": [
+        {
+          "name": "谢宇",
+          "initial_endowment": 10,
+          "contribution": 5,
+          "payoff": 12.2
+        },
+        {
+          "name": "王芳",
+          "initial_endowment": 10,
+          "contribution": 4,
+          "payoff": 13.2
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "stats": {
+        "total_contribution": 17,
+        "public_pool": 27.200000000000003,
+        "share_per_player": 13.600000000000001
+      },
+      "agents": [
+        {
+          "name": "谢宇",
+          "initial_endowment": 12.2,
+          "contribution": 9,
+          "payoff": 16.8
+        },
+        {
+          "name": "王芳",
+          "initial_endowment": 13.2,
+          "contribution": 8,
+          "payoff": 18.8
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "stats": {
+        "total_contribution": 11,
+        "public_pool": 17.6,
+        "share_per_player": 8.8
+      },
+      "agents": [
+        {
+          "name": "谢宇",
+          "initial_endowment": 16.8,
+          "contribution": 8,
+          "payoff": 17.6
+        },
+        {
+          "name": "王芳",
+          "initial_endowment": 18.8,
+          "contribution": 3,
+          "payoff": 24.6
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "stats": {
+        "total_contribution": 18,
+        "public_pool": 28.8,
+        "share_per_player": 14.4
+      },
+      "agents": [
+        {
+          "name": "谢宇",
+          "initial_endowment": 17.6,
+          "contribution": 8,
+          "payoff": 24.0
+        },
+        {
+          "name": "王芳",
+          "initial_endowment": 24.6,
+          "contribution": 10,
+          "payoff": 29.0
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "stats": {
+        "total_contribution": 29,
+        "public_pool": 46.400000000000006,
+        "share_per_player": 23.200000000000003
+      },
+      "agents": [
+        {
+          "name": "谢宇",
+          "initial_endowment": 24.0,
+          "contribution": 10,
+          "payoff": 37.2
+        },
+        {
+          "name": "王芳",
+          "initial_endowment": 29.0,
+          "contribution": 19,
+          "payoff": 33.2
+        }
+      ]
+    },
+    {
+      "round": 6,
+      "stats": {
+        "total_contribution": 36,
+        "public_pool": 57.6,
+        "share_per_player": 28.8
+      },
+      "agents": [
+        {
+          "name": "谢宇",
+          "initial_endowment": 37.2,
+          "contribution": 17,
+          "payoff": 49.0
+        },
+        {
+          "name": "王芳",
+          "initial_endowment": 33.2,
+          "contribution": 19,
+          "payoff": 43.0
+        }
+      ]
+    },
+    {
+      "round": 7,
+      "stats": {
+        "total_contribution": 58,
+        "public_pool": 92.80000000000001,
+        "share_per_player": 46.400000000000006
+      },
+      "agents": [
+        {
+          "name": "谢宇",
+          "initial_endowment": 49.0,
+          "contribution": 35,
+          "payoff": 60.400000000000006
+        },
+        {
+          "name": "王芳",
+          "initial_endowment": 43.0,
+          "contribution": 23,
+          "payoff": 66.4
+        }
+      ]
+    },
+    {
+      "round": 8,
+      "stats": {
+        "total_contribution": 57,
+        "public_pool": 91.2,
+        "share_per_player": 45.6
+      },
+      "agents": [
+        {
+          "name": "谢宇",
+          "initial_endowment": 60.400000000000006,
+          "contribution": 24,
+          "payoff": 82.0
+        },
+        {
+          "name": "王芳",
+          "initial_endowment": 66.4,
+          "contribution": 33,
+          "payoff": 79.0
+        }
+      ]
+    },
+    {
+      "round": 9,
+      "stats": {
+        "total_contribution": 76,
+        "public_pool": 121.60000000000001,
+        "share_per_player": 60.800000000000004
+      },
+      "agents": [
+        {
+          "name": "谢宇",
+          "initial_endowment": 82.0,
+          "contribution": 42,
+          "payoff": 100.80000000000001
+        },
+        {
+          "name": "王芳",
+          "initial_endowment": 79.0,
+          "contribution": 34,
+          "payoff": 105.80000000000001
+        }
+      ]
+    },
+    {
+      "round": 10,
+      "stats": {
+        "total_contribution": 111,
+        "public_pool": 177.60000000000002,
+        "share_per_player": 88.80000000000001
+      },
+      "agents": [
+        {
+          "name": "谢宇",
+          "initial_endowment": 100.80000000000001,
+          "contribution": 58,
+          "payoff": 131.60000000000002
+        },
+        {
+          "name": "王芳",
+          "initial_endowment": 105.80000000000001,
+          "contribution": 53,
+          "payoff": 141.60000000000002
+        }
+      ]
+    }
+  ],
+  "agents": [
+    {
+      "name": "谢宇",
+      "profile": {
+        "name": "谢宇",
+        "gender": "男",
+        "age_group": "58岁",
+        "education": "高中",
+        "occupation": "理发师",
+        "marriage_status": "未婚",
+        "persona": "静默多数者",
+        "background_story": "谢宇，58岁，北京土生土长的理发师，高中毕业后便进入理发行业，一干就是40年。他性格平和，喜欢与邻里交流，但不善于表达情感，未婚独居。生活节奏简单，早起开门营业，晚上刷手机看新闻或老电影。他对政策和社会变迁持中立态度，价值观偏向传统，追求稳定生活，对新技术如AI持观望态度。"
+      },
+      "game_history": [
+        {
+          "name": "谢宇",
+          "initial_endowment": 10,
+          "contribution": 5,
+          "payoff": 12.2
+        },
+        {
+          "name": "谢宇",
+          "initial_endowment": 12.2,
+          "contribution": 9,
+          "payoff": 16.8
+        },
+        {
+          "name": "谢宇",
+          "initial_endowment": 16.8,
+          "contribution": 8,
+          "payoff": 17.6
+        },
+        {
+          "name": "谢宇",
+          "initial_endowment": 17.6,
+          "contribution": 8,
+          "payoff": 24.0
+        },
+        {
+          "name": "谢宇",
+          "initial_endowment": 24.0,
+          "contribution": 10,
+          "payoff": 37.2
+        },
+        {
+          "name": "谢宇",
+          "initial_endowment": 37.2,
+          "contribution": 17,
+          "payoff": 49.0
+        },
+        {
+          "name": "谢宇",
+          "initial_endowment": 49.0,
+          "contribution": 35,
+          "payoff": 60.400000000000006
+        },
+        {
+          "name": "谢宇",
+          "initial_endowment": 60.400000000000006,
+          "contribution": 24,
+          "payoff": 82.0
+        },
+        {
+          "name": "谢宇",
+          "initial_endowment": 82.0,
+          "contribution": 42,
+          "payoff": 100.80000000000001
+        },
+        {
+          "name": "谢宇",
+          "initial_endowment": 100.80000000000001,
+          "contribution": 58,
+          "payoff": 131.60000000000002
+        }
+      ],
+      "dialogue_history": [
+        {
+          "round": 1,
+          "room": "ContributeRoom",
+          "type": "contribution",
+          "content": {
+            "contribution": 5
+          },
+          "timestamp": "2025-06-09T15:09:08.977970"
+        },
+        {
+          "round": 2,
+          "room": "ContributeRoom",
+          "type": "contribution",
+          "content": {
+            "contribution": 9
+          },
+          "timestamp": "2025-06-09T15:09:09.796834"
+        },
+        {
+          "round": 3,
+          "room": "ContributeRoom",
+          "type": "contribution",
+          "content": {
+            "contribution": 8
+          },
+          "timestamp": "2025-06-09T15:09:11.295663"
+        },
+        {
+          "round": 4,
+          "room": "ContributeRoom",
+          "type": "contribution",
+          "content": {
+            "contribution": 8
+          },
+          "timestamp": "2025-06-09T15:09:13.559108"
+        },
+        {
+          "round": 5,
+          "room": "ContributeRoom",
+          "type": "contribution",
+          "content": {
+            "contribution": 10
+          },
+          "timestamp": "2025-06-09T15:09:15.314238"
+        },
+        {
+          "round": 6,
+          "room": "ContributeRoom",
+          "type": "contribution",
+          "content": {
+            "contribution": 17
+          },
+          "timestamp": "2025-06-09T15:09:16.881286"
+        },
+        {
+          "round": 7,
+          "room": "ContributeRoom",
+          "type": "contribution",
+          "content": {
+            "contribution": 35
+          },
+          "timestamp": "2025-06-09T15:09:17.774052"
+        },
+        {
+          "round": 8,
+          "room": "ContributeRoom",
+          "type": "contribution",
+          "content": {
+            "contribution": 24
+          },
+          "timestamp": "2025-06-09T15:09:19.683422"
+        },
+        {
+          "round": 9,
+          "room": "ContributeRoom",
+          "type": "contribution",
+          "content": {
+            "contribution": 42
+          },
+          "timestamp": "2025-06-09T15:09:22.075432"
+        },
+        {
+          "round": 10,
+          "room": "ContributeRoom",
+          "type": "contribution",
+          "content": {
+            "contribution": 58
+          },
+          "timestamp": "2025-06-09T15:09:22.742695"
+        }
+      ]
+    },
+    {
+      "name": "王芳",
+      "profile": {
+        "name": "王芳",
+        "gender": "女",
+        "age_group": "32岁",
+        "education": "本科",
+        "occupation": "软件工程师",
+        "marriage_status": "已婚",
+        "persona": "积极探索者",
+        "background_story": "王芳，32岁，上海本地人，软件工程师。热衷新技术，喜欢在业余时间学习前沿 AI 工具。已婚有一孩，生活忙碌但充满好奇心。"
+      },
+      "game_history": [
+        {
+          "name": "王芳",
+          "initial_endowment": 10,
+          "contribution": 4,
+          "payoff": 13.2
+        },
+        {
+          "name": "王芳",
+          "initial_endowment": 13.2,
+          "contribution": 8,
+          "payoff": 18.8
+        },
+        {
+          "name": "王芳",
+          "initial_endowment": 18.8,
+          "contribution": 3,
+          "payoff": 24.6
+        },
+        {
+          "name": "王芳",
+          "initial_endowment": 24.6,
+          "contribution": 10,
+          "payoff": 29.0
+        },
+        {
+          "name": "王芳",
+          "initial_endowment": 29.0,
+          "contribution": 19,
+          "payoff": 33.2
+        },
+        {
+          "name": "王芳",
+          "initial_endowment": 33.2,
+          "contribution": 19,
+          "payoff": 43.0
+        },
+        {
+          "name": "王芳",
+          "initial_endowment": 43.0,
+          "contribution": 23,
+          "payoff": 66.4
+        },
+        {
+          "name": "王芳",
+          "initial_endowment": 66.4,
+          "contribution": 33,
+          "payoff": 79.0
+        },
+        {
+          "name": "王芳",
+          "initial_endowment": 79.0,
+          "contribution": 34,
+          "payoff": 105.80000000000001
+        },
+        {
+          "name": "王芳",
+          "initial_endowment": 105.80000000000001,
+          "contribution": 53,
+          "payoff": 141.60000000000002
+        }
+      ],
+      "dialogue_history": [
+        {
+          "round": 1,
+          "room": "ContributeRoom",
+          "type": "contribution",
+          "content": {
+            "contribution": 4
+          },
+          "timestamp": "2025-06-09T15:09:08.062816"
+        },
+        {
+          "round": 2,
+          "room": "ContributeRoom",
+          "type": "contribution",
+          "content": {
+            "contribution": 8
+          },
+          "timestamp": "2025-06-09T15:09:10.617147"
+        },
+        {
+          "round": 3,
+          "room": "ContributeRoom",
+          "type": "contribution",
+          "content": {
+            "contribution": 3
+          },
+          "timestamp": "2025-06-09T15:09:11.946949"
+        },
+        {
+          "round": 4,
+          "room": "ContributeRoom",
+          "type": "contribution",
+          "content": {
+            "contribution": 10
+          },
+          "timestamp": "2025-06-09T15:09:12.706982"
+        },
+        {
+          "round": 5,
+          "room": "ContributeRoom",
+          "type": "contribution",
+          "content": {
+            "contribution": 19
+          },
+          "timestamp": "2025-06-09T15:09:14.498963"
+        },
+        {
+          "round": 6,
+          "room": "ContributeRoom",
+          "type": "contribution",
+          "content": {
+            "contribution": 19
+          },
+          "timestamp": "2025-06-09T15:09:16.121965"
+        },
+        {
+          "round": 7,
+          "room": "ContributeRoom",
+          "type": "contribution",
+          "content": {
+            "contribution": 23
+          },
+          "timestamp": "2025-06-09T15:09:18.502362"
+        },
+        {
+          "round": 8,
+          "room": "ContributeRoom",
+          "type": "contribution",
+          "content": {
+            "contribution": 33
+          },
+          "timestamp": "2025-06-09T15:09:20.436964"
+        },
+        {
+          "round": 9,
+          "room": "ContributeRoom",
+          "type": "contribution",
+          "content": {
+            "contribution": 34
+          },
+          "timestamp": "2025-06-09T15:09:21.228205"
+        },
+        {
+          "round": 10,
+          "room": "ContributeRoom",
+          "type": "contribution",
+          "content": {
+            "contribution": 53
+          },
+          "timestamp": "2025-06-09T15:09:23.506934"
+        }
+      ]
+    }
+  ]
+}

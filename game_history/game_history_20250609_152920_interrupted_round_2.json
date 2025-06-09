@@ -1,0 +1,207 @@
+{
+  "game_config": {
+    "endowment": 10,
+    "r": 1.6,
+    "rounds": 10,
+    "num_players": 4,
+    "completed_rounds": 2
+  },
+  "game_status": "interrupted",
+  "rounds": [
+    {
+      "round": 1,
+      "stats": {
+        "total_contribution": 13,
+        "public_pool": 20.8,
+        "share_per_player": 5.2
+      },
+      "agents": [
+        {
+          "name": "陆嘉浩",
+          "initial_endowment": 10,
+          "contribution": 3,
+          "payoff": 12.2
+        },
+        {
+          "name": "康天",
+          "initial_endowment": 10,
+          "contribution": 3,
+          "payoff": 12.2
+        },
+        {
+          "name": "孟若涵",
+          "initial_endowment": 10,
+          "contribution": 3,
+          "payoff": 12.2
+        },
+        {
+          "name": "金玲",
+          "initial_endowment": 10,
+          "contribution": 4,
+          "payoff": 11.2
+        }
+      ]
+    }
+  ],
+  "agents": [
+    {
+      "name": "陆嘉浩",
+      "profile": {
+        "name": "陆嘉浩",
+        "gender": "男",
+        "age_group": "55岁",
+        "education": "初中",
+        "occupation": "理发师",
+        "marriage_status": "未婚",
+        "persona": "中庸务实者",
+        "background_story": "陆嘉浩，55岁，北京土生土长的理发师，初中毕业后进入手艺行业，凭借多年积累的经验和口碑在社区内小有名气。他秉持中庸之道，生活简朴但不失品味，既尊重传统又接受现代技术，如线上预约和环保理发工具。他重视邻里关系，常参与社区活动，关注环境保护，认为平衡个人与社会责任是生活的核心价值。",
+        "id": 143
+      },
+      "game_history": [
+        {
+          "name": "陆嘉浩",
+          "initial_endowment": 10,
+          "contribution": 3,
+          "payoff": 12.2
+        }
+      ],
+      "dialogue_history": [
+        {
+          "round": 1,
+          "room": "ContributeRoom",
+          "type": "contribution",
+          "content": {
+            "contribution": 3
+          },
+          "timestamp": "2025-06-09T15:29:15.007135"
+        }
+      ]
+    },
+    {
+      "name": "康天",
+      "profile": {
+        "name": "康天",
+        "gender": "男",
+        "age_group": "57岁",
+        "education": "高中",
+        "occupation": "安保员",
+        "marriage_status": "未婚",
+        "persona": "社区纽带",
+        "background_story": "康天，57岁，北京土生土长的安保员，居住在老城区一套按揭小房中，生活虽不富裕，但他深感社区归属感。高中毕业后，他一直从事安保工作，为人朴实、热心肠，是邻里眼中的“活地图”和调解员。他注重低碳环保，喜欢分享传统文化，积极参与社区活动，认为守望相助是生活的本质价值。",
+        "id": 562
+      },
+      "game_history": [
+        {
+          "name": "康天",
+          "initial_endowment": 10,
+          "contribution": 3,
+          "payoff": 12.2
+        }
+      ],
+      "dialogue_history": [
+        {
+          "round": 1,
+          "room": "ContributeRoom",
+          "type": "contribution",
+          "content": {
+            "contribution": 3
+          },
+          "timestamp": "2025-06-09T15:29:13.814699"
+        },
+        {
+          "round": 2,
+          "room": "ContributeRoom",
+          "type": "contribution",
+          "content": {
+            "contribution": 7
+          },
+          "timestamp": "2025-06-09T15:29:19.651207"
+        }
+      ]
+    },
+    {
+      "name": "孟若涵",
+      "profile": {
+        "name": "孟若涵",
+        "gender": "女",
+        "age_group": "30岁",
+        "education": "高中",
+        "occupation": "维修工",
+        "marriage_status": "未婚",
+        "persona": "流动新生代",
+        "background_story": "孟若涵，30岁，未婚，来自河北农村，高中毕业后独自来到北京，成为一名设备维修工。她勤奋努力，适应城市生活，虽无资产积累，但对社区有强烈归属感，与邻里关系融洽。她注重环保，崇尚低碳生活，积极学习新技能，拥抱数字化和技术创新，希望通过自身努力在城市扎根，追求更好的未来。",
+        "id": 578
+      },
+      "game_history": [
+        {
+          "name": "孟若涵",
+          "initial_endowment": 10,
+          "contribution": 3,
+          "payoff": 12.2
+        }
+      ],
+      "dialogue_history": [
+        {
+          "round": 1,
+          "room": "ContributeRoom",
+          "type": "contribution",
+          "content": {
+            "contribution": 3
+          },
+          "timestamp": "2025-06-09T15:29:16.366027"
+        },
+        {
+          "round": 2,
+          "room": "ContributeRoom",
+          "type": "contribution",
+          "content": {
+            "contribution": 8
+          },
+          "timestamp": "2025-06-09T15:29:18.321608"
+        }
+      ]
+    },
+    {
+      "name": "金玲",
+      "profile": {
+        "name": "金玲",
+        "gender": "女",
+        "age_group": "37岁",
+        "education": "大学本科及以上",
+        "occupation": "安保员",
+        "marriage_status": "已婚",
+        "persona": "生态守护者",
+        "background_story": "金玲，37岁，北京人，大学本科毕业，目前是一名社区安保员。她热爱自然，倡导低碳生活，闲暇时组织邻里环保活动，如垃圾分类和植树。她对中国文化有深刻认同，常带孩子学习传统手工艺，但对西方文化持谨慎态度。她信任地方政策，积极参与社区治理，致力于营造团结、绿色的生活环境。",
+        "id": 1130
+      },
+      "game_history": [
+        {
+          "name": "金玲",
+          "initial_endowment": 10,
+          "contribution": 4,
+          "payoff": 11.2
+        }
+      ],
+      "dialogue_history": [
+        {
+          "round": 1,
+          "room": "ContributeRoom",
+          "type": "contribution",
+          "content": {
+            "contribution": 4
+          },
+          "timestamp": "2025-06-09T15:29:17.389578"
+        },
+        {
+          "round": 2,
+          "room": "ContributeRoom",
+          "type": "contribution",
+          "content": {
+            "contribution": 7
+          },
+          "timestamp": "2025-06-09T15:29:20.574141"
+        }
+      ]
+    }
+  ]
+}
