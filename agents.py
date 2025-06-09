@@ -136,7 +136,7 @@ class Agent:
                 {json.dumps(others, ensure_ascii=False, indent=2)}"""
 
         messages = [
-            {"role": "system", "content": "你是参与公共品博弈的玩家，基于你的角色特征和当前游戏状况发表观点。"},
+            {"role": "system", "content": "你是参与公共品博弈的玩家，基于提供的背景信息简要发表观点。"},
             {"role": "user", "content": prompt}
         ]
         

@@ -1,0 +1,308 @@
+{
+  "game_config": {
+    "endowment": 10,
+    "r": 1.6,
+    "rounds": 10,
+    "num_players": 4,
+    "completed_rounds": 2
+  },
+  "game_status": "interrupted",
+  "rounds": [
+    {
+      "round": 1,
+      "stats": {
+        "total_contribution": 16,
+        "public_pool": 25.6,
+        "share_per_player": 6.4
+      },
+      "agents": [
+        {
+          "name": "何飞",
+          "initial_endowment": 10,
+          "contribution": 3,
+          "payoff": 13.4
+        },
+        {
+          "name": "魏骁",
+          "initial_endowment": 10,
+          "contribution": 7,
+          "payoff": 9.4
+        },
+        {
+          "name": "江泽",
+          "initial_endowment": 10,
+          "contribution": 3,
+          "payoff": 13.4
+        },
+        {
+          "name": "梁雷",
+          "initial_endowment": 10,
+          "contribution": 3,
+          "payoff": 13.4
+        }
+      ]
+    }
+  ],
+  "agents": [
+    {
+      "name": "何飞",
+      "profile": {
+        "name": "何飞",
+        "gender": "男",
+        "age_group": "33岁",
+        "education": "初中",
+        "occupation": "服务员",
+        "marriage_status": "已婚",
+        "persona": "社区纽带",
+        "background_story": "何飞，33岁，北京人，初中毕业后进入餐饮行业，现为一家小餐馆的服务员。已婚，与妻子共同还贷，育有一子。生活虽有经济压力，但他热心社区事务，常组织邻里活动，帮助新居民融入。何飞注重环保，习惯低碳生活，信任政府政策，认为社区是生活的核心纽带，努力为家人和邻里创造温暖的环境。",
+        "id": 432
+      },
+      "game_history": [
+        {
+          "name": "何飞",
+          "initial_endowment": 10,
+          "contribution": 3,
+          "payoff": 13.4
+        }
+      ],
+      "dialogue_history": [
+        {
+          "round": 1,
+          "room": "DiscussionRoom",
+          "type": "discussion",
+          "content": {
+            "message": "大家好，我是何飞。首先，我想说，参与公共品博弈游戏，对我来说是一个了解社区集体行动的机会。尽管我的经济状况并不宽裕，但我一直认为，社区是一个大家庭，我们每个人都应该为这个大家庭的和谐与美好贡献自己的一份力量。\n\n从我的个人经历来看，虽然我目前没有投入任何资源，但我深知，公共品的提供对整个社区的重要性。比如，我经常组织的邻里活动，不仅增进了邻里之间的感情，也促进了社区的凝聚力。这就像公共品一样，一旦有人开始提供，大家都能受益。\n\n我注意到，目前我们的平均投入和总投入都是0，这可能意味着大家还没有意识到公共品对社区的价值。但我相信，随着游戏的深入，大家会逐渐认识到这一点。\n\n至于其他玩家的投入，我注意到魏骁、江泽和梁雷他们的初始财富都是10。虽然我目前的经济能力有限，但我愿意尽我所能，贡献出自己的一份力量。我相信，只要我们每个人都稍微贡献一点，就能形成一个良好的公共品供给。\n\n作为社区纽带，我希望能带动大家一起行动，哪怕是一点点小小的投入，也能汇聚成一股强大的力量。我期待在接下来的游戏中，我们能共同创造一个更加美好的社区环境。谢谢大家。",
+            "context": {
+              "last_payoff": null,
+              "current_endowment": 10,
+              "others": [
+                {
+                  "name": "魏骁",
+                  "payoff": null,
+                  "current_endowment": 10
+                },
+                {
+                  "name": "江泽",
+                  "payoff": null,
+                  "current_endowment": 10
+                },
+                {
+                  "name": "梁雷",
+                  "payoff": null,
+                  "current_endowment": 10
+                }
+              ],
+              "participated": true
+            },
+            "participated": true
+          },
+          "timestamp": "2025-06-09T16:59:12.679796"
+        },
+        {
+          "round": 1,
+          "room": "ContributeRoom",
+          "type": "contribution",
+          "content": {
+            "contribution": 3
+          },
+          "timestamp": "2025-06-09T16:59:40.318382"
+        }
+      ]
+    },
+    {
+      "name": "魏骁",
+      "profile": {
+        "name": "魏骁",
+        "gender": "男",
+        "age_group": "73岁",
+        "education": "大学本科及以上",
+        "occupation": "科研人员",
+        "marriage_status": "已婚",
+        "persona": "文化混血儿",
+        "background_story": "魏骁，73岁，北京人，知名科研人员，主攻可持续技术与人工智能领域。早年留学欧美，深受中西文化熏陶，精通多国语言，拥有广泛国际社交圈。他热衷推动低碳生活与环境保护，家藏丰富艺术品，体现东西方美学融合。生活简约却充满智慧，信奉科技改善社会，常参与政策讨论与公益活动。",
+        "id": 444
+      },
+      "game_history": [
+        {
+          "name": "魏骁",
+          "initial_endowment": 10,
+          "contribution": 7,
+          "payoff": 9.4
+        }
+      ],
+      "dialogue_history": [
+        {
+          "round": 1,
+          "room": "DiscussionRoom",
+          "type": "discussion",
+          "content": {
+            "message": "尊敬的各位同仁，我是魏骁，作为一名科研人员，我深知公共品博弈对于推动可持续发展和环境保护的重要性。在这个游戏中，我的策略基于我对科技改善社会的信念以及中西文化融合的视角。\n\n首先，从个人的角度来看，虽然目前我的投入为0，但作为一名文化混血儿，我认为我们应该共同努力，为子孙后代创造一个更加美好的世界。我的收益未知，但这正是推动我们持续投入的动力之一。\n\n其次，从集体利益出发，我观察到目前我们的平均投入和总投入都为0，这表明我们尚未充分利用这个平台。然而，正如我的背景故事所体现的，我认为科技的力量不容忽视。我们应该携手合作，将科技创新与公共品博弈相结合，通过科技手段提高资源利用效率，减少浪费，共同促进低碳生活和环境保护。\n\n对于其他玩家的现状，我注意到何飞、江泽和梁雷三位的初始资本均为10，这是一个相对公平的起点。我希望我们能够超越个体利益，形成一个良好的互动机制，共同为公共品的发展做出贡献。\n\n最后，我想强调的是，作为一个已婚且关注社会公益的科研人员，我相信只有通过合作与共赢，我们才能在这个游戏中实现共同的目标。因此，我建议我们在下一轮博弈中适当增加投入，同时，我也愿意与各位玩家分享我在可持续技术和人工智能领域的研究成果，以期为公共品的发展提供技术支持。\n\n总之，作为魏骁，我将积极参与这个公共品博弈，以推动可持续发展为目标，为构建一个和谐共生的社会贡献自己的力量。谢谢大家。",
+            "context": {
+              "last_payoff": null,
+              "current_endowment": 10,
+              "others": [
+                {
+                  "name": "何飞",
+                  "payoff": null,
+                  "current_endowment": 10
+                },
+                {
+                  "name": "江泽",
+                  "payoff": null,
+                  "current_endowment": 10
+                },
+                {
+                  "name": "梁雷",
+                  "payoff": null,
+                  "current_endowment": 10
+                }
+              ],
+              "participated": true
+            },
+            "participated": true
+          },
+          "timestamp": "2025-06-09T16:59:21.448086"
+        },
+        {
+          "round": 1,
+          "room": "ContributeRoom",
+          "type": "contribution",
+          "content": {
+            "contribution": 7
+          },
+          "timestamp": "2025-06-09T16:59:38.458634"
+        }
+      ]
+    },
+    {
+      "name": "江泽",
+      "profile": {
+        "name": "江泽",
+        "gender": "男",
+        "age_group": "52岁",
+        "education": "高中",
+        "occupation": "人事专员",
+        "marriage_status": "已婚",
+        "persona": "生态守护者",
+        "background_story": "江泽，52岁，北京土生土长，高中毕业后进入企业担任人事专员。他热衷环保，是社区活动的组织者，推动垃圾分类与低碳生活。他坚信地方政策，常参与政府举办的环保讲座，但对西方文化持谨慎态度。他家庭和睦，与妻子共同经营储蓄适中的生活。他关注传统文化，认为生态保护是代际责任。",
+        "id": 545
+      },
+      "game_history": [
+        {
+          "name": "江泽",
+          "initial_endowment": 10,
+          "contribution": 3,
+          "payoff": 13.4
+        }
+      ],
+      "dialogue_history": [
+        {
+          "round": 1,
+          "room": "DiscussionRoom",
+          "type": "discussion",
+          "content": {
+            "message": "尊敬的各位参与者，\n\n我是江泽，作为一名热衷环保的生态守护者，我深知公共品博弈中合作与个人利益的关系。在首轮游戏中，我的选择是保持投入为零。这并非出于自私，而是基于我个人的价值观和对生态保护的责任感。\n\n首先，我观察到目前我们的总投入和平均投入都为零，这说明我们还未真正开始合作，也未享受到公共品的收益。然而，正如我所坚信的，生态保护是一项代际责任，需要我们每个人的共同参与和努力。\n\n我注意到其他玩家的初始资本均为10，这为我们提供了足够的资源去进行合作。我认为，在这一轮中，我们应该考虑如何将我们的资源投入到能够产生最大公共利益的领域。例如，我们可以共同投资于社区绿化、垃圾分类处理等项目，这些不仅能够提升我们的生活质量，还能为后代留下一个更加美好的环境。\n\n虽然我对西方文化持谨慎态度，但我相信合作和共赢的理念是全球通用的。在此，我提议我们可以进行一次集体讨论，共同决定我们的合作策略。我认为，我们应该优先考虑那些能够带来长远效益的项目，而不仅仅是眼前的利益。\n\n最后，我想强调的是，作为人事专员，我深知团队合作的重要性。我希望我们能够携手合作，共同为社区和环境保护做出贡献。我相信，只要我们齐心协力，就一定能够创造出正面的社会效应。\n\n谢谢大家，期待我们的合作与共赢。",
+            "context": {
+              "last_payoff": null,
+              "current_endowment": 10,
+              "others": [
+                {
+                  "name": "何飞",
+                  "payoff": null,
+                  "current_endowment": 10
+                },
+                {
+                  "name": "魏骁",
+                  "payoff": null,
+                  "current_endowment": 10
+                },
+                {
+                  "name": "梁雷",
+                  "payoff": null,
+                  "current_endowment": 10
+                }
+              ],
+              "participated": true
+            },
+            "participated": true
+          },
+          "timestamp": "2025-06-09T16:59:28.035707"
+        },
+        {
+          "round": 1,
+          "room": "ContributeRoom",
+          "type": "contribution",
+          "content": {
+            "contribution": 3
+          },
+          "timestamp": "2025-06-09T16:59:41.036714"
+        }
+      ]
+    },
+    {
+      "name": "梁雷",
+      "profile": {
+        "name": "梁雷",
+        "gender": "男",
+        "age_group": "30岁",
+        "education": "大学专科",
+        "occupation": "电工",
+        "marriage_status": "已婚",
+        "persona": "矛盾理想者",
+        "background_story": "梁雷，30岁，北京电工，已婚，有一个3岁的女儿。他憧憬绿色生活，支持环保政策，却因工作忙碌和家庭琐事，环保行动难以落实。他崇尚数字化，但对新技术感到焦虑，常担心自己的技能被淘汰。他收入稳定，有小套房和代步车，信任政府，愿尝试新事物，但在低碳生活和数字适应上仍需努力。",
+        "id": 1137
+      },
+      "game_history": [
+        {
+          "name": "梁雷",
+          "initial_endowment": 10,
+          "contribution": 3,
+          "payoff": 13.4
+        }
+      ],
+      "dialogue_history": [
+        {
+          "round": 1,
+          "room": "DiscussionRoom",
+          "type": "discussion",
+          "content": {
+            "message": "尊敬的各位玩家，\n\n我是梁雷，作为一名电工，我深知公共品的重要性，尤其是在环境保护方面。虽然我在日常生活中由于工作忙碌和家庭琐事，环保行动难以落实，但我对绿色生活的憧憬和对环保政策的支持从未改变。\n\n在本次公共品博弈中，我观察到其他玩家的投入均为0，这让我感到有些担忧。虽然我的个人收益目前未知，但我认为，作为矛盾理想者，我应该在这个游戏中展现出我的责任感和对公共利益的关注。\n\n首先，我坚信公共品的供给需要每个玩家的共同努力。因此，我决定在本轮游戏中投入一定数量的资源，以支持公共品的提供。虽然我的收入稳定，但我也会考虑到家庭的经济状况，确保投入是合理的。\n\n其次，我注意到新技术的发展对电工行业的影响。因此，我也愿意在数字适应上做出努力，学习新技术，以适应行业的变化。我相信，通过这种方式，我不仅能够提升自己的技能，还能为公共品的维护做出更大的贡献。\n\n最后，我对政府充满信任，并愿意尝试新事物。在低碳生活方面，我会努力减少能源消耗，倡导绿色出行。虽然我目前在这方面还有所欠缺，但我相信，通过不断努力，我能够逐步实现绿色生活的目标。\n\n总之，作为矛盾理想者，我将在公共品博弈中坚持我的信念，投入资源，支持公共品的提供，并努力提升自己在低碳生活和数字适应方面的能力。我相信，通过我们的共同努力，我们能够实现更好的公共品博弈结果。\n\n谢谢大家。",
+            "context": {
+              "last_payoff": null,
+              "current_endowment": 10,
+              "others": [
+                {
+                  "name": "何飞",
+                  "payoff": null,
+                  "current_endowment": 10
+                },
+                {
+                  "name": "魏骁",
+                  "payoff": null,
+                  "current_endowment": 10
+                },
+                {
+                  "name": "江泽",
+                  "payoff": null,
+                  "current_endowment": 10
+                }
+              ],
+              "participated": true
+            },
+            "participated": true
+          },
+          "timestamp": "2025-06-09T16:59:35.713730"
+        },
+        {
+          "round": 1,
+          "room": "ContributeRoom",
+          "type": "contribution",
+          "content": {
+            "contribution": 3
+          },
+          "timestamp": "2025-06-09T16:59:36.531921"
+        }
+      ]
+    }
+  ]
+}
