@@ -42,13 +42,13 @@ class DiscussionRoom:
             agent: Agent对象
             game_state: dict, 包含游戏状态信息
         Returns:
-            bool: 是否应该参与讨论
+            str: "是"或"否"的决定
         """
         round_number = game_state.get("round", 1)
         prev_contributions = game_state.get("prev_round_contributions", {})
         base_endowment = game_state.get("base_endowment", 100)
         
-        # 如果有历史贡献数据，计算一些统计信息
+        # 如果有历史贡献数据，计算统计信息
         stats = {}
         if prev_contributions:
             contributions = list(prev_contributions.values())
@@ -58,7 +58,7 @@ class DiscussionRoom:
             agent_contribution = prev_contributions.get(agent.name, 0)
             
             stats.update({
-                "average_contribution": avg_contribution,
+                "average_contribution": f"{avg_contribution:.1f}",
                 "max_contribution": max_contribution,
                 "min_contribution": min_contribution,
                 "my_contribution": agent_contribution,
@@ -66,25 +66,19 @@ class DiscussionRoom:
             })
         
         # 构建提示信息
-        prompt = f"""作为玩家"{agent.name}"，你需要决定是否参与本轮讨论。
+        prompt = f"""你是玩家"{agent.name}"，现在需要决定是否参与讨论。请用一个字回答："是"或"否"。
 
-            你的背景信息：
-            ```json
-            {json.dumps(agent.profile, ensure_ascii=False, indent=2)}
-            ```
+你的背景信息：
+```json
+{json.dumps(agent.profile, ensure_ascii=False, indent=2)}
+```
 
-            当前游戏状态：
-            - 第 {round_number} 轮
-            - 基础禀赋：{base_endowment}
-            {"" if not prev_contributions else f'''
-            上轮统计：
-            - 平均贡献：{stats['average_contribution']}
-            - 最高贡献：{stats['max_contribution']}
-            - 最低贡献：{stats['min_contribution']}
-            - 你的贡献：{stats['my_contribution']}（{stats['relative_position']}平均）'''}
-
-            基于你的性格特征和当前游戏状态，你是否选择参与讨论？
-            请只回答"是"或"否"。"""
+当前游戏状态：{" " if not prev_contributions else f'''
+- 你上轮投入了：{stats["my_contribution"]}（{stats["relative_position"]}平均值）
+- 本轮是第 {round_number} 轮
+- 平均投入：{stats["average_contribution"]}
+- 最高投入：{stats["max_contribution"]}
+- 最低投入：{stats["min_contribution"]}'''}"""
 
         messages = [
             {"role": "system", "content": "你扮演游戏中的玩家，根据性格和状况决定是否参与讨论。只能回答'是'或'否'。"},
@@ -92,15 +86,15 @@ class DiscussionRoom:
         ]
         
         response = agent._call_llm(messages)
-        return response.strip() == "是"
+        return response.strip()
     
     def handle(self, agent, round_number, context):
-        """处理玩家的讨论
+        """Handle player discussion.
         
         Args:
-            agent: Agent对象
-            round_number: 当前轮次
-            context: dict, 包含游戏状态信息
+            agent: Agent instance
+            round_number: current round number
+            context: dict containing game state info
         """
         self.participants.add(agent.name)
         
@@ -134,11 +128,11 @@ class DiscussionRoom:
         )
     
     def record_non_participant(self, agent, round_number):
-        """记录未参与讨论的玩家
+        """Record non-participating player.
         
         Args:
-            agent: Agent对象
-            round_number: 当前轮次
+            agent: Agent instance
+            round_number: current round number
         """
         agent.add_to_history(
             round_number=round_number,
@@ -151,23 +145,8 @@ class DiscussionRoom:
         )
     
     def get_discussion_summary(self):
-        """获取本轮讨论的摘要，用于影响后续决策"""
+        """Get discussion summary for influencing subsequent decisions."""
         return {
             "history": self.discussion_history,
             "participants": list(self.participants)
         }
-
-class InterventionRoom:
-    def handle(self, agent, round_number, context):
-        # 这里可以扩展更多外部干预逻辑
-        intervention_msg = f"对 {agent.name} 应用外部干预"
-        print(f"[InterventionRoom] {intervention_msg}\n")
-        
-        # 记录到历史
-        agent.add_to_history(
-            round_number=round_number,
-            event_type="intervention",
-            content={"intervention": "default_intervention"},
-            room_type="InterventionRoom"
-        )
-        return None

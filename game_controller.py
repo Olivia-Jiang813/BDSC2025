@@ -4,7 +4,7 @@ import signal
 import sys
 from agents import Agent
 from config import GAME_CONFIG
-from rooms import ContributeRoom, DiscussionRoom, InterventionRoom
+from rooms import ContributeRoom, DiscussionRoom
 from game_recorder import GameRecorder
 
 class GameController:
@@ -24,6 +24,9 @@ class GameController:
         
         # 初始化每个玩家的当前禀赋
         self.current_endowments = {ag.name: self.base_endowment for ag in agents}
+        
+        # 初始化上一轮贡献记录
+        self.prev_round_contributions = {}
         
         # 随机确定一个固定的贡献顺序
         self.contribution_order = list(self.agents)
@@ -96,7 +99,6 @@ class GameController:
             rooms = {
                 "ContributeRoom": ContributeRoom(self.base_endowment, self.r, num_players),
                 "DiscussionRoom": DiscussionRoom(),
-                "InterventionRoom": InterventionRoom(),
             }
             last_payoffs = {ag.name: None for ag in self.agents}
 
@@ -108,25 +110,33 @@ class GameController:
                     print(f"{ag.name}: {self.current_endowments[ag.name]:.2f}")
                 print("")
                 
-                # 讨论阶段：所有玩家同时决定是否参与讨论
+                # 讨论阶段变量初始化
                 discussion_participants = []
-                discussion_decisions = {}
-                
-                # 所有玩家同时决定是否参与讨论
-                for ag in self.agents:
-                    should_join = rooms["DiscussionRoom"].should_enter_discussion(
-                        ag,
-                        {
-                            "round": t,
-                            "last_payoff": last_payoffs[ag.name],
-                            "current_endowment": self.current_endowments[ag.name],
-                            "prev_round_contributions": getattr(self, 'prev_round_contributions', {}),
-                            "base_endowment": self.base_endowment
-                        }
-                    )
-                    discussion_decisions[ag.name] = should_join
-                    if should_join:
-                        discussion_participants.append(ag)
+                discussion_summary = None
+
+                # 第一轮直接进行贡献
+                if t == 1:
+                    print(f"\n=== 第 {t} 轮贡献阶段（首轮无讨论）===")
+                else:
+                    # 讨论阶段：所有玩家同时决定是否参与讨论
+                    discussion_decisions = {}
+                    
+                    # 所有玩家同时决定是否参与讨论
+                    for ag in self.agents:
+                        response = rooms["DiscussionRoom"].should_enter_discussion(
+                            ag,
+                            {
+                                "round": t,
+                                "last_payoff": last_payoffs[ag.name],
+                                "current_endowment": self.current_endowments[ag.name],
+                                "prev_round_contributions": self.prev_round_contributions,
+                                "base_endowment": self.base_endowment
+                            }
+                        )
+                        # 判断是否参与讨论
+                        discussion_decisions[ag.name] = response.lower() in ["是", "yes", "true", "1"]
+                        if discussion_decisions[ag.name]:
+                            discussion_participants.append(ag)
                 
                 # 如果有人参与讨论，进行讨论
                 discussion_summary = None
