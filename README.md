@@ -47,4 +47,3 @@
 * **主要类：**
   1. **ContributeRoom：** 处理贡献计算逻辑
   2. **DiscussionRoom：** 管理群体讨论过程
-  3. **InterventionRoom：** （计划中）外部干预机制
