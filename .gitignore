@@ -1,6 +1,19 @@
+# Python
 __pycache__/
 *.py[cod]
-*$py.class
-.DS_Store
+*.class
+
+# Virtual Environment
+venv/
+ENV/
 .env
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Project specific
+game_history/
 *.log

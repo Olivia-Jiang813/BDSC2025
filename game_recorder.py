@@ -52,8 +52,10 @@ class GameRecorder:
         # 收集每个agent的完整历史记录
         for agent in agents:
             agent_record = {
+                "id": agent.id,
                 "name": agent.name,
-                "profile": agent.profile,
+                "personality_type": "anchor" if agent.is_anchor else getattr(agent, "personality_type", "unknown"),
+                "is_anchor": agent.is_anchor,
                 "game_history": agent.history,
                 "dialogue_history": agent.dialogue_history
             }
@@ -81,20 +83,69 @@ class GameRecorder:
             stats: 本轮统计数据
             agents_data: 玩家数据列表
         """
-        summary = [f"\n=== Round {round_number} ==="]
+        summary = [f"\n{'='*20} 第 {round_number} 轮总结 {'='*20}"]
         
         # 添加总体统计信息
         summary.append(
-            f"\n[GameRoom] 总贡献 {stats['total_contribution']:.2f} → "
-            f"公共池 {stats['public_pool']:.2f} → "
-            f"每人回报 {stats['share_per_player']:.2f}\n"
+            f"\n[本轮概况]\n"
+            f"总贡献: {stats['total_contribution']:.2f}\n"
+            f"公共池: {stats['public_pool']:.2f}\n"
+            f"人均回报: {stats['share_per_player']:.2f}\n"
         )
         
         # 添加每个玩家的详细信息
+        summary.append("\n[玩家详情]")
         for data in agents_data:
+            net_gain = data['payoff'] - data['initial_endowment']
             summary.append(
-                f"{data['name']} - 初始: {data['initial_endowment']:.2f}, "
-                f"投入: {data['contribution']:.2f}, 收益: {data['payoff']:.2f}"
-            )
+                f"{data['id']}:\n"
+                f"  初始禀赋: {data['initial_endowment']:.2f}\n"
+                f"  投入金额: {data['contribution']:.2f}\n"
+                f"  最终收益: {data['payoff']:.2f}\n"
+                f"  净收益: {net_gain:+.2f}\n")
         
         return "\n".join(summary)
+
+    def analyze_discussion_participation(self, round_number=None):
+        """分析讨论参与度
+        
+        Args:
+            round_number: 如果提供，只分析特定回合；否则分析所有回合
+            
+        Returns:
+            dict: 包含参与度统计信息
+        """
+        if not self.round_records:
+            return {"error": "No game records available"}
+            
+        participation_stats = {
+            "total_rounds": len(self.round_records),
+            "participation_by_round": {},
+            "participation_rate_by_agent": {}
+        }
+        
+        rounds_to_analyze = [round_number] if round_number else range(1, len(self.round_records) + 1)
+        agent_participation_count = {}
+        
+        for r in rounds_to_analyze:
+            if r <= 1:  # 跳过第一轮（没有讨论）
+                continue
+                
+            # 统计该轮参与讨论的玩家
+            participants = set()
+            for agent in self.round_records[r-1].get("discussion_participants", []):
+                participants.add(agent)
+                agent_participation_count[agent] = agent_participation_count.get(agent, 0) + 1
+            
+            participation_stats["participation_by_round"][r] = {
+                "participant_count": len(participants),
+                "participants": list(participants)
+            }
+        
+        # 计算每个玩家的参与率
+        total_discussion_rounds = len(rounds_to_analyze) - 1  # 减去第一轮
+        if total_discussion_rounds > 0:
+            for agent, count in agent_participation_count.items():
+                participation_stats["participation_rate_by_agent"][agent] = count / total_discussion_rounds
+        
+        return participation_stats

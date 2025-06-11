@@ -68,17 +68,17 @@ class DiscussionRoom:
         # 构建提示信息
         prompt = f"""你是玩家"{agent.name}"，现在需要决定是否参与讨论。请用一个字回答："是"或"否"。
 
-你的背景信息：
-```json
-{json.dumps(agent.profile, ensure_ascii=False, indent=2)}
-```
+        你的背景信息：
+        ```json
+        {json.dumps(agent.profile, ensure_ascii=False, indent=2)}
+        ```
 
-当前游戏状态：{" " if not prev_contributions else f'''
-- 你上轮投入了：{stats["my_contribution"]}（{stats["relative_position"]}平均值）
-- 本轮是第 {round_number} 轮
-- 平均投入：{stats["average_contribution"]}
-- 最高投入：{stats["max_contribution"]}
-- 最低投入：{stats["min_contribution"]}'''}"""
+        当前游戏状态：{" " if not prev_contributions else f'''
+        - 你上轮投入了：{stats["my_contribution"]}（{stats["relative_position"]}平均值）
+        - 本轮是第 {round_number} 轮
+        - 平均投入：{stats["average_contribution"]}
+        - 最高投入：{stats["max_contribution"]}
+        - 最低投入：{stats["min_contribution"]}'''}"""
 
         messages = [
             {"role": "system", "content": "你扮演游戏中的玩家，根据性格和状况决定是否参与讨论。只能回答'是'或'否'。"},

@@ -1,10 +1,8 @@
 # main.py
 import sys
 import traceback
-from agents import Agent
-from profiles import PROFILES
 from game_controller import GameController
-from config import validate_config
+from config import validate_config, GAME_CONFIG
 
 def main():
     """游戏主入口函数"""
@@ -13,13 +11,12 @@ def main():
         print("正在验证游戏配置...")
         validate_config()
         
-        # 创建agents
-        print("正在初始化游戏角色...")
-        agents = [Agent(profile) for profile in PROFILES]
+        # 创建游戏控制器
+        print("正在初始化游戏控制器...")
         
         # 创建并运行游戏
-        print("正在启动游戏控制器...")
-        game = GameController(agents)
+        game = GameController(GAME_CONFIG)
+        game.setup_game()  # 设置游戏，包括创建智能体
         print("\n=== 游戏开始 ===\n")
         game.play()
         print("\n=== 游戏正常结束 ===\n")

@@ -7,7 +7,7 @@ load_dotenv()
 # API Keys配置
 API_KEYS = {
     "openai": os.getenv("OPENAI_API_KEY"),
-    "zhipuai": os.getenv("ZHIPUAI_API_KEY"),
+    "zhipuai": os.getenv("ZHIPUAI_API_KEY")
 }
 
 # 模型配置
@@ -16,7 +16,7 @@ MODEL_CONFIG = {
     "model": "glm-4-flash",        # 当前使用的具体模型
     "available_models": {
         "openai": ["gpt-4", "gpt-4.1", "gpt-4omini"],
-        "zhipuai": ["glm-4-flash", "glm-3-turbo"],
+        "zhipuai": ["glm-4-flash", "glm-3-turbo"]
     }
 }
 
@@ -25,13 +25,21 @@ GAME_CONFIG = {
     "endowment": 10,      # 每轮初始代币数
     "r": 1.6,            # 公共池倍数
     "rounds": 10,        # 游戏轮数
-    "num_players": 4,    # 游戏玩家数量
+    "num_players": 10,    # 游戏玩家数量
+    
+    # 实验控制参数
+    "use_anchor_agent": False,  # 是否使用锚定智能体
+    "allow_discussion": True,   # 是否允许讨论
+    "reveal_mode": "public",    # 信息公开模式：public（完全公开）或 anonymous（只显示总量）
+    
+    # 智能体性格特征设置
+    "personality_type": "low-altruism"  # 可选：high-altruism, medium-altruism, low-altruism, anchor
 }
 
 # 房间配置
 ROOM_CONFIG = {
-    "available_rooms": ["ContributeRoom", "DiscussionRoom", "InterventionRoom"],
-    "default_room": "ContributeRoom",
+    "available_rooms": ["ContributeRoom", "DiscussionRoom"],
+    "default_room": "ContributeRoom"
 }
 
 def validate_config():
@@ -46,9 +54,7 @@ def validate_config():
     
     # 检查模型是否可用
     if model not in MODEL_CONFIG["available_models"][provider]:
-        raise ValueError(f"提供商 {provider} 不支持模型: {model}")
-    
-    # 检查必要的API keys
+        raise ValueError(f"提供商 {provider} 不支持模型: {model}")            # 检查必要的API keys
     if not API_KEYS.get(provider):
         raise ValueError(f"缺少 {provider} 的API密钥")
     
@@ -59,3 +65,5 @@ def validate_config():
         raise ValueError("endowment必须为正数")
     if GAME_CONFIG["rounds"] <= 0:
         raise ValueError("rounds必须为正数")
+    if GAME_CONFIG["num_players"] <= 0:
+        raise ValueError("num_players必须为正数")
