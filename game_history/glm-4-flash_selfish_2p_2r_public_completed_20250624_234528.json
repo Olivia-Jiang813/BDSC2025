@@ -1,0 +1,149 @@
+{
+  "game_config": {
+    "model": "glm-4-flash",
+    "personality_type": "selfish",
+    "endowment": 10,
+    "r": 3,
+    "rounds": 2,
+    "num_players": 2,
+    "reveal_mode": "public",
+    "completed_rounds": 2,
+    "final_decisions": {
+      "0": 5,
+      "1": 5
+    }
+  },
+  "game_status": "completed",
+  "rounds": [
+    {
+      "round": 1,
+      "stats": {
+        "total_contribution": 10,
+        "public_pool": 30,
+        "share_per_player": 15.0
+      },
+      "agents": [
+        {
+          "id": "0",
+          "initial_total_money": 18.0,
+          "contribution": 7,
+          "payoff": 18.0,
+          "latest_strategy": null,
+          "latest_belief": null
+        },
+        {
+          "id": "1",
+          "initial_total_money": 22.0,
+          "contribution": 3,
+          "payoff": 22.0,
+          "latest_strategy": null,
+          "latest_belief": null
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "stats": {
+        "total_contribution": 17,
+        "public_pool": 51,
+        "share_per_player": 25.5
+      },
+      "agents": [
+        {
+          "id": "0",
+          "initial_total_money": 36.5,
+          "contribution": 7,
+          "payoff": 36.5,
+          "latest_strategy": "策略总结: 整体资源投入趋势显示你在第一轮和第二轮都投入了相同的资源，这表明你可能采取了稳定的投入策略。潜在风险在于，如果其他玩家也采取类似的策略，公共品的整体供应可能不足以满足所有玩家的需求，导致集体收益降低。机会在于，如果你能够预测其他玩家的行为并采取差异化的策略，可能会在不牺牲太多个人收益的情况下，获得更多的集体收益。",
+          "latest_belief": null
+        },
+        {
+          "id": "1",
+          "initial_total_money": 37.5,
+          "contribution": 10,
+          "payoff": 37.5,
+          "latest_strategy": "策略总结: 从当前投入趋势来看，玩家 Agent_1 在第二轮投入显著增加，可能表明玩家正在尝试通过增加个人贡献来提高自己的收益或影响力。然而，这种策略存在潜在风险，因为如果其他玩家也跟随增加投入，公共品的总价值可能会增加，但每个玩家从公共品中获得的边际收益可能会减少。同时，这也可能是一个机会，如果其他玩家保持或减少投入，Agent_1 的增加投入可能会带来更高的个人收益。",
+          "latest_belief": null
+        }
+      ]
+    }
+  ],
+  "agents": [
+    {
+      "id": "0",
+      "name": "Agent_0",
+      "personality_type": "selfish",
+      "is_anchor": false,
+      "game_history": [
+        {
+          "round": 1,
+          "contribution": 7,
+          "group_total": 10,
+          "payoff": 18.0
+        },
+        {
+          "round": 2,
+          "contribution": 7,
+          "group_total": 17,
+          "payoff": 36.5
+        }
+      ],
+      "strategy_memory": [
+        {
+          "rounds": [
+            1,
+            2
+          ],
+          "end_round": 2,
+          "timestamp": "2025-06-24T23:45:25.111117",
+          "strategy": "整体资源投入趋势显示你在第一轮和第二轮都投入了相同的资源，这表明你可能采取了稳定的投入策略。潜在风险在于，如果其他玩家也采取类似的策略，公共品的整体供应可能不足以满足所有玩家的需求，导致集体收益降低。机会在于，如果你能够预测其他玩家的行为并采取差异化的策略，可能会在不牺牲太多个人收益的情况下，获得更多的集体收益。",
+          "contributions_analyzed": [
+            7,
+            7
+          ]
+        }
+      ],
+      "belief_memory": [],
+      "current_total_money": 36.5,
+      "final_decision": 5
+    },
+    {
+      "id": "1",
+      "name": "Agent_1",
+      "personality_type": "selfish",
+      "is_anchor": false,
+      "game_history": [
+        {
+          "round": 1,
+          "contribution": 3,
+          "group_total": 10,
+          "payoff": 22.0
+        },
+        {
+          "round": 2,
+          "contribution": 10,
+          "group_total": 17,
+          "payoff": 37.5
+        }
+      ],
+      "strategy_memory": [
+        {
+          "rounds": [
+            1,
+            2
+          ],
+          "end_round": 2,
+          "timestamp": "2025-06-24T23:45:27.530193",
+          "strategy": "从当前投入趋势来看，玩家 Agent_1 在第二轮投入显著增加，可能表明玩家正在尝试通过增加个人贡献来提高自己的收益或影响力。然而，这种策略存在潜在风险，因为如果其他玩家也跟随增加投入，公共品的总价值可能会增加，但每个玩家从公共品中获得的边际收益可能会减少。同时，这也可能是一个机会，如果其他玩家保持或减少投入，Agent_1 的增加投入可能会带来更高的个人收益。",
+          "contributions_analyzed": [
+            3,
+            10
+          ]
+        }
+      ],
+      "belief_memory": [],
+      "current_total_money": 37.5,
+      "final_decision": 5
+    }
+  ]
+}

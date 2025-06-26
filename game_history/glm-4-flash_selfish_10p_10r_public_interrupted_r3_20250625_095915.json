@@ -1,0 +1,598 @@
+{
+  "game_config": {
+    "model": "glm-4-flash",
+    "personality_type": "selfish",
+    "endowment": 10,
+    "r": 3,
+    "rounds": 10,
+    "num_players": 10,
+    "reveal_mode": "public",
+    "completed_rounds": 3,
+    "final_decisions": null
+  },
+  "game_status": "interrupted",
+  "rounds": [
+    {
+      "round": 1,
+      "stats": {
+        "total_contribution": 36,
+        "public_pool": 108,
+        "share_per_player": 10.8
+      },
+      "agents": [
+        {
+          "id": "0",
+          "initial_total_money": 19,
+          "contribution": 2,
+          "payoff": 18.8,
+          "latest_strategy": null,
+          "latest_belief": null
+        },
+        {
+          "id": "1",
+          "initial_total_money": 18,
+          "contribution": 3,
+          "payoff": 17.8,
+          "latest_strategy": null,
+          "latest_belief": null
+        },
+        {
+          "id": "2",
+          "initial_total_money": 18,
+          "contribution": 3,
+          "payoff": 17.8,
+          "latest_strategy": null,
+          "latest_belief": null
+        },
+        {
+          "id": "3",
+          "initial_total_money": 18,
+          "contribution": 3,
+          "payoff": 17.8,
+          "latest_strategy": null,
+          "latest_belief": null
+        },
+        {
+          "id": "4",
+          "initial_total_money": 18,
+          "contribution": 3,
+          "payoff": 17.8,
+          "latest_strategy": null,
+          "latest_belief": null
+        },
+        {
+          "id": "5",
+          "initial_total_money": 14,
+          "contribution": 7,
+          "payoff": 13.8,
+          "latest_strategy": null,
+          "latest_belief": null
+        },
+        {
+          "id": "6",
+          "initial_total_money": 19,
+          "contribution": 2,
+          "payoff": 18.8,
+          "latest_strategy": null,
+          "latest_belief": null
+        },
+        {
+          "id": "7",
+          "initial_total_money": 18,
+          "contribution": 3,
+          "payoff": 17.8,
+          "latest_strategy": null,
+          "latest_belief": null
+        },
+        {
+          "id": "8",
+          "initial_total_money": 18,
+          "contribution": 3,
+          "payoff": 17.8,
+          "latest_strategy": null,
+          "latest_belief": null
+        },
+        {
+          "id": "9",
+          "initial_total_money": 14,
+          "contribution": 7,
+          "payoff": 13.8,
+          "latest_strategy": null,
+          "latest_belief": null
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "stats": {
+        "total_contribution": 57,
+        "public_pool": 171,
+        "share_per_player": 17.1
+      },
+      "agents": [
+        {
+          "id": "0",
+          "initial_total_money": 33,
+          "contribution": 3,
+          "payoff": 33.1,
+          "latest_strategy": "策略总结: 整体资源投入趋势显示，玩家5和玩家9在两轮中均投入最多，可能表明他们具有较大的影响力或资源优势。潜在风险是如果其他玩家开始模仿这种高投入策略，可能会增加公共品的成本，而自私倾向的玩家可能会担心这种高成本会导致自己的利益受损。机会则在于通过观察其他高投入玩家的策略，可能发现他们是否有持续获益的模式，从而在下一轮中调整自己的投入策略以最大化个人收益。",
+          "latest_belief": null
+        },
+        {
+          "id": "1",
+          "initial_total_money": 29,
+          "contribution": 6,
+          "payoff": 29.1,
+          "latest_strategy": "策略总结: 根据以上信息，整体资源投入趋势显示在两轮游戏中，玩家9的投入始终最高，而玩家5和玩家8的投入也有所增加。这表明可能存在一些玩家（如玩家5和玩家8）在追求更高的收益或影响力。潜在风险可能在于，如果大部分玩家持续增加投入，可能会导致公共品不足，而自私倾向的玩家可能需要考虑如何最大化个人收益而不至于过度损害游戏的其他玩家利益。机会则可能在于，通过观察其他玩家的投入模式，我可以找到一种策略来平衡我的个人利益和对公共品的贡献，以避免过度竞争带来的风险。",
+          "latest_belief": null
+        },
+        {
+          "id": "2",
+          "initial_total_money": 28,
+          "contribution": 7,
+          "payoff": 28.1,
+          "latest_strategy": "策略总结: 整体资源投入趋势显示，玩家5和玩家9在两轮中投入最多，可能是认为公共品博弈中高投入能够带来更大的收益。作为自私倾向的玩家，我可能会考虑增加自己的投入以争取更高的收益，但也要注意潜在风险，如其他玩家可能因为预期我的高投入而减少自己的投入，从而降低整体收益。同时，我需要观察其他玩家的策略变化，以调整自己的投入策略。",
+          "latest_belief": null
+        },
+        {
+          "id": "3",
+          "initial_total_money": 29,
+          "contribution": 6,
+          "payoff": 29.1,
+          "latest_strategy": "策略总结: 整体资源投入趋势显示，玩家8和玩家9的投入量显著增加，可能是他们意识到通过提高投入可以获取更高的回报，或者他们认为其他玩家会跟进而增加自己的投入。潜在风险在于，这种趋势可能导致公共品的边际效用下降，因为更多的资源投入可能无法带来同比例的收益增长。机会则在于，如果能够维持这种高投入趋势，并成功引导其他玩家跟随，你可能会在后续的博弈中获得较大的利益。",
+          "latest_belief": null
+        },
+        {
+          "id": "4",
+          "initial_total_money": 30,
+          "contribution": 5,
+          "payoff": 30.1,
+          "latest_strategy": "策略总结: 整体资源投入趋势显示，玩家2、6、8在第2轮显著增加了投入，而玩家5和9的投入相对减少。这可能意味着玩家2、6、8对公共品博弈有更高的期望回报，而玩家5和9可能对收益预期有所调整或面临其他优先级更高的决策。潜在风险包括其他玩家可能通过减少投入来应对这种策略变化，导致公共品收益下降；机会则在于，如果你能识别出其他玩家策略的变化并做出相应的调整，可能会提高你自身的收益。",
+          "latest_belief": null
+        },
+        {
+          "id": "5",
+          "initial_total_money": 28,
+          "contribution": 3,
+          "payoff": 28.1,
+          "latest_strategy": "策略总结: 整体资源投入趋势显示，玩家2、6和8在第二轮投入显著增加，这可能意味着他们正在寻求通过增加贡献来提高个人影响力或回报。潜在风险在于，这种集中投入可能预示着未来资源的过度竞争，而机会则可能在于如果能够识别并利用这些玩家增加投入的动机，通过适当策略可能能够获得更多的个人利益。",
+          "latest_belief": null
+        },
+        {
+          "id": "6",
+          "initial_total_money": 29,
+          "contribution": 7,
+          "payoff": 29.1,
+          "latest_strategy": "策略总结: 整体资源投入趋势显示，大多数玩家在第2轮的投入高于第1轮，表明可能存在竞争加剧的趋势。作为自私倾向的玩家，潜在的策略机会在于观察其他玩家的投入模式，以决定是否跟随他们的投入增加来确保自己的利益最大化，同时注意避免过度投入可能带来的资源枯竭风险。",
+          "latest_belief": null
+        },
+        {
+          "id": "7",
+          "initial_total_money": 30,
+          "contribution": 5,
+          "payoff": 30.1,
+          "latest_strategy": "策略总结: 整体资源投入趋势显示，玩家9和玩家8在连续两轮中都投入了较高的资源，这表明他们可能对公共品博弈的结果非常看重，可能是为了获得更大的回报。潜在风险是，如果其他玩家也意识到这一点，可能会增加自己的投入以竞争资源，导致整体投入增加，最终减少了个人收益。机会则在于，如果你能够识别出这种高投入玩家的动机，并预测他们的行为模式，你可能会通过适度的投入来获取他们的支持，从而在不增加太多风险的情况下提高自己的收益。",
+          "latest_belief": null
+        },
+        {
+          "id": "8",
+          "initial_total_money": 27,
+          "contribution": 8,
+          "payoff": 27.1,
+          "latest_strategy": "策略总结: 整体资源投入趋势显示，多数玩家在第二轮比第一轮投入了更多的资源，尤其是你自己的投入大幅增加。这可能意味着玩家们对公共品的期望收益有所提升，或者是在尝试通过增加投入来影响最终的结果。潜在风险包括资源过度集中可能导致的收益不均和合作破裂，而机会则可能在于通过增加投入来提高自己获得较高回报的可能性。",
+          "latest_belief": null
+        },
+        {
+          "id": "9",
+          "initial_total_money": 24,
+          "contribution": 7,
+          "payoff": 24.1,
+          "latest_strategy": "策略总结: 根据上述投入情况，整体资源投入呈现出上升趋势，尤其是玩家2、6和8的投入明显增加。这表明可能有部分玩家对公共品的贡献度较高，可能会影响到我的个人利益。潜在风险在于，如果其他玩家继续增加投入，我的相对贡献度会降低，从而减少我的收益。同时，潜在机会可能是通过观察其他高投入玩家的行为，找到合作或竞争的策略，以最大化个人利益。",
+          "latest_belief": null
+        }
+      ]
+    }
+  ],
+  "agents": [
+    {
+      "id": "0",
+      "name": "Agent_0",
+      "personality_type": "selfish",
+      "is_anchor": false,
+      "game_history": [
+        {
+          "round": 1,
+          "contribution": 2,
+          "group_total": 36,
+          "payoff": 18.8,
+          "total_money_before_round": 10
+        },
+        {
+          "round": 2,
+          "contribution": 3,
+          "group_total": 57,
+          "payoff": 33.1,
+          "total_money_before_round": 19
+        }
+      ],
+      "strategy_memory": [
+        {
+          "rounds": [
+            1,
+            2
+          ],
+          "end_round": 2,
+          "timestamp": "2025-06-25T09:58:49.171229",
+          "strategy": "整体资源投入趋势显示，玩家5和玩家9在两轮中均投入最多，可能表明他们具有较大的影响力或资源优势。潜在风险是如果其他玩家开始模仿这种高投入策略，可能会增加公共品的成本，而自私倾向的玩家可能会担心这种高成本会导致自己的利益受损。机会则在于通过观察其他高投入玩家的策略，可能发现他们是否有持续获益的模式，从而在下一轮中调整自己的投入策略以最大化个人收益。",
+          "contributions_analyzed": [
+            2,
+            3
+          ]
+        }
+      ],
+      "belief_memory": [],
+      "current_total_money": 33,
+      "final_decision": null
+    },
+    {
+      "id": "1",
+      "name": "Agent_1",
+      "personality_type": "selfish",
+      "is_anchor": false,
+      "game_history": [
+        {
+          "round": 1,
+          "contribution": 3,
+          "group_total": 36,
+          "payoff": 17.8,
+          "total_money_before_round": 10
+        },
+        {
+          "round": 2,
+          "contribution": 6,
+          "group_total": 57,
+          "payoff": 29.1,
+          "total_money_before_round": 18
+        }
+      ],
+      "strategy_memory": [
+        {
+          "rounds": [
+            1,
+            2
+          ],
+          "end_round": 2,
+          "timestamp": "2025-06-25T09:58:51.819588",
+          "strategy": "根据以上信息，整体资源投入趋势显示在两轮游戏中，玩家9的投入始终最高，而玩家5和玩家8的投入也有所增加。这表明可能存在一些玩家（如玩家5和玩家8）在追求更高的收益或影响力。潜在风险可能在于，如果大部分玩家持续增加投入，可能会导致公共品不足，而自私倾向的玩家可能需要考虑如何最大化个人收益而不至于过度损害游戏的其他玩家利益。机会则可能在于，通过观察其他玩家的投入模式，我可以找到一种策略来平衡我的个人利益和对公共品的贡献，以避免过度竞争带来的风险。",
+          "contributions_analyzed": [
+            3,
+            6
+          ]
+        }
+      ],
+      "belief_memory": [],
+      "current_total_money": 29,
+      "final_decision": null
+    },
+    {
+      "id": "2",
+      "name": "Agent_2",
+      "personality_type": "selfish",
+      "is_anchor": false,
+      "game_history": [
+        {
+          "round": 1,
+          "contribution": 3,
+          "group_total": 36,
+          "payoff": 17.8,
+          "total_money_before_round": 10
+        },
+        {
+          "round": 2,
+          "contribution": 7,
+          "group_total": 57,
+          "payoff": 28.1,
+          "total_money_before_round": 18
+        }
+      ],
+      "strategy_memory": [
+        {
+          "rounds": [
+            1,
+            2
+          ],
+          "end_round": 2,
+          "timestamp": "2025-06-25T09:58:54.330460",
+          "strategy": "整体资源投入趋势显示，玩家5和玩家9在两轮中投入最多，可能是认为公共品博弈中高投入能够带来更大的收益。作为自私倾向的玩家，我可能会考虑增加自己的投入以争取更高的收益，但也要注意潜在风险，如其他玩家可能因为预期我的高投入而减少自己的投入，从而降低整体收益。同时，我需要观察其他玩家的策略变化，以调整自己的投入策略。",
+          "contributions_analyzed": [
+            3,
+            7
+          ]
+        }
+      ],
+      "belief_memory": [],
+      "current_total_money": 28,
+      "final_decision": null
+    },
+    {
+      "id": "3",
+      "name": "Agent_3",
+      "personality_type": "selfish",
+      "is_anchor": false,
+      "game_history": [
+        {
+          "round": 1,
+          "contribution": 3,
+          "group_total": 36,
+          "payoff": 17.8,
+          "total_money_before_round": 10
+        },
+        {
+          "round": 2,
+          "contribution": 6,
+          "group_total": 57,
+          "payoff": 29.1,
+          "total_money_before_round": 18
+        }
+      ],
+      "strategy_memory": [
+        {
+          "rounds": [
+            1,
+            2
+          ],
+          "end_round": 2,
+          "timestamp": "2025-06-25T09:58:57.321498",
+          "strategy": "整体资源投入趋势显示，玩家8和玩家9的投入量显著增加，可能是他们意识到通过提高投入可以获取更高的回报，或者他们认为其他玩家会跟进而增加自己的投入。潜在风险在于，这种趋势可能导致公共品的边际效用下降，因为更多的资源投入可能无法带来同比例的收益增长。机会则在于，如果能够维持这种高投入趋势，并成功引导其他玩家跟随，你可能会在后续的博弈中获得较大的利益。",
+          "contributions_analyzed": [
+            3,
+            6
+          ]
+        }
+      ],
+      "belief_memory": [],
+      "current_total_money": 29,
+      "final_decision": null
+    },
+    {
+      "id": "4",
+      "name": "Agent_4",
+      "personality_type": "selfish",
+      "is_anchor": false,
+      "game_history": [
+        {
+          "round": 1,
+          "contribution": 3,
+          "group_total": 36,
+          "payoff": 17.8,
+          "total_money_before_round": 10
+        },
+        {
+          "round": 2,
+          "contribution": 5,
+          "group_total": 57,
+          "payoff": 30.1,
+          "total_money_before_round": 18
+        }
+      ],
+      "strategy_memory": [
+        {
+          "rounds": [
+            1,
+            2
+          ],
+          "end_round": 2,
+          "timestamp": "2025-06-25T09:59:00.399007",
+          "strategy": "整体资源投入趋势显示，玩家2、6、8在第2轮显著增加了投入，而玩家5和9的投入相对减少。这可能意味着玩家2、6、8对公共品博弈有更高的期望回报，而玩家5和9可能对收益预期有所调整或面临其他优先级更高的决策。潜在风险包括其他玩家可能通过减少投入来应对这种策略变化，导致公共品收益下降；机会则在于，如果你能识别出其他玩家策略的变化并做出相应的调整，可能会提高你自身的收益。",
+          "contributions_analyzed": [
+            3,
+            5
+          ]
+        }
+      ],
+      "belief_memory": [],
+      "current_total_money": 30,
+      "final_decision": null
+    },
+    {
+      "id": "5",
+      "name": "Agent_5",
+      "personality_type": "selfish",
+      "is_anchor": false,
+      "game_history": [
+        {
+          "round": 1,
+          "contribution": 7,
+          "group_total": 36,
+          "payoff": 13.8,
+          "total_money_before_round": 10
+        },
+        {
+          "round": 2,
+          "contribution": 3,
+          "group_total": 57,
+          "payoff": 28.1,
+          "total_money_before_round": 14
+        }
+      ],
+      "strategy_memory": [
+        {
+          "rounds": [
+            1,
+            2
+          ],
+          "end_round": 2,
+          "timestamp": "2025-06-25T09:59:03.255169",
+          "strategy": "整体资源投入趋势显示，玩家2、6和8在第二轮投入显著增加，这可能意味着他们正在寻求通过增加贡献来提高个人影响力或回报。潜在风险在于，这种集中投入可能预示着未来资源的过度竞争，而机会则可能在于如果能够识别并利用这些玩家增加投入的动机，通过适当策略可能能够获得更多的个人利益。",
+          "contributions_analyzed": [
+            7,
+            3
+          ]
+        }
+      ],
+      "belief_memory": [],
+      "current_total_money": 28,
+      "final_decision": null
+    },
+    {
+      "id": "6",
+      "name": "Agent_6",
+      "personality_type": "selfish",
+      "is_anchor": false,
+      "game_history": [
+        {
+          "round": 1,
+          "contribution": 2,
+          "group_total": 36,
+          "payoff": 18.8,
+          "total_money_before_round": 10
+        },
+        {
+          "round": 2,
+          "contribution": 7,
+          "group_total": 57,
+          "payoff": 29.1,
+          "total_money_before_round": 19
+        }
+      ],
+      "strategy_memory": [
+        {
+          "rounds": [
+            1,
+            2
+          ],
+          "end_round": 2,
+          "timestamp": "2025-06-25T09:59:05.520763",
+          "strategy": "整体资源投入趋势显示，大多数玩家在第2轮的投入高于第1轮，表明可能存在竞争加剧的趋势。作为自私倾向的玩家，潜在的策略机会在于观察其他玩家的投入模式，以决定是否跟随他们的投入增加来确保自己的利益最大化，同时注意避免过度投入可能带来的资源枯竭风险。",
+          "contributions_analyzed": [
+            2,
+            7
+          ]
+        }
+      ],
+      "belief_memory": [],
+      "current_total_money": 29,
+      "final_decision": null
+    },
+    {
+      "id": "7",
+      "name": "Agent_7",
+      "personality_type": "selfish",
+      "is_anchor": false,
+      "game_history": [
+        {
+          "round": 1,
+          "contribution": 3,
+          "group_total": 36,
+          "payoff": 17.8,
+          "total_money_before_round": 10
+        },
+        {
+          "round": 2,
+          "contribution": 5,
+          "group_total": 57,
+          "payoff": 30.1,
+          "total_money_before_round": 18
+        }
+      ],
+      "strategy_memory": [
+        {
+          "rounds": [
+            1,
+            2
+          ],
+          "end_round": 2,
+          "timestamp": "2025-06-25T09:59:09.831272",
+          "strategy": "整体资源投入趋势显示，玩家9和玩家8在连续两轮中都投入了较高的资源，这表明他们可能对公共品博弈的结果非常看重，可能是为了获得更大的回报。潜在风险是，如果其他玩家也意识到这一点，可能会增加自己的投入以竞争资源，导致整体投入增加，最终减少了个人收益。机会则在于，如果你能够识别出这种高投入玩家的动机，并预测他们的行为模式，你可能会通过适度的投入来获取他们的支持，从而在不增加太多风险的情况下提高自己的收益。",
+          "contributions_analyzed": [
+            3,
+            5
+          ]
+        }
+      ],
+      "belief_memory": [],
+      "current_total_money": 30,
+      "final_decision": null
+    },
+    {
+      "id": "8",
+      "name": "Agent_8",
+      "personality_type": "selfish",
+      "is_anchor": false,
+      "game_history": [
+        {
+          "round": 1,
+          "contribution": 3,
+          "group_total": 36,
+          "payoff": 17.8,
+          "total_money_before_round": 10
+        },
+        {
+          "round": 2,
+          "contribution": 8,
+          "group_total": 57,
+          "payoff": 27.1,
+          "total_money_before_round": 18
+        }
+      ],
+      "strategy_memory": [
+        {
+          "rounds": [
+            1,
+            2
+          ],
+          "end_round": 2,
+          "timestamp": "2025-06-25T09:59:12.067120",
+          "strategy": "整体资源投入趋势显示，多数玩家在第二轮比第一轮投入了更多的资源，尤其是你自己的投入大幅增加。这可能意味着玩家们对公共品的期望收益有所提升，或者是在尝试通过增加投入来影响最终的结果。潜在风险包括资源过度集中可能导致的收益不均和合作破裂，而机会则可能在于通过增加投入来提高自己获得较高回报的可能性。",
+          "contributions_analyzed": [
+            3,
+            8
+          ]
+        }
+      ],
+      "belief_memory": [],
+      "current_total_money": 27,
+      "final_decision": null
+    },
+    {
+      "id": "9",
+      "name": "Agent_9",
+      "personality_type": "selfish",
+      "is_anchor": false,
+      "game_history": [
+        {
+          "round": 1,
+          "contribution": 7,
+          "group_total": 36,
+          "payoff": 13.8,
+          "total_money_before_round": 10
+        },
+        {
+          "round": 2,
+          "contribution": 7,
+          "group_total": 57,
+          "payoff": 24.1,
+          "total_money_before_round": 14
+        }
+      ],
+      "strategy_memory": [
+        {
+          "rounds": [
+            1,
+            2
+          ],
+          "end_round": 2,
+          "timestamp": "2025-06-25T09:59:14.545429",
+          "strategy": "根据上述投入情况，整体资源投入呈现出上升趋势，尤其是玩家2、6和8的投入明显增加。这表明可能有部分玩家对公共品的贡献度较高，可能会影响到我的个人利益。潜在风险在于，如果其他玩家继续增加投入，我的相对贡献度会降低，从而减少我的收益。同时，潜在机会可能是通过观察其他高投入玩家的行为，找到合作或竞争的策略，以最大化个人利益。",
+          "contributions_analyzed": [
+            7,
+            7
+          ]
+        }
+      ],
+      "belief_memory": [],
+      "current_total_money": 24,
+      "final_decision": null
+    }
+  ]
+}

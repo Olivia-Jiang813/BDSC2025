@@ -3,8 +3,7 @@ import random
 import signal
 import sys
 from agents import Agent
-from config import GAME_CONFIG
-from rooms import ContributeRoom, DiscussionRoom
+from config import GAME_CONFIG, MODEL_CONFIG
 from game_recorder import GameRecorder
 
 class GameController:
@@ -18,10 +17,16 @@ class GameController:
         self.agents = []
         self.current_round = 0
         self.reveal_mode = config["reveal_mode"]
-        self.allow_discussion = config["allow_discussion"]
+        # 移除讨论相关功能
+        # self.allow_discussion = config["allow_discussion"]
 
         # 初始化游戏记录器
         self.recorder = GameRecorder()
+
+    def set_debug_mode(self, debug=True):
+        """设置所有智能体的调试模式"""
+        for agent in self.agents:
+            agent.set_debug_mode(debug)
 
     def setup_game(self):
         """初始化游戏，创建智能体"""
@@ -53,21 +58,44 @@ class GameController:
     def signal_handler(self, signum, frame):
         """处理程序意外退出的情况"""
         print("\n\n检测到程序退出信号，正在保存当前进度...")
-        self.save_game_state()
+        self.save_game_state(interrupted=True)
         sys.exit(0)
 
-    def save_game_state(self):
+    def conduct_final_decision(self):
+        """进行游戏结束后的最终一次性PGG决策"""
+        final_decisions = {}
+        print("\n各玩家进行最终一次性PGG决策:")
+        
+        for agent in self.agents:
+            final_contribution = agent.make_final_decision(
+                initial_endowment=self.config["endowment"],
+                r=self.config["r"],
+                num_players=len(self.agents)
+            )
+            final_decisions[agent.id] = final_contribution
+            print(f"玩家 {agent.id}: 最终一次性投入 {final_contribution}")
+            
+        return final_decisions
+
+    def save_game_state(self, interrupted=True, final_decisions=None):
         """保存当前游戏状态"""
         if self.current_round > 0:  # 只在游戏已经开始后保存
             game_config = {
+                "model": MODEL_CONFIG["model"],
+                "personality_type": self.config["personality_type"],
                 "endowment": self.config["endowment"],
                 "r": self.config["r"],
                 "rounds": self.config["rounds"],
                 "num_players": len(self.agents),
-                "completed_rounds": self.current_round
+                "reveal_mode": self.config["reveal_mode"],
+                "completed_rounds": self.current_round,
+                "final_decisions": final_decisions  # 添加最终决策数据
             }
-            self.recorder.save_game_history(game_config, self.agents, interrupted=True)
-            print(f"已保存到第 {self.current_round} 回合的游戏记录")
+            self.recorder.save_game_history(game_config, self.agents, interrupted=interrupted)
+            if interrupted:
+                print(f"已保存到第 {self.current_round} 回合的游戏记录")
+            else:
+                print(f"游戏完成，已保存完整游戏记录（包含最终决策）")
 
     def reveal_contributions(self, contributions):
         """根据不同的揭示模式返回贡献信息"""
@@ -76,54 +104,21 @@ class GameController:
         else:  # anonymous
             return {"总贡献": sum(contributions.values())}
 
-    def run_discussion(self, agents):
-        """根据讨论设置运行讨论阶段"""
-        if not self.allow_discussion:
-            return []
-
-        discussion_log = []
-        for agent in agents:
-            # 获取记忆摘要
-            memory_summary = agent.get_memory_summary(num_rounds=3)  # 最近3轮的记忆
-            
-            # 根据揭示模式准备上下文
-            contribution_info = self.reveal_contributions(
-                {a.id: a.history[-1]['contribution'] for a in agents if a.history}
-            )
-            
-            # 准备讨论消息
-            message = f"根据当前情况和历史记录：\n{memory_summary}\n"
-            message += f"贡献信息：{contribution_info}\n"
-            message += "请发表你对下一轮的看法。"
-            
-            # 记录讨论到智能体的记忆
-            agent.record_memory(
-                round_num=self.current_round,
-                event_type='discussion',
-                details=message
-            )
-            discussion_log.append({
-                'agent_id': agent.id,
-                'message': message
-            })
-            
-        return discussion_log
-
     def calculate_payoffs(self, contributions):
         """计算一轮游戏中每个玩家的收益
-        每轮public pool独立计算，不累积，但玩家的endowment会累积
+        每轮public pool独立计算，不累积，但玩家的total_money会累积
         """
         # 计算本轮public pool相关的值
         total_contribution = sum(contributions.values())
         public_pool = total_contribution * self.config["r"]
         share_per_player = public_pool / len(self.agents)
         
-        # 计算每个玩家的收益：现有禀赋 - 投入 + 分成
+        # 计算每个玩家的收益：现有总金额 - 投入 + 分成
         payoffs = {}
         for agent in self.agents:
             contribution = contributions.get(agent.id, 0)
-            # 保留现有禀赋，减去投入，加上本轮分成
-            remaining = agent.get_current_endowment() - contribution
+            # 保留现有总金额，减去投入，加上本轮分成
+            remaining = agent.current_total_money - contribution
             payoff = remaining + share_per_player
             payoffs[agent.id] = payoff
         
@@ -144,9 +139,9 @@ class GameController:
                 print(f"\n{'='*20} 第 {round_num} 轮 {'='*20}")
                 
                 # 显示当前状态
-                print("\n当前禀赋:")
+                print("\n当前总金额:")
                 for agent in self.agents:
-                    print(f"{agent.id}: {self.last_payoffs[agent.id]:.2f}")
+                    print(f"{agent.id}: {agent.current_total_money:.2f}")
                     
                 # 执行一轮游戏
                 round_data = self.play_round()
@@ -169,12 +164,17 @@ class GameController:
                     round_data['agents_data']
                 )
                 
+            # 游戏正常结束后，进行最终一次性PGG决策
+            print("\n=== 最终一次性PGG决策 ===")
+            final_decisions = self.conduct_final_decision()
+            
             # 游戏正常结束时的处理
             print("\n=== 游戏正常结束 ===")
+            self.save_game_state(interrupted=False, final_decisions=final_decisions)  # 保存完成状态的游戏记录
             
         except Exception as e:
             print(f"\n游戏过程中发生错误: {str(e)}")
-            self.save_game_state()  # 发生错误时保存当前进度
+            self.save_game_state(interrupted=True)  # 发生错误时保存当前进度
             raise
 
     def play_round(self):
@@ -182,202 +182,135 @@ class GameController:
         round_data = {
             'round': self.current_round,
             'contributions': {},
-            'measurements': {},
-            'discussion': [] if self.allow_discussion else None,
             'stats': {}
         }
+        
+        # 收集所有智能体的历史记录用于决策
+        all_history = {}
+        initial_total_money = {}  # 记录本轮开始前每个玩家的总金额
+        for agent in self.agents:
+            all_history[agent.id] = agent.history
+            initial_total_money[agent.id] = agent.current_total_money  # 记录本轮开始前的总金额
+        
+        # 将当前轮的总金额信息添加到all_history中，供其他玩家参考
+        all_history_with_current_money = {}
+        for agent_id, history in all_history.items():
+            all_history_with_current_money[agent_id] = {
+                'history': history,
+                'current_total_money': initial_total_money[agent_id]
+            }
         
         # 1. 收集贡献决策
         print("\n=== 各玩家本轮决策 ===")
         for agent in self.agents:
             contribution = agent.decide_contribution(
                 self.current_round,
-                self.config["endowment"],
-                self.config["r"],  # multiplier是r
-                len(self.agents)
+                self.config["r"],
+                len(self.agents),
+                all_history_with_current_money,
+                self.reveal_mode
             )
-            contribution = min(contribution, agent.get_current_endowment())  # 确保不超过当前禀赋
+            contribution = min(contribution, agent.current_total_money)  # 确保不超过当前总金额
             round_data['contributions'][agent.id] = contribution
             print(f"\n玩家 {agent.id}{'（锚定智能体）' if agent.is_anchor else ''}:")
-            print(f"- 当前禀赋: {agent.get_current_endowment():.2f}")
+            print(f"- 当前总金额: {agent.current_total_money:.2f}")
             print(f"- 决定投入: {contribution:.2f}")
             
-        # 2. 测量阶段
-        for agent in self.agents:
-            measurements = self._collect_measurements(agent)
-            round_data['measurements'][agent.id] = measurements
-        
-        # 3. 计算本轮收益
+        # 2. 计算本轮收益
         payoffs, stats = self.calculate_payoffs(round_data['contributions'])
         round_data['payoffs'] = payoffs
         round_data['stats'] = stats
         
-        # 4. 讨论阶段（如果允许）
-        if self.allow_discussion: 
-            round_data['discussion'] = self._conduct_discussion(round_data)
-            
-        # 5. 更新记忆
+        # 3. 更新记忆
         for agent in self.agents:
-            # 根据reveal_mode准备其他人的贡献信息
-            if self.reveal_mode == "public":
-                others_contributions = {
-                    a_id: contrib for a_id, contrib in round_data['contributions'].items()
-                    if a_id != agent.id
-                }
-            else:
-                others_contributions = None
-                
-            # 获取相关的讨论信息
-            discussion_messages = None
-            if self.allow_discussion and round_data['discussion']:
-                discussion_messages = [
-                    msg for msg in round_data['discussion']
-                    if msg['agent_id'] != agent.id
-                ]
-                
-            # 更新记忆
+            # 先记录本轮的基础游戏数据到agent.history
+            agent.record_round_data(
+                round_num=self.current_round,
+                contribution=round_data['contributions'][agent.id],
+                group_total=round_data['stats']['total_contribution'],
+                payoff=round_data['payoffs'][agent.id],
+                total_money_before_round=initial_total_money[agent.id]
+            )
+            
+            # 然后更新智能体的记忆（此时history已包含当前轮数据）
             agent.update_memory(
                 round_number=self.current_round,
                 own_contribution=round_data['contributions'][agent.id],
-                own_measurement=round_data['measurements'][agent.id],
+                payoff=round_data['payoffs'][agent.id],
                 reveal_mode=self.reveal_mode,
-                public_pool_share=round_data['stats']['share_per_player'],
-                others_contributions=others_contributions,
-                discussion_messages=discussion_messages
+                all_history=all_history
             )
         
-        # 6. 准备agent数据用于记录
+        # 4. 统一进行策略和信念更新（在所有玩家完成本轮后）
+        self._update_agents_memory(all_history)
+        
+        # 5. 准备agent数据用于记录
         round_data['agents_data'] = [{
             "id": agent.id,
-            "initial_endowment": agent.get_current_endowment(),
+            "initial_total_money": agent.current_total_money,
             "contribution": round_data['contributions'][agent.id],
             "payoff": round_data['payoffs'][agent.id],
-            "memory": agent.memory_log[-1] if agent.memory_log else None  # 添加记忆内容
+            "latest_strategy": agent.get_latest_strategy() if agent.strategy_memory else None,
+            "latest_belief": agent.belief_memory[-1]['updated_personality'] if agent.belief_memory else None
         } for agent in self.agents]
-        
-        # 每轮保存游戏状态
-        self.save_game_state()
-        
-        # 打印每个智能体的记忆内容
-        print("\n=== 智能体记忆 ===")
-        for agent in self.agents:
-            if agent.memory_log:
-                print(f"\n玩家 {agent.id} 的记忆：\n{agent.memory_log[-1]['summary']}")
         
         return round_data
         
     def _collect_measurements(self, agent):
-        """收集测量数据"""
-        # 构建提示，要求智能体估计其他人的平均贡献
+        """收集测量数据 - 评估其他玩家的平均投入"""
         other_agents_count = len(self.agents) - 1
         
-        # 如果是第一轮，就不提供历史贡献信息
-        if not agent.history:
-            prompt = f"""请估计其他 {other_agents_count} 位玩家的平均投入会是多少？
-            只需输出一个数字，范围 0-{self.config["endowment"]}。"""
+        # 获取最新的思考或反思来帮助评估
+        memory_context = ""
+        if agent.short_term_memory:
+            memory_context = f"你最近的思考：{agent.short_term_memory[-1]['thought']}"
+        elif agent.long_term_memory:
+            memory_context = f"你最新的反思：{agent.long_term_memory[-1]['reflection']}"
         else:
-            prompt = f"""本轮你投入了 {agent.history[-1]['contribution']} 代币。
-            请估计其他 {other_agents_count} 位玩家的平均投入是多少？
-            只需输出一个数字，范围 0-{self.config["endowment"]}。"""
+            memory_context = "这是第一轮游戏。"
+        
+        # 构建评估提示
+        prompt = f"""作为一个{agent.name}，请评估其他 {other_agents_count} 位玩家的平均投入会是多少？
+        
+        每个玩家的初始禀赋是 {self.config["endowment"]} 代币。
+        
+        {memory_context}
+        
+        请基于以上信息和你的性格特征，估计其他玩家的平均投入。
+        只需输出一个数字，范围 0-{self.config["endowment"]}。"""
         
         messages = [
-            {"role": "system", "content": "你需要基于已知信息，估计其他玩家的平均投入。"},
+            {"role": "system", "content": agent.system_prompt},
             {"role": "user", "content": prompt}
         ]
         
-        estimated_avg = agent._call_llm(messages)
+        estimated_avg = agent._call_llm(messages, debug_label="测量阶段-估计他人投入")
         try:
             estimated_avg = float(estimated_avg)
         except ValueError:
             estimated_avg = self.config["endowment"] / 2  # 默认值
             
         return {
-            'estimated_avg_contribution': estimated_avg
-            # 可以添加更多测量
+            'estimated_avg_contribution': estimated_avg,
         }
+    
+    def _update_agents_memory(self, all_history):
+        """统一更新所有智能体的策略和信念记忆"""
         
-    def _conduct_discussion(self, round_data):
-        """执行讨论阶段"""
-        discussion_log = []
-        for agent in self.agents:
-            # 获取当前轮的投入数据
-            current_contribution = round_data['contributions'].get(agent.id)
-            
-            # 获取其他人的信息（包括当前轮的投入）
-            others_info = self._get_others_info(agent, current_contributions=round_data['contributions'])
-            
-            # 根据是否是第一轮，提供不同的历史信息
-            if not agent.history:
-                message = agent.speak_in_discussion(
-                    round_number=self.current_round,
-                    last_contribution=current_contribution,  # 使用当前轮的投入
-                    last_payoff=None,
-                    others=others_info
-                )
-            else:
-                message = agent.speak_in_discussion(
-                    round_number=self.current_round,
-                    last_contribution=current_contribution,  # 使用当前轮的投入
-                    last_payoff=agent.history[-1]['payoff'],
-                    others=others_info
-                )
-                
-            # 只有当讨论有内容时才记录
-            if message:
-                discussion_log.append({
-                    'agent_id': agent.id,
-                    'message': message
-                })
-                # 打印讨论内容
-                print(f"\n玩家 {agent.id}{'（锚定智能体）' if agent.is_anchor else ''} 的讨论：\n{message}")
-            else:
-                print(f"\n玩家 {agent.id}{'（锚定智能体）' if agent.is_anchor else ''} 没有参与讨论")
-                
-        return discussion_log if discussion_log else None  # 如果没有任何有效讨论，返回None
+        # 策略记忆更新（每2轮）
+        if self.current_round % 2 == 0:
+            print("\n=== 策略记忆更新 ===")
+            for agent in self.agents:
+                agent._update_strategy_memory(self.current_round, self.reveal_mode, all_history)
+                if agent.strategy_memory:
+                    print(f"\n玩家 {agent.id} 的策略记忆更新：\n{agent.strategy_memory[-1]['strategy']}")
         
-    def _get_others_info(self, agent, current_contributions=None):
-        """获取其他玩家的信息，用于讨论
-        
-        Args:
-            agent: 当前智能体
-            current_contributions: 当前轮所有玩家的贡献，用于讨论阶段
-        """
-        if self.reveal_mode == "public":
-            others = []
-            for ag in self.agents:
-                if ag != agent:
-                    if current_contributions:
-                        contribution = current_contributions.get(ag.id)
-                    else:
-                        contribution = ag.history[-1]['contribution'] if ag.history else None
-                        
-                    others.append({
-                        "id": ag.id,
-                        "last_contribution": contribution,
-                        "last_payoff": ag.history[-1]['payoff'] if ag.history else None,
-                        "current_endowment": ag.get_current_endowment()
-                    })
-            return others
-        else:  # anonymous模式
-            # 只返回总体信息
-            total_contribution = 0
-            total_agents = len(self.agents) - 1  # 不包括当前智能体
-            
-            if current_contributions:
-                # 使用当前轮的贡献数据
-                for ag_id, contrib in current_contributions.items():
-                    if ag_id != agent.id:
-                        total_contribution += contrib
-            else:
-                # 使用历史数据
-                for ag in self.agents:
-                    if ag != agent and ag.history:
-                        total_contribution += ag.history[-1]['contribution']
-                        
-            return {
-                "total_agents": total_agents,
-                "total_contribution": total_contribution,
-                "avg_contribution": total_contribution / total_agents if total_agents > 0 and total_contribution > 0 else None
-            }
+        # 信念记忆更新（每4轮）
+        if self.current_round % 4 == 0:
+            print("\n=== 信念记忆更新 ===")
+            for agent in self.agents:
+                agent._update_belief_memory(self.current_round, self.reveal_mode, all_history)
+                if agent.belief_memory:
+                    print(f"\n玩家 {agent.id} 的信念记忆更新：\n{agent.belief_memory[-1]['updated_personality']}")
 
 

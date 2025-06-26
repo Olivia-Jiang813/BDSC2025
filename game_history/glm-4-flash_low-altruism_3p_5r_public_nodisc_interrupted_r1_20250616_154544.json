@@ -1,0 +1,47 @@
+{
+  "game_config": {
+    "model": "glm-4-flash",
+    "personality_type": "low-altruism",
+    "endowment": 10,
+    "r": 1.6,
+    "rounds": 5,
+    "num_players": 3,
+    "reveal_mode": "public",
+    "allow_discussion": false,
+    "completed_rounds": 1
+  },
+  "game_status": "interrupted",
+  "rounds": [],
+  "agents": [
+    {
+      "id": "0",
+      "name": "Agent_0",
+      "personality_type": "low-altruism",
+      "is_anchor": false,
+      "game_history": [],
+      "dialogue_history": [],
+      "short_term_memory": [],
+      "long_term_memory": []
+    },
+    {
+      "id": "1",
+      "name": "Agent_1",
+      "personality_type": "low-altruism",
+      "is_anchor": false,
+      "game_history": [],
+      "dialogue_history": [],
+      "short_term_memory": [],
+      "long_term_memory": []
+    },
+    {
+      "id": "2",
+      "name": "Agent_2",
+      "personality_type": "low-altruism",
+      "is_anchor": false,
+      "game_history": [],
+      "dialogue_history": [],
+      "short_term_memory": [],
+      "long_term_memory": []
+    }
+  ]
+}

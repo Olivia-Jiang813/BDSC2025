@@ -1,3 +1,52 @@
+# 公共品博弈游戏
+
+## 快速开始
+
+### 环境配置
+确保已安装依赖包并配置了API密钥：
+```bash
+pip install -r requirements.txt
+```
+
+在项目根目录创建`.env`文件，添加API密钥：
+```
+OPENAI_API_KEY=your_openai_key
+ZHIPUAI_API_KEY=your_zhipuai_key
+```
+
+### 运行游戏
+
+**1. 单次游戏运行：**
+```bash
+python main.py
+```
+
+**2. 快速测试（少量实验）：**
+```bash
+python run_experiments.py quick
+```
+
+**3. 完整参数扫描：**
+```bash
+python run_experiments.py sweep
+```
+
+**4. 针对性实验：**
+```bash
+python run_experiments.py targeted
+```
+
+### 参数配置
+
+所有游戏参数统一在`config.py`文件中管理：
+
+- **GAME_CONFIG**: 单次游戏的默认参数（禀赋、轮数、玩家数等）
+- **EXPERIMENT_CONFIG**: 批量实验的参数范围和特定实验配置
+
+要修改实验参数，请编辑`config.py`中的相应部分。
+
+---
+
 # 项目文件说明
 
 ## main.py

@@ -1,0 +1,58 @@
+{
+  "game_config": {
+    "model": "gpt-4.1-mini",
+    "personality_type": "selfish",
+    "endowment": 10,
+    "r": 3,
+    "rounds": 5,
+    "num_players": 3,
+    "reveal_mode": "public",
+    "completed_rounds": 1,
+    "final_decisions": null
+  },
+  "game_status": "interrupted",
+  "rounds": [],
+  "agents": [
+    {
+      "id": "0",
+      "name": "Agent_0",
+      "personality_type": "selfish",
+      "is_anchor": false,
+      "game_history": [],
+      "strategy_memory": [],
+      "belief_memory": [],
+      "current_total_money": 10,
+      "final_decision": null
+    },
+    {
+      "id": "1",
+      "name": "Agent_1",
+      "personality_type": "selfish",
+      "is_anchor": false,
+      "game_history": [],
+      "strategy_memory": [],
+      "belief_memory": [],
+      "current_total_money": 10,
+      "final_decision": null
+    },
+    {
+      "id": "2",
+      "name": "Agent_2",
+      "personality_type": "selfish",
+      "is_anchor": false,
+      "game_history": [],
+      "strategy_memory": [],
+      "belief_memory": [],
+      "current_total_money": 10,
+      "final_decision": null
+    }
+  ],
+  "llm_interactions": {
+    "summary": {
+      "total_interactions": 0,
+      "agents_count": 3
+    },
+    "interactions_by_agent": {}
+  },
+  "reasoning_summary": {}
+}

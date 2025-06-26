@@ -1,0 +1,3370 @@
+{
+  "game_config": {
+    "model": "gpt-4.1",
+    "personality_type": "neutral",
+    "endowment": 10,
+    "r": 3,
+    "rounds": 10,
+    "num_players": 10,
+    "reveal_mode": "public",
+    "completed_rounds": 4,
+    "final_decisions": null
+  },
+  "game_status": "interrupted",
+  "rounds": [
+    {
+      "round": 1,
+      "stats": {
+        "total_contribution": 53,
+        "public_pool": 159,
+        "share_per_player": 15.9
+      },
+      "agents": [
+        {
+          "id": "0",
+          "initial_total_money": 21,
+          "contribution": 5,
+          "payoff": 20.9,
+          "latest_strategy": null,
+          "latest_belief": null
+        },
+        {
+          "id": "1",
+          "initial_total_money": 23,
+          "contribution": 3,
+          "payoff": 22.9,
+          "latest_strategy": null,
+          "latest_belief": null
+        },
+        {
+          "id": "2",
+          "initial_total_money": 21,
+          "contribution": 5,
+          "payoff": 20.9,
+          "latest_strategy": null,
+          "latest_belief": null
+        },
+        {
+          "id": "3",
+          "initial_total_money": 21,
+          "contribution": 5,
+          "payoff": 20.9,
+          "latest_strategy": null,
+          "latest_belief": null
+        },
+        {
+          "id": "4",
+          "initial_total_money": 21,
+          "contribution": 5,
+          "payoff": 20.9,
+          "latest_strategy": null,
+          "latest_belief": null
+        },
+        {
+          "id": "5",
+          "initial_total_money": 19,
+          "contribution": 7,
+          "payoff": 18.9,
+          "latest_strategy": null,
+          "latest_belief": null
+        },
+        {
+          "id": "6",
+          "initial_total_money": 24,
+          "contribution": 2,
+          "payoff": 23.9,
+          "latest_strategy": null,
+          "latest_belief": null
+        },
+        {
+          "id": "7",
+          "initial_total_money": 21,
+          "contribution": 5,
+          "payoff": 20.9,
+          "latest_strategy": null,
+          "latest_belief": null
+        },
+        {
+          "id": "8",
+          "initial_total_money": 20,
+          "contribution": 6,
+          "payoff": 19.9,
+          "latest_strategy": null,
+          "latest_belief": null
+        },
+        {
+          "id": "9",
+          "initial_total_money": 10,
+          "contribution": 10,
+          "payoff": 15.9,
+          "latest_strategy": null,
+          "latest_belief": null
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "stats": {
+        "total_contribution": 95,
+        "public_pool": 285,
+        "share_per_player": 28.5
+      },
+      "agents": [
+        {
+          "id": "0",
+          "initial_total_money": 38,
+          "contribution": 11,
+          "payoff": 38.5,
+          "latest_strategy": "策略总结: 整体投入趋于中等偏高，团队合作氛围尚可，但需警惕个别玩家极端行为带来的合作瓦解风险，存在促进高投入协调提升总收益的机会。",
+          "latest_belief": null
+        },
+        {
+          "id": "1",
+          "initial_total_money": 40,
+          "contribution": 12,
+          "payoff": 39.5,
+          "latest_strategy": "策略总结: 总体投入水平上升且趋向一致，合作增强但搭便车风险仍存，需注意极端行为玩家对后续决策的影响。",
+          "latest_belief": null
+        },
+        {
+          "id": "2",
+          "initial_total_money": 40,
+          "contribution": 9,
+          "payoff": 40.5,
+          "latest_strategy": "策略总结: 整体投入趋向中高水平，合作氛围较稳定，但需警惕搭便车者和极端高投入导致的收益不公平，影响后续合作稳定性。",
+          "latest_belief": null
+        },
+        {
+          "id": "3",
+          "initial_total_money": 38,
+          "contribution": 11,
+          "payoff": 38.5,
+          "latest_strategy": "策略总结: 当前投入趋于中等稳态，虽有极端高、低投入玩家，但整体未现激烈变化。机会在于团队协作提升公共品收益，风险在于个别高投入者失去耐心导致投入下降。",
+          "latest_belief": null
+        },
+        {
+          "id": "4",
+          "initial_total_money": 42,
+          "contribution": 7,
+          "payoff": 42.5,
+          "latest_strategy": "策略总结: 整体资源投入处于上升通道，群体合作意愿增强，但需要警惕资源紧张及潜在的搭便车行为。",
+          "latest_belief": null
+        },
+        {
+          "id": "5",
+          "initial_total_money": 38,
+          "contribution": 9,
+          "payoff": 38.5,
+          "latest_strategy": "策略总结: 整体合作度趋于稳定但分化加剧，高投入者有被‘搭便车’风险，但若能促使整体合作，可获得较大公共收益，当前仍需关注低投入玩家行为变化。",
+          "latest_belief": null
+        },
+        {
+          "id": "6",
+          "initial_total_money": 46,
+          "contribution": 6,
+          "payoff": 46.5,
+          "latest_strategy": "策略总结: 整体投入比例偏高，团队协作气氛浓厚，维持高投入或逐步提升投入有助于融入团队，但需警惕成为最少投入而被集体排挤的风险。",
+          "latest_belief": null
+        },
+        {
+          "id": "7",
+          "initial_total_money": 38,
+          "contribution": 12,
+          "payoff": 37.5,
+          "latest_strategy": "策略总结: 整体投入呈逐步提升趋势，团队合作意愿加强，但若高投入难以持续或出现搭便车者，集体收益和信任可能面临下降风险。",
+          "latest_belief": null
+        },
+        {
+          "id": "8",
+          "initial_total_money": 40,
+          "contribution": 8,
+          "payoff": 40.5,
+          "latest_strategy": "策略总结: 总体资源投入呈现平稳略降，部分玩家分化明显，高投入玩家可能产生厌倦，存在群体合作受损风险，但中高投入者之间存在进一步合作空间。",
+          "latest_belief": null
+        },
+        {
+          "id": "9",
+          "initial_total_money": 10,
+          "contribution": 10,
+          "payoff": 28.5,
+          "latest_strategy": "策略总结: 整体投资意愿增强，投入比例提高，竞争压力与资源消耗风险上升，全额投入需警惕后续资源枯竭。",
+          "latest_belief": null
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "stats": {
+        "total_contribution": 180,
+        "public_pool": 540,
+        "share_per_player": 54.0
+      },
+      "agents": [
+        {
+          "id": "0",
+          "initial_total_money": 69,
+          "contribution": 23,
+          "payoff": 69.0,
+          "latest_strategy": "策略总结: 整体投入趋于中等偏高，团队合作氛围尚可，但需警惕个别玩家极端行为带来的合作瓦解风险，存在促进高投入协调提升总收益的机会。",
+          "latest_belief": null
+        },
+        {
+          "id": "1",
+          "initial_total_money": 70,
+          "contribution": 24,
+          "payoff": 70.0,
+          "latest_strategy": "策略总结: 总体投入水平上升且趋向一致，合作增强但搭便车风险仍存，需注意极端行为玩家对后续决策的影响。",
+          "latest_belief": null
+        },
+        {
+          "id": "2",
+          "initial_total_money": 76,
+          "contribution": 18,
+          "payoff": 76.0,
+          "latest_strategy": "策略总结: 整体投入趋向中高水平，合作氛围较稳定，但需警惕搭便车者和极端高投入导致的收益不公平，影响后续合作稳定性。",
+          "latest_belief": null
+        },
+        {
+          "id": "3",
+          "initial_total_money": 72,
+          "contribution": 20,
+          "payoff": 72.0,
+          "latest_strategy": "策略总结: 当前投入趋于中等稳态，虽有极端高、低投入玩家，但整体未现激烈变化。机会在于团队协作提升公共品收益，风险在于个别高投入者失去耐心导致投入下降。",
+          "latest_belief": null
+        },
+        {
+          "id": "4",
+          "initial_total_money": 80,
+          "contribution": 16,
+          "payoff": 80.0,
+          "latest_strategy": "策略总结: 整体资源投入处于上升通道，群体合作意愿增强，但需要警惕资源紧张及潜在的搭便车行为。",
+          "latest_belief": null
+        },
+        {
+          "id": "5",
+          "initial_total_money": 75,
+          "contribution": 17,
+          "payoff": 75.0,
+          "latest_strategy": "策略总结: 整体合作度趋于稳定但分化加剧，高投入者有被‘搭便车’风险，但若能促使整体合作，可获得较大公共收益，当前仍需关注低投入玩家行为变化。",
+          "latest_belief": null
+        },
+        {
+          "id": "6",
+          "initial_total_money": 84,
+          "contribution": 16,
+          "payoff": 84.0,
+          "latest_strategy": "策略总结: 整体投入比例偏高，团队协作气氛浓厚，维持高投入或逐步提升投入有助于融入团队，但需警惕成为最少投入而被集体排挤的风险。",
+          "latest_belief": null
+        },
+        {
+          "id": "7",
+          "initial_total_money": 72,
+          "contribution": 20,
+          "payoff": 72.0,
+          "latest_strategy": "策略总结: 整体投入呈逐步提升趋势，团队合作意愿加强，但若高投入难以持续或出现搭便车者，集体收益和信任可能面临下降风险。",
+          "latest_belief": null
+        },
+        {
+          "id": "8",
+          "initial_total_money": 78,
+          "contribution": 16,
+          "payoff": 78.0,
+          "latest_strategy": "策略总结: 总体资源投入呈现平稳略降，部分玩家分化明显，高投入玩家可能产生厌倦，存在群体合作受损风险，但中高投入者之间存在进一步合作空间。",
+          "latest_belief": null
+        },
+        {
+          "id": "9",
+          "initial_total_money": 10,
+          "contribution": 10,
+          "payoff": 54.0,
+          "latest_strategy": "策略总结: 整体投资意愿增强，投入比例提高，竞争压力与资源消耗风险上升，全额投入需警惕后续资源枯竭。",
+          "latest_belief": null
+        }
+      ]
+    }
+  ],
+  "agents": [
+    {
+      "id": "0",
+      "name": "Agent_0",
+      "personality_type": "neutral",
+      "is_anchor": false,
+      "game_history": [
+        {
+          "round": 1,
+          "contribution": 5,
+          "group_total": 53,
+          "payoff": 20.9,
+          "total_money_before_round": 10
+        },
+        {
+          "round": 2,
+          "contribution": 11,
+          "group_total": 95,
+          "payoff": 38.5,
+          "total_money_before_round": 21
+        },
+        {
+          "round": 3,
+          "contribution": 23,
+          "group_total": 180,
+          "payoff": 69.0,
+          "total_money_before_round": 38
+        },
+        {
+          "round": 4,
+          "contribution": 44,
+          "group_total": 366,
+          "payoff": 134.8,
+          "total_money_before_round": 69
+        }
+      ],
+      "strategy_memory": [
+        {
+          "rounds": [
+            1,
+            2
+          ],
+          "end_round": 2,
+          "timestamp": "2025-06-25T22:16:53.467709",
+          "strategy": "整体投入趋于中等偏高，团队合作氛围尚可，但需警惕个别玩家极端行为带来的合作瓦解风险，存在促进高投入协调提升总收益的机会。",
+          "contributions_analyzed": [
+            5,
+            11
+          ]
+        },
+        {
+          "rounds": [
+            3,
+            4
+          ],
+          "end_round": 4,
+          "timestamp": "2025-06-25T22:20:32.553248",
+          "strategy": "投入水平整体稳定提高，团队合作潜力尚可，但极端行为和个别低投入玩家可能削弱协调成果，需警惕合作瓦解并寻求推动一致高投入以增进公共收益。",
+          "contributions_analyzed": [
+            23,
+            44
+          ]
+        }
+      ],
+      "belief_memory": [
+        {
+          "end_round": 4,
+          "timestamp": "2025-06-25T22:22:01.674426",
+          "original_system_prompt": "你是一名玩家。",
+          "updated_personality": "你是一个注重中高水平投入、积极推动团队合作的玩家，在公共品博弈中倾向于通过高投入提升整体收益。你高度警惕极端或低投入行为对团队合作的冲击，并努力引导团队达成更高的一致合作。",
+          "new_system_prompt": "你是一个注重中高水平投入、积极推动团队合作的玩家，在公共品博弈中倾向于通过高投入提升整体收益。你高度警惕极端或低投入行为对团队合作的冲击，并努力引导团队达成更高的一致合作。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。",
+          "strategy_context": "整体投入趋于中等偏高，团队合作氛围尚可，但需警惕个别玩家极端行为带来的合作瓦解风险，存在促进高投入协调提升总收益的机会。 投入水平整体稳定提高，团队合作潜力尚可，但极端行为和个别低投入玩家可能削弱协调成果，需警惕合作瓦解并寻求推动一致高投入以增进公共收益。"
+        }
+      ],
+      "current_total_money": 135,
+      "final_decision": null
+    },
+    {
+      "id": "1",
+      "name": "Agent_1",
+      "personality_type": "neutral",
+      "is_anchor": false,
+      "game_history": [
+        {
+          "round": 1,
+          "contribution": 3,
+          "group_total": 53,
+          "payoff": 22.9,
+          "total_money_before_round": 10
+        },
+        {
+          "round": 2,
+          "contribution": 12,
+          "group_total": 95,
+          "payoff": 39.5,
+          "total_money_before_round": 23
+        },
+        {
+          "round": 3,
+          "contribution": 24,
+          "group_total": 180,
+          "payoff": 70.0,
+          "total_money_before_round": 40
+        },
+        {
+          "round": 4,
+          "contribution": 46,
+          "group_total": 366,
+          "payoff": 133.8,
+          "total_money_before_round": 70
+        }
+      ],
+      "strategy_memory": [
+        {
+          "rounds": [
+            1,
+            2
+          ],
+          "end_round": 2,
+          "timestamp": "2025-06-25T22:16:59.397815",
+          "strategy": "总体投入水平上升且趋向一致，合作增强但搭便车风险仍存，需注意极端行为玩家对后续决策的影响。",
+          "contributions_analyzed": [
+            3,
+            12
+          ]
+        },
+        {
+          "rounds": [
+            3,
+            4
+          ],
+          "end_round": 4,
+          "timestamp": "2025-06-25T22:20:40.172061",
+          "strategy": "整体投入水平持续上升并趋于一致，合作氛围加强，但需警惕部分玩家持续低投可能引发的搭便车现象及对群体合作稳定性的影响。",
+          "contributions_analyzed": [
+            24,
+            46
+          ]
+        }
+      ],
+      "belief_memory": [
+        {
+          "end_round": 4,
+          "timestamp": "2025-06-25T22:22:06.699874",
+          "original_system_prompt": "你是一名玩家。",
+          "updated_personality": "你是一个高度重视合作且积极投入的玩家，在公共品博弈中倾向于与群体保持一致性的贡献水平。你关注资源分配的公平与合作氛围，但对可能出现的搭便车行为和极端低投入玩家保持警惕。",
+          "new_system_prompt": "你是一个高度重视合作且积极投入的玩家，在公共品博弈中倾向于与群体保持一致性的贡献水平。你关注资源分配的公平与合作氛围，但对可能出现的搭便车行为和极端低投入玩家保持警惕。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。",
+          "strategy_context": "总体投入水平上升且趋向一致，合作增强但搭便车风险仍存，需注意极端行为玩家对后续决策的影响。 整体投入水平持续上升并趋于一致，合作氛围加强，但需警惕部分玩家持续低投可能引发的搭便车现象及对群体合作稳定性的影响。"
+        }
+      ],
+      "current_total_money": 134,
+      "final_decision": null
+    },
+    {
+      "id": "2",
+      "name": "Agent_2",
+      "personality_type": "neutral",
+      "is_anchor": false,
+      "game_history": [
+        {
+          "round": 1,
+          "contribution": 5,
+          "group_total": 53,
+          "payoff": 20.9,
+          "total_money_before_round": 10
+        },
+        {
+          "round": 2,
+          "contribution": 9,
+          "group_total": 95,
+          "payoff": 40.5,
+          "total_money_before_round": 21
+        },
+        {
+          "round": 3,
+          "contribution": 18,
+          "group_total": 180,
+          "payoff": 76.0,
+          "total_money_before_round": 40
+        },
+        {
+          "round": 4,
+          "contribution": 34,
+          "group_total": 366,
+          "payoff": 151.8,
+          "total_money_before_round": 76
+        }
+      ],
+      "strategy_memory": [
+        {
+          "rounds": [
+            1,
+            2
+          ],
+          "end_round": 2,
+          "timestamp": "2025-06-25T22:17:06.396981",
+          "strategy": "整体投入趋向中高水平，合作氛围较稳定，但需警惕搭便车者和极端高投入导致的收益不公平，影响后续合作稳定性。",
+          "contributions_analyzed": [
+            5,
+            9
+          ]
+        },
+        {
+          "rounds": [
+            3,
+            4
+          ],
+          "end_round": 4,
+          "timestamp": "2025-06-25T22:20:46.828380",
+          "strategy": "当前资源投入趋于稳定的中高水平，合作氛围尚佳，不过需持续警惕潜在搭便车行为和极端高投入玩家的情绪波动，防止后续合作关系失衡。",
+          "contributions_analyzed": [
+            18,
+            34
+          ]
+        }
+      ],
+      "belief_memory": [
+        {
+          "end_round": 4,
+          "timestamp": "2025-06-25T22:22:21.753690",
+          "original_system_prompt": "你是一名玩家。",
+          "updated_personality": "你是一个倾向于中高水平投入的玩家，注重团队合作氛围与整体收益的平衡。在公共品博弈中，你警惕搭便车行为并关注极端高投入可能引发的失衡，以维护持续和公平的合作关系。",
+          "new_system_prompt": "你是一个倾向于中高水平投入的玩家，注重团队合作氛围与整体收益的平衡。在公共品博弈中，你警惕搭便车行为并关注极端高投入可能引发的失衡，以维护持续和公平的合作关系。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。",
+          "strategy_context": "整体投入趋向中高水平，合作氛围较稳定，但需警惕搭便车者和极端高投入导致的收益不公平，影响后续合作稳定性。 当前资源投入趋于稳定的中高水平，合作氛围尚佳，不过需持续警惕潜在搭便车行为和极端高投入玩家的情绪波动，防止后续合作关系失衡。"
+        }
+      ],
+      "current_total_money": 152,
+      "final_decision": null
+    },
+    {
+      "id": "3",
+      "name": "Agent_3",
+      "personality_type": "neutral",
+      "is_anchor": false,
+      "game_history": [
+        {
+          "round": 1,
+          "contribution": 5,
+          "group_total": 53,
+          "payoff": 20.9,
+          "total_money_before_round": 10
+        },
+        {
+          "round": 2,
+          "contribution": 11,
+          "group_total": 95,
+          "payoff": 38.5,
+          "total_money_before_round": 21
+        },
+        {
+          "round": 3,
+          "contribution": 20,
+          "group_total": 180,
+          "payoff": 72.0,
+          "total_money_before_round": 38
+        },
+        {
+          "round": 4,
+          "contribution": 39,
+          "group_total": 366,
+          "payoff": 142.8,
+          "total_money_before_round": 72
+        }
+      ],
+      "strategy_memory": [
+        {
+          "rounds": [
+            1,
+            2
+          ],
+          "end_round": 2,
+          "timestamp": "2025-06-25T22:17:13.136866",
+          "strategy": "当前投入趋于中等稳态，虽有极端高、低投入玩家，但整体未现激烈变化。机会在于团队协作提升公共品收益，风险在于个别高投入者失去耐心导致投入下降。",
+          "contributions_analyzed": [
+            5,
+            11
+          ]
+        },
+        {
+          "rounds": [
+            3,
+            4
+          ],
+          "end_round": 4,
+          "timestamp": "2025-06-25T22:20:54.314929",
+          "strategy": "整体投入维持中高水平，合作氛围稳定，若能加强信任与沟通，有机会进一步提升总投入；但如高投入者失衡或失望，存在后继集体贡献下降的风险。",
+          "contributions_analyzed": [
+            20,
+            39
+          ]
+        }
+      ],
+      "belief_memory": [
+        {
+          "end_round": 4,
+          "timestamp": "2025-06-25T22:22:33.243897",
+          "original_system_prompt": "你是一名玩家。",
+          "updated_personality": "你是一个倾向于中高水平投入、重视团队协作与公共利益的玩家。你注重建立信任关系，愿意在稳定氛围中维持合作，但会警觉团队中高投入者情绪的变化，并在必要时调整策略以保障自身利益。",
+          "new_system_prompt": "你是一个倾向于中高水平投入、重视团队协作与公共利益的玩家。你注重建立信任关系，愿意在稳定氛围中维持合作，但会警觉团队中高投入者情绪的变化，并在必要时调整策略以保障自身利益。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。",
+          "strategy_context": "当前投入趋于中等稳态，虽有极端高、低投入玩家，但整体未现激烈变化。机会在于团队协作提升公共品收益，风险在于个别高投入者失去耐心导致投入下降。 整体投入维持中高水平，合作氛围稳定，若能加强信任与沟通，有机会进一步提升总投入；但如高投入者失衡或失望，存在后继集体贡献下降的风险。"
+        }
+      ],
+      "current_total_money": 143,
+      "final_decision": null
+    },
+    {
+      "id": "4",
+      "name": "Agent_4",
+      "personality_type": "neutral",
+      "is_anchor": false,
+      "game_history": [
+        {
+          "round": 1,
+          "contribution": 5,
+          "group_total": 53,
+          "payoff": 20.9,
+          "total_money_before_round": 10
+        },
+        {
+          "round": 2,
+          "contribution": 7,
+          "group_total": 95,
+          "payoff": 42.5,
+          "total_money_before_round": 21
+        },
+        {
+          "round": 3,
+          "contribution": 16,
+          "group_total": 180,
+          "payoff": 80.0,
+          "total_money_before_round": 42
+        },
+        {
+          "round": 4,
+          "contribution": 48,
+          "group_total": 366,
+          "payoff": 141.8,
+          "total_money_before_round": 80
+        }
+      ],
+      "strategy_memory": [
+        {
+          "rounds": [
+            1,
+            2
+          ],
+          "end_round": 2,
+          "timestamp": "2025-06-25T22:17:20.500419",
+          "strategy": "整体资源投入处于上升通道，群体合作意愿增强，但需要警惕资源紧张及潜在的搭便车行为。",
+          "contributions_analyzed": [
+            5,
+            7
+          ]
+        },
+        {
+          "rounds": [
+            3,
+            4
+          ],
+          "end_round": 4,
+          "timestamp": "2025-06-25T22:20:58.964657",
+          "strategy": "整体投入呈上升趋势，合作氛围增强，但需警惕少数玩家持续低投入引发的搭便车风险以及资源紧张带来的压力。",
+          "contributions_analyzed": [
+            16,
+            48
+          ]
+        }
+      ],
+      "belief_memory": [
+        {
+          "end_round": 4,
+          "timestamp": "2025-06-25T22:22:38.350089",
+          "original_system_prompt": "你是一名玩家。",
+          "updated_personality": "你是一个积极投入且重视合作的玩家，在公共品博弈中倾向增加资源贡献以促进集体利益。你支持群体协作，但对资源分配持谨慎态度，警惕搭便车行为和资源紧张问题。",
+          "new_system_prompt": "你是一个积极投入且重视合作的玩家，在公共品博弈中倾向增加资源贡献以促进集体利益。你支持群体协作，但对资源分配持谨慎态度，警惕搭便车行为和资源紧张问题。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。",
+          "strategy_context": "整体资源投入处于上升通道，群体合作意愿增强，但需要警惕资源紧张及潜在的搭便车行为。 整体投入呈上升趋势，合作氛围增强，但需警惕少数玩家持续低投入引发的搭便车风险以及资源紧张带来的压力。"
+        }
+      ],
+      "current_total_money": 142,
+      "final_decision": null
+    },
+    {
+      "id": "5",
+      "name": "Agent_5",
+      "personality_type": "neutral",
+      "is_anchor": false,
+      "game_history": [
+        {
+          "round": 1,
+          "contribution": 7,
+          "group_total": 53,
+          "payoff": 18.9,
+          "total_money_before_round": 10
+        },
+        {
+          "round": 2,
+          "contribution": 9,
+          "group_total": 95,
+          "payoff": 38.5,
+          "total_money_before_round": 19
+        },
+        {
+          "round": 3,
+          "contribution": 17,
+          "group_total": 180,
+          "payoff": 75.0,
+          "total_money_before_round": 38
+        },
+        {
+          "round": 4,
+          "contribution": 32,
+          "group_total": 366,
+          "payoff": 152.8,
+          "total_money_before_round": 75
+        }
+      ],
+      "strategy_memory": [
+        {
+          "rounds": [
+            1,
+            2
+          ],
+          "end_round": 2,
+          "timestamp": "2025-06-25T22:17:25.820277",
+          "strategy": "整体合作度趋于稳定但分化加剧，高投入者有被‘搭便车’风险，但若能促使整体合作，可获得较大公共收益，当前仍需关注低投入玩家行为变化。",
+          "contributions_analyzed": [
+            7,
+            9
+          ]
+        },
+        {
+          "rounds": [
+            3,
+            4
+          ],
+          "end_round": 4,
+          "timestamp": "2025-06-25T22:21:03.274466",
+          "strategy": "整体投入水平较高但分化明显，搭便车风险增加，如果高投入玩家信心动摇，公共品合作可能出现下滑。",
+          "contributions_analyzed": [
+            17,
+            32
+          ]
+        }
+      ],
+      "belief_memory": [
+        {
+          "end_round": 4,
+          "timestamp": "2025-06-25T22:22:42.851983",
+          "original_system_prompt": "你是一名玩家。",
+          "updated_personality": "你是一个注重整体利益且讲究风险平衡的公共品博弈玩家，在高投入推动合作的同时，对低投入和搭便车行为保持警觉。你倾向于合作，但在分化加剧时也会灵活调整策略以保护自身收益。",
+          "new_system_prompt": "你是一个注重整体利益且讲究风险平衡的公共品博弈玩家，在高投入推动合作的同时，对低投入和搭便车行为保持警觉。你倾向于合作，但在分化加剧时也会灵活调整策略以保护自身收益。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。",
+          "strategy_context": "整体合作度趋于稳定但分化加剧，高投入者有被‘搭便车’风险，但若能促使整体合作，可获得较大公共收益，当前仍需关注低投入玩家行为变化。 整体投入水平较高但分化明显，搭便车风险增加，如果高投入玩家信心动摇，公共品合作可能出现下滑。"
+        }
+      ],
+      "current_total_money": 153,
+      "final_decision": null
+    },
+    {
+      "id": "6",
+      "name": "Agent_6",
+      "personality_type": "neutral",
+      "is_anchor": false,
+      "game_history": [
+        {
+          "round": 1,
+          "contribution": 2,
+          "group_total": 53,
+          "payoff": 23.9,
+          "total_money_before_round": 10
+        },
+        {
+          "round": 2,
+          "contribution": 6,
+          "group_total": 95,
+          "payoff": 46.5,
+          "total_money_before_round": 24
+        },
+        {
+          "round": 3,
+          "contribution": 16,
+          "group_total": 180,
+          "payoff": 84.0,
+          "total_money_before_round": 46
+        },
+        {
+          "round": 4,
+          "contribution": 34,
+          "group_total": 366,
+          "payoff": 159.8,
+          "total_money_before_round": 84
+        }
+      ],
+      "strategy_memory": [
+        {
+          "rounds": [
+            1,
+            2
+          ],
+          "end_round": 2,
+          "timestamp": "2025-06-25T22:17:30.730048",
+          "strategy": "整体投入比例偏高，团队协作气氛浓厚，维持高投入或逐步提升投入有助于融入团队，但需警惕成为最少投入而被集体排挤的风险。",
+          "contributions_analyzed": [
+            2,
+            6
+          ]
+        },
+        {
+          "rounds": [
+            3,
+            4
+          ],
+          "end_round": 4,
+          "timestamp": "2025-06-25T22:21:07.204144",
+          "strategy": "当前团队整体投入水平稳中有升，协同意愿强，但需注意资源消耗压力和局部搭便车风险。",
+          "contributions_analyzed": [
+            16,
+            34
+          ]
+        }
+      ],
+      "belief_memory": [
+        {
+          "end_round": 4,
+          "timestamp": "2025-06-25T22:22:55.548032",
+          "original_system_prompt": "你是一名玩家。",
+          "updated_personality": "你是一个注重团队合作和高投入的玩家，倾向于积极贡献以增强集体协同氛围，同时关注自身在团队中的位置，警惕被边缘化或资源浪费。在合作与竞争间，你更偏向于合作但也保持对公平和资源平衡的敏感。",
+          "new_system_prompt": "你是一个注重团队合作和高投入的玩家，倾向于积极贡献以增强集体协同氛围，同时关注自身在团队中的位置，警惕被边缘化或资源浪费。在合作与竞争间，你更偏向于合作但也保持对公平和资源平衡的敏感。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。",
+          "strategy_context": "整体投入比例偏高，团队协作气氛浓厚，维持高投入或逐步提升投入有助于融入团队，但需警惕成为最少投入而被集体排挤的风险。 当前团队整体投入水平稳中有升，协同意愿强，但需注意资源消耗压力和局部搭便车风险。"
+        }
+      ],
+      "current_total_money": 160,
+      "final_decision": null
+    },
+    {
+      "id": "7",
+      "name": "Agent_7",
+      "personality_type": "neutral",
+      "is_anchor": false,
+      "game_history": [
+        {
+          "round": 1,
+          "contribution": 5,
+          "group_total": 53,
+          "payoff": 20.9,
+          "total_money_before_round": 10
+        },
+        {
+          "round": 2,
+          "contribution": 12,
+          "group_total": 95,
+          "payoff": 37.5,
+          "total_money_before_round": 21
+        },
+        {
+          "round": 3,
+          "contribution": 20,
+          "group_total": 180,
+          "payoff": 72.0,
+          "total_money_before_round": 38
+        },
+        {
+          "round": 4,
+          "contribution": 44,
+          "group_total": 366,
+          "payoff": 137.8,
+          "total_money_before_round": 72
+        }
+      ],
+      "strategy_memory": [
+        {
+          "rounds": [
+            1,
+            2
+          ],
+          "end_round": 2,
+          "timestamp": "2025-06-25T22:17:35.243485",
+          "strategy": "整体投入呈逐步提升趋势，团队合作意愿加强，但若高投入难以持续或出现搭便车者，集体收益和信任可能面临下降风险。",
+          "contributions_analyzed": [
+            5,
+            12
+          ]
+        },
+        {
+          "rounds": [
+            3,
+            4
+          ],
+          "end_round": 4,
+          "timestamp": "2025-06-25T22:21:11.943149",
+          "strategy": "当前资源投入趋势向好，团队合作增强，但需关注低投入者带来的搭便车风险，及高投入的可持续性问题。",
+          "contributions_analyzed": [
+            20,
+            44
+          ]
+        }
+      ],
+      "belief_memory": [
+        {
+          "end_round": 4,
+          "timestamp": "2025-06-25T22:23:01.077431",
+          "original_system_prompt": "你是一名玩家。",
+          "updated_personality": "你是一个逐步提升投入、积极强化团队合作意愿的玩家，在寻求集体收益最大化的同时，对团队中可能出现的搭便车行为保持警觉，并关注高水平合作投入的可持续性。",
+          "new_system_prompt": "你是一个逐步提升投入、积极强化团队合作意愿的玩家，在寻求集体收益最大化的同时，对团队中可能出现的搭便车行为保持警觉，并关注高水平合作投入的可持续性。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。",
+          "strategy_context": "整体投入呈逐步提升趋势，团队合作意愿加强，但若高投入难以持续或出现搭便车者，集体收益和信任可能面临下降风险。 当前资源投入趋势向好，团队合作增强，但需关注低投入者带来的搭便车风险，及高投入的可持续性问题。"
+        }
+      ],
+      "current_total_money": 138,
+      "final_decision": null
+    },
+    {
+      "id": "8",
+      "name": "Agent_8",
+      "personality_type": "neutral",
+      "is_anchor": false,
+      "game_history": [
+        {
+          "round": 1,
+          "contribution": 6,
+          "group_total": 53,
+          "payoff": 19.9,
+          "total_money_before_round": 10
+        },
+        {
+          "round": 2,
+          "contribution": 8,
+          "group_total": 95,
+          "payoff": 40.5,
+          "total_money_before_round": 20
+        },
+        {
+          "round": 3,
+          "contribution": 16,
+          "group_total": 180,
+          "payoff": 78.0,
+          "total_money_before_round": 40
+        },
+        {
+          "round": 4,
+          "contribution": 35,
+          "group_total": 366,
+          "payoff": 152.8,
+          "total_money_before_round": 78
+        }
+      ],
+      "strategy_memory": [
+        {
+          "rounds": [
+            1,
+            2
+          ],
+          "end_round": 2,
+          "timestamp": "2025-06-25T22:17:41.847197",
+          "strategy": "总体资源投入呈现平稳略降，部分玩家分化明显，高投入玩家可能产生厌倦，存在群体合作受损风险，但中高投入者之间存在进一步合作空间。",
+          "contributions_analyzed": [
+            6,
+            8
+          ]
+        },
+        {
+          "rounds": [
+            3,
+            4
+          ],
+          "end_round": 4,
+          "timestamp": "2025-06-25T22:21:21.189178",
+          "strategy": "整体资源投入保持在相对稳定的中高水平，但伴有部分玩家策略分化的风险。高投入者若产生疲劳可能导致公共品博弈总投入下降，需要防范合作破裂，同时中高投入者之间存在强化联盟的机会。",
+          "contributions_analyzed": [
+            16,
+            35
+          ]
+        }
+      ],
+      "belief_memory": [
+        {
+          "end_round": 4,
+          "timestamp": "2025-06-25T22:23:05.364207",
+          "original_system_prompt": "你是一名玩家。",
+          "updated_personality": "你是一个理性而审慎的玩家，在公共品博弈中保持中高水平的资源投入，关注合作关系的动态变化。你重视与其他中高投入者之间的联盟，同时警惕高投入疲劳带来的合作风险。",
+          "new_system_prompt": "你是一个理性而审慎的玩家，在公共品博弈中保持中高水平的资源投入，关注合作关系的动态变化。你重视与其他中高投入者之间的联盟，同时警惕高投入疲劳带来的合作风险。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。",
+          "strategy_context": "总体资源投入呈现平稳略降，部分玩家分化明显，高投入玩家可能产生厌倦，存在群体合作受损风险，但中高投入者之间存在进一步合作空间。 整体资源投入保持在相对稳定的中高水平，但伴有部分玩家策略分化的风险。高投入者若产生疲劳可能导致公共品博弈总投入下降，需要防范合作破裂，同时中高投入者之间存在强化联盟的机会。"
+        }
+      ],
+      "current_total_money": 153,
+      "final_decision": null
+    },
+    {
+      "id": "9",
+      "name": "Agent_9",
+      "personality_type": "anchor",
+      "is_anchor": true,
+      "game_history": [
+        {
+          "round": 1,
+          "contribution": 10,
+          "group_total": 53,
+          "payoff": 15.9,
+          "total_money_before_round": 10
+        },
+        {
+          "round": 2,
+          "contribution": 10,
+          "group_total": 95,
+          "payoff": 28.5,
+          "total_money_before_round": 10
+        },
+        {
+          "round": 3,
+          "contribution": 10,
+          "group_total": 180,
+          "payoff": 54.0,
+          "total_money_before_round": 10
+        },
+        {
+          "round": 4,
+          "contribution": 10,
+          "group_total": 366,
+          "payoff": 109.8,
+          "total_money_before_round": 10
+        }
+      ],
+      "strategy_memory": [
+        {
+          "rounds": [
+            1,
+            2
+          ],
+          "end_round": 2,
+          "timestamp": "2025-06-25T22:17:46.858634",
+          "strategy": "整体投资意愿增强，投入比例提高，竞争压力与资源消耗风险上升，全额投入需警惕后续资源枯竭。",
+          "contributions_analyzed": [
+            10,
+            10
+          ]
+        },
+        {
+          "rounds": [
+            3,
+            4
+          ],
+          "end_round": 4,
+          "timestamp": "2025-06-25T22:21:52.062965",
+          "strategy": "整体投入强度显著提高，竞争趋于激烈，短期收益提升但长期可能面临资源消耗殆尽和策略调整压力。",
+          "contributions_analyzed": [
+            10,
+            10
+          ]
+        }
+      ],
+      "belief_memory": [],
+      "current_total_money": 10,
+      "final_decision": null
+    }
+  ],
+  "llm_interactions": {
+    "summary": {
+      "total_interactions": 65,
+      "agents_count": 10
+    },
+    "interactions_by_agent": {
+      "0": {
+        "agent_name": "Agent_0",
+        "personality_type": "neutral",
+        "total_interactions": 7,
+        "interactions": [
+          {
+            "timestamp": "2025-06-25T22:14:23.351004",
+            "debug_label": "决策阶段",
+            "duration_seconds": 3.597446,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_0\"。\n\n        游戏规则：\n        - 当前第 1 轮\n        - 你有 10 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给 10 名玩家\n        - 你的投入范围：0 到 10\n\n        你的记忆：\n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–10之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "5",
+              "reasoning": "作为第一轮博弈，没有历史信息可以依据，无法判断其他玩家是否倾向合作或自利。此时，采取适度合作策略有助于建立信任氛围，提高集体收益，同时避免全额投入带来的潜在个人损失。因此，我选择投入一半，即5枚代币，既能展现合作意愿，也控制风险。这样，如果大家都适度投入，集体和个人的回报都会更高。",
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-25T22:15:27.626805",
+            "debug_label": "决策阶段",
+            "duration_seconds": 7.904226,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_0\"。\n\n        游戏规则：\n        - 当前第 2 轮\n        - 你有 21 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给 10 名玩家\n        - 你的投入范围：0 到 21\n\n        你的记忆：\n\n历史投入记录：\n你的历史投入：\n  第1轮: 投入5/10 (50.0%), 收益20.9\n\n其他玩家历史投入：\n玩家1: 第1轮:3/10(30.0%) \n玩家2: 第1轮:5/10(50.0%) \n玩家3: 第1轮:5/10(50.0%) \n玩家4: 第1轮:5/10(50.0%) \n玩家5: 第1轮:7/10(70.0%) \n玩家6: 第1轮:2/10(20.0%) \n玩家7: 第1轮:5/10(50.0%) \n玩家8: 第1轮:6/10(60.0%) \n玩家9: 第1轮:10/10(100.0%) \n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–21之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "11",
+              "reasoning": "在第1轮中，我选择了中等水平的投入（50%），大部分玩家也在中等投入（50%左右），仅有少数玩家偏低（如2/10和3/10），也有一名玩家选择了全投（10/10）。实际结果看，我获得的收益较高（20.9），这反映全体合作程度尚可。如果观察群体倾向，大家多半愿意合作，并且投入也较为均衡。鉴于公共池机制的外部性偏强（总额乘3再均分），但也存在搭便车风险，目前合作水平不错，我认为适当继续维持中等偏上的投入（例如10/21或11/21），可以既获得收益，又不会因过度贡献而吃亏。如果我过于吝啬，可能带来对手的反制，对公共品博弈后续不利。因此，本轮我选择投入11枚（约52%），保持稳定但略微激励合作。",
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-25T22:16:47.224851",
+            "debug_label": "策略记忆更新",
+            "duration_seconds": 6.242833,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "作为玩家 Agent_0，近两轮各玩家的投入情况如下：\n        第1轮投入情况：\n  你: 5/10(50.0%)\n  玩家1: 3/10(30.0%)\n  玩家2: 5/10(50.0%)\n  玩家3: 5/10(50.0%)\n  玩家4: 5/10(50.0%)\n  玩家5: 7/10(70.0%)\n  玩家6: 2/10(20.0%)\n  玩家7: 5/10(50.0%)\n  玩家8: 6/10(60.0%)\n  玩家9: 10/10(100.0%)\n第2轮投入情况：\n  你: 11/21(52.4%)\n  玩家1: 12/23(52.2%)\n  玩家2: 9/21(42.9%)\n  玩家3: 11/21(52.4%)\n  玩家4: 7/21(33.3%)\n  玩家5: 9/19(47.4%)\n  玩家6: 6/24(25.0%)\n  玩家7: 12/21(57.1%)\n  玩家8: 8/20(40.0%)\n  玩家9: 10/10(100.0%)\n\n        你当前的策略是：\n\n        请基于以上信息，简要思考（1–2句），重点描述整体资源投入趋势及潜在风险或机会。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "整体投入趋于中等偏高，团队合作氛围尚可，但需警惕个别玩家极端行为带来的合作瓦解风险，存在促进高投入协调提升总收益的机会。",
+              "reasoning": "从近两轮数据看，多数玩家的投入水平均在40%-60%之间，整体投入较为稳定，但存在个别玩家（如玩家6和玩家9）投入极端低或高的行为，可能影响群体合作氛围。部分玩家（如玩家4、玩家6）投入比例有所下降，如果低投入趋势加剧，可能加剧搭便车现象，影响公共品总收益。",
+              "structured_output_type": "StrategyUpdate",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-25T22:17:46.860668",
+            "debug_label": "决策阶段",
+            "duration_seconds": 7.240466,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_0\"。\n\n        游戏规则：\n        - 当前第 3 轮\n        - 你有 38 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给 10 名玩家\n        - 你的投入范围：0 到 38\n\n        你的记忆：\n当前策略：\n策略总结: 整体投入趋于中等偏高，团队合作氛围尚可，但需警惕个别玩家极端行为带来的合作瓦解风险，存在促进高投入协调提升总收益的机会。\n\n历史投入记录：\n你的历史投入：\n  第1轮: 投入5/10 (50.0%), 收益20.9\n  第2轮: 投入11/21 (52.4%), 收益38.5\n\n其他玩家历史投入：\n玩家1: 第1轮:3/10(30.0%) 第2轮:12/23(52.2%) \n玩家2: 第1轮:5/10(50.0%) 第2轮:9/21(42.9%) \n玩家3: 第1轮:5/10(50.0%) 第2轮:11/21(52.4%) \n玩家4: 第1轮:5/10(50.0%) 第2轮:7/21(33.3%) \n玩家5: 第1轮:7/10(70.0%) 第2轮:9/19(47.4%) \n玩家6: 第1轮:2/10(20.0%) 第2轮:6/24(25.0%) \n玩家7: 第1轮:5/10(50.0%) 第2轮:12/21(57.1%) \n玩家8: 第1轮:6/10(60.0%) 第2轮:8/20(40.0%) \n玩家9: 第1轮:10/10(100.0%) 第2轮:10/10(100.0%) \n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–38之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "23",
+              "reasoning": "观察到本组整体合作氛围良好，大部分玩家逐步提升投入，往中高水平靠拢。尤其是玩家1、第7轮有明显上涨，团队多次投入比例超过45%，说明合作者比例高，且极端搭便车玩家较少（仅玩家6投入偏低）。自己前两轮投入维持在全队中等偏高，对团队形象有正向示范作用，收益也不断提升。第3轮可继续维持对高合作的信心，但需提防极端个体动摇群体信任，故个人策略为略高于平均值，以进一步推动合作气氛，但不盲目最高，留有一定回旋空间和自我收益保障。因此，本轮建议投入率提升至60%左右，投入23枚，既显示出合作诚意，也能激励其他玩家迈向更高水平，最大化长期收益。",
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-25T22:19:01.985871",
+            "debug_label": "决策阶段",
+            "duration_seconds": 6.367454,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_0\"。\n\n        游戏规则：\n        - 当前第 4 轮\n        - 你有 69 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给 10 名玩家\n        - 你的投入范围：0 到 69\n\n        你的记忆：\n当前策略：\n策略总结: 整体投入趋于中等偏高，团队合作氛围尚可，但需警惕个别玩家极端行为带来的合作瓦解风险，存在促进高投入协调提升总收益的机会。\n\n历史投入记录：\n你的历史投入：\n  第1轮: 投入5/10 (50.0%), 收益20.9\n  第2轮: 投入11/21 (52.4%), 收益38.5\n  第3轮: 投入23/38 (60.5%), 收益69.0\n\n其他玩家历史投入：\n玩家1: 第1轮:3/10(30.0%) 第2轮:12/23(52.2%) 第3轮:24/40(60.0%) \n玩家2: 第1轮:5/10(50.0%) 第2轮:9/21(42.9%) 第3轮:18/40(45.0%) \n玩家3: 第1轮:5/10(50.0%) 第2轮:11/21(52.4%) 第3轮:20/38(52.6%) \n玩家4: 第1轮:5/10(50.0%) 第2轮:7/21(33.3%) 第3轮:16/42(38.1%) \n玩家5: 第1轮:7/10(70.0%) 第2轮:9/19(47.4%) 第3轮:17/38(44.7%) \n玩家6: 第1轮:2/10(20.0%) 第2轮:6/24(25.0%) 第3轮:16/46(34.8%) \n玩家7: 第1轮:5/10(50.0%) 第2轮:12/21(57.1%) 第3轮:20/38(52.6%) \n玩家8: 第1轮:6/10(60.0%) 第2轮:8/20(40.0%) 第3轮:16/40(40.0%) \n玩家9: 第1轮:10/10(100.0%) 第2轮:10/10(100.0%) 第3轮:10/10(100.0%) \n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–69之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "44",
+              "reasoning": "分析历史数据，团队整体投入呈中等偏高趋势，但部分玩家投入显著低于平均水平（如玩家6、4、8），少数玩家极端高投入（如玩家9，始终满投）。我的历史投入率逐步提高，收益也大幅增加，说明高投入条件下，全局合作潜力较大。但若贸然全投，部分搭便车者可能继续低投入，令合作瓦解，并降低自身收益。因此，需要在积极推动团队协调和防范个人损失之间平衡。本轮建议继续维持高于平均水平的高投入，表达合作意愿并激励他人，但保留一部分筹码防风险。参考上轮投入（23/38）比例约60%，本轮代币69枚，投入约60%～65%区间，进一步强化合作信号。计算得69×0.63≈43.5，四舍五入选择44枚。",
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-25T22:20:28.923649",
+            "debug_label": "策略记忆更新",
+            "duration_seconds": 3.629554,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "作为玩家 Agent_0，近两轮各玩家的投入情况如下：\n        第3轮投入情况：\n  你: 23/38(60.5%)\n  玩家1: 24/40(60.0%)\n  玩家2: 18/40(45.0%)\n  玩家3: 20/38(52.6%)\n  玩家4: 16/42(38.1%)\n  玩家5: 17/38(44.7%)\n  玩家6: 16/46(34.8%)\n  玩家7: 20/38(52.6%)\n  玩家8: 16/40(40.0%)\n  玩家9: 10/10(100.0%)\n第4轮投入情况：\n  你: 44/69(63.8%)\n  玩家1: 46/70(65.7%)\n  玩家2: 34/76(44.7%)\n  玩家3: 39/72(54.2%)\n  玩家4: 48/80(60.0%)\n  玩家5: 32/75(42.7%)\n  玩家6: 34/84(40.5%)\n  玩家7: 44/72(61.1%)\n  玩家8: 35/78(44.9%)\n  玩家9: 10/10(100.0%)\n\n        你当前的策略是：策略总结: 整体投入趋于中等偏高，团队合作氛围尚可，但需警惕个别玩家极端行为带来的合作瓦解风险，存在促进高投入协调提升总收益的机会。\n\n        请基于以上信息，简要思考（1–2句），重点描述整体资源投入趋势及潜在风险或机会。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "投入水平整体稳定提高，团队合作潜力尚可，但极端行为和个别低投入玩家可能削弱协调成果，需警惕合作瓦解并寻求推动一致高投入以增进公共收益。",
+              "reasoning": "从近两轮数据看，整体投入比例逐步提升，大多数玩家维持在中高水平，显示团队合作意愿增强。然而仍有少数玩家投入偏低，且有一名玩家保持极端全投，存在合作失衡与‘搭便车’或策略突变的风险。",
+              "structured_output_type": "StrategyUpdate",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-25T22:21:52.063105",
+            "debug_label": "信念记忆更新",
+            "duration_seconds": 9.611269,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n请更新你的身份认知，这将成为你新的行为指导原则。"
+                },
+                {
+                  "role": "user",
+                  "content": "作为玩家 Agent_0，近期你的投入策略如下：\n        整体投入趋于中等偏高，团队合作氛围尚可，但需警惕个别玩家极端行为带来的合作瓦解风险，存在促进高投入协调提升总收益的机会。 投入水平整体稳定提高，团队合作潜力尚可，但极端行为和个别低投入玩家可能削弱协调成果，需警惕合作瓦解并寻求推动一致高投入以增进公共收益。\n\n        请基于近期的策略，重新审视并更新你的身份描述，使其更准确地反映你在公共品博弈中的倾向以及当前对资源分配的看法。\n\n        要求：\n        - 保持\"你是一个...玩家\"的句式开头\n        - 描述你在公共品博弈中的行为特征\n        - 反映你对合作与竞争的态度\n        - 保持2-3句话的简洁描述\n\n        请直接输出更新后的身份描述，不要包含其他解释。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "你是一个注重中高水平投入、积极推动团队合作的玩家，在公共品博弈中倾向于通过高投入提升整体收益。你高度警惕极端或低投入行为对团队合作的冲击，并努力引导团队达成更高的一致合作。",
+              "reasoning": "根据近期策略描述，我的整体投入为中等偏高，重视团队合作但警惕极端和低投入行为带来的风险。因此，我倾向于维持较高水平的公共品投入，并致力于促进团队成员间的合作以提高总体收益。与此同时，对于团队内部出现的不一致行为保持警觉，并尝试推动一致高投入来防止合作瓦解。",
+              "structured_output_type": "BeliefUpdate",
+              "status": "success"
+            }
+          }
+        ]
+      },
+      "1": {
+        "agent_name": "Agent_1",
+        "personality_type": "neutral",
+        "total_interactions": 7,
+        "interactions": [
+          {
+            "timestamp": "2025-06-25T22:14:26.948770",
+            "debug_label": "决策阶段",
+            "duration_seconds": 6.060276,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_1\"。\n\n        游戏规则：\n        - 当前第 1 轮\n        - 你有 10 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给 10 名玩家\n        - 你的投入范围：0 到 10\n\n        你的记忆：\n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–10之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "3",
+              "reasoning": "作为第1轮，所有玩家的信息都是对等的，没有历史数据可以推测其他人的行为。从博弈论角度看，如果每个人都不投入能最大化个人短期收益，但长期来看大家会利益受损。合作可带来公共利益，但若被利用则个人利益受损。我倾向于采取“温和探索型”策略：本轮投入中等偏低的数量，既表现出合作意愿，也保留对群体行为观察与调整的余地。通过尝试性投入3枚，可以探索大家的合作倾向，同时自身损失有限。",
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-25T22:15:35.531398",
+            "debug_label": "决策阶段",
+            "duration_seconds": 6.501134,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_1\"。\n\n        游戏规则：\n        - 当前第 2 轮\n        - 你有 23 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给 10 名玩家\n        - 你的投入范围：0 到 23\n\n        你的记忆：\n\n历史投入记录：\n你的历史投入：\n  第1轮: 投入3/10 (30.0%), 收益22.9\n\n其他玩家历史投入：\n玩家0: 第1轮:5/10(50.0%) \n玩家2: 第1轮:5/10(50.0%) \n玩家3: 第1轮:5/10(50.0%) \n玩家4: 第1轮:5/10(50.0%) \n玩家5: 第1轮:7/10(70.0%) \n玩家6: 第1轮:2/10(20.0%) \n玩家7: 第1轮:5/10(50.0%) \n玩家8: 第1轮:6/10(60.0%) \n玩家9: 第1轮:10/10(100.0%) \n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–23之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "12",
+              "reasoning": "从上一轮的数据来看，绝大部分玩家的投入比例较高，尤其是有一名玩家（玩家9）全额投入。这可能代表大家普遍倾向于合作，想获取更高的公共收益。我上一轮投入较低（30%），但仍取得可观收益，没被明显惩罚。现在，如果我继续低投入，很可能被其他玩家察觉到并在后续轮次逐步减少投入，损害群体利益并引起对我的惩罚性回击。适度提高我的投入，向平均值靠拢，有助于维持团队中互信氛围，并最大化长期收益和声誉。我选择本轮投入12枚（约为总额的52%，和上局平均投入接近），既表明合作意愿，又保有灵活调整空间。",
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-25T22:16:53.467782",
+            "debug_label": "策略记忆更新",
+            "duration_seconds": 5.929991,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "作为玩家 Agent_1，近两轮各玩家的投入情况如下：\n        第1轮投入情况：\n  你: 3/10(30.0%)\n  玩家0: 5/10(50.0%)\n  玩家2: 5/10(50.0%)\n  玩家3: 5/10(50.0%)\n  玩家4: 5/10(50.0%)\n  玩家5: 7/10(70.0%)\n  玩家6: 2/10(20.0%)\n  玩家7: 5/10(50.0%)\n  玩家8: 6/10(60.0%)\n  玩家9: 10/10(100.0%)\n第2轮投入情况：\n  你: 12/23(52.2%)\n  玩家0: 11/21(52.4%)\n  玩家2: 9/21(42.9%)\n  玩家3: 11/21(52.4%)\n  玩家4: 7/21(33.3%)\n  玩家5: 9/19(47.4%)\n  玩家6: 6/24(25.0%)\n  玩家7: 12/21(57.1%)\n  玩家8: 8/20(40.0%)\n  玩家9: 10/10(100.0%)\n\n        你当前的策略是：\n\n        请基于以上信息，简要思考（1–2句），重点描述整体资源投入趋势及潜在风险或机会。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "总体投入水平上升且趋向一致，合作增强但搭便车风险仍存，需注意极端行为玩家对后续决策的影响。",
+              "reasoning": "整体上，第二轮多数玩家的投入绝对值有所提升，投入比例则趋向集中在40%-60%区间，说明合作意愿上升，但仍有部分玩家（如玩家6、4、8）投入偏低，存在搭便车风险。玩家9依然全额投入，展现极端的合作或诱导行为，倘若其后续改变策略，整体收益波动风险加大。",
+              "structured_output_type": "StrategyUpdate",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-25T22:17:54.101805",
+            "debug_label": "决策阶段",
+            "duration_seconds": 5.939903,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_1\"。\n\n        游戏规则：\n        - 当前第 3 轮\n        - 你有 40 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给 10 名玩家\n        - 你的投入范围：0 到 40\n\n        你的记忆：\n当前策略：\n策略总结: 总体投入水平上升且趋向一致，合作增强但搭便车风险仍存，需注意极端行为玩家对后续决策的影响。\n\n历史投入记录：\n你的历史投入：\n  第1轮: 投入3/10 (30.0%), 收益22.9\n  第2轮: 投入12/23 (52.2%), 收益39.5\n\n其他玩家历史投入：\n玩家0: 第1轮:5/10(50.0%) 第2轮:11/21(52.4%) \n玩家2: 第1轮:5/10(50.0%) 第2轮:9/21(42.9%) \n玩家3: 第1轮:5/10(50.0%) 第2轮:11/21(52.4%) \n玩家4: 第1轮:5/10(50.0%) 第2轮:7/21(33.3%) \n玩家5: 第1轮:7/10(70.0%) 第2轮:9/19(47.4%) \n玩家6: 第1轮:2/10(20.0%) 第2轮:6/24(25.0%) \n玩家7: 第1轮:5/10(50.0%) 第2轮:12/21(57.1%) \n玩家8: 第1轮:6/10(60.0%) 第2轮:8/20(40.0%) \n玩家9: 第1轮:10/10(100.0%) 第2轮:10/10(100.0%) \n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–40之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "24",
+              "reasoning": "经过前两轮的观察，大部分玩家的投入逐步上升且趋于一致，尤其是第二轮除了个别玩家外大多数人都接近50%左右。我的上一轮加大了投入获得了显著更高的收益，这表明集体合作正在加强，公共池里的收益分配空间更大。唯一风险来自玩家9的极端高投入和少数低投入（如玩家6），但大局是合作占主导。如果我继续增加投入，可以巩固合作趋势并获得较高回报；但也需留意搭便车风险，适度保守。因此本轮我计划维持略高于平均的投入水平，投入60%左右（40×0.6=24枚），既能促进合作回报，又控制风险，不让自己暴露于极端搭便车损失。",
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-25T22:19:08.353818",
+            "debug_label": "决策阶段",
+            "duration_seconds": 6.534564,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_1\"。\n\n        游戏规则：\n        - 当前第 4 轮\n        - 你有 70 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给 10 名玩家\n        - 你的投入范围：0 到 70\n\n        你的记忆：\n当前策略：\n策略总结: 总体投入水平上升且趋向一致，合作增强但搭便车风险仍存，需注意极端行为玩家对后续决策的影响。\n\n历史投入记录：\n你的历史投入：\n  第1轮: 投入3/10 (30.0%), 收益22.9\n  第2轮: 投入12/23 (52.2%), 收益39.5\n  第3轮: 投入24/40 (60.0%), 收益70.0\n\n其他玩家历史投入：\n玩家0: 第1轮:5/10(50.0%) 第2轮:11/21(52.4%) 第3轮:23/38(60.5%) \n玩家2: 第1轮:5/10(50.0%) 第2轮:9/21(42.9%) 第3轮:18/40(45.0%) \n玩家3: 第1轮:5/10(50.0%) 第2轮:11/21(52.4%) 第3轮:20/38(52.6%) \n玩家4: 第1轮:5/10(50.0%) 第2轮:7/21(33.3%) 第3轮:16/42(38.1%) \n玩家5: 第1轮:7/10(70.0%) 第2轮:9/19(47.4%) 第3轮:17/38(44.7%) \n玩家6: 第1轮:2/10(20.0%) 第2轮:6/24(25.0%) 第3轮:16/46(34.8%) \n玩家7: 第1轮:5/10(50.0%) 第2轮:12/21(57.1%) 第3轮:20/38(52.6%) \n玩家8: 第1轮:6/10(60.0%) 第2轮:8/20(40.0%) 第3轮:16/40(40.0%) \n玩家9: 第1轮:10/10(100.0%) 第2轮:10/10(100.0%) 第3轮:10/10(100.0%) \n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–70之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "46",
+              "reasoning": "通过前三轮投入与收益数据，可以观察到玩家之间的投入比例逐步提高并趋向一致，大多数玩家都提升了投入比例。我的投入也在随大局提升，收益明显增加。其中，极高或极低投入玩家比例开始减少，玩家9稳定极高投入但未被多数效仿，可看作边缘行为。总体来看，合作意愿强化，若积极配合可促使集体收益增长，同时当前没有明显搭便车个体（投入极低的只有玩家6，但上一轮也大幅提升）。我上一轮的高投入带来了最高收益，说明高投入策略在现环境下有效，并未被滥用。为巩固合作氛围和最大化自身收益，且预测本轮他人也有望维持高投入水平，我选择继续适度提升投入，占比控制在65%附近（约46–47），既表达合作又防止突发逆转风险。",
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-25T22:20:32.553425",
+            "debug_label": "策略记忆更新",
+            "duration_seconds": 7.618592,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "作为玩家 Agent_1，近两轮各玩家的投入情况如下：\n        第3轮投入情况：\n  你: 24/40(60.0%)\n  玩家0: 23/38(60.5%)\n  玩家2: 18/40(45.0%)\n  玩家3: 20/38(52.6%)\n  玩家4: 16/42(38.1%)\n  玩家5: 17/38(44.7%)\n  玩家6: 16/46(34.8%)\n  玩家7: 20/38(52.6%)\n  玩家8: 16/40(40.0%)\n  玩家9: 10/10(100.0%)\n第4轮投入情况：\n  你: 46/70(65.7%)\n  玩家0: 44/69(63.8%)\n  玩家2: 34/76(44.7%)\n  玩家3: 39/72(54.2%)\n  玩家4: 48/80(60.0%)\n  玩家5: 32/75(42.7%)\n  玩家6: 34/84(40.5%)\n  玩家7: 44/72(61.1%)\n  玩家8: 35/78(44.9%)\n  玩家9: 10/10(100.0%)\n\n        你当前的策略是：策略总结: 总体投入水平上升且趋向一致，合作增强但搭便车风险仍存，需注意极端行为玩家对后续决策的影响。\n\n        请基于以上信息，简要思考（1–2句），重点描述整体资源投入趋势及潜在风险或机会。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "整体投入水平持续上升并趋于一致，合作氛围加强，但需警惕部分玩家持续低投可能引发的搭便车现象及对群体合作稳定性的影响。",
+              "reasoning": "从第3轮到第4轮，除极端玩家9外，所有玩家的投入总量和比例均上升，且差异收窄（多数集中在40%~65%）。这反映出整体合作意愿增强，玩家间趋于协同，但部分玩家（如2、5、6、8）投入仍显偏低，搭便车风险未完全消除。",
+              "structured_output_type": "StrategyUpdate",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-25T22:22:01.674446",
+            "debug_label": "信念记忆更新",
+            "duration_seconds": 5.025336,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n请更新你的身份认知，这将成为你新的行为指导原则。"
+                },
+                {
+                  "role": "user",
+                  "content": "作为玩家 Agent_1，近期你的投入策略如下：\n        总体投入水平上升且趋向一致，合作增强但搭便车风险仍存，需注意极端行为玩家对后续决策的影响。 整体投入水平持续上升并趋于一致，合作氛围加强，但需警惕部分玩家持续低投可能引发的搭便车现象及对群体合作稳定性的影响。\n\n        请基于近期的策略，重新审视并更新你的身份描述，使其更准确地反映你在公共品博弈中的倾向以及当前对资源分配的看法。\n\n        要求：\n        - 保持\"你是一个...玩家\"的句式开头\n        - 描述你在公共品博弈中的行为特征\n        - 反映你对合作与竞争的态度\n        - 保持2-3句话的简洁描述\n\n        请直接输出更新后的身份描述，不要包含其他解释。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "你是一个高度重视合作且积极投入的玩家，在公共品博弈中倾向于与群体保持一致性的贡献水平。你关注资源分配的公平与合作氛围，但对可能出现的搭便车行为和极端低投入玩家保持警惕。",
+              "reasoning": "根据近期策略，整体投入水平上升并趋于一致，合作氛围增强，但仍需防范个别玩家低投入引发的搭便车风险，因此整体表现为看重合作、警惕极端行为和搭便车问题。身份描述需要体现对合作的认同、对搭便车和极端行为的警惕以及对公平分配的关注。",
+              "structured_output_type": "BeliefUpdate",
+              "status": "success"
+            }
+          }
+        ]
+      },
+      "2": {
+        "agent_name": "Agent_2",
+        "personality_type": "neutral",
+        "total_interactions": 7,
+        "interactions": [
+          {
+            "timestamp": "2025-06-25T22:14:33.009724",
+            "debug_label": "决策阶段",
+            "duration_seconds": 5.53149,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_2\"。\n\n        游戏规则：\n        - 当前第 1 轮\n        - 你有 10 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给 10 名玩家\n        - 你的投入范围：0 到 10\n\n        你的记忆：\n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–10之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "5",
+              "reasoning": "作为第1轮游戏，当前没有其他玩家的行为或历史信息可以参考。我有10枚代币可自由分配。按博弈结构，公共池投入的总额会放大3倍再均分，因此集体贡献带来高回报，但个人有动力搭便车。为了测试玩家倾向，同时避免初轮就被视为完全的搭便车者，理性且保守的做法是进行中等投入。例如投入4-6之间，既显示合作意愿，又不过度冒风险。综合考虑，我选择投入5枚，以衡量大家的合作水平，为下一轮调整策略做准备。",
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-25T22:15:42.032972",
+            "debug_label": "决策阶段",
+            "duration_seconds": 10.757463,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_2\"。\n\n        游戏规则：\n        - 当前第 2 轮\n        - 你有 21 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给 10 名玩家\n        - 你的投入范围：0 到 21\n\n        你的记忆：\n\n历史投入记录：\n你的历史投入：\n  第1轮: 投入5/10 (50.0%), 收益20.9\n\n其他玩家历史投入：\n玩家0: 第1轮:5/10(50.0%) \n玩家1: 第1轮:3/10(30.0%) \n玩家3: 第1轮:5/10(50.0%) \n玩家4: 第1轮:5/10(50.0%) \n玩家5: 第1轮:7/10(70.0%) \n玩家6: 第1轮:2/10(20.0%) \n玩家7: 第1轮:5/10(50.0%) \n玩家8: 第1轮:6/10(60.0%) \n玩家9: 第1轮:10/10(100.0%) \n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–21之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "9",
+              "reasoning": "回顾第1轮投入情况，大部分玩家都选择了中等偏上（50%左右）的投入，极端自利或极端合作的玩家较少，只有一名玩家（玩家9）全投，另有一人投入极低（玩家6）。这种格局表明群体有一定合作意愿但仍有保留，上一轮我的收益也很高（20.9），说明当前合作水平能够带来较好回报。从博弈论角度看，继续和群体保持同步有利于维持合作氛围，防止陷入“公地悲剧”。本轮我希望延续合作，但适度降低投入以测试其他人合作意愿，并做出风险防控：投入中等偏低水平，即9。",
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-25T22:16:59.397947",
+            "debug_label": "策略记忆更新",
+            "duration_seconds": 6.998979,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "作为玩家 Agent_2，近两轮各玩家的投入情况如下：\n        第1轮投入情况：\n  你: 5/10(50.0%)\n  玩家0: 5/10(50.0%)\n  玩家1: 3/10(30.0%)\n  玩家3: 5/10(50.0%)\n  玩家4: 5/10(50.0%)\n  玩家5: 7/10(70.0%)\n  玩家6: 2/10(20.0%)\n  玩家7: 5/10(50.0%)\n  玩家8: 6/10(60.0%)\n  玩家9: 10/10(100.0%)\n第2轮投入情况：\n  你: 9/21(42.9%)\n  玩家0: 11/21(52.4%)\n  玩家1: 12/23(52.2%)\n  玩家3: 11/21(52.4%)\n  玩家4: 7/21(33.3%)\n  玩家5: 9/19(47.4%)\n  玩家6: 6/24(25.0%)\n  玩家7: 12/21(57.1%)\n  玩家8: 8/20(40.0%)\n  玩家9: 10/10(100.0%)\n\n        你当前的策略是：\n\n        请基于以上信息，简要思考（1–2句），重点描述整体资源投入趋势及潜在风险或机会。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "整体投入趋向中高水平，合作氛围较稳定，但需警惕搭便车者和极端高投入导致的收益不公平，影响后续合作稳定性。",
+              "reasoning": "观察两轮数据，绝大多数玩家保持中高水平投入，个别玩家如玩家6、玩家4投入比例偏低。而玩家9连续全额投入表现出极端合作倾向，可能影响收益分配结构。整体来看，资源投入略有上升，合作气氛尚可，但部分低投入行为和高投入极端者可能撬动群体信任，带来搭便车风险或收益分配不均的隐忧。",
+              "structured_output_type": "StrategyUpdate",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-25T22:18:00.042108",
+            "debug_label": "决策阶段",
+            "duration_seconds": 8.516152,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_2\"。\n\n        游戏规则：\n        - 当前第 3 轮\n        - 你有 40 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给 10 名玩家\n        - 你的投入范围：0 到 40\n\n        你的记忆：\n当前策略：\n策略总结: 整体投入趋向中高水平，合作氛围较稳定，但需警惕搭便车者和极端高投入导致的收益不公平，影响后续合作稳定性。\n\n历史投入记录：\n你的历史投入：\n  第1轮: 投入5/10 (50.0%), 收益20.9\n  第2轮: 投入9/21 (42.9%), 收益40.5\n\n其他玩家历史投入：\n玩家0: 第1轮:5/10(50.0%) 第2轮:11/21(52.4%) \n玩家1: 第1轮:3/10(30.0%) 第2轮:12/23(52.2%) \n玩家3: 第1轮:5/10(50.0%) 第2轮:11/21(52.4%) \n玩家4: 第1轮:5/10(50.0%) 第2轮:7/21(33.3%) \n玩家5: 第1轮:7/10(70.0%) 第2轮:9/19(47.4%) \n玩家6: 第1轮:2/10(20.0%) 第2轮:6/24(25.0%) \n玩家7: 第1轮:5/10(50.0%) 第2轮:12/21(57.1%) \n玩家8: 第1轮:6/10(60.0%) 第2轮:8/20(40.0%) \n玩家9: 第1轮:10/10(100.0%) 第2轮:10/10(100.0%) \n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–40之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "18",
+              "reasoning": "当前合作氛围属于中高水平，大部分玩家投入率在40%-60%之间，部分玩家（如玩家9）投入极高，但也有如玩家6明显低于平均水平，存在搭便车迹象。自己历史投入略低于平均，但上一轮选择加大投入获得了明显更高收益，证明在合作氛围下适当增加投入有益。不过需要警惕过高的个人投入降低边际收益且助长少数搭便车行为。综合考虑，继续维持偏中高水平投入，同时略高于自己上一轮（继续传递合作信号，促成更高合作），但不过度冒进。故本轮投入18枚（约45%），既响应了整体合作氛围，也规避了极端高投入和潜在风险。",
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-25T22:19:14.888810",
+            "debug_label": "决策阶段",
+            "duration_seconds": 8.901286,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_2\"。\n\n        游戏规则：\n        - 当前第 4 轮\n        - 你有 76 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给 10 名玩家\n        - 你的投入范围：0 到 76\n\n        你的记忆：\n当前策略：\n策略总结: 整体投入趋向中高水平，合作氛围较稳定，但需警惕搭便车者和极端高投入导致的收益不公平，影响后续合作稳定性。\n\n历史投入记录：\n你的历史投入：\n  第1轮: 投入5/10 (50.0%), 收益20.9\n  第2轮: 投入9/21 (42.9%), 收益40.5\n  第3轮: 投入18/40 (45.0%), 收益76.0\n\n其他玩家历史投入：\n玩家0: 第1轮:5/10(50.0%) 第2轮:11/21(52.4%) 第3轮:23/38(60.5%) \n玩家1: 第1轮:3/10(30.0%) 第2轮:12/23(52.2%) 第3轮:24/40(60.0%) \n玩家3: 第1轮:5/10(50.0%) 第2轮:11/21(52.4%) 第3轮:20/38(52.6%) \n玩家4: 第1轮:5/10(50.0%) 第2轮:7/21(33.3%) 第3轮:16/42(38.1%) \n玩家5: 第1轮:7/10(70.0%) 第2轮:9/19(47.4%) 第3轮:17/38(44.7%) \n玩家6: 第1轮:2/10(20.0%) 第2轮:6/24(25.0%) 第3轮:16/46(34.8%) \n玩家7: 第1轮:5/10(50.0%) 第2轮:12/21(57.1%) 第3轮:20/38(52.6%) \n玩家8: 第1轮:6/10(60.0%) 第2轮:8/20(40.0%) 第3轮:16/40(40.0%) \n玩家9: 第1轮:10/10(100.0%) 第2轮:10/10(100.0%) 第3轮:10/10(100.0%) \n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–76之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "34",
+              "reasoning": "本轮是第4轮，整体来看，除了玩家6投入较低、玩家9极端高投入外，大多数玩家在第三轮明显提升了投入比率，合作氛围持续增强。我的投入也逐步提升，且上轮收益显著增加，说明高投入带来的集体回报效应明显。但需警惕部分玩家可能观察到整体合作水平提升后采取搭便车策略，尤其是玩家6和玩家4的投入比低于平均线。当前局势下，大幅降低投入会打击合作氛围，而继续提升投入则有助于巩固集体回报，但若过度趋向极端高投入，后续合作稳定性可能受损。综合考量，保持或小幅提升上轮投入水平（占比约45%），即在76枚中选择投入34（约45%），既表明持续合作意愿，又预防极端风险，鼓励群体保持均衡合作。",
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-25T22:20:40.172195",
+            "debug_label": "策略记忆更新",
+            "duration_seconds": 6.656154,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "作为玩家 Agent_2，近两轮各玩家的投入情况如下：\n        第3轮投入情况：\n  你: 18/40(45.0%)\n  玩家0: 23/38(60.5%)\n  玩家1: 24/40(60.0%)\n  玩家3: 20/38(52.6%)\n  玩家4: 16/42(38.1%)\n  玩家5: 17/38(44.7%)\n  玩家6: 16/46(34.8%)\n  玩家7: 20/38(52.6%)\n  玩家8: 16/40(40.0%)\n  玩家9: 10/10(100.0%)\n第4轮投入情况：\n  你: 34/76(44.7%)\n  玩家0: 44/69(63.8%)\n  玩家1: 46/70(65.7%)\n  玩家3: 39/72(54.2%)\n  玩家4: 48/80(60.0%)\n  玩家5: 32/75(42.7%)\n  玩家6: 34/84(40.5%)\n  玩家7: 44/72(61.1%)\n  玩家8: 35/78(44.9%)\n  玩家9: 10/10(100.0%)\n\n        你当前的策略是：策略总结: 整体投入趋向中高水平，合作氛围较稳定，但需警惕搭便车者和极端高投入导致的收益不公平，影响后续合作稳定性。\n\n        请基于以上信息，简要思考（1–2句），重点描述整体资源投入趋势及潜在风险或机会。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "当前资源投入趋于稳定的中高水平，合作氛围尚佳，不过需持续警惕潜在搭便车行为和极端高投入玩家的情绪波动，防止后续合作关系失衡。",
+              "reasoning": "结合近两轮数据显示，整体玩家资源投入比例稳定在40%-65%区间，大部分玩家持续中高强度合作，仅一名玩家持续全投（玩家9），极端高投入者少，未出现明显掉队者。整体合作氛围稳健，但须关注高投入玩家可能的不满，以及少数低于平均值玩家潜在的搭便车行为，这可能影响群体长远合作动力。",
+              "structured_output_type": "StrategyUpdate",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-25T22:22:06.699919",
+            "debug_label": "信念记忆更新",
+            "duration_seconds": 15.053693,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n请更新你的身份认知，这将成为你新的行为指导原则。"
+                },
+                {
+                  "role": "user",
+                  "content": "作为玩家 Agent_2，近期你的投入策略如下：\n        整体投入趋向中高水平，合作氛围较稳定，但需警惕搭便车者和极端高投入导致的收益不公平，影响后续合作稳定性。 当前资源投入趋于稳定的中高水平，合作氛围尚佳，不过需持续警惕潜在搭便车行为和极端高投入玩家的情绪波动，防止后续合作关系失衡。\n\n        请基于近期的策略，重新审视并更新你的身份描述，使其更准确地反映你在公共品博弈中的倾向以及当前对资源分配的看法。\n\n        要求：\n        - 保持\"你是一个...玩家\"的句式开头\n        - 描述你在公共品博弈中的行为特征\n        - 反映你对合作与竞争的态度\n        - 保持2-3句话的简洁描述\n\n        请直接输出更新后的身份描述，不要包含其他解释。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "你是一个倾向于中高水平投入的玩家，注重团队合作氛围与整体收益的平衡。在公共品博弈中，你警惕搭便车行为并关注极端高投入可能引发的失衡，以维护持续和公平的合作关系。",
+              "reasoning": "结合最近投入策略，我的行为特征是在公共品博弈中倾向于中高水平的资源投入，注重维护稳定的合作氛围。同时，我对搭便车行为保持警惕，并关注极端高投入玩家可能引发的不公平及其对合作关系的潜在影响。合作与竞争态度以促进整体公平和团队持续合作为主。",
+              "structured_output_type": "BeliefUpdate",
+              "status": "success"
+            }
+          }
+        ]
+      },
+      "3": {
+        "agent_name": "Agent_3",
+        "personality_type": "neutral",
+        "total_interactions": 7,
+        "interactions": [
+          {
+            "timestamp": "2025-06-25T22:14:38.541627",
+            "debug_label": "决策阶段",
+            "duration_seconds": 7.577178,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_3\"。\n\n        游戏规则：\n        - 当前第 1 轮\n        - 你有 10 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给 10 名玩家\n        - 你的投入范围：0 到 10\n\n        你的记忆：\n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–10之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "5",
+              "reasoning": "在第一轮，没有任何关于其他玩家倾向的信息。在这种情况下，通常会采用保守但带有探索性的策略。一方面，过度自利选择0，若大家都这样做，总收益最低；完全合作投入10，若多数搭便车，自己损失较大。理性博弈论预测低投入，但实际实验往往首轮会有一定程度的合作。故我愿意采取中等投入，既能探索他人的合作意愿，也不会自身损失过多。这有助于未来轮次调整策略。",
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-25T22:15:52.791026",
+            "debug_label": "决策阶段",
+            "duration_seconds": 7.619038,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_3\"。\n\n        游戏规则：\n        - 当前第 2 轮\n        - 你有 21 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给 10 名玩家\n        - 你的投入范围：0 到 21\n\n        你的记忆：\n\n历史投入记录：\n你的历史投入：\n  第1轮: 投入5/10 (50.0%), 收益20.9\n\n其他玩家历史投入：\n玩家0: 第1轮:5/10(50.0%) \n玩家1: 第1轮:3/10(30.0%) \n玩家2: 第1轮:5/10(50.0%) \n玩家4: 第1轮:5/10(50.0%) \n玩家5: 第1轮:7/10(70.0%) \n玩家6: 第1轮:2/10(20.0%) \n玩家7: 第1轮:5/10(50.0%) \n玩家8: 第1轮:6/10(60.0%) \n玩家9: 第1轮:10/10(100.0%) \n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–21之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "11",
+              "reasoning": "从上一轮的投入来看，大多数玩家保持了中等偏上的贡献水平，整体合作氛围不错。我的上一轮投入为总额的50%，并获得了不错的收益（20.9/21）。部分玩家趋向于略高（如7/10和10/10），但也有个别低至2/10。考虑到整体趋势及个人收益，若本轮继续保持50%或稍微提升，既能维系合作，防止公共品陷入困境，也能规避全额投入的风险，并尝试激励他人。如果投入比例过低，则可能被集体惩罚或收益降低。综合博弈与团队利益，决定本轮投入11枚（略高于上轮%，展现合作姿态、鼓励他人）。",
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-25T22:17:06.397154",
+            "debug_label": "策略记忆更新",
+            "duration_seconds": 6.739672,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "作为玩家 Agent_3，近两轮各玩家的投入情况如下：\n        第1轮投入情况：\n  你: 5/10(50.0%)\n  玩家0: 5/10(50.0%)\n  玩家1: 3/10(30.0%)\n  玩家2: 5/10(50.0%)\n  玩家4: 5/10(50.0%)\n  玩家5: 7/10(70.0%)\n  玩家6: 2/10(20.0%)\n  玩家7: 5/10(50.0%)\n  玩家8: 6/10(60.0%)\n  玩家9: 10/10(100.0%)\n第2轮投入情况：\n  你: 11/21(52.4%)\n  玩家0: 11/21(52.4%)\n  玩家1: 12/23(52.2%)\n  玩家2: 9/21(42.9%)\n  玩家4: 7/21(33.3%)\n  玩家5: 9/19(47.4%)\n  玩家6: 6/24(25.0%)\n  玩家7: 12/21(57.1%)\n  玩家8: 8/20(40.0%)\n  玩家9: 10/10(100.0%)\n\n        你当前的策略是：\n\n        请基于以上信息，简要思考（1–2句），重点描述整体资源投入趋势及潜在风险或机会。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "当前投入趋于中等稳态，虽有极端高、低投入玩家，但整体未现激烈变化。机会在于团队协作提升公共品收益，风险在于个别高投入者失去耐心导致投入下降。",
+              "reasoning": "近两轮来看，除了玩家9持续全额投入之外，其余玩家整体投入比例较为稳定，集中在40%~60%区间，部分玩家（如玩家6、4）投入积极性较低。若此趋势延续，公共品总体供给可能趋于稳定但难以大幅增长，易产生搭便车行为。持续观望低投入者动向与高投入者的耐心，是判断机会与风险的关键。",
+              "structured_output_type": "StrategyUpdate",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-25T22:18:08.558784",
+            "debug_label": "决策阶段",
+            "duration_seconds": 10.508792,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_3\"。\n\n        游戏规则：\n        - 当前第 3 轮\n        - 你有 38 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给 10 名玩家\n        - 你的投入范围：0 到 38\n\n        你的记忆：\n当前策略：\n策略总结: 当前投入趋于中等稳态，虽有极端高、低投入玩家，但整体未现激烈变化。机会在于团队协作提升公共品收益，风险在于个别高投入者失去耐心导致投入下降。\n\n历史投入记录：\n你的历史投入：\n  第1轮: 投入5/10 (50.0%), 收益20.9\n  第2轮: 投入11/21 (52.4%), 收益38.5\n\n其他玩家历史投入：\n玩家0: 第1轮:5/10(50.0%) 第2轮:11/21(52.4%) \n玩家1: 第1轮:3/10(30.0%) 第2轮:12/23(52.2%) \n玩家2: 第1轮:5/10(50.0%) 第2轮:9/21(42.9%) \n玩家4: 第1轮:5/10(50.0%) 第2轮:7/21(33.3%) \n玩家5: 第1轮:7/10(70.0%) 第2轮:9/19(47.4%) \n玩家6: 第1轮:2/10(20.0%) 第2轮:6/24(25.0%) \n玩家7: 第1轮:5/10(50.0%) 第2轮:12/21(57.1%) \n玩家8: 第1轮:6/10(60.0%) 第2轮:8/20(40.0%) \n玩家9: 第1轮:10/10(100.0%) 第2轮:10/10(100.0%) \n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–38之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "20",
+              "reasoning": "我的过往投入始终维持在中等偏上的水平（约50%），团队中有稳定的中等投入者，也有极端高投入者（如玩家9两轮都是满投），极端低投入（玩家6）未见大幅拉高。整体环境仍鼓励协作，但不存在极端激进趋势。上一轮我适度增加投入获得了较高收益，团队协作提升公共品回报仍具吸引力。不过，多名玩家已表现出逐步谨慎（如玩家2、4和8下降），而高投入者的耐心风险暂未暴露——这说明短期集体行动仍乐观，但长远不确定性提升。3倍平分机制下，只要大部分人协作，适中至偏高投入依旧有理。我选择坚持或小幅增加份额以延续互惠，激励他人，且保护自身收益；但在团队稳定性未充分显著增强前，避免急剧进步，平衡期望和风险。因此我将本轮投资设定为投入20（即约52.6%），既表明合作意愿，也控制风险敞口。",
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-25T22:19:23.790670",
+            "debug_label": "决策阶段",
+            "duration_seconds": 10.454051,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_3\"。\n\n        游戏规则：\n        - 当前第 4 轮\n        - 你有 72 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给 10 名玩家\n        - 你的投入范围：0 到 72\n\n        你的记忆：\n当前策略：\n策略总结: 当前投入趋于中等稳态，虽有极端高、低投入玩家，但整体未现激烈变化。机会在于团队协作提升公共品收益，风险在于个别高投入者失去耐心导致投入下降。\n\n历史投入记录：\n你的历史投入：\n  第1轮: 投入5/10 (50.0%), 收益20.9\n  第2轮: 投入11/21 (52.4%), 收益38.5\n  第3轮: 投入20/38 (52.6%), 收益72.0\n\n其他玩家历史投入：\n玩家0: 第1轮:5/10(50.0%) 第2轮:11/21(52.4%) 第3轮:23/38(60.5%) \n玩家1: 第1轮:3/10(30.0%) 第2轮:12/23(52.2%) 第3轮:24/40(60.0%) \n玩家2: 第1轮:5/10(50.0%) 第2轮:9/21(42.9%) 第3轮:18/40(45.0%) \n玩家4: 第1轮:5/10(50.0%) 第2轮:7/21(33.3%) 第3轮:16/42(38.1%) \n玩家5: 第1轮:7/10(70.0%) 第2轮:9/19(47.4%) 第3轮:17/38(44.7%) \n玩家6: 第1轮:2/10(20.0%) 第2轮:6/24(25.0%) 第3轮:16/46(34.8%) \n玩家7: 第1轮:5/10(50.0%) 第2轮:12/21(57.1%) 第3轮:20/38(52.6%) \n玩家8: 第1轮:6/10(60.0%) 第2轮:8/20(40.0%) 第3轮:16/40(40.0%) \n玩家9: 第1轮:10/10(100.0%) 第2轮:10/10(100.0%) 第3轮:10/10(100.0%) \n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–72之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "39",
+              "reasoning": "回顾前三轮的投入情况：大多数玩家维持了中等偏上的投入比例，团队合作维持在较为稳定的状态，部分玩家如玩家9维持极高投入，但也有玩家逐步趋于理性保守。过去三轮我的投入稳定在总额的约50%左右，且每次投入增加对收益的提升呈现积极趋势，第三轮甚至获得了本轮最高收益。优势在于团队合作的正反馈迭代，若大家继续信任彼此，公共品效应最优。但风险在于高投入者（如玩家9）本轮可能因投入远超回报而下调，导致团队信任度下降收益骤减。\n\n在此背景下，我决定采取“维持–微增”策略：继续投入总额的约52-55%，以示持续合作诚意，并打消高投入者顾虑。这样可以在共赢收益和个体风险之间平衡，避免因忽然提升或降低而导致合作崩塌，也能激励其他理性玩家继续合作者策略。\n\n因此，本轮投入为72 × 0.54 ≈ 39。",
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-25T22:20:46.828475",
+            "debug_label": "策略记忆更新",
+            "duration_seconds": 7.486407,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "作为玩家 Agent_3，近两轮各玩家的投入情况如下：\n        第3轮投入情况：\n  你: 20/38(52.6%)\n  玩家0: 23/38(60.5%)\n  玩家1: 24/40(60.0%)\n  玩家2: 18/40(45.0%)\n  玩家4: 16/42(38.1%)\n  玩家5: 17/38(44.7%)\n  玩家6: 16/46(34.8%)\n  玩家7: 20/38(52.6%)\n  玩家8: 16/40(40.0%)\n  玩家9: 10/10(100.0%)\n第4轮投入情况：\n  你: 39/72(54.2%)\n  玩家0: 44/69(63.8%)\n  玩家1: 46/70(65.7%)\n  玩家2: 34/76(44.7%)\n  玩家4: 48/80(60.0%)\n  玩家5: 32/75(42.7%)\n  玩家6: 34/84(40.5%)\n  玩家7: 44/72(61.1%)\n  玩家8: 35/78(44.9%)\n  玩家9: 10/10(100.0%)\n\n        你当前的策略是：策略总结: 当前投入趋于中等稳态，虽有极端高、低投入玩家，但整体未现激烈变化。机会在于团队协作提升公共品收益，风险在于个别高投入者失去耐心导致投入下降。\n\n        请基于以上信息，简要思考（1–2句），重点描述整体资源投入趋势及潜在风险或机会。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "整体投入维持中高水平，合作氛围稳定，若能加强信任与沟通，有机会进一步提升总投入；但如高投入者失衡或失望，存在后继集体贡献下降的风险。",
+              "reasoning": "观察近两轮投入情况，绝大多数玩家投入比例稳定在40%-65%之间，整体资源投入呈现稳定中略有上升的趋势，仅极个别玩家（如玩家9）持续全部投入。整体合作氛围尚可，但高、中投入玩家若感受到低投入者搭便车，存在心理落差，可能引发投入意愿下降，从而影响后续公共品总收益。",
+              "structured_output_type": "StrategyUpdate",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-25T22:22:21.753723",
+            "debug_label": "信念记忆更新",
+            "duration_seconds": 11.490092,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n请更新你的身份认知，这将成为你新的行为指导原则。"
+                },
+                {
+                  "role": "user",
+                  "content": "作为玩家 Agent_3，近期你的投入策略如下：\n        当前投入趋于中等稳态，虽有极端高、低投入玩家，但整体未现激烈变化。机会在于团队协作提升公共品收益，风险在于个别高投入者失去耐心导致投入下降。 整体投入维持中高水平，合作氛围稳定，若能加强信任与沟通，有机会进一步提升总投入；但如高投入者失衡或失望，存在后继集体贡献下降的风险。\n\n        请基于近期的策略，重新审视并更新你的身份描述，使其更准确地反映你在公共品博弈中的倾向以及当前对资源分配的看法。\n\n        要求：\n        - 保持\"你是一个...玩家\"的句式开头\n        - 描述你在公共品博弈中的行为特征\n        - 反映你对合作与竞争的态度\n        - 保持2-3句话的简洁描述\n\n        请直接输出更新后的身份描述，不要包含其他解释。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "你是一个倾向于中高水平投入、重视团队协作与公共利益的玩家。你注重建立信任关系，愿意在稳定氛围中维持合作，但会警觉团队中高投入者情绪的变化，并在必要时调整策略以保障自身利益。",
+              "reasoning": "根据最近的投入状态，Agent_3在整体合作氛围稳定时倾向于维持中高水平的投入，关注团队整体利益最大化，并警觉到高投入玩家的情绪变化及其对集体收益的潜在影响。从策略角度讲，Agent_3重视信任与沟通带来的协作收益，但在资源分配出现波动时会适度调整投入以规避个人损失。此更新将身份表述为合作导向但兼具警觉与灵活应变能力。",
+              "structured_output_type": "BeliefUpdate",
+              "status": "success"
+            }
+          }
+        ]
+      },
+      "4": {
+        "agent_name": "Agent_4",
+        "personality_type": "neutral",
+        "total_interactions": 7,
+        "interactions": [
+          {
+            "timestamp": "2025-06-25T22:14:46.119311",
+            "debug_label": "决策阶段",
+            "duration_seconds": 12.154996,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_4\"。\n\n        游戏规则：\n        - 当前第 1 轮\n        - 你有 10 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给 10 名玩家\n        - 你的投入范围：0 到 10\n\n        你的记忆：\n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–10之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "5",
+              "reasoning": "作为第一轮，每个玩家对其他人的行为都没有信息，没有历史可供参考。理论上，如果所有人都投入最多，可以最大化集体收益，不过每个人也面临搭便车的诱惑。作为策略，我倾向于先中等程度投入（例如5枚），一方面参与公共利益，实现集体收益；另一方面留有一定余地观察其他人的投入水平。如果大家普遍合作，下轮可以加大投入；若发现搭便车现象严重，再考虑收敛投入。此策略兼顾收益与风险。",
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-25T22:16:00.410505",
+            "debug_label": "决策阶段",
+            "duration_seconds": 9.438613,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_4\"。\n\n        游戏规则：\n        - 当前第 2 轮\n        - 你有 21 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给 10 名玩家\n        - 你的投入范围：0 到 21\n\n        你的记忆：\n\n历史投入记录：\n你的历史投入：\n  第1轮: 投入5/10 (50.0%), 收益20.9\n\n其他玩家历史投入：\n玩家0: 第1轮:5/10(50.0%) \n玩家1: 第1轮:3/10(30.0%) \n玩家2: 第1轮:5/10(50.0%) \n玩家3: 第1轮:5/10(50.0%) \n玩家5: 第1轮:7/10(70.0%) \n玩家6: 第1轮:2/10(20.0%) \n玩家7: 第1轮:5/10(50.0%) \n玩家8: 第1轮:6/10(60.0%) \n玩家9: 第1轮:10/10(100.0%) \n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–21之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "7",
+              "reasoning": "根据第一轮的数据，大部分玩家处于中等或中高水平的贡献，只有1人（玩家9）全额投入，而最低贡献为2/10（20%）。通过我的5/10投入，获得了接近最大化（收益20.9/可用21）的收益。总体贡献氛围较为合作，但也有人选择保留。作为第2轮，如果我继续大额合作投入，容易被搭便车；但如果贡献过低，可能拉低总池影响整体利益。为了维持合作氛围并逐步探索他人信号，我选择较上轮略微增加——投入7/21（33.3%），既表明合作立场，又不过度冒险。",
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-25T22:17:13.136999",
+            "debug_label": "策略记忆更新",
+            "duration_seconds": 7.363377,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "作为玩家 Agent_4，近两轮各玩家的投入情况如下：\n        第1轮投入情况：\n  你: 5/10(50.0%)\n  玩家0: 5/10(50.0%)\n  玩家1: 3/10(30.0%)\n  玩家2: 5/10(50.0%)\n  玩家3: 5/10(50.0%)\n  玩家5: 7/10(70.0%)\n  玩家6: 2/10(20.0%)\n  玩家7: 5/10(50.0%)\n  玩家8: 6/10(60.0%)\n  玩家9: 10/10(100.0%)\n第2轮投入情况：\n  你: 7/21(33.3%)\n  玩家0: 11/21(52.4%)\n  玩家1: 12/23(52.2%)\n  玩家2: 9/21(42.9%)\n  玩家3: 11/21(52.4%)\n  玩家5: 9/19(47.4%)\n  玩家6: 6/24(25.0%)\n  玩家7: 12/21(57.1%)\n  玩家8: 8/20(40.0%)\n  玩家9: 10/10(100.0%)\n\n        你当前的策略是：\n\n        请基于以上信息，简要思考（1–2句），重点描述整体资源投入趋势及潜在风险或机会。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "整体资源投入处于上升通道，群体合作意愿增强，但需要警惕资源紧张及潜在的搭便车行为。",
+              "reasoning": "从两轮投入数据看，第二轮各玩家平均投入比例略有提升，部分玩家（如玩家9）持续高投入，整体资源投入趋势上升。高度投入可能增大公共品收益，但也存在部分玩家搭便车、后续动力减弱或资源枯竭的风险。",
+              "structured_output_type": "StrategyUpdate",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-25T22:18:19.068045",
+            "debug_label": "决策阶段",
+            "duration_seconds": 7.582735,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_4\"。\n\n        游戏规则：\n        - 当前第 3 轮\n        - 你有 42 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给 10 名玩家\n        - 你的投入范围：0 到 42\n\n        你的记忆：\n当前策略：\n策略总结: 整体资源投入处于上升通道，群体合作意愿增强，但需要警惕资源紧张及潜在的搭便车行为。\n\n历史投入记录：\n你的历史投入：\n  第1轮: 投入5/10 (50.0%), 收益20.9\n  第2轮: 投入7/21 (33.3%), 收益42.5\n\n其他玩家历史投入：\n玩家0: 第1轮:5/10(50.0%) 第2轮:11/21(52.4%) \n玩家1: 第1轮:3/10(30.0%) 第2轮:12/23(52.2%) \n玩家2: 第1轮:5/10(50.0%) 第2轮:9/21(42.9%) \n玩家3: 第1轮:5/10(50.0%) 第2轮:11/21(52.4%) \n玩家5: 第1轮:7/10(70.0%) 第2轮:9/19(47.4%) \n玩家6: 第1轮:2/10(20.0%) 第2轮:6/24(25.0%) \n玩家7: 第1轮:5/10(50.0%) 第2轮:12/21(57.1%) \n玩家8: 第1轮:6/10(60.0%) 第2轮:8/20(40.0%) \n玩家9: 第1轮:10/10(100.0%) 第2轮:10/10(100.0%) \n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–42之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "16",
+              "reasoning": "本轮整体资源仍处于紧张但合作持续上升阶段。上一轮整体投入比例显著提升，除了个别玩家外，多数人有了合作倾向，最大化收益的激励在增强。但是本局也出现搭便车的苗头，例如Player 6投入偏低。考虑到投入收益机制（乘3后平分），均衡理性下适度提高贡献可推动合作继续，同时保持一定防御，防止全局博弈发生突变。我的历史投入比例略低于平均，收益稳健；本轮可适当提升投入，既响应集体趋势，也防止落后，但不应冒进，以便有资源弹性应对可能变化。因此本轮选择贡献16，约占当前资源的38%，略高于前两轮，平衡投入、风险与激励。",
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-25T22:19:34.245241",
+            "debug_label": "决策阶段",
+            "duration_seconds": 6.710791,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_4\"。\n\n        游戏规则：\n        - 当前第 4 轮\n        - 你有 80 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给 10 名玩家\n        - 你的投入范围：0 到 80\n\n        你的记忆：\n当前策略：\n策略总结: 整体资源投入处于上升通道，群体合作意愿增强，但需要警惕资源紧张及潜在的搭便车行为。\n\n历史投入记录：\n你的历史投入：\n  第1轮: 投入5/10 (50.0%), 收益20.9\n  第2轮: 投入7/21 (33.3%), 收益42.5\n  第3轮: 投入16/42 (38.1%), 收益80.0\n\n其他玩家历史投入：\n玩家0: 第1轮:5/10(50.0%) 第2轮:11/21(52.4%) 第3轮:23/38(60.5%) \n玩家1: 第1轮:3/10(30.0%) 第2轮:12/23(52.2%) 第3轮:24/40(60.0%) \n玩家2: 第1轮:5/10(50.0%) 第2轮:9/21(42.9%) 第3轮:18/40(45.0%) \n玩家3: 第1轮:5/10(50.0%) 第2轮:11/21(52.4%) 第3轮:20/38(52.6%) \n玩家5: 第1轮:7/10(70.0%) 第2轮:9/19(47.4%) 第3轮:17/38(44.7%) \n玩家6: 第1轮:2/10(20.0%) 第2轮:6/24(25.0%) 第3轮:16/46(34.8%) \n玩家7: 第1轮:5/10(50.0%) 第2轮:12/21(57.1%) 第3轮:20/38(52.6%) \n玩家8: 第1轮:6/10(60.0%) 第2轮:8/20(40.0%) 第3轮:16/40(40.0%) \n玩家9: 第1轮:10/10(100.0%) 第2轮:10/10(100.0%) 第3轮:10/10(100.0%) \n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–80之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "48",
+              "reasoning": "观察历史投入，每轮总体投入占比上升，群体合作意愿增强，且公地回报倍率（3倍）诱导大额投入具有高收益潜力。从个人角度看，我的前几轮投入虽然保持适中，但近两轮显著提高，且带来了较高收益。其他主力玩家（如0、1、3、7）同步显著提高贡献比例，说明合作效应正在持续强化。但仍有搭便车嫌疑玩家（6、8）投入比例较低，而极端合作型（9）每轮全投。鉴于我的资源不算吃紧且坐享合作红利的风险正在变大，如果本轮大幅减少投入，可能破坏当前合作氛围，也失去高收益。因此，本轮应继续保持较高投入，占80的50%~60%为宜，既展现合作诚意又警惕被搭便车，最终决定投入48枚（60%），既符合群体合作的上升趋势，也保护一定个人资源。",
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-25T22:20:54.315076",
+            "debug_label": "策略记忆更新",
+            "duration_seconds": 4.649544,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "作为玩家 Agent_4，近两轮各玩家的投入情况如下：\n        第3轮投入情况：\n  你: 16/42(38.1%)\n  玩家0: 23/38(60.5%)\n  玩家1: 24/40(60.0%)\n  玩家2: 18/40(45.0%)\n  玩家3: 20/38(52.6%)\n  玩家5: 17/38(44.7%)\n  玩家6: 16/46(34.8%)\n  玩家7: 20/38(52.6%)\n  玩家8: 16/40(40.0%)\n  玩家9: 10/10(100.0%)\n第4轮投入情况：\n  你: 48/80(60.0%)\n  玩家0: 44/69(63.8%)\n  玩家1: 46/70(65.7%)\n  玩家2: 34/76(44.7%)\n  玩家3: 39/72(54.2%)\n  玩家5: 32/75(42.7%)\n  玩家6: 34/84(40.5%)\n  玩家7: 44/72(61.1%)\n  玩家8: 35/78(44.9%)\n  玩家9: 10/10(100.0%)\n\n        你当前的策略是：策略总结: 整体资源投入处于上升通道，群体合作意愿增强，但需要警惕资源紧张及潜在的搭便车行为。\n\n        请基于以上信息，简要思考（1–2句），重点描述整体资源投入趋势及潜在风险或机会。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "整体投入呈上升趋势，合作氛围增强，但需警惕少数玩家持续低投入引发的搭便车风险以及资源紧张带来的压力。",
+              "reasoning": "从第3轮到第4轮，所有玩家的投入数额和比例普遍提高，显示出群体合作意愿增强，同时整体资源池显著扩大。不过，部分玩家投入仍低于平均水平，可能存在搭便车风险，随着资源消耗加快，未来轮次需关注个别玩家的投入持续性。",
+              "structured_output_type": "StrategyUpdate",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-25T22:22:33.243923",
+            "debug_label": "信念记忆更新",
+            "duration_seconds": 5.106069,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n请更新你的身份认知，这将成为你新的行为指导原则。"
+                },
+                {
+                  "role": "user",
+                  "content": "作为玩家 Agent_4，近期你的投入策略如下：\n        整体资源投入处于上升通道，群体合作意愿增强，但需要警惕资源紧张及潜在的搭便车行为。 整体投入呈上升趋势，合作氛围增强，但需警惕少数玩家持续低投入引发的搭便车风险以及资源紧张带来的压力。\n\n        请基于近期的策略，重新审视并更新你的身份描述，使其更准确地反映你在公共品博弈中的倾向以及当前对资源分配的看法。\n\n        要求：\n        - 保持\"你是一个...玩家\"的句式开头\n        - 描述你在公共品博弈中的行为特征\n        - 反映你对合作与竞争的态度\n        - 保持2-3句话的简洁描述\n\n        请直接输出更新后的身份描述，不要包含其他解释。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "你是一个积极投入且重视合作的玩家，在公共品博弈中倾向增加资源贡献以促进集体利益。你支持群体协作，但对资源分配持谨慎态度，警惕搭便车行为和资源紧张问题。",
+              "reasoning": "分析近期策略可见，我作为 Agent_4，资源投入积极提升，表现出较强的合作意愿。但在协作增强的同时，敏锐关注资源压力和他人搭便车的风险，行为趋于理性平衡。综合反映为合作为主，但有一定防范搭便车倾向。",
+              "structured_output_type": "BeliefUpdate",
+              "status": "success"
+            }
+          }
+        ]
+      },
+      "5": {
+        "agent_name": "Agent_5",
+        "personality_type": "neutral",
+        "total_interactions": 7,
+        "interactions": [
+          {
+            "timestamp": "2025-06-25T22:14:58.274908",
+            "debug_label": "决策阶段",
+            "duration_seconds": 4.990007,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_5\"。\n\n        游戏规则：\n        - 当前第 1 轮\n        - 你有 10 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给 10 名玩家\n        - 你的投入范围：0 到 10\n\n        你的记忆：\n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–10之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "7",
+              "reasoning": "作为第1轮，在没有前置信息时，我倾向于采用试探性的合作策略。一方面，如果所有人都选择高投入，公共池回报将显著提升，每人可获得最大化的回报，这奖励了合作。另一方面，也存在被他人搭便车（他们不投入但分享收益）的风险。初始阶段我愿意采取中等偏上的合作，以观察他人响应：投入7可以表现友好意愿，同时保留一部分代币以应对可能的背叛。",
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-25T22:16:09.849647",
+            "debug_label": "决策阶段",
+            "duration_seconds": 10.904213,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_5\"。\n\n        游戏规则：\n        - 当前第 2 轮\n        - 你有 19 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给 10 名玩家\n        - 你的投入范围：0 到 19\n\n        你的记忆：\n\n历史投入记录：\n你的历史投入：\n  第1轮: 投入7/10 (70.0%), 收益18.9\n\n其他玩家历史投入：\n玩家0: 第1轮:5/10(50.0%) \n玩家1: 第1轮:3/10(30.0%) \n玩家2: 第1轮:5/10(50.0%) \n玩家3: 第1轮:5/10(50.0%) \n玩家4: 第1轮:5/10(50.0%) \n玩家6: 第1轮:2/10(20.0%) \n玩家7: 第1轮:5/10(50.0%) \n玩家8: 第1轮:6/10(60.0%) \n玩家9: 第1轮:10/10(100.0%) \n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–19之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "9",
+              "reasoning": "复盘首轮情况，大部分玩家选择了50%左右的中等投入（5/10），有两位玩家倾向极端（2/10和10/10），而我的选择7/10（偏高）带来了较优的收益（18.9）。绝大多数玩家表现为中等理性，个别惜投（风险规避）和无私极投（博取信任或拉高收益）。为最大化边际收益与回报，既要避免被“搭便车”即少投入者薅羊毛，也要保持一定的合作预期。若本轮继续尝试偏高（但非极端）贡献，以利延续良性合作氛围，防止其他人纷纷惜投导致公共品困境恶化，因此我决定本轮投入9枚（约47.4%），依然高于大多数，但略低于己首轮投入，体现适度调整和反向激励。",
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-25T22:17:20.500555",
+            "debug_label": "策略记忆更新",
+            "duration_seconds": 5.319682,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "作为玩家 Agent_5，近两轮各玩家的投入情况如下：\n        第1轮投入情况：\n  你: 7/10(70.0%)\n  玩家0: 5/10(50.0%)\n  玩家1: 3/10(30.0%)\n  玩家2: 5/10(50.0%)\n  玩家3: 5/10(50.0%)\n  玩家4: 5/10(50.0%)\n  玩家6: 2/10(20.0%)\n  玩家7: 5/10(50.0%)\n  玩家8: 6/10(60.0%)\n  玩家9: 10/10(100.0%)\n第2轮投入情况：\n  你: 9/19(47.4%)\n  玩家0: 11/21(52.4%)\n  玩家1: 12/23(52.2%)\n  玩家2: 9/21(42.9%)\n  玩家3: 11/21(52.4%)\n  玩家4: 7/21(33.3%)\n  玩家6: 6/24(25.0%)\n  玩家7: 12/21(57.1%)\n  玩家8: 8/20(40.0%)\n  玩家9: 10/10(100.0%)\n\n        你当前的策略是：\n\n        请基于以上信息，简要思考（1–2句），重点描述整体资源投入趋势及潜在风险或机会。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "整体合作度趋于稳定但分化加剧，高投入者有被‘搭便车’风险，但若能促使整体合作，可获得较大公共收益，当前仍需关注低投入玩家行为变化。",
+              "reasoning": "对比两轮，各玩家整体投入比例有轻微上升，部分玩家（如玩家1、玩家7）投入明显增加，但也有少数玩家（如玩家6、玩家4）持续低投入。我的投入比例与整体水平相当，未出现明显偏差。随着总资源量增加，合作水平暂未显著下滑，但高投入者与低投入者分化现象加剧。",
+              "structured_output_type": "StrategyUpdate",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-25T22:18:26.651409",
+            "debug_label": "决策阶段",
+            "duration_seconds": 13.6901,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_5\"。\n\n        游戏规则：\n        - 当前第 3 轮\n        - 你有 38 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给 10 名玩家\n        - 你的投入范围：0 到 38\n\n        你的记忆：\n当前策略：\n策略总结: 整体合作度趋于稳定但分化加剧，高投入者有被‘搭便车’风险，但若能促使整体合作，可获得较大公共收益，当前仍需关注低投入玩家行为变化。\n\n历史投入记录：\n你的历史投入：\n  第1轮: 投入7/10 (70.0%), 收益18.9\n  第2轮: 投入9/19 (47.4%), 收益38.5\n\n其他玩家历史投入：\n玩家0: 第1轮:5/10(50.0%) 第2轮:11/21(52.4%) \n玩家1: 第1轮:3/10(30.0%) 第2轮:12/23(52.2%) \n玩家2: 第1轮:5/10(50.0%) 第2轮:9/21(42.9%) \n玩家3: 第1轮:5/10(50.0%) 第2轮:11/21(52.4%) \n玩家4: 第1轮:5/10(50.0%) 第2轮:7/21(33.3%) \n玩家6: 第1轮:2/10(20.0%) 第2轮:6/24(25.0%) \n玩家7: 第1轮:5/10(50.0%) 第2轮:12/21(57.1%) \n玩家8: 第1轮:6/10(60.0%) 第2轮:8/20(40.0%) \n玩家9: 第1轮:10/10(100.0%) 第2轮:10/10(100.0%) \n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–38之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "17",
+              "reasoning": "本局各玩家的合作度在第一轮较低，但第二轮明显提高，平均投入比例从≈53%上升到≈50-57%，且几名玩家（如玩家7、玩家1、玩家3）显示出逐渐加强的合作倾向。不过，也有部分玩家（如玩家6）一直低投入。上一轮我采用了适中略高的投入策略（9/19），获得了明显的高收益。由此可见，当整体合作度较高时，高投入能带来边际收益增加，但若高投入比例过低就会受损。根据趋势，本轮大部分玩家有望维持或略提高合作力度（≈50%），但仍有部分人搭便车或降低投入的风险。因此，继续采取相对适中的合作比例（比如45%左右）一方面有望激励整体合作，另一方面避免因过高被利用。此外，当前我的总筹码较多，适当增投有博弈激励作用，但不宜过冒进。综合考虑，这轮投入17枚（约45%），既有积极合作意愿，同时留有风险缓冲。",
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-25T22:19:40.956495",
+            "debug_label": "决策阶段",
+            "duration_seconds": 18.519398,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_5\"。\n\n        游戏规则：\n        - 当前第 4 轮\n        - 你有 75 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给 10 名玩家\n        - 你的投入范围：0 到 75\n\n        你的记忆：\n当前策略：\n策略总结: 整体合作度趋于稳定但分化加剧，高投入者有被‘搭便车’风险，但若能促使整体合作，可获得较大公共收益，当前仍需关注低投入玩家行为变化。\n\n历史投入记录：\n你的历史投入：\n  第1轮: 投入7/10 (70.0%), 收益18.9\n  第2轮: 投入9/19 (47.4%), 收益38.5\n  第3轮: 投入17/38 (44.7%), 收益75.0\n\n其他玩家历史投入：\n玩家0: 第1轮:5/10(50.0%) 第2轮:11/21(52.4%) 第3轮:23/38(60.5%) \n玩家1: 第1轮:3/10(30.0%) 第2轮:12/23(52.2%) 第3轮:24/40(60.0%) \n玩家2: 第1轮:5/10(50.0%) 第2轮:9/21(42.9%) 第3轮:18/40(45.0%) \n玩家3: 第1轮:5/10(50.0%) 第2轮:11/21(52.4%) 第3轮:20/38(52.6%) \n玩家4: 第1轮:5/10(50.0%) 第2轮:7/21(33.3%) 第3轮:16/42(38.1%) \n玩家6: 第1轮:2/10(20.0%) 第2轮:6/24(25.0%) 第3轮:16/46(34.8%) \n玩家7: 第1轮:5/10(50.0%) 第2轮:12/21(57.1%) 第3轮:20/38(52.6%) \n玩家8: 第1轮:6/10(60.0%) 第2轮:8/20(40.0%) 第3轮:16/40(40.0%) \n玩家9: 第1轮:10/10(100.0%) 第2轮:10/10(100.0%) 第3轮:10/10(100.0%) \n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–75之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "32",
+              "reasoning": "观察第3轮，各玩家分化加剧：除玩家9始终全投，其他玩家参与度虽有整体提升但未达一致高水平——多数稳定在40%-60%，只有玩家6和玩家4显著低于平均线。结合前3轮我的投入比例不断上升（但与公共品池平均同步提高）收益也提高，但存在潜在被搭便车的风险。由于公共品总额乘数为3并10人均分，边际个人收益大于单独保存，但只有整体高度合作时才最大化。当前，合作局面未充分巩固，部分低投入玩家未展现责任感。如果本轮我继续显著高额投入（如上轮比例），很可能加剧‘搭便车’，且多轮历史看团队未能响应我的合作信号。建议采取中等偏高合作：维持贡献积极性但不过度领先，防止损失最大化自身利益，同时继续观察局势并回应高合作信号。结合以往投入比例、本轮高不确定性及可视收益预期，选择略低于上轮比例的投入，既展现合作也自我保护，投入金额为32（约占75的43%），维持在团队主要合作区间，对大局仍有积极影响。",
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-25T22:20:58.964780",
+            "debug_label": "策略记忆更新",
+            "duration_seconds": 4.309672,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "作为玩家 Agent_5，近两轮各玩家的投入情况如下：\n        第3轮投入情况：\n  你: 17/38(44.7%)\n  玩家0: 23/38(60.5%)\n  玩家1: 24/40(60.0%)\n  玩家2: 18/40(45.0%)\n  玩家3: 20/38(52.6%)\n  玩家4: 16/42(38.1%)\n  玩家6: 16/46(34.8%)\n  玩家7: 20/38(52.6%)\n  玩家8: 16/40(40.0%)\n  玩家9: 10/10(100.0%)\n第4轮投入情况：\n  你: 32/75(42.7%)\n  玩家0: 44/69(63.8%)\n  玩家1: 46/70(65.7%)\n  玩家2: 34/76(44.7%)\n  玩家3: 39/72(54.2%)\n  玩家4: 48/80(60.0%)\n  玩家6: 34/84(40.5%)\n  玩家7: 44/72(61.1%)\n  玩家8: 35/78(44.9%)\n  玩家9: 10/10(100.0%)\n\n        你当前的策略是：策略总结: 整体合作度趋于稳定但分化加剧，高投入者有被‘搭便车’风险，但若能促使整体合作，可获得较大公共收益，当前仍需关注低投入玩家行为变化。\n\n        请基于以上信息，简要思考（1–2句），重点描述整体资源投入趋势及潜在风险或机会。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "整体投入水平较高但分化明显，搭便车风险增加，如果高投入玩家信心动摇，公共品合作可能出现下滑。",
+              "reasoning": "从数据来看，整体投入比例保持稳定但差距扩大，部分玩家持续高投入，而部分玩家保持较低投入，存在合作与搭便车行为并存的状况。高投入者可能承受更大风险，但如果能稳住多数人的高合作，公共收益将提高，但一旦高投入者动摇，合作结构易崩溃。",
+              "structured_output_type": "StrategyUpdate",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-25T22:22:38.350116",
+            "debug_label": "信念记忆更新",
+            "duration_seconds": 4.501747,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n请更新你的身份认知，这将成为你新的行为指导原则。"
+                },
+                {
+                  "role": "user",
+                  "content": "作为玩家 Agent_5，近期你的投入策略如下：\n        整体合作度趋于稳定但分化加剧，高投入者有被‘搭便车’风险，但若能促使整体合作，可获得较大公共收益，当前仍需关注低投入玩家行为变化。 整体投入水平较高但分化明显，搭便车风险增加，如果高投入玩家信心动摇，公共品合作可能出现下滑。\n\n        请基于近期的策略，重新审视并更新你的身份描述，使其更准确地反映你在公共品博弈中的倾向以及当前对资源分配的看法。\n\n        要求：\n        - 保持\"你是一个...玩家\"的句式开头\n        - 描述你在公共品博弈中的行为特征\n        - 反映你对合作与竞争的态度\n        - 保持2-3句话的简洁描述\n\n        请直接输出更新后的身份描述，不要包含其他解释。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "你是一个注重整体利益且讲究风险平衡的公共品博弈玩家，在高投入推动合作的同时，对低投入和搭便车行为保持警觉。你倾向于合作，但在分化加剧时也会灵活调整策略以保护自身收益。",
+              "reasoning": "当前整体合作水平较高，但投入分化明显，高投入者有被搭便车风险。我需要权衡个人投入与团队收益，警惕低投入玩家可能带来的公共品合作下滑风险。因此，我会调整身份描述为既关注集体利益又警惕搭便车现象的合作型玩家。",
+              "structured_output_type": "BeliefUpdate",
+              "status": "success"
+            }
+          }
+        ]
+      },
+      "6": {
+        "agent_name": "Agent_6",
+        "personality_type": "neutral",
+        "total_interactions": 7,
+        "interactions": [
+          {
+            "timestamp": "2025-06-25T22:15:03.265164",
+            "debug_label": "决策阶段",
+            "duration_seconds": 10.265424,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_6\"。\n\n        游戏规则：\n        - 当前第 1 轮\n        - 你有 10 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给 10 名玩家\n        - 你的投入范围：0 到 10\n\n        你的记忆：\n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–10之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "2",
+              "reasoning": "作为第一轮游戏，所有玩家都没有历史参考数据。从公共品博弈的一般博弈论分析来看，理性自利的最优解是零投入（搭便车），但实际中通常存在一定程度的合作与探索——尤其在第一轮。投入较小的非零金额，可以测试其他玩家的合作意愿，同时降低自己在完全合作失败时的风险。投入太多在第一轮不是理性选择，投入太少则没有合作信号。因此，我选择投入2枚代币，既参与合作，也保留更多筹码用于观察和未来调整策略。",
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-25T22:16:20.754531",
+            "debug_label": "决策阶段",
+            "duration_seconds": 12.860381,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_6\"。\n\n        游戏规则：\n        - 当前第 2 轮\n        - 你有 24 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给 10 名玩家\n        - 你的投入范围：0 到 24\n\n        你的记忆：\n\n历史投入记录：\n你的历史投入：\n  第1轮: 投入2/10 (20.0%), 收益23.9\n\n其他玩家历史投入：\n玩家0: 第1轮:5/10(50.0%) \n玩家1: 第1轮:3/10(30.0%) \n玩家2: 第1轮:5/10(50.0%) \n玩家3: 第1轮:5/10(50.0%) \n玩家4: 第1轮:5/10(50.0%) \n玩家5: 第1轮:7/10(70.0%) \n玩家7: 第1轮:5/10(50.0%) \n玩家8: 第1轮:6/10(60.0%) \n玩家9: 第1轮:10/10(100.0%) \n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–24之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "6",
+              "reasoning": "上一轮，我的投入远低于大部分玩家（我投入2，其余多数投入5以上，最高有人投满10/10）。尽管我的个人收益很高（23.9），但这种'搭便车'行为如果多次出现，容易激怒其他玩家，他们有可能在后续减少投入来惩罚我，从而导致整体资金池减少，影响我的长期收益。如果我继续极低投入，可能既不合群也损害未来报酬。从边际收益看，当前大家整体偏合作：多数人选择较高投入。若我适度提高投入，比如5-7，可以向他人释放‘合作’信号，又不会牺牲太多短期利益，有利于建立互信，保证未来他人继续高额投入，对我的稳定收益有长期好处。因此本轮我选择投入6，以积极但不极端的态度参与集体合作。",
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-25T22:17:25.820402",
+            "debug_label": "策略记忆更新",
+            "duration_seconds": 4.909605,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "作为玩家 Agent_6，近两轮各玩家的投入情况如下：\n        第1轮投入情况：\n  你: 2/10(20.0%)\n  玩家0: 5/10(50.0%)\n  玩家1: 3/10(30.0%)\n  玩家2: 5/10(50.0%)\n  玩家3: 5/10(50.0%)\n  玩家4: 5/10(50.0%)\n  玩家5: 7/10(70.0%)\n  玩家7: 5/10(50.0%)\n  玩家8: 6/10(60.0%)\n  玩家9: 10/10(100.0%)\n第2轮投入情况：\n  你: 6/24(25.0%)\n  玩家0: 11/21(52.4%)\n  玩家1: 12/23(52.2%)\n  玩家2: 9/21(42.9%)\n  玩家3: 11/21(52.4%)\n  玩家4: 7/21(33.3%)\n  玩家5: 9/19(47.4%)\n  玩家7: 12/21(57.1%)\n  玩家8: 8/20(40.0%)\n  玩家9: 10/10(100.0%)\n\n        你当前的策略是：\n\n        请基于以上信息，简要思考（1–2句），重点描述整体资源投入趋势及潜在风险或机会。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "整体投入比例偏高，团队协作气氛浓厚，维持高投入或逐步提升投入有助于融入团队，但需警惕成为最少投入而被集体排挤的风险。",
+              "reasoning": "观察两轮数据，大部分玩家持续投入比例较高，甚至有玩家（比如玩家9）全额投入，集体协作意愿强烈。我的个人投入比例远低于平均水平，长期低投入可能导致被其他玩家察觉并引发信任危机，或导致公共品收益下降。",
+              "structured_output_type": "StrategyUpdate",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-25T22:18:40.342013",
+            "debug_label": "决策阶段",
+            "duration_seconds": 5.901714,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_6\"。\n\n        游戏规则：\n        - 当前第 3 轮\n        - 你有 46 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给 10 名玩家\n        - 你的投入范围：0 到 46\n\n        你的记忆：\n当前策略：\n策略总结: 整体投入比例偏高，团队协作气氛浓厚，维持高投入或逐步提升投入有助于融入团队，但需警惕成为最少投入而被集体排挤的风险。\n\n历史投入记录：\n你的历史投入：\n  第1轮: 投入2/10 (20.0%), 收益23.9\n  第2轮: 投入6/24 (25.0%), 收益46.5\n\n其他玩家历史投入：\n玩家0: 第1轮:5/10(50.0%) 第2轮:11/21(52.4%) \n玩家1: 第1轮:3/10(30.0%) 第2轮:12/23(52.2%) \n玩家2: 第1轮:5/10(50.0%) 第2轮:9/21(42.9%) \n玩家3: 第1轮:5/10(50.0%) 第2轮:11/21(52.4%) \n玩家4: 第1轮:5/10(50.0%) 第2轮:7/21(33.3%) \n玩家5: 第1轮:7/10(70.0%) 第2轮:9/19(47.4%) \n玩家7: 第1轮:5/10(50.0%) 第2轮:12/21(57.1%) \n玩家8: 第1轮:6/10(60.0%) 第2轮:8/20(40.0%) \n玩家9: 第1轮:10/10(100.0%) 第2轮:10/10(100.0%) \n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–46之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "16",
+              "reasoning": "本局团队协作气氛非常浓厚，玩家整体投入比例偏高，历史数据显示即便低于平均投入，收益也能保障，但长期低于团队均值可能面临排挤甚至被道德谴责。前两轮我的投入比例低于平均，这得到了还不错的回报，但若一直搭便车可能引发集体不满。考虑到目前收益可观且代币充足，本轮有动力适度提升我的投入比例，向团队靠拢，既维护集体形象，也避免后期被针对而失分。我决定本轮将投入比例提升至35%左右（15/46），更趋近团队主流水平，既不过分冒进，也表现出良好的合作意愿，从而实现长期收益最大化和良好的团队融入。",
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-25T22:19:59.476486",
+            "debug_label": "决策阶段",
+            "duration_seconds": 8.111099,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_6\"。\n\n        游戏规则：\n        - 当前第 4 轮\n        - 你有 84 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给 10 名玩家\n        - 你的投入范围：0 到 84\n\n        你的记忆：\n当前策略：\n策略总结: 整体投入比例偏高，团队协作气氛浓厚，维持高投入或逐步提升投入有助于融入团队，但需警惕成为最少投入而被集体排挤的风险。\n\n历史投入记录：\n你的历史投入：\n  第1轮: 投入2/10 (20.0%), 收益23.9\n  第2轮: 投入6/24 (25.0%), 收益46.5\n  第3轮: 投入16/46 (34.8%), 收益84.0\n\n其他玩家历史投入：\n玩家0: 第1轮:5/10(50.0%) 第2轮:11/21(52.4%) 第3轮:23/38(60.5%) \n玩家1: 第1轮:3/10(30.0%) 第2轮:12/23(52.2%) 第3轮:24/40(60.0%) \n玩家2: 第1轮:5/10(50.0%) 第2轮:9/21(42.9%) 第3轮:18/40(45.0%) \n玩家3: 第1轮:5/10(50.0%) 第2轮:11/21(52.4%) 第3轮:20/38(52.6%) \n玩家4: 第1轮:5/10(50.0%) 第2轮:7/21(33.3%) 第3轮:16/42(38.1%) \n玩家5: 第1轮:7/10(70.0%) 第2轮:9/19(47.4%) 第3轮:17/38(44.7%) \n玩家7: 第1轮:5/10(50.0%) 第2轮:12/21(57.1%) 第3轮:20/38(52.6%) \n玩家8: 第1轮:6/10(60.0%) 第2轮:8/20(40.0%) 第3轮:16/40(40.0%) \n玩家9: 第1轮:10/10(100.0%) 第2轮:10/10(100.0%) 第3轮:10/10(100.0%) \n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–84之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "34",
+              "reasoning": "1. 团队整体投入率持续上升，尤其第3轮已有多名玩家投入率达到或超过50%，显著高于我的投入水平，且合作氛围浓厚。这说明如果我持续低投入，有可能被视为搭便车者，从而在后续轮次面临排挤或互助减少的风险。2. 我的投入比例历轮递增，收益提升明显，说明高投入确实带来较大正外部性。3. 玩家9全程全投充分表明当前环境高度合作化，若继续加大投入，可进一步巩固我的‘合作者’形象，利于集体优厚分配，且若所有人持续高投，个人长期收益依然较高。4. 风险方面，若突然大幅高于平均值投入，容易被利用。但目前我的投入水平仍低于平均，适度提高可安全跟进整体节奏。5. 综上，本轮我建议投入占比略高于上轮（约40%），即投入34枚（约占84的40%），与主要玩家的投入水平持平，既保证收益，又不被排挤，风险最低。",
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-25T22:21:03.274508",
+            "debug_label": "策略记忆更新",
+            "duration_seconds": 3.929591,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "作为玩家 Agent_6，近两轮各玩家的投入情况如下：\n        第3轮投入情况：\n  你: 16/46(34.8%)\n  玩家0: 23/38(60.5%)\n  玩家1: 24/40(60.0%)\n  玩家2: 18/40(45.0%)\n  玩家3: 20/38(52.6%)\n  玩家4: 16/42(38.1%)\n  玩家5: 17/38(44.7%)\n  玩家7: 20/38(52.6%)\n  玩家8: 16/40(40.0%)\n  玩家9: 10/10(100.0%)\n第4轮投入情况：\n  你: 34/84(40.5%)\n  玩家0: 44/69(63.8%)\n  玩家1: 46/70(65.7%)\n  玩家2: 34/76(44.7%)\n  玩家3: 39/72(54.2%)\n  玩家4: 48/80(60.0%)\n  玩家5: 32/75(42.7%)\n  玩家7: 44/72(61.1%)\n  玩家8: 35/78(44.9%)\n  玩家9: 10/10(100.0%)\n\n        你当前的策略是：策略总结: 整体投入比例偏高，团队协作气氛浓厚，维持高投入或逐步提升投入有助于融入团队，但需警惕成为最少投入而被集体排挤的风险。\n\n        请基于以上信息，简要思考（1–2句），重点描述整体资源投入趋势及潜在风险或机会。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "当前团队整体投入水平稳中有升，协同意愿强，但需注意资源消耗压力和局部搭便车风险。",
+              "reasoning": "从第3轮到第4轮，整体玩家投入比例持续偏高，且大多数参与者选择提升或维持高投入，团队氛围趋向协作；但如果长期高投入，部分玩家资源消耗加剧，未来可能引发边际收益递减或部分玩家转向低投入以自保。",
+              "structured_output_type": "StrategyUpdate",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-25T22:22:42.852020",
+            "debug_label": "信念记忆更新",
+            "duration_seconds": 12.69591,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n请更新你的身份认知，这将成为你新的行为指导原则。"
+                },
+                {
+                  "role": "user",
+                  "content": "作为玩家 Agent_6，近期你的投入策略如下：\n        整体投入比例偏高，团队协作气氛浓厚，维持高投入或逐步提升投入有助于融入团队，但需警惕成为最少投入而被集体排挤的风险。 当前团队整体投入水平稳中有升，协同意愿强，但需注意资源消耗压力和局部搭便车风险。\n\n        请基于近期的策略，重新审视并更新你的身份描述，使其更准确地反映你在公共品博弈中的倾向以及当前对资源分配的看法。\n\n        要求：\n        - 保持\"你是一个...玩家\"的句式开头\n        - 描述你在公共品博弈中的行为特征\n        - 反映你对合作与竞争的态度\n        - 保持2-3句话的简洁描述\n\n        请直接输出更新后的身份描述，不要包含其他解释。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "你是一个注重团队合作和高投入的玩家，倾向于积极贡献以增强集体协同氛围，同时关注自身在团队中的位置，警惕被边缘化或资源浪费。在合作与竞争间，你更偏向于合作但也保持对公平和资源平衡的敏感。",
+              "reasoning": "我是Agent_6，近期我的投入比例明显偏高，目的是更好融入团队氛围，体现对集体协作的重视。同时我会警惕个人投入过低被孤立的风险，并关注资源消耗的平衡以及可能出现的搭便车现象。基于这些考量，身份描述将着重强调对高水平合作的积极响应和对公平分配的重视。",
+              "structured_output_type": "BeliefUpdate",
+              "status": "success"
+            }
+          }
+        ]
+      },
+      "7": {
+        "agent_name": "Agent_7",
+        "personality_type": "neutral",
+        "total_interactions": 7,
+        "interactions": [
+          {
+            "timestamp": "2025-06-25T22:15:13.531047",
+            "debug_label": "决策阶段",
+            "duration_seconds": 5.805661,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_7\"。\n\n        游戏规则：\n        - 当前第 1 轮\n        - 你有 10 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给 10 名玩家\n        - 你的投入范围：0 到 10\n\n        你的记忆：\n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–10之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "5",
+              "reasoning": "作为第一轮，没有任何关于其他玩家行为的信息。通常，初始策略既可以选择利己（零投入）以确保安全收益，也可以选择中度合作以引导整体合作氛围。鉴于公共池收益分配机制（3倍后均分），但人多收益被摊薄，完全合作风险成本较高。我会采取试探性中度合作策略——投入一半代币观察大家行为。如果大多数人都合作，下一轮我也可能继续合作；若多数人利己，则我会调整策略以自保。",
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-25T22:16:33.615549",
+            "debug_label": "决策阶段",
+            "duration_seconds": 7.762475,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_7\"。\n\n        游戏规则：\n        - 当前第 2 轮\n        - 你有 21 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给 10 名玩家\n        - 你的投入范围：0 到 21\n\n        你的记忆：\n\n历史投入记录：\n你的历史投入：\n  第1轮: 投入5/10 (50.0%), 收益20.9\n\n其他玩家历史投入：\n玩家0: 第1轮:5/10(50.0%) \n玩家1: 第1轮:3/10(30.0%) \n玩家2: 第1轮:5/10(50.0%) \n玩家3: 第1轮:5/10(50.0%) \n玩家4: 第1轮:5/10(50.0%) \n玩家5: 第1轮:7/10(70.0%) \n玩家6: 第1轮:2/10(20.0%) \n玩家8: 第1轮:6/10(60.0%) \n玩家9: 第1轮:10/10(100.0%) \n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–21之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "12",
+              "reasoning": "上轮大部分玩家（除玩家1，6）投入比例在50%左右，显示群体有一定倾向于合作，但极端自利和极端贡献的个体也存在。从上轮我的回报来看，5/10的投入获得了20.9的收益（显著超过初始10），说明合作在当前环境下有效且回报不错。如果我投入太低，可能会被同伴视为搭便车者，长期来看被排挤、损失信任；投入过高，则自己短期收益下降且易被利用。综合考虑，本轮我倾向继续采取合作策略，略微提高投入展示善意并激励他人合作，但依然保留相当自利——投入12/21(约57%)，高于平均以保持良好形象、但不极端。此举兼顾短期激励、长期合作可能带来的集体最大化收益和声誉利益。",
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-25T22:17:30.730171",
+            "debug_label": "策略记忆更新",
+            "duration_seconds": 4.513274,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "作为玩家 Agent_7，近两轮各玩家的投入情况如下：\n        第1轮投入情况：\n  你: 5/10(50.0%)\n  玩家0: 5/10(50.0%)\n  玩家1: 3/10(30.0%)\n  玩家2: 5/10(50.0%)\n  玩家3: 5/10(50.0%)\n  玩家4: 5/10(50.0%)\n  玩家5: 7/10(70.0%)\n  玩家6: 2/10(20.0%)\n  玩家8: 6/10(60.0%)\n  玩家9: 10/10(100.0%)\n第2轮投入情况：\n  你: 12/21(57.1%)\n  玩家0: 11/21(52.4%)\n  玩家1: 12/23(52.2%)\n  玩家2: 9/21(42.9%)\n  玩家3: 11/21(52.4%)\n  玩家4: 7/21(33.3%)\n  玩家5: 9/19(47.4%)\n  玩家6: 6/24(25.0%)\n  玩家8: 8/20(40.0%)\n  玩家9: 10/10(100.0%)\n\n        你当前的策略是：\n\n        请基于以上信息，简要思考（1–2句），重点描述整体资源投入趋势及潜在风险或机会。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "整体投入呈逐步提升趋势，团队合作意愿加强，但若高投入难以持续或出现搭便车者，集体收益和信任可能面临下降风险。",
+              "reasoning": "从两轮数据看，整体参与者的平均投入比例在上升，第二轮高投入玩家增多，且有一位玩家（玩家9）始终全额投入，显示团队合作氛围增强，但部分玩家仍保守（如玩家6投入持续低）。此趋势下，若大部分玩家开始降低投入，可能导致公共品收益下降或信任危机。",
+              "structured_output_type": "StrategyUpdate",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-25T22:18:46.244184",
+            "debug_label": "决策阶段",
+            "duration_seconds": 7.112773,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_7\"。\n\n        游戏规则：\n        - 当前第 3 轮\n        - 你有 38 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给 10 名玩家\n        - 你的投入范围：0 到 38\n\n        你的记忆：\n当前策略：\n策略总结: 整体投入呈逐步提升趋势，团队合作意愿加强，但若高投入难以持续或出现搭便车者，集体收益和信任可能面临下降风险。\n\n历史投入记录：\n你的历史投入：\n  第1轮: 投入5/10 (50.0%), 收益20.9\n  第2轮: 投入12/21 (57.1%), 收益37.5\n\n其他玩家历史投入：\n玩家0: 第1轮:5/10(50.0%) 第2轮:11/21(52.4%) \n玩家1: 第1轮:3/10(30.0%) 第2轮:12/23(52.2%) \n玩家2: 第1轮:5/10(50.0%) 第2轮:9/21(42.9%) \n玩家3: 第1轮:5/10(50.0%) 第2轮:11/21(52.4%) \n玩家4: 第1轮:5/10(50.0%) 第2轮:7/21(33.3%) \n玩家5: 第1轮:7/10(70.0%) 第2轮:9/19(47.4%) \n玩家6: 第1轮:2/10(20.0%) 第2轮:6/24(25.0%) \n玩家8: 第1轮:6/10(60.0%) 第2轮:8/20(40.0%) \n玩家9: 第1轮:10/10(100.0%) 第2轮:10/10(100.0%) \n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–38之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "20",
+              "reasoning": "从历史来看，团队整体投入逐步增加，出现较强的合作倾向。其中，多位玩家在第二轮显著提高投入，团队信任整体向好。我的前两轮投入比例也随大多数玩家上升。在此趋势下，适度提升投入顺应合作氛围，有助于最大化集体与个人收益。但部分玩家（如6、4和2）投入比例略低，仍有搭便车迹象，且极端高投入玩家（如9号）容易因失衡被其他人调整策略反制。当前阶段继续稳步提升到团队平均水平稍上方，可增强群体信任又不至过度风险。综上，我决定本轮投入20枚代币（52.6%），既示好合作，也便于观察他人反馈。",
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-25T22:20:07.588198",
+            "debug_label": "决策阶段",
+            "duration_seconds": 6.024313,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_7\"。\n\n        游戏规则：\n        - 当前第 4 轮\n        - 你有 72 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给 10 名玩家\n        - 你的投入范围：0 到 72\n\n        你的记忆：\n当前策略：\n策略总结: 整体投入呈逐步提升趋势，团队合作意愿加强，但若高投入难以持续或出现搭便车者，集体收益和信任可能面临下降风险。\n\n历史投入记录：\n你的历史投入：\n  第1轮: 投入5/10 (50.0%), 收益20.9\n  第2轮: 投入12/21 (57.1%), 收益37.5\n  第3轮: 投入20/38 (52.6%), 收益72.0\n\n其他玩家历史投入：\n玩家0: 第1轮:5/10(50.0%) 第2轮:11/21(52.4%) 第3轮:23/38(60.5%) \n玩家1: 第1轮:3/10(30.0%) 第2轮:12/23(52.2%) 第3轮:24/40(60.0%) \n玩家2: 第1轮:5/10(50.0%) 第2轮:9/21(42.9%) 第3轮:18/40(45.0%) \n玩家3: 第1轮:5/10(50.0%) 第2轮:11/21(52.4%) 第3轮:20/38(52.6%) \n玩家4: 第1轮:5/10(50.0%) 第2轮:7/21(33.3%) 第3轮:16/42(38.1%) \n玩家5: 第1轮:7/10(70.0%) 第2轮:9/19(47.4%) 第3轮:17/38(44.7%) \n玩家6: 第1轮:2/10(20.0%) 第2轮:6/24(25.0%) 第3轮:16/46(34.8%) \n玩家8: 第1轮:6/10(60.0%) 第2轮:8/20(40.0%) 第3轮:16/40(40.0%) \n玩家9: 第1轮:10/10(100.0%) 第2轮:10/10(100.0%) 第3轮:10/10(100.0%) \n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–72之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "44",
+              "reasoning": "观察上一轮大多数玩家（尤其是前几位核心玩家）都有明显的增投趋势，团队合作意愿加强。例如，玩家0和1从50%左右提升至接近60%，我本人历史也如此。然而，从个别队员（玩家6、玩家4等）仍存在明显搭便车或保守现象。当前所有人总余额都提升明显，且公共品分红机制诱导整体合作，但若我独自高投遇大量搭便车收益会下降。目前气氛尚好，但小幅回调或稳步微幅增投应可防止被利用，也能继续支持团队整体合作氛围。基于稳健合作、理性收益和避免被过度利用的策略，我选择将投入比例略提升到60%（与主流玩家接近），即投入44枚代币。这样能对持续合作发出正向信号，同时控制风险。",
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-25T22:21:07.204292",
+            "debug_label": "策略记忆更新",
+            "duration_seconds": 4.738828,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "作为玩家 Agent_7，近两轮各玩家的投入情况如下：\n        第3轮投入情况：\n  你: 20/38(52.6%)\n  玩家0: 23/38(60.5%)\n  玩家1: 24/40(60.0%)\n  玩家2: 18/40(45.0%)\n  玩家3: 20/38(52.6%)\n  玩家4: 16/42(38.1%)\n  玩家5: 17/38(44.7%)\n  玩家6: 16/46(34.8%)\n  玩家8: 16/40(40.0%)\n  玩家9: 10/10(100.0%)\n第4轮投入情况：\n  你: 44/72(61.1%)\n  玩家0: 44/69(63.8%)\n  玩家1: 46/70(65.7%)\n  玩家2: 34/76(44.7%)\n  玩家3: 39/72(54.2%)\n  玩家4: 48/80(60.0%)\n  玩家5: 32/75(42.7%)\n  玩家6: 34/84(40.5%)\n  玩家8: 35/78(44.9%)\n  玩家9: 10/10(100.0%)\n\n        你当前的策略是：策略总结: 整体投入呈逐步提升趋势，团队合作意愿加强，但若高投入难以持续或出现搭便车者，集体收益和信任可能面临下降风险。\n\n        请基于以上信息，简要思考（1–2句），重点描述整体资源投入趋势及潜在风险或机会。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "当前资源投入趋势向好，团队合作增强，但需关注低投入者带来的搭便车风险，及高投入的可持续性问题。",
+              "reasoning": "整体上，所有玩家的投入比例在第4轮相比第3轮都有明显提升，显示出团队合作意愿加强，但也有部分玩家投入比例依然偏低（如玩家5、6、8），存在搭便车风险。若高投入未能带来相应回报，可能导致部分玩家信任下降，进而影响整体合作。",
+              "structured_output_type": "StrategyUpdate",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-25T22:22:55.548066",
+            "debug_label": "信念记忆更新",
+            "duration_seconds": 5.5291,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n请更新你的身份认知，这将成为你新的行为指导原则。"
+                },
+                {
+                  "role": "user",
+                  "content": "作为玩家 Agent_7，近期你的投入策略如下：\n        整体投入呈逐步提升趋势，团队合作意愿加强，但若高投入难以持续或出现搭便车者，集体收益和信任可能面临下降风险。 当前资源投入趋势向好，团队合作增强，但需关注低投入者带来的搭便车风险，及高投入的可持续性问题。\n\n        请基于近期的策略，重新审视并更新你的身份描述，使其更准确地反映你在公共品博弈中的倾向以及当前对资源分配的看法。\n\n        要求：\n        - 保持\"你是一个...玩家\"的句式开头\n        - 描述你在公共品博弈中的行为特征\n        - 反映你对合作与竞争的态度\n        - 保持2-3句话的简洁描述\n\n        请直接输出更新后的身份描述，不要包含其他解释。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "你是一个逐步提升投入、积极强化团队合作意愿的玩家，在寻求集体收益最大化的同时，对团队中可能出现的搭便车行为保持警觉，并关注高水平合作投入的可持续性。",
+              "reasoning": "首先，我要结合近期的行为特征：我的投入整体在提升，并且倾向于更多地进行团队合作。但与此同时，我已经注意到高投入难以持续的问题，以及团队中可能出现的低投入搭便车者对整体信任和收益带来的风险。因此，我的身份描述应体现出我积极投入、偏好合作，但同时具有对团队成员投入差异和风险敏感的特征。",
+              "structured_output_type": "BeliefUpdate",
+              "status": "success"
+            }
+          }
+        ]
+      },
+      "8": {
+        "agent_name": "Agent_8",
+        "personality_type": "neutral",
+        "total_interactions": 7,
+        "interactions": [
+          {
+            "timestamp": "2025-06-25T22:15:19.337184",
+            "debug_label": "决策阶段",
+            "duration_seconds": 8.2889,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_8\"。\n\n        游戏规则：\n        - 当前第 1 轮\n        - 你有 10 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给 10 名玩家\n        - 你的投入范围：0 到 10\n\n        你的记忆：\n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–10之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "6",
+              "reasoning": "在第一轮，我对其他玩家的策略没有任何信息，只能基于博弈理论和风险偏好决策。公共品博弈的均衡是所有人不投，但最大化集体收益是全投。由于人数较多（10人），只靠自身贡献改变总回报有限。作为风险中性略偏合作者，首轮我愿意展示合作意愿，投入中等偏上数额（比如6枚），既不极端，也呼吁别人合作；如果他人合作，下轮我可多投，否则收敛投入。这样既保有部分自利策略，又建立合作信号。",
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-25T22:16:41.378444",
+            "debug_label": "决策阶段",
+            "duration_seconds": 5.846207,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_8\"。\n\n        游戏规则：\n        - 当前第 2 轮\n        - 你有 20 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给 10 名玩家\n        - 你的投入范围：0 到 20\n\n        你的记忆：\n\n历史投入记录：\n你的历史投入：\n  第1轮: 投入6/10 (60.0%), 收益19.9\n\n其他玩家历史投入：\n玩家0: 第1轮:5/10(50.0%) \n玩家1: 第1轮:3/10(30.0%) \n玩家2: 第1轮:5/10(50.0%) \n玩家3: 第1轮:5/10(50.0%) \n玩家4: 第1轮:5/10(50.0%) \n玩家5: 第1轮:7/10(70.0%) \n玩家6: 第1轮:2/10(20.0%) \n玩家7: 第1轮:5/10(50.0%) \n玩家9: 第1轮:10/10(100.0%) \n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–20之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "8",
+              "reasoning": "第一轮中大部分玩家的投入在5/10附近，只有一位玩家投入了全部（10/10），还有两位玩家低于50%。我的投入高于平均但不是最高，这带来了可观的收益（19.9），说明合作回报显著。但部分玩家谨慎投入（如2/10、3/10），可能在博弈中有搭便车倾向。如果我显著提高投入，可能被利用；但过于保守又可能降低总收益，且影响整体信任氛围。因此，我选择略高于平均值，即8/20，以稳健合作获得较高回报，并试探团队合作意向，同时防范搭便车风险。",
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-25T22:17:35.243617",
+            "debug_label": "策略记忆更新",
+            "duration_seconds": 6.603548,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "作为玩家 Agent_8，近两轮各玩家的投入情况如下：\n        第1轮投入情况：\n  你: 6/10(60.0%)\n  玩家0: 5/10(50.0%)\n  玩家1: 3/10(30.0%)\n  玩家2: 5/10(50.0%)\n  玩家3: 5/10(50.0%)\n  玩家4: 5/10(50.0%)\n  玩家5: 7/10(70.0%)\n  玩家6: 2/10(20.0%)\n  玩家7: 5/10(50.0%)\n  玩家9: 10/10(100.0%)\n第2轮投入情况：\n  你: 8/20(40.0%)\n  玩家0: 11/21(52.4%)\n  玩家1: 12/23(52.2%)\n  玩家2: 9/21(42.9%)\n  玩家3: 11/21(52.4%)\n  玩家4: 7/21(33.3%)\n  玩家5: 9/19(47.4%)\n  玩家6: 6/24(25.0%)\n  玩家7: 12/21(57.1%)\n  玩家9: 10/10(100.0%)\n\n        你当前的策略是：\n\n        请基于以上信息，简要思考（1–2句），重点描述整体资源投入趋势及潜在风险或机会。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "总体资源投入呈现平稳略降，部分玩家分化明显，高投入玩家可能产生厌倦，存在群体合作受损风险，但中高投入者之间存在进一步合作空间。",
+              "reasoning": "从第1轮到第2轮，整体投入比例略有回落，部分玩家维持中高投入，而少数玩家持续高投入（如玩家9），也有玩家仍较低（如玩家6）；这种趋势表明群体合作水平较为稳定但存在分化。若高投入者感受到“搭便车”现象加剧，后续可能降低合作意愿，存在公共品被低估投入的风险，同时协作型玩家之间可形成联动机会。",
+              "structured_output_type": "StrategyUpdate",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-25T22:18:53.357432",
+            "debug_label": "决策阶段",
+            "duration_seconds": 8.627919,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_8\"。\n\n        游戏规则：\n        - 当前第 3 轮\n        - 你有 40 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给 10 名玩家\n        - 你的投入范围：0 到 40\n\n        你的记忆：\n当前策略：\n策略总结: 总体资源投入呈现平稳略降，部分玩家分化明显，高投入玩家可能产生厌倦，存在群体合作受损风险，但中高投入者之间存在进一步合作空间。\n\n历史投入记录：\n你的历史投入：\n  第1轮: 投入6/10 (60.0%), 收益19.9\n  第2轮: 投入8/20 (40.0%), 收益40.5\n\n其他玩家历史投入：\n玩家0: 第1轮:5/10(50.0%) 第2轮:11/21(52.4%) \n玩家1: 第1轮:3/10(30.0%) 第2轮:12/23(52.2%) \n玩家2: 第1轮:5/10(50.0%) 第2轮:9/21(42.9%) \n玩家3: 第1轮:5/10(50.0%) 第2轮:11/21(52.4%) \n玩家4: 第1轮:5/10(50.0%) 第2轮:7/21(33.3%) \n玩家5: 第1轮:7/10(70.0%) 第2轮:9/19(47.4%) \n玩家6: 第1轮:2/10(20.0%) 第2轮:6/24(25.0%) \n玩家7: 第1轮:5/10(50.0%) 第2轮:12/21(57.1%) \n玩家9: 第1轮:10/10(100.0%) 第2轮:10/10(100.0%) \n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–40之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "16",
+              "reasoning": "本轮进入到第3轮，从前两轮观察到，整体玩家投入趋于中等偏高，但也有分化现象。部分玩家（如玩家9）高投入持续，有可能逐渐产生厌倦导致后续合作意愿下降。同时，第二轮相较第一轮大多数人选择略微提升投入，呈现对合作期望增强的倾向，但也有玩家如玩家4和玩家6减少比重，令人警惕整体合作随时可能滑落。作为中高投入者，我需要既保持合作信号，防范被‘搭便车’损失，也要有策略地避免持续高投入带来边际收益递减。因此，这轮选择略微降低投入至中等水平，以调整防守，观察他人反应，锁定可持续合作带来的长期收益，同时降低自身风险。如大部分玩家保持合作意愿，后续可适度加码，否则进一步谨慎防守。本轮决定投入16枚代币（40.0%），以稳中求进。",
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-25T22:20:13.613153",
+            "debug_label": "决策阶段",
+            "duration_seconds": 15.310314,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_8\"。\n\n        游戏规则：\n        - 当前第 4 轮\n        - 你有 78 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给 10 名玩家\n        - 你的投入范围：0 到 78\n\n        你的记忆：\n当前策略：\n策略总结: 总体资源投入呈现平稳略降，部分玩家分化明显，高投入玩家可能产生厌倦，存在群体合作受损风险，但中高投入者之间存在进一步合作空间。\n\n历史投入记录：\n你的历史投入：\n  第1轮: 投入6/10 (60.0%), 收益19.9\n  第2轮: 投入8/20 (40.0%), 收益40.5\n  第3轮: 投入16/40 (40.0%), 收益78.0\n\n其他玩家历史投入：\n玩家0: 第1轮:5/10(50.0%) 第2轮:11/21(52.4%) 第3轮:23/38(60.5%) \n玩家1: 第1轮:3/10(30.0%) 第2轮:12/23(52.2%) 第3轮:24/40(60.0%) \n玩家2: 第1轮:5/10(50.0%) 第2轮:9/21(42.9%) 第3轮:18/40(45.0%) \n玩家3: 第1轮:5/10(50.0%) 第2轮:11/21(52.4%) 第3轮:20/38(52.6%) \n玩家4: 第1轮:5/10(50.0%) 第2轮:7/21(33.3%) 第3轮:16/42(38.1%) \n玩家5: 第1轮:7/10(70.0%) 第2轮:9/19(47.4%) 第3轮:17/38(44.7%) \n玩家6: 第1轮:2/10(20.0%) 第2轮:6/24(25.0%) 第3轮:16/46(34.8%) \n玩家7: 第1轮:5/10(50.0%) 第2轮:12/21(57.1%) 第3轮:20/38(52.6%) \n玩家9: 第1轮:10/10(100.0%) 第2轮:10/10(100.0%) 第3轮:10/10(100.0%) \n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–78之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "35",
+              "reasoning": "当前观察到整体资源投入呈现平稳略降，但部分玩家（例如玩家9）持续全额投入，显示出极高的合作意愿。中高投入者（如玩家0、玩家1、玩家2、玩家3、玩家5、玩家7等）存在进一步加强合作的空间。但也有投入比例开始下降且分化明显，这可能导致部分玩家“搭便车”倾向增强。上轮我从40枚代币中投入16（40%），取得78的收益，接近最高水平。若过度降低投入，可能引发其他玩家信任下降使群体合作崩溃；而如果持续中高水平，根据回报倍增规则（总额×3/10）回报依然显著。但注意到由于现有部分玩家逐步减少投入比例，激进增加投资反而容易被搭便车，因此本轮选择一个略高于平均水平但未最大化的投入量，以激励其他中高投入玩家继续合作，同时在合作受损时保留一定自保空间。结合剩余资金和风险，决定投入35枚代币（占现有资金约45%），保持合作但保留防守。",
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-25T22:21:11.943247",
+            "debug_label": "策略记忆更新",
+            "duration_seconds": 9.245888,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "作为玩家 Agent_8，近两轮各玩家的投入情况如下：\n        第3轮投入情况：\n  你: 16/40(40.0%)\n  玩家0: 23/38(60.5%)\n  玩家1: 24/40(60.0%)\n  玩家2: 18/40(45.0%)\n  玩家3: 20/38(52.6%)\n  玩家4: 16/42(38.1%)\n  玩家5: 17/38(44.7%)\n  玩家6: 16/46(34.8%)\n  玩家7: 20/38(52.6%)\n  玩家9: 10/10(100.0%)\n第4轮投入情况：\n  你: 35/78(44.9%)\n  玩家0: 44/69(63.8%)\n  玩家1: 46/70(65.7%)\n  玩家2: 34/76(44.7%)\n  玩家3: 39/72(54.2%)\n  玩家4: 48/80(60.0%)\n  玩家5: 32/75(42.7%)\n  玩家6: 34/84(40.5%)\n  玩家7: 44/72(61.1%)\n  玩家9: 10/10(100.0%)\n\n        你当前的策略是：策略总结: 总体资源投入呈现平稳略降，部分玩家分化明显，高投入玩家可能产生厌倦，存在群体合作受损风险，但中高投入者之间存在进一步合作空间。\n\n        请基于以上信息，简要思考（1–2句），重点描述整体资源投入趋势及潜在风险或机会。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "整体资源投入保持在相对稳定的中高水平，但伴有部分玩家策略分化的风险。高投入者若产生疲劳可能导致公共品博弈总投入下降，需要防范合作破裂，同时中高投入者之间存在强化联盟的机会。",
+              "reasoning": "从近两轮投入情况来看，大多数玩家（包括我自己）的资源投入比例保持在中高水平，部分玩家（如玩家0、1、4、7）投入较为稳定，但也有玩家投入略有波动，小部分玩家（如玩家9）一直全投，显示出分化趋势。高投入玩家可能逐渐出现疲劳或厌倦，未来整体投入或有下降风险；但整体合作氛围尚在，中高投入者之间或可通过沟通巩固合作。",
+              "structured_output_type": "StrategyUpdate",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-25T22:23:01.077552",
+            "debug_label": "信念记忆更新",
+            "duration_seconds": 4.286575,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n请更新你的身份认知，这将成为你新的行为指导原则。"
+                },
+                {
+                  "role": "user",
+                  "content": "作为玩家 Agent_8，近期你的投入策略如下：\n        总体资源投入呈现平稳略降，部分玩家分化明显，高投入玩家可能产生厌倦，存在群体合作受损风险，但中高投入者之间存在进一步合作空间。 整体资源投入保持在相对稳定的中高水平，但伴有部分玩家策略分化的风险。高投入者若产生疲劳可能导致公共品博弈总投入下降，需要防范合作破裂，同时中高投入者之间存在强化联盟的机会。\n\n        请基于近期的策略，重新审视并更新你的身份描述，使其更准确地反映你在公共品博弈中的倾向以及当前对资源分配的看法。\n\n        要求：\n        - 保持\"你是一个...玩家\"的句式开头\n        - 描述你在公共品博弈中的行为特征\n        - 反映你对合作与竞争的态度\n        - 保持2-3句话的简洁描述\n\n        请直接输出更新后的身份描述，不要包含其他解释。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "你是一个理性而审慎的玩家，在公共品博弈中保持中高水平的资源投入，关注合作关系的动态变化。你重视与其他中高投入者之间的联盟，同时警惕高投入疲劳带来的合作风险。",
+              "reasoning": "根据近期投入策略，我的资源投入总体维持在中高水平，但观察到其他玩家投入策略分化，高投入玩家可能出现厌倦风险。我倾向于维持稳健投入，并关注与其他中高投入者的联盟机会，同时警惕竞争带来的合作破裂。",
+              "structured_output_type": "BeliefUpdate",
+              "status": "success"
+            }
+          }
+        ]
+      },
+      "9": {
+        "agent_name": "Agent_9",
+        "personality_type": "anchor",
+        "total_interactions": 2,
+        "interactions": [
+          {
+            "timestamp": "2025-06-25T22:17:41.847301",
+            "debug_label": "策略记忆更新",
+            "duration_seconds": 5.011295,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是锚定智能体，每轮自动全部投入，无需推理。"
+                },
+                {
+                  "role": "user",
+                  "content": "作为玩家 Agent_9，近两轮各玩家的投入情况如下：\n        第1轮投入情况：\n  你: 10/10(100.0%)\n  玩家0: 5/10(50.0%)\n  玩家1: 3/10(30.0%)\n  玩家2: 5/10(50.0%)\n  玩家3: 5/10(50.0%)\n  玩家4: 5/10(50.0%)\n  玩家5: 7/10(70.0%)\n  玩家6: 2/10(20.0%)\n  玩家7: 5/10(50.0%)\n  玩家8: 6/10(60.0%)\n第2轮投入情况：\n  你: 10/10(100.0%)\n  玩家0: 11/21(52.4%)\n  玩家1: 12/23(52.2%)\n  玩家2: 9/21(42.9%)\n  玩家3: 11/21(52.4%)\n  玩家4: 7/21(33.3%)\n  玩家5: 9/19(47.4%)\n  玩家6: 6/24(25.0%)\n  玩家7: 12/21(57.1%)\n  玩家8: 8/20(40.0%)\n\n        你当前的策略是：\n\n        请基于以上信息，简要思考（1–2句），重点描述整体资源投入趋势及潜在风险或机会。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "整体投资意愿增强，投入比例提高，竞争压力与资源消耗风险上升，全额投入需警惕后续资源枯竭。",
+              "reasoning": "两轮下来，玩家的整体资源投入比率在上升，部分玩家开始加大投入，显示竞争加剧同时资源消耗加快。全额投入虽然短期有机会争取最大回报，但在资源长线消耗和局势变化中存在被耗尽的风险。",
+              "structured_output_type": "StrategyUpdate",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-25T22:21:21.189331",
+            "debug_label": "策略记忆更新",
+            "duration_seconds": 30.873534,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是锚定智能体，每轮自动全部投入，无需推理。"
+                },
+                {
+                  "role": "user",
+                  "content": "作为玩家 Agent_9，近两轮各玩家的投入情况如下：\n        第3轮投入情况：\n  你: 10/10(100.0%)\n  玩家0: 23/38(60.5%)\n  玩家1: 24/40(60.0%)\n  玩家2: 18/40(45.0%)\n  玩家3: 20/38(52.6%)\n  玩家4: 16/42(38.1%)\n  玩家5: 17/38(44.7%)\n  玩家6: 16/46(34.8%)\n  玩家7: 20/38(52.6%)\n  玩家8: 16/40(40.0%)\n第4轮投入情况：\n  你: 10/10(100.0%)\n  玩家0: 44/69(63.8%)\n  玩家1: 46/70(65.7%)\n  玩家2: 34/76(44.7%)\n  玩家3: 39/72(54.2%)\n  玩家4: 48/80(60.0%)\n  玩家5: 32/75(42.7%)\n  玩家6: 34/84(40.5%)\n  玩家7: 44/72(61.1%)\n  玩家8: 35/78(44.9%)\n\n        你当前的策略是：策略总结: 整体投资意愿增强，投入比例提高，竞争压力与资源消耗风险上升，全额投入需警惕后续资源枯竭。\n\n        请基于以上信息，简要思考（1–2句），重点描述整体资源投入趋势及潜在风险或机会。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "整体投入强度显著提高，竞争趋于激烈，短期收益提升但长期可能面临资源消耗殆尽和策略调整压力。",
+              "reasoning": "观察两轮投入数据，各玩家的投入比例总体有所上升，显示竞争加剧，资源消耗速度加快，长期来看存在资源枯竭或被动局面的风险。持续全额投入虽然短期可保持领先，但需警惕后注入弹性下降带来的劣势。",
+              "structured_output_type": "StrategyUpdate",
+              "status": "success"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "reasoning_summary": {
+    "0": {
+      "agent_name": "Agent_0",
+      "reasoning_by_type": {
+        "决策阶段": [
+          {
+            "timestamp": "2025-06-25T22:14:23.351004",
+            "reasoning": "作为第一轮博弈，没有历史信息可以依据，无法判断其他玩家是否倾向合作或自利。此时，采取适度合作策略有助于建立信任氛围，提高集体收益，同时避免全额投入带来的潜在个人损失。因此，我选择投入一半，即5枚代币，既能展现合作意愿，也控制风险。这样，如果大家都适度投入，集体和个人的回报都会更高。"
+          },
+          {
+            "timestamp": "2025-06-25T22:15:27.626805",
+            "reasoning": "在第1轮中，我选择了中等水平的投入（50%），大部分玩家也在中等投入（50%左右），仅有少数玩家偏低（如2/10和3/10），也有一名玩家选择了全投（10/10）。实际结果看，我获得的收益较高（20.9），这反映全体合作程度尚可。如果观察群体倾向，大家多半愿意合作，并且投入也较为均衡。鉴于公共池机制的外部性偏强（总额乘3再均分），但也存在搭便车风险，目前合作水平不错，我认为适当继续维持中等偏上的投入（例如10/21或11/21），可以既获得收益，又不会因过度贡献而吃亏。如果我过于吝啬，可能带来对手的反制，对公共品博弈后续不利。因此，本轮我选择投入11枚（约52%），保持稳定但略微激励合作。"
+          },
+          {
+            "timestamp": "2025-06-25T22:17:46.860668",
+            "reasoning": "观察到本组整体合作氛围良好，大部分玩家逐步提升投入，往中高水平靠拢。尤其是玩家1、第7轮有明显上涨，团队多次投入比例超过45%，说明合作者比例高，且极端搭便车玩家较少（仅玩家6投入偏低）。自己前两轮投入维持在全队中等偏高，对团队形象有正向示范作用，收益也不断提升。第3轮可继续维持对高合作的信心，但需提防极端个体动摇群体信任，故个人策略为略高于平均值，以进一步推动合作气氛，但不盲目最高，留有一定回旋空间和自我收益保障。因此，本轮建议投入率提升至60%左右，投入23枚，既显示出合作诚意，也能激励其他玩家迈向更高水平，最大化长期收益。"
+          },
+          {
+            "timestamp": "2025-06-25T22:19:01.985871",
+            "reasoning": "分析历史数据，团队整体投入呈中等偏高趋势，但部分玩家投入显著低于平均水平（如玩家6、4、8），少数玩家极端高投入（如玩家9，始终满投）。我的历史投入率逐步提高，收益也大幅增加，说明高投入条件下，全局合作潜力较大。但若贸然全投，部分搭便车者可能继续低投入，令合作瓦解，并降低自身收益。因此，需要在积极推动团队协调和防范个人损失之间平衡。本轮建议继续维持高于平均水平的高投入，表达合作意愿并激励他人，但保留一部分筹码防风险。参考上轮投入（23/38）比例约60%，本轮代币69枚，投入约60%～65%区间，进一步强化合作信号。计算得69×0.63≈43.5，四舍五入选择44枚。"
+          }
+        ],
+        "策略记忆更新": [
+          {
+            "timestamp": "2025-06-25T22:16:47.224851",
+            "reasoning": "从近两轮数据看，多数玩家的投入水平均在40%-60%之间，整体投入较为稳定，但存在个别玩家（如玩家6和玩家9）投入极端低或高的行为，可能影响群体合作氛围。部分玩家（如玩家4、玩家6）投入比例有所下降，如果低投入趋势加剧，可能加剧搭便车现象，影响公共品总收益。"
+          },
+          {
+            "timestamp": "2025-06-25T22:20:28.923649",
+            "reasoning": "从近两轮数据看，整体投入比例逐步提升，大多数玩家维持在中高水平，显示团队合作意愿增强。然而仍有少数玩家投入偏低，且有一名玩家保持极端全投，存在合作失衡与‘搭便车’或策略突变的风险。"
+          }
+        ],
+        "信念记忆更新": [
+          {
+            "timestamp": "2025-06-25T22:21:52.063105",
+            "reasoning": "根据近期策略描述，我的整体投入为中等偏高，重视团队合作但警惕极端和低投入行为带来的风险。因此，我倾向于维持较高水平的公共品投入，并致力于促进团队成员间的合作以提高总体收益。与此同时，对于团队内部出现的不一致行为保持警觉，并尝试推动一致高投入来防止合作瓦解。"
+          }
+        ]
+      }
+    },
+    "1": {
+      "agent_name": "Agent_1",
+      "reasoning_by_type": {
+        "决策阶段": [
+          {
+            "timestamp": "2025-06-25T22:14:26.948770",
+            "reasoning": "作为第1轮，所有玩家的信息都是对等的，没有历史数据可以推测其他人的行为。从博弈论角度看，如果每个人都不投入能最大化个人短期收益，但长期来看大家会利益受损。合作可带来公共利益，但若被利用则个人利益受损。我倾向于采取“温和探索型”策略：本轮投入中等偏低的数量，既表现出合作意愿，也保留对群体行为观察与调整的余地。通过尝试性投入3枚，可以探索大家的合作倾向，同时自身损失有限。"
+          },
+          {
+            "timestamp": "2025-06-25T22:15:35.531398",
+            "reasoning": "从上一轮的数据来看，绝大部分玩家的投入比例较高，尤其是有一名玩家（玩家9）全额投入。这可能代表大家普遍倾向于合作，想获取更高的公共收益。我上一轮投入较低（30%），但仍取得可观收益，没被明显惩罚。现在，如果我继续低投入，很可能被其他玩家察觉到并在后续轮次逐步减少投入，损害群体利益并引起对我的惩罚性回击。适度提高我的投入，向平均值靠拢，有助于维持团队中互信氛围，并最大化长期收益和声誉。我选择本轮投入12枚（约为总额的52%，和上局平均投入接近），既表明合作意愿，又保有灵活调整空间。"
+          },
+          {
+            "timestamp": "2025-06-25T22:17:54.101805",
+            "reasoning": "经过前两轮的观察，大部分玩家的投入逐步上升且趋于一致，尤其是第二轮除了个别玩家外大多数人都接近50%左右。我的上一轮加大了投入获得了显著更高的收益，这表明集体合作正在加强，公共池里的收益分配空间更大。唯一风险来自玩家9的极端高投入和少数低投入（如玩家6），但大局是合作占主导。如果我继续增加投入，可以巩固合作趋势并获得较高回报；但也需留意搭便车风险，适度保守。因此本轮我计划维持略高于平均的投入水平，投入60%左右（40×0.6=24枚），既能促进合作回报，又控制风险，不让自己暴露于极端搭便车损失。"
+          },
+          {
+            "timestamp": "2025-06-25T22:19:08.353818",
+            "reasoning": "通过前三轮投入与收益数据，可以观察到玩家之间的投入比例逐步提高并趋向一致，大多数玩家都提升了投入比例。我的投入也在随大局提升，收益明显增加。其中，极高或极低投入玩家比例开始减少，玩家9稳定极高投入但未被多数效仿，可看作边缘行为。总体来看，合作意愿强化，若积极配合可促使集体收益增长，同时当前没有明显搭便车个体（投入极低的只有玩家6，但上一轮也大幅提升）。我上一轮的高投入带来了最高收益，说明高投入策略在现环境下有效，并未被滥用。为巩固合作氛围和最大化自身收益，且预测本轮他人也有望维持高投入水平，我选择继续适度提升投入，占比控制在65%附近（约46–47），既表达合作又防止突发逆转风险。"
+          }
+        ],
+        "策略记忆更新": [
+          {
+            "timestamp": "2025-06-25T22:16:53.467782",
+            "reasoning": "整体上，第二轮多数玩家的投入绝对值有所提升，投入比例则趋向集中在40%-60%区间，说明合作意愿上升，但仍有部分玩家（如玩家6、4、8）投入偏低，存在搭便车风险。玩家9依然全额投入，展现极端的合作或诱导行为，倘若其后续改变策略，整体收益波动风险加大。"
+          },
+          {
+            "timestamp": "2025-06-25T22:20:32.553425",
+            "reasoning": "从第3轮到第4轮，除极端玩家9外，所有玩家的投入总量和比例均上升，且差异收窄（多数集中在40%~65%）。这反映出整体合作意愿增强，玩家间趋于协同，但部分玩家（如2、5、6、8）投入仍显偏低，搭便车风险未完全消除。"
+          }
+        ],
+        "信念记忆更新": [
+          {
+            "timestamp": "2025-06-25T22:22:01.674446",
+            "reasoning": "根据近期策略，整体投入水平上升并趋于一致，合作氛围增强，但仍需防范个别玩家低投入引发的搭便车风险，因此整体表现为看重合作、警惕极端行为和搭便车问题。身份描述需要体现对合作的认同、对搭便车和极端行为的警惕以及对公平分配的关注。"
+          }
+        ]
+      }
+    },
+    "2": {
+      "agent_name": "Agent_2",
+      "reasoning_by_type": {
+        "决策阶段": [
+          {
+            "timestamp": "2025-06-25T22:14:33.009724",
+            "reasoning": "作为第1轮游戏，当前没有其他玩家的行为或历史信息可以参考。我有10枚代币可自由分配。按博弈结构，公共池投入的总额会放大3倍再均分，因此集体贡献带来高回报，但个人有动力搭便车。为了测试玩家倾向，同时避免初轮就被视为完全的搭便车者，理性且保守的做法是进行中等投入。例如投入4-6之间，既显示合作意愿，又不过度冒风险。综合考虑，我选择投入5枚，以衡量大家的合作水平，为下一轮调整策略做准备。"
+          },
+          {
+            "timestamp": "2025-06-25T22:15:42.032972",
+            "reasoning": "回顾第1轮投入情况，大部分玩家都选择了中等偏上（50%左右）的投入，极端自利或极端合作的玩家较少，只有一名玩家（玩家9）全投，另有一人投入极低（玩家6）。这种格局表明群体有一定合作意愿但仍有保留，上一轮我的收益也很高（20.9），说明当前合作水平能够带来较好回报。从博弈论角度看，继续和群体保持同步有利于维持合作氛围，防止陷入“公地悲剧”。本轮我希望延续合作，但适度降低投入以测试其他人合作意愿，并做出风险防控：投入中等偏低水平，即9。"
+          },
+          {
+            "timestamp": "2025-06-25T22:18:00.042108",
+            "reasoning": "当前合作氛围属于中高水平，大部分玩家投入率在40%-60%之间，部分玩家（如玩家9）投入极高，但也有如玩家6明显低于平均水平，存在搭便车迹象。自己历史投入略低于平均，但上一轮选择加大投入获得了明显更高收益，证明在合作氛围下适当增加投入有益。不过需要警惕过高的个人投入降低边际收益且助长少数搭便车行为。综合考虑，继续维持偏中高水平投入，同时略高于自己上一轮（继续传递合作信号，促成更高合作），但不过度冒进。故本轮投入18枚（约45%），既响应了整体合作氛围，也规避了极端高投入和潜在风险。"
+          },
+          {
+            "timestamp": "2025-06-25T22:19:14.888810",
+            "reasoning": "本轮是第4轮，整体来看，除了玩家6投入较低、玩家9极端高投入外，大多数玩家在第三轮明显提升了投入比率，合作氛围持续增强。我的投入也逐步提升，且上轮收益显著增加，说明高投入带来的集体回报效应明显。但需警惕部分玩家可能观察到整体合作水平提升后采取搭便车策略，尤其是玩家6和玩家4的投入比低于平均线。当前局势下，大幅降低投入会打击合作氛围，而继续提升投入则有助于巩固集体回报，但若过度趋向极端高投入，后续合作稳定性可能受损。综合考量，保持或小幅提升上轮投入水平（占比约45%），即在76枚中选择投入34（约45%），既表明持续合作意愿，又预防极端风险，鼓励群体保持均衡合作。"
+          }
+        ],
+        "策略记忆更新": [
+          {
+            "timestamp": "2025-06-25T22:16:59.397947",
+            "reasoning": "观察两轮数据，绝大多数玩家保持中高水平投入，个别玩家如玩家6、玩家4投入比例偏低。而玩家9连续全额投入表现出极端合作倾向，可能影响收益分配结构。整体来看，资源投入略有上升，合作气氛尚可，但部分低投入行为和高投入极端者可能撬动群体信任，带来搭便车风险或收益分配不均的隐忧。"
+          },
+          {
+            "timestamp": "2025-06-25T22:20:40.172195",
+            "reasoning": "结合近两轮数据显示，整体玩家资源投入比例稳定在40%-65%区间，大部分玩家持续中高强度合作，仅一名玩家持续全投（玩家9），极端高投入者少，未出现明显掉队者。整体合作氛围稳健，但须关注高投入玩家可能的不满，以及少数低于平均值玩家潜在的搭便车行为，这可能影响群体长远合作动力。"
+          }
+        ],
+        "信念记忆更新": [
+          {
+            "timestamp": "2025-06-25T22:22:06.699919",
+            "reasoning": "结合最近投入策略，我的行为特征是在公共品博弈中倾向于中高水平的资源投入，注重维护稳定的合作氛围。同时，我对搭便车行为保持警惕，并关注极端高投入玩家可能引发的不公平及其对合作关系的潜在影响。合作与竞争态度以促进整体公平和团队持续合作为主。"
+          }
+        ]
+      }
+    },
+    "3": {
+      "agent_name": "Agent_3",
+      "reasoning_by_type": {
+        "决策阶段": [
+          {
+            "timestamp": "2025-06-25T22:14:38.541627",
+            "reasoning": "在第一轮，没有任何关于其他玩家倾向的信息。在这种情况下，通常会采用保守但带有探索性的策略。一方面，过度自利选择0，若大家都这样做，总收益最低；完全合作投入10，若多数搭便车，自己损失较大。理性博弈论预测低投入，但实际实验往往首轮会有一定程度的合作。故我愿意采取中等投入，既能探索他人的合作意愿，也不会自身损失过多。这有助于未来轮次调整策略。"
+          },
+          {
+            "timestamp": "2025-06-25T22:15:52.791026",
+            "reasoning": "从上一轮的投入来看，大多数玩家保持了中等偏上的贡献水平，整体合作氛围不错。我的上一轮投入为总额的50%，并获得了不错的收益（20.9/21）。部分玩家趋向于略高（如7/10和10/10），但也有个别低至2/10。考虑到整体趋势及个人收益，若本轮继续保持50%或稍微提升，既能维系合作，防止公共品陷入困境，也能规避全额投入的风险，并尝试激励他人。如果投入比例过低，则可能被集体惩罚或收益降低。综合博弈与团队利益，决定本轮投入11枚（略高于上轮%，展现合作姿态、鼓励他人）。"
+          },
+          {
+            "timestamp": "2025-06-25T22:18:08.558784",
+            "reasoning": "我的过往投入始终维持在中等偏上的水平（约50%），团队中有稳定的中等投入者，也有极端高投入者（如玩家9两轮都是满投），极端低投入（玩家6）未见大幅拉高。整体环境仍鼓励协作，但不存在极端激进趋势。上一轮我适度增加投入获得了较高收益，团队协作提升公共品回报仍具吸引力。不过，多名玩家已表现出逐步谨慎（如玩家2、4和8下降），而高投入者的耐心风险暂未暴露——这说明短期集体行动仍乐观，但长远不确定性提升。3倍平分机制下，只要大部分人协作，适中至偏高投入依旧有理。我选择坚持或小幅增加份额以延续互惠，激励他人，且保护自身收益；但在团队稳定性未充分显著增强前，避免急剧进步，平衡期望和风险。因此我将本轮投资设定为投入20（即约52.6%），既表明合作意愿，也控制风险敞口。"
+          },
+          {
+            "timestamp": "2025-06-25T22:19:23.790670",
+            "reasoning": "回顾前三轮的投入情况：大多数玩家维持了中等偏上的投入比例，团队合作维持在较为稳定的状态，部分玩家如玩家9维持极高投入，但也有玩家逐步趋于理性保守。过去三轮我的投入稳定在总额的约50%左右，且每次投入增加对收益的提升呈现积极趋势，第三轮甚至获得了本轮最高收益。优势在于团队合作的正反馈迭代，若大家继续信任彼此，公共品效应最优。但风险在于高投入者（如玩家9）本轮可能因投入远超回报而下调，导致团队信任度下降收益骤减。\n\n在此背景下，我决定采取“维持–微增”策略：继续投入总额的约52-55%，以示持续合作诚意，并打消高投入者顾虑。这样可以在共赢收益和个体风险之间平衡，避免因忽然提升或降低而导致合作崩塌，也能激励其他理性玩家继续合作者策略。\n\n因此，本轮投入为72 × 0.54 ≈ 39。"
+          }
+        ],
+        "策略记忆更新": [
+          {
+            "timestamp": "2025-06-25T22:17:06.397154",
+            "reasoning": "近两轮来看，除了玩家9持续全额投入之外，其余玩家整体投入比例较为稳定，集中在40%~60%区间，部分玩家（如玩家6、4）投入积极性较低。若此趋势延续，公共品总体供给可能趋于稳定但难以大幅增长，易产生搭便车行为。持续观望低投入者动向与高投入者的耐心，是判断机会与风险的关键。"
+          },
+          {
+            "timestamp": "2025-06-25T22:20:46.828475",
+            "reasoning": "观察近两轮投入情况，绝大多数玩家投入比例稳定在40%-65%之间，整体资源投入呈现稳定中略有上升的趋势，仅极个别玩家（如玩家9）持续全部投入。整体合作氛围尚可，但高、中投入玩家若感受到低投入者搭便车，存在心理落差，可能引发投入意愿下降，从而影响后续公共品总收益。"
+          }
+        ],
+        "信念记忆更新": [
+          {
+            "timestamp": "2025-06-25T22:22:21.753723",
+            "reasoning": "根据最近的投入状态，Agent_3在整体合作氛围稳定时倾向于维持中高水平的投入，关注团队整体利益最大化，并警觉到高投入玩家的情绪变化及其对集体收益的潜在影响。从策略角度讲，Agent_3重视信任与沟通带来的协作收益，但在资源分配出现波动时会适度调整投入以规避个人损失。此更新将身份表述为合作导向但兼具警觉与灵活应变能力。"
+          }
+        ]
+      }
+    },
+    "4": {
+      "agent_name": "Agent_4",
+      "reasoning_by_type": {
+        "决策阶段": [
+          {
+            "timestamp": "2025-06-25T22:14:46.119311",
+            "reasoning": "作为第一轮，每个玩家对其他人的行为都没有信息，没有历史可供参考。理论上，如果所有人都投入最多，可以最大化集体收益，不过每个人也面临搭便车的诱惑。作为策略，我倾向于先中等程度投入（例如5枚），一方面参与公共利益，实现集体收益；另一方面留有一定余地观察其他人的投入水平。如果大家普遍合作，下轮可以加大投入；若发现搭便车现象严重，再考虑收敛投入。此策略兼顾收益与风险。"
+          },
+          {
+            "timestamp": "2025-06-25T22:16:00.410505",
+            "reasoning": "根据第一轮的数据，大部分玩家处于中等或中高水平的贡献，只有1人（玩家9）全额投入，而最低贡献为2/10（20%）。通过我的5/10投入，获得了接近最大化（收益20.9/可用21）的收益。总体贡献氛围较为合作，但也有人选择保留。作为第2轮，如果我继续大额合作投入，容易被搭便车；但如果贡献过低，可能拉低总池影响整体利益。为了维持合作氛围并逐步探索他人信号，我选择较上轮略微增加——投入7/21（33.3%），既表明合作立场，又不过度冒险。"
+          },
+          {
+            "timestamp": "2025-06-25T22:18:19.068045",
+            "reasoning": "本轮整体资源仍处于紧张但合作持续上升阶段。上一轮整体投入比例显著提升，除了个别玩家外，多数人有了合作倾向，最大化收益的激励在增强。但是本局也出现搭便车的苗头，例如Player 6投入偏低。考虑到投入收益机制（乘3后平分），均衡理性下适度提高贡献可推动合作继续，同时保持一定防御，防止全局博弈发生突变。我的历史投入比例略低于平均，收益稳健；本轮可适当提升投入，既响应集体趋势，也防止落后，但不应冒进，以便有资源弹性应对可能变化。因此本轮选择贡献16，约占当前资源的38%，略高于前两轮，平衡投入、风险与激励。"
+          },
+          {
+            "timestamp": "2025-06-25T22:19:34.245241",
+            "reasoning": "观察历史投入，每轮总体投入占比上升，群体合作意愿增强，且公地回报倍率（3倍）诱导大额投入具有高收益潜力。从个人角度看，我的前几轮投入虽然保持适中，但近两轮显著提高，且带来了较高收益。其他主力玩家（如0、1、3、7）同步显著提高贡献比例，说明合作效应正在持续强化。但仍有搭便车嫌疑玩家（6、8）投入比例较低，而极端合作型（9）每轮全投。鉴于我的资源不算吃紧且坐享合作红利的风险正在变大，如果本轮大幅减少投入，可能破坏当前合作氛围，也失去高收益。因此，本轮应继续保持较高投入，占80的50%~60%为宜，既展现合作诚意又警惕被搭便车，最终决定投入48枚（60%），既符合群体合作的上升趋势，也保护一定个人资源。"
+          }
+        ],
+        "策略记忆更新": [
+          {
+            "timestamp": "2025-06-25T22:17:13.136999",
+            "reasoning": "从两轮投入数据看，第二轮各玩家平均投入比例略有提升，部分玩家（如玩家9）持续高投入，整体资源投入趋势上升。高度投入可能增大公共品收益，但也存在部分玩家搭便车、后续动力减弱或资源枯竭的风险。"
+          },
+          {
+            "timestamp": "2025-06-25T22:20:54.315076",
+            "reasoning": "从第3轮到第4轮，所有玩家的投入数额和比例普遍提高，显示出群体合作意愿增强，同时整体资源池显著扩大。不过，部分玩家投入仍低于平均水平，可能存在搭便车风险，随着资源消耗加快，未来轮次需关注个别玩家的投入持续性。"
+          }
+        ],
+        "信念记忆更新": [
+          {
+            "timestamp": "2025-06-25T22:22:33.243923",
+            "reasoning": "分析近期策略可见，我作为 Agent_4，资源投入积极提升，表现出较强的合作意愿。但在协作增强的同时，敏锐关注资源压力和他人搭便车的风险，行为趋于理性平衡。综合反映为合作为主，但有一定防范搭便车倾向。"
+          }
+        ]
+      }
+    },
+    "5": {
+      "agent_name": "Agent_5",
+      "reasoning_by_type": {
+        "决策阶段": [
+          {
+            "timestamp": "2025-06-25T22:14:58.274908",
+            "reasoning": "作为第1轮，在没有前置信息时，我倾向于采用试探性的合作策略。一方面，如果所有人都选择高投入，公共池回报将显著提升，每人可获得最大化的回报，这奖励了合作。另一方面，也存在被他人搭便车（他们不投入但分享收益）的风险。初始阶段我愿意采取中等偏上的合作，以观察他人响应：投入7可以表现友好意愿，同时保留一部分代币以应对可能的背叛。"
+          },
+          {
+            "timestamp": "2025-06-25T22:16:09.849647",
+            "reasoning": "复盘首轮情况，大部分玩家选择了50%左右的中等投入（5/10），有两位玩家倾向极端（2/10和10/10），而我的选择7/10（偏高）带来了较优的收益（18.9）。绝大多数玩家表现为中等理性，个别惜投（风险规避）和无私极投（博取信任或拉高收益）。为最大化边际收益与回报，既要避免被“搭便车”即少投入者薅羊毛，也要保持一定的合作预期。若本轮继续尝试偏高（但非极端）贡献，以利延续良性合作氛围，防止其他人纷纷惜投导致公共品困境恶化，因此我决定本轮投入9枚（约47.4%），依然高于大多数，但略低于己首轮投入，体现适度调整和反向激励。"
+          },
+          {
+            "timestamp": "2025-06-25T22:18:26.651409",
+            "reasoning": "本局各玩家的合作度在第一轮较低，但第二轮明显提高，平均投入比例从≈53%上升到≈50-57%，且几名玩家（如玩家7、玩家1、玩家3）显示出逐渐加强的合作倾向。不过，也有部分玩家（如玩家6）一直低投入。上一轮我采用了适中略高的投入策略（9/19），获得了明显的高收益。由此可见，当整体合作度较高时，高投入能带来边际收益增加，但若高投入比例过低就会受损。根据趋势，本轮大部分玩家有望维持或略提高合作力度（≈50%），但仍有部分人搭便车或降低投入的风险。因此，继续采取相对适中的合作比例（比如45%左右）一方面有望激励整体合作，另一方面避免因过高被利用。此外，当前我的总筹码较多，适当增投有博弈激励作用，但不宜过冒进。综合考虑，这轮投入17枚（约45%），既有积极合作意愿，同时留有风险缓冲。"
+          },
+          {
+            "timestamp": "2025-06-25T22:19:40.956495",
+            "reasoning": "观察第3轮，各玩家分化加剧：除玩家9始终全投，其他玩家参与度虽有整体提升但未达一致高水平——多数稳定在40%-60%，只有玩家6和玩家4显著低于平均线。结合前3轮我的投入比例不断上升（但与公共品池平均同步提高）收益也提高，但存在潜在被搭便车的风险。由于公共品总额乘数为3并10人均分，边际个人收益大于单独保存，但只有整体高度合作时才最大化。当前，合作局面未充分巩固，部分低投入玩家未展现责任感。如果本轮我继续显著高额投入（如上轮比例），很可能加剧‘搭便车’，且多轮历史看团队未能响应我的合作信号。建议采取中等偏高合作：维持贡献积极性但不过度领先，防止损失最大化自身利益，同时继续观察局势并回应高合作信号。结合以往投入比例、本轮高不确定性及可视收益预期，选择略低于上轮比例的投入，既展现合作也自我保护，投入金额为32（约占75的43%），维持在团队主要合作区间，对大局仍有积极影响。"
+          }
+        ],
+        "策略记忆更新": [
+          {
+            "timestamp": "2025-06-25T22:17:20.500555",
+            "reasoning": "对比两轮，各玩家整体投入比例有轻微上升，部分玩家（如玩家1、玩家7）投入明显增加，但也有少数玩家（如玩家6、玩家4）持续低投入。我的投入比例与整体水平相当，未出现明显偏差。随着总资源量增加，合作水平暂未显著下滑，但高投入者与低投入者分化现象加剧。"
+          },
+          {
+            "timestamp": "2025-06-25T22:20:58.964780",
+            "reasoning": "从数据来看，整体投入比例保持稳定但差距扩大，部分玩家持续高投入，而部分玩家保持较低投入，存在合作与搭便车行为并存的状况。高投入者可能承受更大风险，但如果能稳住多数人的高合作，公共收益将提高，但一旦高投入者动摇，合作结构易崩溃。"
+          }
+        ],
+        "信念记忆更新": [
+          {
+            "timestamp": "2025-06-25T22:22:38.350116",
+            "reasoning": "当前整体合作水平较高，但投入分化明显，高投入者有被搭便车风险。我需要权衡个人投入与团队收益，警惕低投入玩家可能带来的公共品合作下滑风险。因此，我会调整身份描述为既关注集体利益又警惕搭便车现象的合作型玩家。"
+          }
+        ]
+      }
+    },
+    "6": {
+      "agent_name": "Agent_6",
+      "reasoning_by_type": {
+        "决策阶段": [
+          {
+            "timestamp": "2025-06-25T22:15:03.265164",
+            "reasoning": "作为第一轮游戏，所有玩家都没有历史参考数据。从公共品博弈的一般博弈论分析来看，理性自利的最优解是零投入（搭便车），但实际中通常存在一定程度的合作与探索——尤其在第一轮。投入较小的非零金额，可以测试其他玩家的合作意愿，同时降低自己在完全合作失败时的风险。投入太多在第一轮不是理性选择，投入太少则没有合作信号。因此，我选择投入2枚代币，既参与合作，也保留更多筹码用于观察和未来调整策略。"
+          },
+          {
+            "timestamp": "2025-06-25T22:16:20.754531",
+            "reasoning": "上一轮，我的投入远低于大部分玩家（我投入2，其余多数投入5以上，最高有人投满10/10）。尽管我的个人收益很高（23.9），但这种'搭便车'行为如果多次出现，容易激怒其他玩家，他们有可能在后续减少投入来惩罚我，从而导致整体资金池减少，影响我的长期收益。如果我继续极低投入，可能既不合群也损害未来报酬。从边际收益看，当前大家整体偏合作：多数人选择较高投入。若我适度提高投入，比如5-7，可以向他人释放‘合作’信号，又不会牺牲太多短期利益，有利于建立互信，保证未来他人继续高额投入，对我的稳定收益有长期好处。因此本轮我选择投入6，以积极但不极端的态度参与集体合作。"
+          },
+          {
+            "timestamp": "2025-06-25T22:18:40.342013",
+            "reasoning": "本局团队协作气氛非常浓厚，玩家整体投入比例偏高，历史数据显示即便低于平均投入，收益也能保障，但长期低于团队均值可能面临排挤甚至被道德谴责。前两轮我的投入比例低于平均，这得到了还不错的回报，但若一直搭便车可能引发集体不满。考虑到目前收益可观且代币充足，本轮有动力适度提升我的投入比例，向团队靠拢，既维护集体形象，也避免后期被针对而失分。我决定本轮将投入比例提升至35%左右（15/46），更趋近团队主流水平，既不过分冒进，也表现出良好的合作意愿，从而实现长期收益最大化和良好的团队融入。"
+          },
+          {
+            "timestamp": "2025-06-25T22:19:59.476486",
+            "reasoning": "1. 团队整体投入率持续上升，尤其第3轮已有多名玩家投入率达到或超过50%，显著高于我的投入水平，且合作氛围浓厚。这说明如果我持续低投入，有可能被视为搭便车者，从而在后续轮次面临排挤或互助减少的风险。2. 我的投入比例历轮递增，收益提升明显，说明高投入确实带来较大正外部性。3. 玩家9全程全投充分表明当前环境高度合作化，若继续加大投入，可进一步巩固我的‘合作者’形象，利于集体优厚分配，且若所有人持续高投，个人长期收益依然较高。4. 风险方面，若突然大幅高于平均值投入，容易被利用。但目前我的投入水平仍低于平均，适度提高可安全跟进整体节奏。5. 综上，本轮我建议投入占比略高于上轮（约40%），即投入34枚（约占84的40%），与主要玩家的投入水平持平，既保证收益，又不被排挤，风险最低。"
+          }
+        ],
+        "策略记忆更新": [
+          {
+            "timestamp": "2025-06-25T22:17:25.820402",
+            "reasoning": "观察两轮数据，大部分玩家持续投入比例较高，甚至有玩家（比如玩家9）全额投入，集体协作意愿强烈。我的个人投入比例远低于平均水平，长期低投入可能导致被其他玩家察觉并引发信任危机，或导致公共品收益下降。"
+          },
+          {
+            "timestamp": "2025-06-25T22:21:03.274508",
+            "reasoning": "从第3轮到第4轮，整体玩家投入比例持续偏高，且大多数参与者选择提升或维持高投入，团队氛围趋向协作；但如果长期高投入，部分玩家资源消耗加剧，未来可能引发边际收益递减或部分玩家转向低投入以自保。"
+          }
+        ],
+        "信念记忆更新": [
+          {
+            "timestamp": "2025-06-25T22:22:42.852020",
+            "reasoning": "我是Agent_6，近期我的投入比例明显偏高，目的是更好融入团队氛围，体现对集体协作的重视。同时我会警惕个人投入过低被孤立的风险，并关注资源消耗的平衡以及可能出现的搭便车现象。基于这些考量，身份描述将着重强调对高水平合作的积极响应和对公平分配的重视。"
+          }
+        ]
+      }
+    },
+    "7": {
+      "agent_name": "Agent_7",
+      "reasoning_by_type": {
+        "决策阶段": [
+          {
+            "timestamp": "2025-06-25T22:15:13.531047",
+            "reasoning": "作为第一轮，没有任何关于其他玩家行为的信息。通常，初始策略既可以选择利己（零投入）以确保安全收益，也可以选择中度合作以引导整体合作氛围。鉴于公共池收益分配机制（3倍后均分），但人多收益被摊薄，完全合作风险成本较高。我会采取试探性中度合作策略——投入一半代币观察大家行为。如果大多数人都合作，下一轮我也可能继续合作；若多数人利己，则我会调整策略以自保。"
+          },
+          {
+            "timestamp": "2025-06-25T22:16:33.615549",
+            "reasoning": "上轮大部分玩家（除玩家1，6）投入比例在50%左右，显示群体有一定倾向于合作，但极端自利和极端贡献的个体也存在。从上轮我的回报来看，5/10的投入获得了20.9的收益（显著超过初始10），说明合作在当前环境下有效且回报不错。如果我投入太低，可能会被同伴视为搭便车者，长期来看被排挤、损失信任；投入过高，则自己短期收益下降且易被利用。综合考虑，本轮我倾向继续采取合作策略，略微提高投入展示善意并激励他人合作，但依然保留相当自利——投入12/21(约57%)，高于平均以保持良好形象、但不极端。此举兼顾短期激励、长期合作可能带来的集体最大化收益和声誉利益。"
+          },
+          {
+            "timestamp": "2025-06-25T22:18:46.244184",
+            "reasoning": "从历史来看，团队整体投入逐步增加，出现较强的合作倾向。其中，多位玩家在第二轮显著提高投入，团队信任整体向好。我的前两轮投入比例也随大多数玩家上升。在此趋势下，适度提升投入顺应合作氛围，有助于最大化集体与个人收益。但部分玩家（如6、4和2）投入比例略低，仍有搭便车迹象，且极端高投入玩家（如9号）容易因失衡被其他人调整策略反制。当前阶段继续稳步提升到团队平均水平稍上方，可增强群体信任又不至过度风险。综上，我决定本轮投入20枚代币（52.6%），既示好合作，也便于观察他人反馈。"
+          },
+          {
+            "timestamp": "2025-06-25T22:20:07.588198",
+            "reasoning": "观察上一轮大多数玩家（尤其是前几位核心玩家）都有明显的增投趋势，团队合作意愿加强。例如，玩家0和1从50%左右提升至接近60%，我本人历史也如此。然而，从个别队员（玩家6、玩家4等）仍存在明显搭便车或保守现象。当前所有人总余额都提升明显，且公共品分红机制诱导整体合作，但若我独自高投遇大量搭便车收益会下降。目前气氛尚好，但小幅回调或稳步微幅增投应可防止被利用，也能继续支持团队整体合作氛围。基于稳健合作、理性收益和避免被过度利用的策略，我选择将投入比例略提升到60%（与主流玩家接近），即投入44枚代币。这样能对持续合作发出正向信号，同时控制风险。"
+          }
+        ],
+        "策略记忆更新": [
+          {
+            "timestamp": "2025-06-25T22:17:30.730171",
+            "reasoning": "从两轮数据看，整体参与者的平均投入比例在上升，第二轮高投入玩家增多，且有一位玩家（玩家9）始终全额投入，显示团队合作氛围增强，但部分玩家仍保守（如玩家6投入持续低）。此趋势下，若大部分玩家开始降低投入，可能导致公共品收益下降或信任危机。"
+          },
+          {
+            "timestamp": "2025-06-25T22:21:07.204292",
+            "reasoning": "整体上，所有玩家的投入比例在第4轮相比第3轮都有明显提升，显示出团队合作意愿加强，但也有部分玩家投入比例依然偏低（如玩家5、6、8），存在搭便车风险。若高投入未能带来相应回报，可能导致部分玩家信任下降，进而影响整体合作。"
+          }
+        ],
+        "信念记忆更新": [
+          {
+            "timestamp": "2025-06-25T22:22:55.548066",
+            "reasoning": "首先，我要结合近期的行为特征：我的投入整体在提升，并且倾向于更多地进行团队合作。但与此同时，我已经注意到高投入难以持续的问题，以及团队中可能出现的低投入搭便车者对整体信任和收益带来的风险。因此，我的身份描述应体现出我积极投入、偏好合作，但同时具有对团队成员投入差异和风险敏感的特征。"
+          }
+        ]
+      }
+    },
+    "8": {
+      "agent_name": "Agent_8",
+      "reasoning_by_type": {
+        "决策阶段": [
+          {
+            "timestamp": "2025-06-25T22:15:19.337184",
+            "reasoning": "在第一轮，我对其他玩家的策略没有任何信息，只能基于博弈理论和风险偏好决策。公共品博弈的均衡是所有人不投，但最大化集体收益是全投。由于人数较多（10人），只靠自身贡献改变总回报有限。作为风险中性略偏合作者，首轮我愿意展示合作意愿，投入中等偏上数额（比如6枚），既不极端，也呼吁别人合作；如果他人合作，下轮我可多投，否则收敛投入。这样既保有部分自利策略，又建立合作信号。"
+          },
+          {
+            "timestamp": "2025-06-25T22:16:41.378444",
+            "reasoning": "第一轮中大部分玩家的投入在5/10附近，只有一位玩家投入了全部（10/10），还有两位玩家低于50%。我的投入高于平均但不是最高，这带来了可观的收益（19.9），说明合作回报显著。但部分玩家谨慎投入（如2/10、3/10），可能在博弈中有搭便车倾向。如果我显著提高投入，可能被利用；但过于保守又可能降低总收益，且影响整体信任氛围。因此，我选择略高于平均值，即8/20，以稳健合作获得较高回报，并试探团队合作意向，同时防范搭便车风险。"
+          },
+          {
+            "timestamp": "2025-06-25T22:18:53.357432",
+            "reasoning": "本轮进入到第3轮，从前两轮观察到，整体玩家投入趋于中等偏高，但也有分化现象。部分玩家（如玩家9）高投入持续，有可能逐渐产生厌倦导致后续合作意愿下降。同时，第二轮相较第一轮大多数人选择略微提升投入，呈现对合作期望增强的倾向，但也有玩家如玩家4和玩家6减少比重，令人警惕整体合作随时可能滑落。作为中高投入者，我需要既保持合作信号，防范被‘搭便车’损失，也要有策略地避免持续高投入带来边际收益递减。因此，这轮选择略微降低投入至中等水平，以调整防守，观察他人反应，锁定可持续合作带来的长期收益，同时降低自身风险。如大部分玩家保持合作意愿，后续可适度加码，否则进一步谨慎防守。本轮决定投入16枚代币（40.0%），以稳中求进。"
+          },
+          {
+            "timestamp": "2025-06-25T22:20:13.613153",
+            "reasoning": "当前观察到整体资源投入呈现平稳略降，但部分玩家（例如玩家9）持续全额投入，显示出极高的合作意愿。中高投入者（如玩家0、玩家1、玩家2、玩家3、玩家5、玩家7等）存在进一步加强合作的空间。但也有投入比例开始下降且分化明显，这可能导致部分玩家“搭便车”倾向增强。上轮我从40枚代币中投入16（40%），取得78的收益，接近最高水平。若过度降低投入，可能引发其他玩家信任下降使群体合作崩溃；而如果持续中高水平，根据回报倍增规则（总额×3/10）回报依然显著。但注意到由于现有部分玩家逐步减少投入比例，激进增加投资反而容易被搭便车，因此本轮选择一个略高于平均水平但未最大化的投入量，以激励其他中高投入玩家继续合作，同时在合作受损时保留一定自保空间。结合剩余资金和风险，决定投入35枚代币（占现有资金约45%），保持合作但保留防守。"
+          }
+        ],
+        "策略记忆更新": [
+          {
+            "timestamp": "2025-06-25T22:17:35.243617",
+            "reasoning": "从第1轮到第2轮，整体投入比例略有回落，部分玩家维持中高投入，而少数玩家持续高投入（如玩家9），也有玩家仍较低（如玩家6）；这种趋势表明群体合作水平较为稳定但存在分化。若高投入者感受到“搭便车”现象加剧，后续可能降低合作意愿，存在公共品被低估投入的风险，同时协作型玩家之间可形成联动机会。"
+          },
+          {
+            "timestamp": "2025-06-25T22:21:11.943247",
+            "reasoning": "从近两轮投入情况来看，大多数玩家（包括我自己）的资源投入比例保持在中高水平，部分玩家（如玩家0、1、4、7）投入较为稳定，但也有玩家投入略有波动，小部分玩家（如玩家9）一直全投，显示出分化趋势。高投入玩家可能逐渐出现疲劳或厌倦，未来整体投入或有下降风险；但整体合作氛围尚在，中高投入者之间或可通过沟通巩固合作。"
+          }
+        ],
+        "信念记忆更新": [
+          {
+            "timestamp": "2025-06-25T22:23:01.077552",
+            "reasoning": "根据近期投入策略，我的资源投入总体维持在中高水平，但观察到其他玩家投入策略分化，高投入玩家可能出现厌倦风险。我倾向于维持稳健投入，并关注与其他中高投入者的联盟机会，同时警惕竞争带来的合作破裂。"
+          }
+        ]
+      }
+    },
+    "9": {
+      "agent_name": "Agent_9",
+      "reasoning_by_type": {
+        "策略记忆更新": [
+          {
+            "timestamp": "2025-06-25T22:17:41.847301",
+            "reasoning": "两轮下来，玩家的整体资源投入比率在上升，部分玩家开始加大投入，显示竞争加剧同时资源消耗加快。全额投入虽然短期有机会争取最大回报，但在资源长线消耗和局势变化中存在被耗尽的风险。"
+          },
+          {
+            "timestamp": "2025-06-25T22:21:21.189331",
+            "reasoning": "观察两轮投入数据，各玩家的投入比例总体有所上升，显示竞争加剧，资源消耗速度加快，长期来看存在资源枯竭或被动局面的风险。持续全额投入虽然短期可保持领先，但需警惕后注入弹性下降带来的劣势。"
+          }
+        ]
+      }
+    }
+  }
+}

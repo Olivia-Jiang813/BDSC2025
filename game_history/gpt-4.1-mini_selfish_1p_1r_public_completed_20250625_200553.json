@@ -1,0 +1,149 @@
+{
+  "game_config": {
+    "model": "gpt-4.1-mini",
+    "personality_type": "selfish",
+    "endowment": 10,
+    "r": 3,
+    "rounds": 1,
+    "num_players": 1,
+    "reveal_mode": "public",
+    "completed_rounds": 1,
+    "final_decisions": {
+      "0": 0
+    }
+  },
+  "game_status": "completed",
+  "rounds": [
+    {
+      "round": 1,
+      "stats": {
+        "total_contribution": 0,
+        "public_pool": 0,
+        "share_per_player": 0.0
+      },
+      "agents": [
+        {
+          "id": "0",
+          "initial_total_money": 10,
+          "contribution": 0,
+          "payoff": 10.0,
+          "latest_strategy": null,
+          "latest_belief": null
+        }
+      ]
+    }
+  ],
+  "agents": [
+    {
+      "id": "0",
+      "name": "Agent_0",
+      "personality_type": "selfish",
+      "is_anchor": false,
+      "game_history": [
+        {
+          "round": 1,
+          "contribution": 0,
+          "group_total": 0,
+          "payoff": 10.0,
+          "total_money_before_round": 10
+        }
+      ],
+      "strategy_memory": [],
+      "belief_memory": [],
+      "current_total_money": 10,
+      "final_decision": 0
+    }
+  ],
+  "llm_interactions": {
+    "summary": {
+      "total_interactions": 2,
+      "agents_count": 1
+    },
+    "interactions_by_agent": {
+      "0": {
+        "agent_name": "Agent_0",
+        "personality_type": "selfish",
+        "total_interactions": 2,
+        "interactions": [
+          {
+            "timestamp": "2025-06-25T20:05:40.153924",
+            "debug_label": "决策阶段",
+            "duration_seconds": 10.72911,
+            "model": "gpt-4.1-mini",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名 ** 自私倾向 ** 的玩家。在面临利益冲突或资源分配时，为了实现你自身目标、满足个人需求或维护自我利益，你倾向于有意或无意地以他人的利益、福祉、权利或机会为代价。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_0\"。\n\n        游戏规则：\n        - 当前第 1 轮\n        - 你有 10 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给 1 名玩家\n        - 你的投入范围：0 到 10\n\n        你的记忆：\n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–10之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "0",
+              "reasoning": "作为一名自私倾向的玩家，我的目标是最大化自身收益。由于只有一名玩家能获得公共池的奖金，且奖金为公共池总额的三倍平分（实际上是全部奖金给一人），我的投资回报依赖于其他玩家的行为。如果我投入较多，自己承担的成本会增加，但如果其他玩家投入很少，我的回报可能不足以覆盖投资；如果我投入为零，则无需承担成本，但也错失可能获得的奖金。由于这是第一轮，我缺乏其他玩家投入的信息，采取保守策略避免不必要的损失是合理的选择。因此，我选择投入0，以避免任何单方面损失。",
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-25T20:05:50.883366",
+            "debug_label": "最终一次性决策",
+            "duration_seconds": 2.262788,
+            "model": "gpt-4.1-mini",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名 ** 自私倾向 ** 的玩家。在面临利益冲突或资源分配时，为了实现你自身目标、满足个人需求或维护自我利益，你倾向于有意或无意地以他人的利益、福祉、权利或机会为代价。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "游戏已经结束。现在你面临一个全新的一次性公共品博弈：\n\n        游戏设置：\n        - 你有 10 枚代币（这是一个独立的新游戏）\n        - 与 0 名陌生玩家进行一次性博弈\n        - 公共池总额 × 3 后平分给所有玩家\n        - 没有历史记录，没有未来轮次\n        - 投入范围：0 到 10\n\n        请基于你在之前游戏中形成的策略和信念，决定在这个一次性博弈中的投入。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "0",
+              "reasoning": "在当前场景中，没有其他玩家参与，意味着没有人共享公共池收益，投入公共品的收益完全由自己承担，且贡献不会带来任何额外利益。作为一名自私的玩家，我的目标是最大化自身收益。投0代币，我能够保留全部10枚代币且不会亏损。其他投入都会导致个人纯收益减少，因此最佳策略是完全不投入。",
+              "structured_output_type": "FinalDecision",
+              "status": "success"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "reasoning_summary": {
+    "0": {
+      "agent_name": "Agent_0",
+      "reasoning_by_type": {
+        "决策阶段": [
+          {
+            "timestamp": "2025-06-25T20:05:40.153924",
+            "reasoning": "作为一名自私倾向的玩家，我的目标是最大化自身收益。由于只有一名玩家能获得公共池的奖金，且奖金为公共池总额的三倍平分（实际上是全部奖金给一人），我的投资回报依赖于其他玩家的行为。如果我投入较多，自己承担的成本会增加，但如果其他玩家投入很少，我的回报可能不足以覆盖投资；如果我投入为零，则无需承担成本，但也错失可能获得的奖金。由于这是第一轮，我缺乏其他玩家投入的信息，采取保守策略避免不必要的损失是合理的选择。因此，我选择投入0，以避免任何单方面损失。"
+          }
+        ],
+        "最终一次性决策": [
+          {
+            "timestamp": "2025-06-25T20:05:50.883366",
+            "reasoning": "在当前场景中，没有其他玩家参与，意味着没有人共享公共池收益，投入公共品的收益完全由自己承担，且贡献不会带来任何额外利益。作为一名自私的玩家，我的目标是最大化自身收益。投0代币，我能够保留全部10枚代币且不会亏损。其他投入都会导致个人纯收益减少，因此最佳策略是完全不投入。"
+          }
+        ]
+      }
+    }
+  }
+}

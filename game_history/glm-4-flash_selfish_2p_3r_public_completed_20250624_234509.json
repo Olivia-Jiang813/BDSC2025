@@ -1,0 +1,187 @@
+{
+  "game_config": {
+    "model": "glm-4-flash",
+    "personality_type": "selfish",
+    "endowment": 10,
+    "r": 3,
+    "rounds": 3,
+    "num_players": 2,
+    "reveal_mode": "public",
+    "completed_rounds": 3,
+    "final_decisions": {
+      "0": 7,
+      "1": 5
+    }
+  },
+  "game_status": "completed",
+  "rounds": [
+    {
+      "round": 1,
+      "stats": {
+        "total_contribution": 7,
+        "public_pool": 21,
+        "share_per_player": 10.5
+      },
+      "agents": [
+        {
+          "id": "0",
+          "initial_total_money": 17.5,
+          "contribution": 3,
+          "payoff": 17.5,
+          "latest_strategy": null,
+          "latest_belief": null
+        },
+        {
+          "id": "1",
+          "initial_total_money": 16.5,
+          "contribution": 4,
+          "payoff": 16.5,
+          "latest_strategy": null,
+          "latest_belief": null
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "stats": {
+        "total_contribution": 7,
+        "public_pool": 21,
+        "share_per_player": 10.5
+      },
+      "agents": [
+        {
+          "id": "0",
+          "initial_total_money": 25.0,
+          "contribution": 3,
+          "payoff": 25.0,
+          "latest_strategy": "策略总结: 基于上述信息，可以观察到整体资源投入趋势为波动，且你的投入相对稳定，而玩家1在第一轮投入较高。潜在风险在于，如果玩家1在下一轮继续高投入，可能会激励其他玩家也增加投入，从而增加你的成本和竞争压力。机会在于，如果你能够准确预测玩家1的行为模式，可以通过调整自己的投入策略来减少竞争或获取额外的资源。",
+          "latest_belief": null
+        },
+        {
+          "id": "1",
+          "initial_total_money": 23.0,
+          "contribution": 4,
+          "payoff": 23.0,
+          "latest_strategy": "策略总结: 从目前的投入情况来看，玩家Agent_1和玩家0在两轮博弈中都保持了相同的投入水平，这可能表明两位玩家都倾向于保持稳定投入，以维持一定的公共品产出。然而，这种稳定的投入趋势可能存在潜在风险，即如果其他玩家减少投入，将导致公共品产出减少，影响自身收益；同时，这也可能是一个机会，因为稳定的投入可能会增加其他玩家对合作的信任，从而在未来可能获得更多的合作回报。",
+          "latest_belief": null
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "stats": {
+        "total_contribution": 7,
+        "public_pool": 21,
+        "share_per_player": 10.5
+      },
+      "agents": [
+        {
+          "id": "0",
+          "initial_total_money": 32.5,
+          "contribution": 3,
+          "payoff": 32.5,
+          "latest_strategy": "策略总结: 基于上述信息，可以观察到整体资源投入趋势为波动，且你的投入相对稳定，而玩家1在第一轮投入较高。潜在风险在于，如果玩家1在下一轮继续高投入，可能会激励其他玩家也增加投入，从而增加你的成本和竞争压力。机会在于，如果你能够准确预测玩家1的行为模式，可以通过调整自己的投入策略来减少竞争或获取额外的资源。",
+          "latest_belief": null
+        },
+        {
+          "id": "1",
+          "initial_total_money": 29.5,
+          "contribution": 4,
+          "payoff": 29.5,
+          "latest_strategy": "策略总结: 从目前的投入情况来看，玩家Agent_1和玩家0在两轮博弈中都保持了相同的投入水平，这可能表明两位玩家都倾向于保持稳定投入，以维持一定的公共品产出。然而，这种稳定的投入趋势可能存在潜在风险，即如果其他玩家减少投入，将导致公共品产出减少，影响自身收益；同时，这也可能是一个机会，因为稳定的投入可能会增加其他玩家对合作的信任，从而在未来可能获得更多的合作回报。",
+          "latest_belief": null
+        }
+      ]
+    }
+  ],
+  "agents": [
+    {
+      "id": "0",
+      "name": "Agent_0",
+      "personality_type": "selfish",
+      "is_anchor": false,
+      "game_history": [
+        {
+          "round": 1,
+          "contribution": 3,
+          "group_total": 7,
+          "payoff": 17.5
+        },
+        {
+          "round": 2,
+          "contribution": 3,
+          "group_total": 7,
+          "payoff": 25.0
+        },
+        {
+          "round": 3,
+          "contribution": 3,
+          "group_total": 7,
+          "payoff": 32.5
+        }
+      ],
+      "strategy_memory": [
+        {
+          "rounds": [
+            1,
+            2
+          ],
+          "end_round": 2,
+          "timestamp": "2025-06-24T23:45:05.432486",
+          "strategy": "基于上述信息，可以观察到整体资源投入趋势为波动，且你的投入相对稳定，而玩家1在第一轮投入较高。潜在风险在于，如果玩家1在下一轮继续高投入，可能会激励其他玩家也增加投入，从而增加你的成本和竞争压力。机会在于，如果你能够准确预测玩家1的行为模式，可以通过调整自己的投入策略来减少竞争或获取额外的资源。",
+          "contributions_analyzed": [
+            3,
+            3
+          ]
+        }
+      ],
+      "belief_memory": [],
+      "current_total_money": 32.5,
+      "final_decision": 7
+    },
+    {
+      "id": "1",
+      "name": "Agent_1",
+      "personality_type": "selfish",
+      "is_anchor": false,
+      "game_history": [
+        {
+          "round": 1,
+          "contribution": 4,
+          "group_total": 7,
+          "payoff": 16.5
+        },
+        {
+          "round": 2,
+          "contribution": 4,
+          "group_total": 7,
+          "payoff": 23.0
+        },
+        {
+          "round": 3,
+          "contribution": 4,
+          "group_total": 7,
+          "payoff": 29.5
+        }
+      ],
+      "strategy_memory": [
+        {
+          "rounds": [
+            1,
+            2
+          ],
+          "end_round": 2,
+          "timestamp": "2025-06-24T23:45:07.977719",
+          "strategy": "从目前的投入情况来看，玩家Agent_1和玩家0在两轮博弈中都保持了相同的投入水平，这可能表明两位玩家都倾向于保持稳定投入，以维持一定的公共品产出。然而，这种稳定的投入趋势可能存在潜在风险，即如果其他玩家减少投入，将导致公共品产出减少，影响自身收益；同时，这也可能是一个机会，因为稳定的投入可能会增加其他玩家对合作的信任，从而在未来可能获得更多的合作回报。",
+          "contributions_analyzed": [
+            4,
+            4
+          ]
+        }
+      ],
+      "belief_memory": [],
+      "current_total_money": 29.5,
+      "final_decision": 5
+    }
+  ]
+}
