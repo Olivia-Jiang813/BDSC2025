@@ -42,11 +42,10 @@ GAME_CONFIG = {
     "r": 3,            # 公共池倍数
     "rounds": 10,        # 游戏轮数
     "num_players": 10,    # 游戏玩家数量
-    
+    # Anchor智能体比例（0~1），如0.1表示10%，0.2表示20%，0.3表示30%
+    "anchor_ratio": 0.2,  # 默认10%，可调整为0.2、0.3等
     # 实验控制参数
-    "use_anchor_agent": False,  # 是否使用锚定智能体
-    "reveal_mode": "public",    # 信息公开模式：public（完全公开）或 anonymous（只显示总量）
-    
+    "reveal_mode": "anonymous",    # 信息公开模式：public（完全公开）或 anonymous（只显示总量）
     # 智能体性格特征设置
     "personality_type": "neutral"  # 可选：selfish, altruistic, neutral, anchor
 }

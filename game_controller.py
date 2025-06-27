@@ -30,30 +30,26 @@ class GameController:
 
     def setup_game(self):
         """初始化游戏，创建智能体"""
-        # 创建普通智能体
         num_agents = self.config["num_players"]
-        if self.config["use_anchor_agent"]:
-            # 如果使用锚定智能体，则减少一个普通智能体
-            num_normal_agents = num_agents - 1
-        else:
-            num_normal_agents = num_agents
-            
-        # 创建普通智能体
-        for i in range(num_normal_agents):
-            agent = Agent(
-                agent_id=str(i),
-                personality_type=self.config["personality_type"]
-            )
+        anchor_ratio = self.config.get("anchor_ratio", 0)
+        num_anchors = int(num_agents * anchor_ratio)
+        if anchor_ratio > 0 and num_anchors == 0:
+            num_anchors = 1  # 至少1个anchor
+        # 随机选取anchor的位置
+        anchor_indices = set(random.sample(range(num_agents), num_anchors))
+        for i in range(num_agents):
+            if i in anchor_indices:
+                agent = Agent(
+                    agent_id=str(i),
+                    personality_type="anchor",
+                    is_anchor=True
+                )
+            else:
+                agent = Agent(
+                    agent_id=str(i),
+                    personality_type=self.config["personality_type"]
+                )
             self.agents.append(agent)
-            
-        # 如果启用了锚定智能体，添加一个锚定智能体
-        if self.config["use_anchor_agent"]:
-            anchor_agent = Agent(
-                agent_id=str(num_agents-1),
-                personality_type="anchor",
-                is_anchor=True
-            )
-            self.agents.append(anchor_agent)
 
     def signal_handler(self, signum, frame):
         """处理程序意外退出的情况"""
@@ -221,17 +217,18 @@ class GameController:
         round_data['payoffs'] = payoffs
         round_data['stats'] = stats
         
-        # 3. 更新记忆
+        # 3. 更新记忆，并收集每个agent本轮数据
+        agents_data = []
         for agent in self.agents:
-            # 先记录本轮的基础游戏数据到agent.history
-            agent.record_round_data(
+            # 先记录本轮的基础游戏数据到agent.history，并获取本轮数据
+            agent_round_data = agent.record_round_data(
                 round_num=self.current_round,
                 contribution=round_data['contributions'][agent.id],
                 group_total=round_data['stats']['total_contribution'],
                 payoff=round_data['payoffs'][agent.id],
                 total_money_before_round=initial_total_money[agent.id]
             )
-            
+            agents_data.append(agent_round_data)
             # 然后更新智能体的记忆（此时history已包含当前轮数据）
             agent.update_memory(
                 round_number=self.current_round,
@@ -240,20 +237,9 @@ class GameController:
                 reveal_mode=self.reveal_mode,
                 all_history=all_history
             )
-        
-        # 4. 统一进行策略和信念更新（在所有玩家完成本轮后）
+        round_data['agents_data'] = agents_data
+        # 信念每轮都更新
         self._update_agents_memory(all_history)
-        
-        # 5. 准备agent数据用于记录
-        round_data['agents_data'] = [{
-            "id": agent.id,
-            "initial_total_money": agent.current_total_money,
-            "contribution": round_data['contributions'][agent.id],
-            "payoff": round_data['payoffs'][agent.id],
-            "latest_strategy": agent.get_latest_strategy() if agent.strategy_memory else None,
-            "latest_belief": agent.belief_memory[-1]['updated_personality'] if agent.belief_memory else None
-        } for agent in self.agents]
-        
         return round_data
         
     def _collect_measurements(self, agent):
@@ -262,8 +248,8 @@ class GameController:
         
         # 获取最新的思考或反思来帮助评估
         memory_context = ""
-        if agent.short_term_memory:
-            memory_context = f"你最近的思考：{agent.short_term_memory[-1]['thought']}"
+        if agent.reasoning:
+            memory_context = f"你最近的思考：{agent.reasoning[-1]['thought']}"
         elif agent.long_term_memory:
             memory_context = f"你最新的反思：{agent.long_term_memory[-1]['reflection']}"
         else:
@@ -295,22 +281,11 @@ class GameController:
         }
     
     def _update_agents_memory(self, all_history):
-        """统一更新所有智能体的策略和信念记忆"""
-        
-        # 策略记忆更新（每2轮）
-        if self.current_round % 2 == 0:
-            print("\n=== 策略记忆更新 ===")
-            for agent in self.agents:
-                agent._update_strategy_memory(self.current_round, self.reveal_mode, all_history)
-                if agent.strategy_memory:
-                    print(f"\n玩家 {agent.id} 的策略记忆更新：\n{agent.strategy_memory[-1]['strategy']}")
-        
-        # 信念记忆更新（每4轮）
-        if self.current_round % 4 == 0:
-            print("\n=== 信念记忆更新 ===")
-            for agent in self.agents:
-                agent._update_belief_memory(self.current_round, self.reveal_mode, all_history)
-                if agent.belief_memory:
-                    print(f"\n玩家 {agent.id} 的信念记忆更新：\n{agent.belief_memory[-1]['updated_personality']}")
+        """统一更新所有智能体的信念记忆（每轮都更新）"""
+        print("\n=== 信念记忆更新 ===")
+        for agent in self.agents:
+            agent._update_belief_memory(self.current_round, self.reveal_mode, all_history)
+            if agent.belief_memory:
+                print(f"\n玩家 {agent.id} 的信念记忆更新：\n{agent.belief_memory[-1]['updated_personality']}")
 
 

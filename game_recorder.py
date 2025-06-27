@@ -57,8 +57,7 @@ class GameRecorder:
                 "personality_type": agent.personality_type,
                 "is_anchor": agent.is_anchor,
                 "game_history": agent.history,
-                "strategy_memory": agent.strategy_memory,  # 新的策略记忆
-                "belief_memory": agent.belief_memory,      # 新的信念记忆
+                "belief_memory": agent.belief_memory,      # 信念记忆
                 "current_total_money": agent.current_total_money,  # 当前总金额
                 "final_decision": game_config.get("final_decisions", {}).get(agent.id) if game_config.get("final_decisions") else None
             }
@@ -220,21 +219,18 @@ class GameRecorder:
                 lines.append(f"玩家 {agent_data['id']}: {agent_data['contribution']}")
             lines.append("-"*30)
 
-        # === 4. 策略与信念记录 ===
+        # === 4. 信念记录 ===
         lines.append("\n" + "="*50)
-        lines.append("策略与信念记录")
+        lines.append("信念记录")
         lines.append("="*50)
         for agent in agents:
             if agent.is_anchor:
-                lines.append(f"\n玩家 {agent.name}（锚定智能体）不参与策略与信念记忆更新。")
+                lines.append(f"\n玩家 {agent.name}（锚定智能体）不参与信念记忆更新。")
                 lines.append("-"*30)
                 continue
-            lines.append(f"\n玩家 {agent.name} 的策略记忆:")
-            for strat in agent.strategy_memory:
-                lines.append(f"- 轮次 {strat['end_round']}: {strat['strategy']}")
             lines.append(f"\n玩家 {agent.name} 的信念记忆:")
             for belief in agent.belief_memory:
-                lines.append(f"- 轮次 {belief['end_round']}: {belief['updated_personality']}")
+                lines.append(f"- 轮次 {belief.get('round', belief.get('end_round', '?'))}: {belief.get('updated_personality', belief.get('updated_personality',''))}")
             lines.append("-"*30)
 
         # === 5. AI交互记录 ===

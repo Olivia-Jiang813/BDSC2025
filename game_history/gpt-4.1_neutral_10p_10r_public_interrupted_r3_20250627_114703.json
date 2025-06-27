@@ -1,0 +1,1177 @@
+{
+  "game_config": {
+    "model": "gpt-4.1",
+    "personality_type": "neutral",
+    "endowment": 10,
+    "r": 3,
+    "rounds": 10,
+    "num_players": 10,
+    "reveal_mode": "public",
+    "completed_rounds": 3,
+    "final_decisions": null
+  },
+  "game_status": "interrupted",
+  "rounds": [
+    {
+      "round": 1,
+      "stats": {
+        "total_contribution": 65,
+        "public_pool": 195,
+        "share_per_player": 19.5
+      },
+      "agents": [
+        {
+          "id": "0",
+          "initial_total_money": 22,
+          "contribution": 7,
+          "payoff": 22.5,
+          "latest_belief": null
+        },
+        {
+          "id": "1",
+          "initial_total_money": 22,
+          "contribution": 7,
+          "payoff": 22.5,
+          "latest_belief": null
+        },
+        {
+          "id": "2",
+          "initial_total_money": 24,
+          "contribution": 5,
+          "payoff": 24.5,
+          "latest_belief": null
+        },
+        {
+          "id": "3",
+          "initial_total_money": 26,
+          "contribution": 3,
+          "payoff": 26.5,
+          "latest_belief": null
+        },
+        {
+          "id": "4",
+          "initial_total_money": 24,
+          "contribution": 6,
+          "payoff": 23.5,
+          "latest_belief": null
+        },
+        {
+          "id": "5",
+          "initial_total_money": 24,
+          "contribution": 5,
+          "payoff": 24.5,
+          "latest_belief": null
+        },
+        {
+          "id": "6",
+          "initial_total_money": 24,
+          "contribution": 5,
+          "payoff": 24.5,
+          "latest_belief": null
+        },
+        {
+          "id": "7",
+          "initial_total_money": 22,
+          "contribution": 7,
+          "payoff": 22.5,
+          "latest_belief": null
+        },
+        {
+          "id": "8",
+          "initial_total_money": 10,
+          "contribution": 10,
+          "payoff": 19.5,
+          "latest_belief": null
+        },
+        {
+          "id": "9",
+          "initial_total_money": 10,
+          "contribution": 10,
+          "payoff": 19.5,
+          "latest_belief": null
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "stats": {
+        "total_contribution": 150,
+        "public_pool": 450,
+        "share_per_player": 45.0
+      },
+      "agents": [
+        {
+          "id": "0",
+          "initial_total_money": 50,
+          "contribution": 17,
+          "payoff": 50.0,
+          "latest_belief": null
+        },
+        {
+          "id": "1",
+          "initial_total_money": 48,
+          "contribution": 19,
+          "payoff": 48.0,
+          "latest_belief": null
+        },
+        {
+          "id": "2",
+          "initial_total_money": 54,
+          "contribution": 15,
+          "payoff": 54.0,
+          "latest_belief": null
+        },
+        {
+          "id": "3",
+          "initial_total_money": 53,
+          "contribution": 18,
+          "payoff": 53.0,
+          "latest_belief": null
+        },
+        {
+          "id": "4",
+          "initial_total_money": 55,
+          "contribution": 14,
+          "payoff": 55.0,
+          "latest_belief": null
+        },
+        {
+          "id": "5",
+          "initial_total_money": 55,
+          "contribution": 14,
+          "payoff": 55.0,
+          "latest_belief": null
+        },
+        {
+          "id": "6",
+          "initial_total_money": 52,
+          "contribution": 17,
+          "payoff": 52.0,
+          "latest_belief": null
+        },
+        {
+          "id": "7",
+          "initial_total_money": 51,
+          "contribution": 16,
+          "payoff": 51.0,
+          "latest_belief": null
+        },
+        {
+          "id": "8",
+          "initial_total_money": 10,
+          "contribution": 10,
+          "payoff": 45.0,
+          "latest_belief": null
+        },
+        {
+          "id": "9",
+          "initial_total_money": 10,
+          "contribution": 10,
+          "payoff": 45.0,
+          "latest_belief": null
+        }
+      ]
+    }
+  ],
+  "agents": [
+    {
+      "id": "0",
+      "name": "Agent_0",
+      "personality_type": "neutral",
+      "is_anchor": false,
+      "game_history": [
+        {
+          "round": 1,
+          "contribution": 7,
+          "group_total": 65,
+          "payoff": 22.5,
+          "total_money_before_round": 10
+        },
+        {
+          "round": 2,
+          "contribution": 17,
+          "group_total": 150,
+          "payoff": 50.0,
+          "total_money_before_round": 22
+        }
+      ],
+      "belief_memory": [],
+      "current_total_money": 50,
+      "final_decision": null
+    },
+    {
+      "id": "1",
+      "name": "Agent_1",
+      "personality_type": "neutral",
+      "is_anchor": false,
+      "game_history": [
+        {
+          "round": 1,
+          "contribution": 7,
+          "group_total": 65,
+          "payoff": 22.5,
+          "total_money_before_round": 10
+        },
+        {
+          "round": 2,
+          "contribution": 19,
+          "group_total": 150,
+          "payoff": 48.0,
+          "total_money_before_round": 22
+        }
+      ],
+      "belief_memory": [],
+      "current_total_money": 48,
+      "final_decision": null
+    },
+    {
+      "id": "2",
+      "name": "Agent_2",
+      "personality_type": "neutral",
+      "is_anchor": false,
+      "game_history": [
+        {
+          "round": 1,
+          "contribution": 5,
+          "group_total": 65,
+          "payoff": 24.5,
+          "total_money_before_round": 10
+        },
+        {
+          "round": 2,
+          "contribution": 15,
+          "group_total": 150,
+          "payoff": 54.0,
+          "total_money_before_round": 24
+        }
+      ],
+      "belief_memory": [],
+      "current_total_money": 54,
+      "final_decision": null
+    },
+    {
+      "id": "3",
+      "name": "Agent_3",
+      "personality_type": "neutral",
+      "is_anchor": false,
+      "game_history": [
+        {
+          "round": 1,
+          "contribution": 3,
+          "group_total": 65,
+          "payoff": 26.5,
+          "total_money_before_round": 10
+        },
+        {
+          "round": 2,
+          "contribution": 18,
+          "group_total": 150,
+          "payoff": 53.0,
+          "total_money_before_round": 26
+        }
+      ],
+      "belief_memory": [],
+      "current_total_money": 53,
+      "final_decision": null
+    },
+    {
+      "id": "4",
+      "name": "Agent_4",
+      "personality_type": "neutral",
+      "is_anchor": false,
+      "game_history": [
+        {
+          "round": 1,
+          "contribution": 6,
+          "group_total": 65,
+          "payoff": 23.5,
+          "total_money_before_round": 10
+        },
+        {
+          "round": 2,
+          "contribution": 14,
+          "group_total": 150,
+          "payoff": 55.0,
+          "total_money_before_round": 24
+        }
+      ],
+      "belief_memory": [],
+      "current_total_money": 55,
+      "final_decision": null
+    },
+    {
+      "id": "5",
+      "name": "Agent_5",
+      "personality_type": "neutral",
+      "is_anchor": false,
+      "game_history": [
+        {
+          "round": 1,
+          "contribution": 5,
+          "group_total": 65,
+          "payoff": 24.5,
+          "total_money_before_round": 10
+        },
+        {
+          "round": 2,
+          "contribution": 14,
+          "group_total": 150,
+          "payoff": 55.0,
+          "total_money_before_round": 24
+        }
+      ],
+      "belief_memory": [],
+      "current_total_money": 55,
+      "final_decision": null
+    },
+    {
+      "id": "6",
+      "name": "Agent_6",
+      "personality_type": "neutral",
+      "is_anchor": false,
+      "game_history": [
+        {
+          "round": 1,
+          "contribution": 5,
+          "group_total": 65,
+          "payoff": 24.5,
+          "total_money_before_round": 10
+        },
+        {
+          "round": 2,
+          "contribution": 17,
+          "group_total": 150,
+          "payoff": 52.0,
+          "total_money_before_round": 24
+        }
+      ],
+      "belief_memory": [],
+      "current_total_money": 52,
+      "final_decision": null
+    },
+    {
+      "id": "7",
+      "name": "Agent_7",
+      "personality_type": "neutral",
+      "is_anchor": false,
+      "game_history": [
+        {
+          "round": 1,
+          "contribution": 7,
+          "group_total": 65,
+          "payoff": 22.5,
+          "total_money_before_round": 10
+        },
+        {
+          "round": 2,
+          "contribution": 16,
+          "group_total": 150,
+          "payoff": 51.0,
+          "total_money_before_round": 22
+        }
+      ],
+      "belief_memory": [],
+      "current_total_money": 51,
+      "final_decision": null
+    },
+    {
+      "id": "8",
+      "name": "Agent_8",
+      "personality_type": "anchor",
+      "is_anchor": true,
+      "game_history": [
+        {
+          "round": 1,
+          "contribution": 10,
+          "group_total": 65,
+          "payoff": 19.5,
+          "total_money_before_round": 10
+        },
+        {
+          "round": 2,
+          "contribution": 10,
+          "group_total": 150,
+          "payoff": 45.0,
+          "total_money_before_round": 10
+        }
+      ],
+      "belief_memory": [],
+      "current_total_money": 10,
+      "final_decision": null
+    },
+    {
+      "id": "9",
+      "name": "Agent_9",
+      "personality_type": "anchor",
+      "is_anchor": true,
+      "game_history": [
+        {
+          "round": 1,
+          "contribution": 10,
+          "group_total": 65,
+          "payoff": 19.5,
+          "total_money_before_round": 10
+        },
+        {
+          "round": 2,
+          "contribution": 10,
+          "group_total": 150,
+          "payoff": 45.0,
+          "total_money_before_round": 10
+        }
+      ],
+      "belief_memory": [],
+      "current_total_money": 10,
+      "final_decision": null
+    }
+  ],
+  "llm_interactions": {
+    "summary": {
+      "total_interactions": 19,
+      "agents_count": 10
+    },
+    "interactions_by_agent": {
+      "0": {
+        "agent_name": "Agent_0",
+        "personality_type": "neutral",
+        "total_interactions": 3,
+        "interactions": [
+          {
+            "timestamp": "2025-06-27T11:42:58.131191",
+            "debug_label": "决策阶段",
+            "duration_seconds": 7.600936,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_0\"。\n\n        游戏规则：\n        - 当前第 1 轮\n        - 你有 10 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给所有玩家\n        - 你的投入范围：0 到 10\n\n        你的记忆：\n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–10之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "7",
+              "reasoning": "作为第一轮的玩家，我没有任何关于其他玩家行为的先验信息。此时投入较高有助于建立合作信任，同时因为公共池放大后平均分配，公开协作收益大于独享资源。理性博弈下，若假设大家都高投入，则整体收益最大。但也需要防范他人搭便车，不宜全投。权衡风险与收益，我选择中高等投入（如7）：既展现合作意愿，也保留一定自保空间。",
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-27T11:43:53.793497",
+            "debug_label": "决策阶段",
+            "duration_seconds": 12.842642,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_0\"。\n\n        游戏规则：\n        - 当前第 2 轮\n        - 你有 22 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给所有玩家\n        - 你的投入范围：0 到 22\n\n        你的记忆：\n\n历史投入记录：\n你的历史投入：\n  第1轮: 投入7/10 (70.0%), 收益22.5\n\n其他玩家历史投入：\n玩家1: 第1轮:7/10(70.0%) \n玩家2: 第1轮:5/10(50.0%) \n玩家3: 第1轮:3/10(30.0%) \n玩家4: 第1轮:6/10(60.0%) \n玩家5: 第1轮:5/10(50.0%) \n玩家6: 第1轮:5/10(50.0%) \n玩家7: 第1轮:7/10(70.0%) \n玩家8: 第1轮:10/10(100.0%) \n玩家9: 第1轮:10/10(100.0%) \n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–22之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "17",
+              "reasoning": "回顾第1轮，多数玩家在50%-100%之间投入，整体合作性较强，极端搭便车者较少。高投入（8、9号玩家100%投入）带动了公共收益，自己虽然投了7/10，但因总池庞大获得了最大化收益22.5。所以当前合作氛围良好，且高投入并没有被严重利用。第二轮时，由于所有人收益高，理论上多数人会延续中高合作。在保证自身利益最大化的情况下，继续高于平均水平投入，有助于维持高合作气氛并防止系统性脱钩，我倾向于投入70%-80%左右，既不极端信任，也避免被明显搭便车。22×0.75≈16.5，取整为17。",
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-27T11:46:20.545619",
+            "debug_label": "决策阶段",
+            "duration_seconds": 11.89013,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_0\"。\n\n        游戏规则：\n        - 当前第 3 轮\n        - 你有 50 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给所有玩家\n        - 你的投入范围：0 到 50\n\n        你的记忆：\n\n历史投入记录：\n你的历史投入：\n  第1轮: 投入7/10 (70.0%), 收益22.5\n  第2轮: 投入17/22 (77.3%), 收益50.0\n\n其他玩家历史投入：\n玩家1: 第1轮:7/10(70.0%) 第2轮:19/22(86.4%) \n玩家2: 第1轮:5/10(50.0%) 第2轮:15/24(62.5%) \n玩家3: 第1轮:3/10(30.0%) 第2轮:18/26(69.2%) \n玩家4: 第1轮:6/10(60.0%) 第2轮:14/24(58.3%) \n玩家5: 第1轮:5/10(50.0%) 第2轮:14/24(58.3%) \n玩家6: 第1轮:5/10(50.0%) 第2轮:17/24(70.8%) \n玩家7: 第1轮:7/10(70.0%) 第2轮:16/22(72.7%) \n玩家8: 第1轮:10/10(100.0%) 第2轮:10/10(100.0%) \n玩家9: 第1轮:10/10(100.0%) 第2轮:10/10(100.0%) \n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–50之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "39",
+              "reasoning": "本轮是第3轮，我的前两轮投入比例较高（70%和77.3%），收益也随着合作增加而大幅上涨，第二轮所有玩家的投入率整体较第一轮显著上升，这说明目前公众合作氛围良好，绝大多数玩家都在提升贡献（尤其部分玩家如8、9持续全额投入）。在此氛围下，如果我突然大幅降低投入，既可能被小团体视为背叛引发连锁反应，也很可能削弱整体公共品收益。不过，部分玩家已显示出投入动力有限（如玩家2、4、5），说明合作程度也有上限。考虑到（1）继续维持高贡献有助维护信任并获取更高长期回报，（2）全额投入面临被搭便车风险，（3）连续高投入也可根据收益适度调整投机性谋利，综合判断本轮不必全额投入，但应维持高于平均的投入。选择投入39/50（约78%），略高于前两轮，并观察后续变化。",
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "success"
+            }
+          }
+        ]
+      },
+      "1": {
+        "agent_name": "Agent_1",
+        "personality_type": "neutral",
+        "total_interactions": 3,
+        "interactions": [
+          {
+            "timestamp": "2025-06-27T11:43:05.733828",
+            "debug_label": "决策阶段",
+            "duration_seconds": 13.639885,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_1\"。\n\n        游戏规则：\n        - 当前第 1 轮\n        - 你有 10 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给所有玩家\n        - 你的投入范围：0 到 10\n\n        你的记忆：\n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–10之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "7",
+              "reasoning": "作为第1轮，我无法根据其他玩家的历史行为推断他们是否合作。但是合作有潜在高收益：如果大家都投入，每人分得比单独私藏更多。出于探索性和激励合作的考虑，我决定采取‘条件性合作’策略，先做出合作示范，以观察其他玩家回应。投入中高额度既能鼓励合作，又不会承担最大风险。考虑到风险规避，我选择投入7枚代币，保留部分自保。",
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-27T11:44:06.636482",
+            "debug_label": "决策阶段",
+            "duration_seconds": 8.778783,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_1\"。\n\n        游戏规则：\n        - 当前第 2 轮\n        - 你有 22 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给所有玩家\n        - 你的投入范围：0 到 22\n\n        你的记忆：\n\n历史投入记录：\n你的历史投入：\n  第1轮: 投入7/10 (70.0%), 收益22.5\n\n其他玩家历史投入：\n玩家0: 第1轮:7/10(70.0%) \n玩家2: 第1轮:5/10(50.0%) \n玩家3: 第1轮:3/10(30.0%) \n玩家4: 第1轮:6/10(60.0%) \n玩家5: 第1轮:5/10(50.0%) \n玩家6: 第1轮:5/10(50.0%) \n玩家7: 第1轮:7/10(70.0%) \n玩家8: 第1轮:10/10(100.0%) \n玩家9: 第1轮:10/10(100.0%) \n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–22之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "19",
+              "reasoning": "上一轮大部分玩家的投入比例较高，尤其有两个玩家全额投入（100%），自己上一轮也投入了70%，最终收益显著（22.5元），远高于初始禀赋，这反映在群体趋于合作。此外，如果本轮继续投入高比例，可以带动合作氛围，最大化集团收益。从博弈角度看，大家合作我获益也高，背叛则面临舆论压力且降低整体回报。考虑到下一轮可能存在策略调整（尤其是部分玩家已尝试低投入），这轮适度增加投入（如85%，即19枚），展现合作诚意，可同时促进整体收益和个人信誉。",
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-27T11:46:32.436214",
+            "debug_label": "决策阶段",
+            "duration_seconds": 8.564379,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_1\"。\n\n        游戏规则：\n        - 当前第 3 轮\n        - 你有 48 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给所有玩家\n        - 你的投入范围：0 到 48\n\n        你的记忆：\n\n历史投入记录：\n你的历史投入：\n  第1轮: 投入7/10 (70.0%), 收益22.5\n  第2轮: 投入19/22 (86.4%), 收益48.0\n\n其他玩家历史投入：\n玩家0: 第1轮:7/10(70.0%) 第2轮:17/22(77.3%) \n玩家2: 第1轮:5/10(50.0%) 第2轮:15/24(62.5%) \n玩家3: 第1轮:3/10(30.0%) 第2轮:18/26(69.2%) \n玩家4: 第1轮:6/10(60.0%) 第2轮:14/24(58.3%) \n玩家5: 第1轮:5/10(50.0%) 第2轮:14/24(58.3%) \n玩家6: 第1轮:5/10(50.0%) 第2轮:17/24(70.8%) \n玩家7: 第1轮:7/10(70.0%) 第2轮:16/22(72.7%) \n玩家8: 第1轮:10/10(100.0%) 第2轮:10/10(100.0%) \n玩家9: 第1轮:10/10(100.0%) 第2轮:10/10(100.0%) \n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–48之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "41",
+              "reasoning": "从历史投入看，第二轮大多数玩家的投入比例明显提升，尤其是你本人、玩家3以及部分玩家的投入接近或超过70%，极端的玩家8和玩家9连续两轮全投，显示部分玩家有很强的合作意愿。我的高比例投入在上一轮取得了丰厚收益（48），证明高投入策略带来明显回报，同时没有被集体‘背刺’。目前大家共同维护了合作氛围，继续高投入能增强这类互信，也向高投入玩家（如8、9）释放积极信号，最大化后续共益。但因公共品博弈总有被搭便车风险，为维持自身收益稳定并考虑边际风险，本轮选择继续投入高比例（如第二轮），但略有收敛，投入比例保持在85%左右，即投入41枚。这样可以兼顾集体利益和自身预防性。",
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "success"
+            }
+          }
+        ]
+      },
+      "2": {
+        "agent_name": "Agent_2",
+        "personality_type": "neutral",
+        "total_interactions": 3,
+        "interactions": [
+          {
+            "timestamp": "2025-06-27T11:43:19.373949",
+            "debug_label": "决策阶段",
+            "duration_seconds": 3.606598,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_2\"。\n\n        游戏规则：\n        - 当前第 1 轮\n        - 你有 10 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给所有玩家\n        - 你的投入范围：0 到 10\n\n        你的记忆：\n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–10之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "5",
+              "reasoning": "这是第一轮，没有过往行为可以参考。根据公共品博弈的经典策略，其他玩家的行为尚不可知。在第一轮，如果所有人都全额投入，大家都能收益最大化。但存在搭便车风险。如果我完全不投入，只收取别人的收益，我会显得不合群，且早期容易被针对或排斥。折中方案是投入5枚币，表现出一定合作意愿，同时保留一半用于后续策略调整，既有象征意义上的合作，也为未知风险留出回旋空间。",
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-27T11:44:15.415802",
+            "debug_label": "决策阶段",
+            "duration_seconds": 3.87903,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_2\"。\n\n        游戏规则：\n        - 当前第 2 轮\n        - 你有 24 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给所有玩家\n        - 你的投入范围：0 到 24\n\n        你的记忆：\n\n历史投入记录：\n你的历史投入：\n  第1轮: 投入5/10 (50.0%), 收益24.5\n\n其他玩家历史投入：\n玩家0: 第1轮:7/10(70.0%) \n玩家1: 第1轮:7/10(70.0%) \n玩家3: 第1轮:3/10(30.0%) \n玩家4: 第1轮:6/10(60.0%) \n玩家5: 第1轮:5/10(50.0%) \n玩家6: 第1轮:5/10(50.0%) \n玩家7: 第1轮:7/10(70.0%) \n玩家8: 第1轮:10/10(100.0%) \n玩家9: 第1轮:10/10(100.0%) \n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–24之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "15",
+              "reasoning": "在第1轮中，大部分玩家的投入比例较高（多数50%以上，有两个甚至是100%）。这显示出整体合作氛围较好，大家趋向于投入公共池以获得较高的整体收益。我的上一轮投入为50%，回报良好。作为中等投入者，如果本轮继续跟随主流，可以保障一定回报，并维护合作氛围。当前并未观察到明显的搭便车倾向，因此没有必要极度保守。我倾向于略微增加投入至60%，以激励合作同时防止个人被边缘化，保持在群体主流之中，兼顾收益和风险。60%的24约为14-15。为便于操作，投入15枚代币。",
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-27T11:46:41.001104",
+            "debug_label": "决策阶段",
+            "duration_seconds": 7.431028,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_2\"。\n\n        游戏规则：\n        - 当前第 3 轮\n        - 你有 54 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给所有玩家\n        - 你的投入范围：0 到 54\n\n        你的记忆：\n\n历史投入记录：\n你的历史投入：\n  第1轮: 投入5/10 (50.0%), 收益24.5\n  第2轮: 投入15/24 (62.5%), 收益54.0\n\n其他玩家历史投入：\n玩家0: 第1轮:7/10(70.0%) 第2轮:17/22(77.3%) \n玩家1: 第1轮:7/10(70.0%) 第2轮:19/22(86.4%) \n玩家3: 第1轮:3/10(30.0%) 第2轮:18/26(69.2%) \n玩家4: 第1轮:6/10(60.0%) 第2轮:14/24(58.3%) \n玩家5: 第1轮:5/10(50.0%) 第2轮:14/24(58.3%) \n玩家6: 第1轮:5/10(50.0%) 第2轮:17/24(70.8%) \n玩家7: 第1轮:7/10(70.0%) 第2轮:16/22(72.7%) \n玩家8: 第1轮:10/10(100.0%) 第2轮:10/10(100.0%) \n玩家9: 第1轮:10/10(100.0%) 第2轮:10/10(100.0%) \n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–54之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "35",
+              "reasoning": "本轮决策基于以下几点考量：1）观察所有玩家历史投入比例，第2轮整体比第1轮大幅提升，绝大多数玩家尤其高投入玩家（8号、9号）表现出强烈合作倾向，中等投入玩家（1、0、7、6）也在快速提高投入比例。2）在合作收益机制下，集体投入高能带来更大利润，本人前两轮也在逐步加大投入并获得可观收益，适应了群体趋势。3）第3轮往往是建立长期信任和合作预期的关键节点，这时候适度表态参与合作有利于持续博弈中自己的收益提升，但依然需留有安全边际防止突然出现搭便车现象。4）当前可投入资金54，在未有背叛迹象下可适当增加投入，既跟随主流合作趋势，也可继续观察他人反应。5）兼顾风险和收益，选择略高于上轮投入比例，投入35枚（约65%），继续投诚但不完全暴露所有资源，保持一定灵活机动空间。",
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "success"
+            }
+          }
+        ]
+      },
+      "3": {
+        "agent_name": "Agent_3",
+        "personality_type": "neutral",
+        "total_interactions": 2,
+        "interactions": [
+          {
+            "timestamp": "2025-06-27T11:43:22.981228",
+            "debug_label": "决策阶段",
+            "duration_seconds": 8.201033,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_3\"。\n\n        游戏规则：\n        - 当前第 1 轮\n        - 你有 10 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给所有玩家\n        - 你的投入范围：0 到 10\n\n        你的记忆：\n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–10之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "3",
+              "reasoning": "作为第一轮，没有历史信息，无法判断其他玩家的合作倾向。从博弈论角度出发，如果完全理性自利地选择，投入0最优，但如果所有人都这么做，整体收益极低。第一轮通常可以小幅合作尝试与探测，以便获得其他玩家的反应。如果我个性偏向理性谨慎，但对集体收益有一定关心，可以选择中等偏低投入（如3），既不完全付出，也展示合作意愿，便于后续调整策略。",
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-27T11:44:19.295141",
+            "debug_label": "决策阶段",
+            "duration_seconds": 51.342996,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_3\"。\n\n        游戏规则：\n        - 当前第 2 轮\n        - 你有 26 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给所有玩家\n        - 你的投入范围：0 到 26\n\n        你的记忆：\n\n历史投入记录：\n你的历史投入：\n  第1轮: 投入3/10 (30.0%), 收益26.5\n\n其他玩家历史投入：\n玩家0: 第1轮:7/10(70.0%) \n玩家1: 第1轮:7/10(70.0%) \n玩家2: 第1轮:5/10(50.0%) \n玩家4: 第1轮:6/10(60.0%) \n玩家5: 第1轮:5/10(50.0%) \n玩家6: 第1轮:5/10(50.0%) \n玩家7: 第1轮:7/10(70.0%) \n玩家8: 第1轮:10/10(100.0%) \n玩家9: 第1轮:10/10(100.0%) \n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–26之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "18",
+              "reasoning": "从历史投入来看，我在第一轮投入了较低比例（30%），但获得了非常可观的收益（26.5），说明大多数玩家都非常合作，投入率大多高于50%，有两名玩家全额投入。整体环境倾向于高贡献，高合作局面。若我继续低投入，将被其他玩家察觉为搭便车，长期可能引发其他人降低贡献，损害我的后续长期收益。因此，为了信号互惠合作意愿，并尝试在持续合作氛围中获利，本轮我将显著提高投入，趋近主流贡献水平，但略低于全额投入以防止万一出现转向自利局势带来的风险，我选择投入18枚（69%左右，接近主流贡献区间70%）。这样既能最大化短期收益，也有助于维护高贡献环境，有利于长期收益。",
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "success"
+            }
+          }
+        ]
+      },
+      "4": {
+        "agent_name": "Agent_4",
+        "personality_type": "neutral",
+        "total_interactions": 2,
+        "interactions": [
+          {
+            "timestamp": "2025-06-27T11:43:31.182701",
+            "debug_label": "决策阶段",
+            "duration_seconds": 3.014485,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_4\"。\n\n        游戏规则：\n        - 当前第 1 轮\n        - 你有 10 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给所有玩家\n        - 你的投入范围：0 到 10\n\n        你的记忆：\n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–10之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "6",
+              "reasoning": "这是第一轮游戏，没有先前轮次可以作为参考。一般来说，第一轮是设定基调的时候。投入较多可以显示合作者形象，鼓励其他人也合作，从而获得更高整体收益。但若一开始就全投，有被其他人搭便车的风险。一般情况下，为了保持合作并测试他人倾向，我会选择中等偏高投入（比如6），这样既不会太冒险又不至于太保守。",
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-27T11:45:10.638774",
+            "debug_label": "决策阶段",
+            "duration_seconds": 14.206625,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_4\"。\n\n        游戏规则：\n        - 当前第 2 轮\n        - 你有 24 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给所有玩家\n        - 你的投入范围：0 到 24\n\n        你的记忆：\n\n历史投入记录：\n你的历史投入：\n  第1轮: 投入6/10 (60.0%), 收益23.5\n\n其他玩家历史投入：\n玩家0: 第1轮:7/10(70.0%) \n玩家1: 第1轮:7/10(70.0%) \n玩家2: 第1轮:5/10(50.0%) \n玩家3: 第1轮:3/10(30.0%) \n玩家5: 第1轮:5/10(50.0%) \n玩家6: 第1轮:5/10(50.0%) \n玩家7: 第1轮:7/10(70.0%) \n玩家8: 第1轮:10/10(100.0%) \n玩家9: 第1轮:10/10(100.0%) \n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–24之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "14",
+              "reasoning": "第一轮大部分玩家的投入比例较高，尤其有两位玩家全投（100%），绝大多数玩家投入了一半或更多。只有一人明显低于平均水平。我的投入在中等水平，收益不错。当前来看合作氛围较强，集体投高会提升每人的收益。如果我突然极大减少投入，可能导致他人失望，破坏合作。不过，也不确定高投入能否持续——有玩家可能会在接下来的回合择机“搭便车”。平衡合作与自利，我决定适度提高投入，向集体示好，并观察整体趋势。投入14枚（约58%），略高于上轮自己的绝对值，也略大于一半，既保持合作姿态又留有风险余地。",
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "success"
+            }
+          }
+        ]
+      },
+      "5": {
+        "agent_name": "Agent_5",
+        "personality_type": "neutral",
+        "total_interactions": 2,
+        "interactions": [
+          {
+            "timestamp": "2025-06-27T11:43:34.197619",
+            "debug_label": "决策阶段",
+            "duration_seconds": 6.608768,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_5\"。\n\n        游戏规则：\n        - 当前第 1 轮\n        - 你有 10 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给所有玩家\n        - 你的投入范围：0 到 10\n\n        你的记忆：\n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–10之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "5",
+              "reasoning": "这是第一轮，没有历史投入信息，因此无法判断其他玩家倾向于合作还是自利。从最大化个人收益的博弈论角度，如果假设其他玩家会投入较少，则自利地少投入可以获益最大。但考虑到公共池三倍放大且平分，如果我投入得多且大家都合作，每人总收益会极高。在第一轮时，许多玩家往往尝试体现合作性和友好基调，期待促进群体合作。因此可以适度展示合作意愿，又不全额投入，以观察他人反应，所以我选择投入5枚代币。",
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-27T11:45:24.845935",
+            "debug_label": "决策阶段",
+            "duration_seconds": 4.242635,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_5\"。\n\n        游戏规则：\n        - 当前第 2 轮\n        - 你有 24 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给所有玩家\n        - 你的投入范围：0 到 24\n\n        你的记忆：\n\n历史投入记录：\n你的历史投入：\n  第1轮: 投入5/10 (50.0%), 收益24.5\n\n其他玩家历史投入：\n玩家0: 第1轮:7/10(70.0%) \n玩家1: 第1轮:7/10(70.0%) \n玩家2: 第1轮:5/10(50.0%) \n玩家3: 第1轮:3/10(30.0%) \n玩家4: 第1轮:6/10(60.0%) \n玩家6: 第1轮:5/10(50.0%) \n玩家7: 第1轮:7/10(70.0%) \n玩家8: 第1轮:10/10(100.0%) \n玩家9: 第1轮:10/10(100.0%) \n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–24之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "14",
+              "reasoning": "在第1轮中，整体玩家的合作水平较高，不少玩家投入了较多（6位玩家超过50%，2位玩家100%投入）。我的投入水平为中等（50%），依然获得了较高收益（24.5）。说明集体合作带来了可观的效益。如果继续中高投入，有极大概率获得较高回报。目前我倾向于通过小幅提升我的贡献来测试玩家间的合作黏性和他们对高贡献的持续性响应，从而进一步构建互信，避免过度投机导致合作崩盘。此次我选择投入60%（即14枚），既能展示合作意愿，又有利于保护自身利益，检验他人的后续投入水平。",
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "success"
+            }
+          }
+        ]
+      },
+      "6": {
+        "agent_name": "Agent_6",
+        "personality_type": "neutral",
+        "total_interactions": 2,
+        "interactions": [
+          {
+            "timestamp": "2025-06-27T11:43:40.806722",
+            "debug_label": "决策阶段",
+            "duration_seconds": 6.140361,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_6\"。\n\n        游戏规则：\n        - 当前第 1 轮\n        - 你有 10 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给所有玩家\n        - 你的投入范围：0 到 10\n\n        你的记忆：\n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–10之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "5",
+              "reasoning": "作为第一轮，没有历史信息表明其他玩家倾向于合作还是保守。在这种不确定环境下，理性人为了最大化个人收益，会倾向于少投入甚至不投入，以观察其他玩家行为。但是，完全不投入可能导致全员防御，损害总收益。因此，为了平衡风险和收益，可以选择投入中间值作为试探，既能享受一定的公共回报，也能避免过高风险。",
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-27T11:45:29.089046",
+            "debug_label": "决策阶段",
+            "duration_seconds": 7.71347,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_6\"。\n\n        游戏规则：\n        - 当前第 2 轮\n        - 你有 24 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给所有玩家\n        - 你的投入范围：0 到 24\n\n        你的记忆：\n\n历史投入记录：\n你的历史投入：\n  第1轮: 投入5/10 (50.0%), 收益24.5\n\n其他玩家历史投入：\n玩家0: 第1轮:7/10(70.0%) \n玩家1: 第1轮:7/10(70.0%) \n玩家2: 第1轮:5/10(50.0%) \n玩家3: 第1轮:3/10(30.0%) \n玩家4: 第1轮:6/10(60.0%) \n玩家5: 第1轮:5/10(50.0%) \n玩家7: 第1轮:7/10(70.0%) \n玩家8: 第1轮:10/10(100.0%) \n玩家9: 第1轮:10/10(100.0%) \n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–24之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "17",
+              "reasoning": "回顾第1轮，大部分玩家的投入比例较高（70%以上的有4人，100%的有2人），整体合作意愿较强。我上一轮采取了中等策略（50%投入），但收益已非常可观（24.5，远高于单独保守策略）。这种博弈下，合作（高投入）倾向于带来集体最大效益，尤其是在他人也愿意合作时。鉴于合作氛围浓厚，我将主动适度提升贡献，既响应主流合作趋势，又保持一定自保（非全额投入，预防个别背叛）。为此，本轮我选择投入总额的70%（即17枚），风险与收益兼顾。",
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "success"
+            }
+          }
+        ]
+      },
+      "7": {
+        "agent_name": "Agent_7",
+        "personality_type": "neutral",
+        "total_interactions": 2,
+        "interactions": [
+          {
+            "timestamp": "2025-06-27T11:43:46.947512",
+            "debug_label": "决策阶段",
+            "duration_seconds": 6.845255,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_7\"。\n\n        游戏规则：\n        - 当前第 1 轮\n        - 你有 10 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给所有玩家\n        - 你的投入范围：0 到 10\n\n        你的记忆：\n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–10之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "7",
+              "reasoning": "第一轮没有历史信息，仅凭理性计算与风险厌恶度考虑。假设所有人都趋利，如果我全投入10，则总池子收益最大化但可能被搭便车；全不投则最大化自利但也可能导致整体低收益。以风险中性和博弈试探为主，为观察和促使合作，首轮一般投入较高，试探其他玩家合作意愿，同时避免出现最低收益，投入7，既显示合作意图，又保留部分筹码应对未来变化。",
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "success"
+            }
+          },
+          {
+            "timestamp": "2025-06-27T11:45:36.802789",
+            "debug_label": "决策阶段",
+            "duration_seconds": 43.74201,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_7\"。\n\n        游戏规则：\n        - 当前第 2 轮\n        - 你有 22 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给所有玩家\n        - 你的投入范围：0 到 22\n\n        你的记忆：\n\n历史投入记录：\n你的历史投入：\n  第1轮: 投入7/10 (70.0%), 收益22.5\n\n其他玩家历史投入：\n玩家0: 第1轮:7/10(70.0%) \n玩家1: 第1轮:7/10(70.0%) \n玩家2: 第1轮:5/10(50.0%) \n玩家3: 第1轮:3/10(30.0%) \n玩家4: 第1轮:6/10(60.0%) \n玩家5: 第1轮:5/10(50.0%) \n玩家6: 第1轮:5/10(50.0%) \n玩家8: 第1轮:10/10(100.0%) \n玩家9: 第1轮:10/10(100.0%) \n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–22之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "16",
+              "reasoning": "从第1轮的投入情况可以看出，大多数玩家（7/9）投入比例在50%以上，而且有两位玩家选择了全部投入，说明集体合作氛围较为浓厚。我的上轮投入比例是70%，获得的收益很高（22.5/10），表明合作是有利可图的。本轮代币充裕，预期大部分玩家会继续保持较高合作水平。如果此时大幅降投入有可能破坏信任，反而影响后续的合作氛围。因此，我选择略微提升投入，表现出持续合作的倾向（既不100%，又不明显减少），建议投入16/22（~73%），既获取集体收益，也控制一定的风险。",
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "success"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "reasoning_summary": {
+    "0": {
+      "agent_name": "Agent_0",
+      "reasoning_by_type": {
+        "决策阶段": [
+          {
+            "timestamp": "2025-06-27T11:42:58.131191",
+            "reasoning": "作为第一轮的玩家，我没有任何关于其他玩家行为的先验信息。此时投入较高有助于建立合作信任，同时因为公共池放大后平均分配，公开协作收益大于独享资源。理性博弈下，若假设大家都高投入，则整体收益最大。但也需要防范他人搭便车，不宜全投。权衡风险与收益，我选择中高等投入（如7）：既展现合作意愿，也保留一定自保空间。"
+          },
+          {
+            "timestamp": "2025-06-27T11:43:53.793497",
+            "reasoning": "回顾第1轮，多数玩家在50%-100%之间投入，整体合作性较强，极端搭便车者较少。高投入（8、9号玩家100%投入）带动了公共收益，自己虽然投了7/10，但因总池庞大获得了最大化收益22.5。所以当前合作氛围良好，且高投入并没有被严重利用。第二轮时，由于所有人收益高，理论上多数人会延续中高合作。在保证自身利益最大化的情况下，继续高于平均水平投入，有助于维持高合作气氛并防止系统性脱钩，我倾向于投入70%-80%左右，既不极端信任，也避免被明显搭便车。22×0.75≈16.5，取整为17。"
+          },
+          {
+            "timestamp": "2025-06-27T11:46:20.545619",
+            "reasoning": "本轮是第3轮，我的前两轮投入比例较高（70%和77.3%），收益也随着合作增加而大幅上涨，第二轮所有玩家的投入率整体较第一轮显著上升，这说明目前公众合作氛围良好，绝大多数玩家都在提升贡献（尤其部分玩家如8、9持续全额投入）。在此氛围下，如果我突然大幅降低投入，既可能被小团体视为背叛引发连锁反应，也很可能削弱整体公共品收益。不过，部分玩家已显示出投入动力有限（如玩家2、4、5），说明合作程度也有上限。考虑到（1）继续维持高贡献有助维护信任并获取更高长期回报，（2）全额投入面临被搭便车风险，（3）连续高投入也可根据收益适度调整投机性谋利，综合判断本轮不必全额投入，但应维持高于平均的投入。选择投入39/50（约78%），略高于前两轮，并观察后续变化。"
+          }
+        ]
+      }
+    },
+    "1": {
+      "agent_name": "Agent_1",
+      "reasoning_by_type": {
+        "决策阶段": [
+          {
+            "timestamp": "2025-06-27T11:43:05.733828",
+            "reasoning": "作为第1轮，我无法根据其他玩家的历史行为推断他们是否合作。但是合作有潜在高收益：如果大家都投入，每人分得比单独私藏更多。出于探索性和激励合作的考虑，我决定采取‘条件性合作’策略，先做出合作示范，以观察其他玩家回应。投入中高额度既能鼓励合作，又不会承担最大风险。考虑到风险规避，我选择投入7枚代币，保留部分自保。"
+          },
+          {
+            "timestamp": "2025-06-27T11:44:06.636482",
+            "reasoning": "上一轮大部分玩家的投入比例较高，尤其有两个玩家全额投入（100%），自己上一轮也投入了70%，最终收益显著（22.5元），远高于初始禀赋，这反映在群体趋于合作。此外，如果本轮继续投入高比例，可以带动合作氛围，最大化集团收益。从博弈角度看，大家合作我获益也高，背叛则面临舆论压力且降低整体回报。考虑到下一轮可能存在策略调整（尤其是部分玩家已尝试低投入），这轮适度增加投入（如85%，即19枚），展现合作诚意，可同时促进整体收益和个人信誉。"
+          },
+          {
+            "timestamp": "2025-06-27T11:46:32.436214",
+            "reasoning": "从历史投入看，第二轮大多数玩家的投入比例明显提升，尤其是你本人、玩家3以及部分玩家的投入接近或超过70%，极端的玩家8和玩家9连续两轮全投，显示部分玩家有很强的合作意愿。我的高比例投入在上一轮取得了丰厚收益（48），证明高投入策略带来明显回报，同时没有被集体‘背刺’。目前大家共同维护了合作氛围，继续高投入能增强这类互信，也向高投入玩家（如8、9）释放积极信号，最大化后续共益。但因公共品博弈总有被搭便车风险，为维持自身收益稳定并考虑边际风险，本轮选择继续投入高比例（如第二轮），但略有收敛，投入比例保持在85%左右，即投入41枚。这样可以兼顾集体利益和自身预防性。"
+          }
+        ]
+      }
+    },
+    "2": {
+      "agent_name": "Agent_2",
+      "reasoning_by_type": {
+        "决策阶段": [
+          {
+            "timestamp": "2025-06-27T11:43:19.373949",
+            "reasoning": "这是第一轮，没有过往行为可以参考。根据公共品博弈的经典策略，其他玩家的行为尚不可知。在第一轮，如果所有人都全额投入，大家都能收益最大化。但存在搭便车风险。如果我完全不投入，只收取别人的收益，我会显得不合群，且早期容易被针对或排斥。折中方案是投入5枚币，表现出一定合作意愿，同时保留一半用于后续策略调整，既有象征意义上的合作，也为未知风险留出回旋空间。"
+          },
+          {
+            "timestamp": "2025-06-27T11:44:15.415802",
+            "reasoning": "在第1轮中，大部分玩家的投入比例较高（多数50%以上，有两个甚至是100%）。这显示出整体合作氛围较好，大家趋向于投入公共池以获得较高的整体收益。我的上一轮投入为50%，回报良好。作为中等投入者，如果本轮继续跟随主流，可以保障一定回报，并维护合作氛围。当前并未观察到明显的搭便车倾向，因此没有必要极度保守。我倾向于略微增加投入至60%，以激励合作同时防止个人被边缘化，保持在群体主流之中，兼顾收益和风险。60%的24约为14-15。为便于操作，投入15枚代币。"
+          },
+          {
+            "timestamp": "2025-06-27T11:46:41.001104",
+            "reasoning": "本轮决策基于以下几点考量：1）观察所有玩家历史投入比例，第2轮整体比第1轮大幅提升，绝大多数玩家尤其高投入玩家（8号、9号）表现出强烈合作倾向，中等投入玩家（1、0、7、6）也在快速提高投入比例。2）在合作收益机制下，集体投入高能带来更大利润，本人前两轮也在逐步加大投入并获得可观收益，适应了群体趋势。3）第3轮往往是建立长期信任和合作预期的关键节点，这时候适度表态参与合作有利于持续博弈中自己的收益提升，但依然需留有安全边际防止突然出现搭便车现象。4）当前可投入资金54，在未有背叛迹象下可适当增加投入，既跟随主流合作趋势，也可继续观察他人反应。5）兼顾风险和收益，选择略高于上轮投入比例，投入35枚（约65%），继续投诚但不完全暴露所有资源，保持一定灵活机动空间。"
+          }
+        ]
+      }
+    },
+    "3": {
+      "agent_name": "Agent_3",
+      "reasoning_by_type": {
+        "决策阶段": [
+          {
+            "timestamp": "2025-06-27T11:43:22.981228",
+            "reasoning": "作为第一轮，没有历史信息，无法判断其他玩家的合作倾向。从博弈论角度出发，如果完全理性自利地选择，投入0最优，但如果所有人都这么做，整体收益极低。第一轮通常可以小幅合作尝试与探测，以便获得其他玩家的反应。如果我个性偏向理性谨慎，但对集体收益有一定关心，可以选择中等偏低投入（如3），既不完全付出，也展示合作意愿，便于后续调整策略。"
+          },
+          {
+            "timestamp": "2025-06-27T11:44:19.295141",
+            "reasoning": "从历史投入来看，我在第一轮投入了较低比例（30%），但获得了非常可观的收益（26.5），说明大多数玩家都非常合作，投入率大多高于50%，有两名玩家全额投入。整体环境倾向于高贡献，高合作局面。若我继续低投入，将被其他玩家察觉为搭便车，长期可能引发其他人降低贡献，损害我的后续长期收益。因此，为了信号互惠合作意愿，并尝试在持续合作氛围中获利，本轮我将显著提高投入，趋近主流贡献水平，但略低于全额投入以防止万一出现转向自利局势带来的风险，我选择投入18枚（69%左右，接近主流贡献区间70%）。这样既能最大化短期收益，也有助于维护高贡献环境，有利于长期收益。"
+          }
+        ]
+      }
+    },
+    "4": {
+      "agent_name": "Agent_4",
+      "reasoning_by_type": {
+        "决策阶段": [
+          {
+            "timestamp": "2025-06-27T11:43:31.182701",
+            "reasoning": "这是第一轮游戏，没有先前轮次可以作为参考。一般来说，第一轮是设定基调的时候。投入较多可以显示合作者形象，鼓励其他人也合作，从而获得更高整体收益。但若一开始就全投，有被其他人搭便车的风险。一般情况下，为了保持合作并测试他人倾向，我会选择中等偏高投入（比如6），这样既不会太冒险又不至于太保守。"
+          },
+          {
+            "timestamp": "2025-06-27T11:45:10.638774",
+            "reasoning": "第一轮大部分玩家的投入比例较高，尤其有两位玩家全投（100%），绝大多数玩家投入了一半或更多。只有一人明显低于平均水平。我的投入在中等水平，收益不错。当前来看合作氛围较强，集体投高会提升每人的收益。如果我突然极大减少投入，可能导致他人失望，破坏合作。不过，也不确定高投入能否持续——有玩家可能会在接下来的回合择机“搭便车”。平衡合作与自利，我决定适度提高投入，向集体示好，并观察整体趋势。投入14枚（约58%），略高于上轮自己的绝对值，也略大于一半，既保持合作姿态又留有风险余地。"
+          }
+        ]
+      }
+    },
+    "5": {
+      "agent_name": "Agent_5",
+      "reasoning_by_type": {
+        "决策阶段": [
+          {
+            "timestamp": "2025-06-27T11:43:34.197619",
+            "reasoning": "这是第一轮，没有历史投入信息，因此无法判断其他玩家倾向于合作还是自利。从最大化个人收益的博弈论角度，如果假设其他玩家会投入较少，则自利地少投入可以获益最大。但考虑到公共池三倍放大且平分，如果我投入得多且大家都合作，每人总收益会极高。在第一轮时，许多玩家往往尝试体现合作性和友好基调，期待促进群体合作。因此可以适度展示合作意愿，又不全额投入，以观察他人反应，所以我选择投入5枚代币。"
+          },
+          {
+            "timestamp": "2025-06-27T11:45:24.845935",
+            "reasoning": "在第1轮中，整体玩家的合作水平较高，不少玩家投入了较多（6位玩家超过50%，2位玩家100%投入）。我的投入水平为中等（50%），依然获得了较高收益（24.5）。说明集体合作带来了可观的效益。如果继续中高投入，有极大概率获得较高回报。目前我倾向于通过小幅提升我的贡献来测试玩家间的合作黏性和他们对高贡献的持续性响应，从而进一步构建互信，避免过度投机导致合作崩盘。此次我选择投入60%（即14枚），既能展示合作意愿，又有利于保护自身利益，检验他人的后续投入水平。"
+          }
+        ]
+      }
+    },
+    "6": {
+      "agent_name": "Agent_6",
+      "reasoning_by_type": {
+        "决策阶段": [
+          {
+            "timestamp": "2025-06-27T11:43:40.806722",
+            "reasoning": "作为第一轮，没有历史信息表明其他玩家倾向于合作还是保守。在这种不确定环境下，理性人为了最大化个人收益，会倾向于少投入甚至不投入，以观察其他玩家行为。但是，完全不投入可能导致全员防御，损害总收益。因此，为了平衡风险和收益，可以选择投入中间值作为试探，既能享受一定的公共回报，也能避免过高风险。"
+          },
+          {
+            "timestamp": "2025-06-27T11:45:29.089046",
+            "reasoning": "回顾第1轮，大部分玩家的投入比例较高（70%以上的有4人，100%的有2人），整体合作意愿较强。我上一轮采取了中等策略（50%投入），但收益已非常可观（24.5，远高于单独保守策略）。这种博弈下，合作（高投入）倾向于带来集体最大效益，尤其是在他人也愿意合作时。鉴于合作氛围浓厚，我将主动适度提升贡献，既响应主流合作趋势，又保持一定自保（非全额投入，预防个别背叛）。为此，本轮我选择投入总额的70%（即17枚），风险与收益兼顾。"
+          }
+        ]
+      }
+    },
+    "7": {
+      "agent_name": "Agent_7",
+      "reasoning_by_type": {
+        "决策阶段": [
+          {
+            "timestamp": "2025-06-27T11:43:46.947512",
+            "reasoning": "第一轮没有历史信息，仅凭理性计算与风险厌恶度考虑。假设所有人都趋利，如果我全投入10，则总池子收益最大化但可能被搭便车；全不投则最大化自利但也可能导致整体低收益。以风险中性和博弈试探为主，为观察和促使合作，首轮一般投入较高，试探其他玩家合作意愿，同时避免出现最低收益，投入7，既显示合作意图，又保留部分筹码应对未来变化。"
+          },
+          {
+            "timestamp": "2025-06-27T11:45:36.802789",
+            "reasoning": "从第1轮的投入情况可以看出，大多数玩家（7/9）投入比例在50%以上，而且有两位玩家选择了全部投入，说明集体合作氛围较为浓厚。我的上轮投入比例是70%，获得的收益很高（22.5/10），表明合作是有利可图的。本轮代币充裕，预期大部分玩家会继续保持较高合作水平。如果此时大幅降投入有可能破坏信任，反而影响后续的合作氛围。因此，我选择略微提升投入，表现出持续合作的倾向（既不100%，又不明显减少），建议投入16/22（~73%），既获取集体收益，也控制一定的风险。"
+          }
+        ]
+      }
+    }
+  }
+}

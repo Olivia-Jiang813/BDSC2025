@@ -1,0 +1,1106 @@
+{
+  "game_config": {
+    "model": "gpt-4.1",
+    "personality_type": "neutral",
+    "endowment": 10,
+    "r": 3,
+    "rounds": 10,
+    "num_players": 10,
+    "reveal_mode": "public",
+    "completed_rounds": 3,
+    "final_decisions": null
+  },
+  "game_status": "interrupted",
+  "rounds": [
+    {
+      "round": 1,
+      "stats": {
+        "total_contribution": 20,
+        "public_pool": 60,
+        "share_per_player": 6.0
+      },
+      "agents": [
+        {
+          "id": "0",
+          "initial_total_money": 16,
+          "contribution": 0,
+          "payoff": 16.0,
+          "latest_belief": null
+        },
+        {
+          "id": "1",
+          "initial_total_money": 16,
+          "contribution": 0,
+          "payoff": 16.0,
+          "latest_belief": null
+        },
+        {
+          "id": "2",
+          "initial_total_money": 16,
+          "contribution": 0,
+          "payoff": 16.0,
+          "latest_belief": null
+        },
+        {
+          "id": "3",
+          "initial_total_money": 16,
+          "contribution": 0,
+          "payoff": 16.0,
+          "latest_belief": null
+        },
+        {
+          "id": "4",
+          "initial_total_money": 16,
+          "contribution": 0,
+          "payoff": 16.0,
+          "latest_belief": null
+        },
+        {
+          "id": "5",
+          "initial_total_money": 16,
+          "contribution": 0,
+          "payoff": 16.0,
+          "latest_belief": null
+        },
+        {
+          "id": "6",
+          "initial_total_money": 16,
+          "contribution": 0,
+          "payoff": 16.0,
+          "latest_belief": null
+        },
+        {
+          "id": "7",
+          "initial_total_money": 16,
+          "contribution": 0,
+          "payoff": 16.0,
+          "latest_belief": null
+        },
+        {
+          "id": "8",
+          "initial_total_money": 10,
+          "contribution": 10,
+          "payoff": 6.0,
+          "latest_belief": null
+        },
+        {
+          "id": "9",
+          "initial_total_money": 10,
+          "contribution": 10,
+          "payoff": 6.0,
+          "latest_belief": null
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "stats": {
+        "total_contribution": 20,
+        "public_pool": 60,
+        "share_per_player": 6.0
+      },
+      "agents": [
+        {
+          "id": "0",
+          "initial_total_money": 22,
+          "contribution": 0,
+          "payoff": 22.0,
+          "latest_belief": null
+        },
+        {
+          "id": "1",
+          "initial_total_money": 22,
+          "contribution": 0,
+          "payoff": 22.0,
+          "latest_belief": null
+        },
+        {
+          "id": "2",
+          "initial_total_money": 22,
+          "contribution": 0,
+          "payoff": 22.0,
+          "latest_belief": null
+        },
+        {
+          "id": "3",
+          "initial_total_money": 22,
+          "contribution": 0,
+          "payoff": 22.0,
+          "latest_belief": null
+        },
+        {
+          "id": "4",
+          "initial_total_money": 22,
+          "contribution": 0,
+          "payoff": 22.0,
+          "latest_belief": null
+        },
+        {
+          "id": "5",
+          "initial_total_money": 22,
+          "contribution": 0,
+          "payoff": 22.0,
+          "latest_belief": null
+        },
+        {
+          "id": "6",
+          "initial_total_money": 22,
+          "contribution": 0,
+          "payoff": 22.0,
+          "latest_belief": null
+        },
+        {
+          "id": "7",
+          "initial_total_money": 22,
+          "contribution": 0,
+          "payoff": 22.0,
+          "latest_belief": null
+        },
+        {
+          "id": "8",
+          "initial_total_money": 10,
+          "contribution": 10,
+          "payoff": 6.0,
+          "latest_belief": null
+        },
+        {
+          "id": "9",
+          "initial_total_money": 10,
+          "contribution": 10,
+          "payoff": 6.0,
+          "latest_belief": null
+        }
+      ]
+    }
+  ],
+  "agents": [
+    {
+      "id": "0",
+      "name": "Agent_0",
+      "personality_type": "neutral",
+      "is_anchor": false,
+      "game_history": [
+        {
+          "round": 1,
+          "contribution": 0,
+          "group_total": 20,
+          "payoff": 16.0,
+          "total_money_before_round": 10
+        },
+        {
+          "round": 2,
+          "contribution": 0,
+          "group_total": 20,
+          "payoff": 22.0,
+          "total_money_before_round": 16
+        }
+      ],
+      "belief_memory": [],
+      "current_total_money": 22,
+      "final_decision": null
+    },
+    {
+      "id": "1",
+      "name": "Agent_1",
+      "personality_type": "neutral",
+      "is_anchor": false,
+      "game_history": [
+        {
+          "round": 1,
+          "contribution": 0,
+          "group_total": 20,
+          "payoff": 16.0,
+          "total_money_before_round": 10
+        },
+        {
+          "round": 2,
+          "contribution": 0,
+          "group_total": 20,
+          "payoff": 22.0,
+          "total_money_before_round": 16
+        }
+      ],
+      "belief_memory": [],
+      "current_total_money": 22,
+      "final_decision": null
+    },
+    {
+      "id": "2",
+      "name": "Agent_2",
+      "personality_type": "neutral",
+      "is_anchor": false,
+      "game_history": [
+        {
+          "round": 1,
+          "contribution": 0,
+          "group_total": 20,
+          "payoff": 16.0,
+          "total_money_before_round": 10
+        },
+        {
+          "round": 2,
+          "contribution": 0,
+          "group_total": 20,
+          "payoff": 22.0,
+          "total_money_before_round": 16
+        }
+      ],
+      "belief_memory": [],
+      "current_total_money": 22,
+      "final_decision": null
+    },
+    {
+      "id": "3",
+      "name": "Agent_3",
+      "personality_type": "neutral",
+      "is_anchor": false,
+      "game_history": [
+        {
+          "round": 1,
+          "contribution": 0,
+          "group_total": 20,
+          "payoff": 16.0,
+          "total_money_before_round": 10
+        },
+        {
+          "round": 2,
+          "contribution": 0,
+          "group_total": 20,
+          "payoff": 22.0,
+          "total_money_before_round": 16
+        }
+      ],
+      "belief_memory": [],
+      "current_total_money": 22,
+      "final_decision": null
+    },
+    {
+      "id": "4",
+      "name": "Agent_4",
+      "personality_type": "neutral",
+      "is_anchor": false,
+      "game_history": [
+        {
+          "round": 1,
+          "contribution": 0,
+          "group_total": 20,
+          "payoff": 16.0,
+          "total_money_before_round": 10
+        },
+        {
+          "round": 2,
+          "contribution": 0,
+          "group_total": 20,
+          "payoff": 22.0,
+          "total_money_before_round": 16
+        }
+      ],
+      "belief_memory": [],
+      "current_total_money": 22,
+      "final_decision": null
+    },
+    {
+      "id": "5",
+      "name": "Agent_5",
+      "personality_type": "neutral",
+      "is_anchor": false,
+      "game_history": [
+        {
+          "round": 1,
+          "contribution": 0,
+          "group_total": 20,
+          "payoff": 16.0,
+          "total_money_before_round": 10
+        },
+        {
+          "round": 2,
+          "contribution": 0,
+          "group_total": 20,
+          "payoff": 22.0,
+          "total_money_before_round": 16
+        }
+      ],
+      "belief_memory": [],
+      "current_total_money": 22,
+      "final_decision": null
+    },
+    {
+      "id": "6",
+      "name": "Agent_6",
+      "personality_type": "neutral",
+      "is_anchor": false,
+      "game_history": [
+        {
+          "round": 1,
+          "contribution": 0,
+          "group_total": 20,
+          "payoff": 16.0,
+          "total_money_before_round": 10
+        },
+        {
+          "round": 2,
+          "contribution": 0,
+          "group_total": 20,
+          "payoff": 22.0,
+          "total_money_before_round": 16
+        }
+      ],
+      "belief_memory": [],
+      "current_total_money": 22,
+      "final_decision": null
+    },
+    {
+      "id": "7",
+      "name": "Agent_7",
+      "personality_type": "neutral",
+      "is_anchor": false,
+      "game_history": [
+        {
+          "round": 1,
+          "contribution": 0,
+          "group_total": 20,
+          "payoff": 16.0,
+          "total_money_before_round": 10
+        },
+        {
+          "round": 2,
+          "contribution": 0,
+          "group_total": 20,
+          "payoff": 22.0,
+          "total_money_before_round": 16
+        }
+      ],
+      "belief_memory": [],
+      "current_total_money": 22,
+      "final_decision": null
+    },
+    {
+      "id": "8",
+      "name": "Agent_8",
+      "personality_type": "anchor",
+      "is_anchor": true,
+      "game_history": [
+        {
+          "round": 1,
+          "contribution": 10,
+          "group_total": 20,
+          "payoff": 6.0,
+          "total_money_before_round": 10
+        },
+        {
+          "round": 2,
+          "contribution": 10,
+          "group_total": 20,
+          "payoff": 6.0,
+          "total_money_before_round": 10
+        }
+      ],
+      "belief_memory": [],
+      "current_total_money": 10,
+      "final_decision": null
+    },
+    {
+      "id": "9",
+      "name": "Agent_9",
+      "personality_type": "anchor",
+      "is_anchor": true,
+      "game_history": [
+        {
+          "round": 1,
+          "contribution": 10,
+          "group_total": 20,
+          "payoff": 6.0,
+          "total_money_before_round": 10
+        },
+        {
+          "round": 2,
+          "contribution": 10,
+          "group_total": 20,
+          "payoff": 6.0,
+          "total_money_before_round": 10
+        }
+      ],
+      "belief_memory": [],
+      "current_total_money": 10,
+      "final_decision": null
+    }
+  ],
+  "llm_interactions": {
+    "summary": {
+      "total_interactions": 20,
+      "agents_count": 10
+    },
+    "interactions_by_agent": {
+      "0": {
+        "agent_name": "Agent_0",
+        "personality_type": "neutral",
+        "total_interactions": 3,
+        "interactions": [
+          {
+            "timestamp": "2025-06-27T11:40:24.575907",
+            "debug_label": "决策阶段",
+            "duration_seconds": 1.521982,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_0\"。\n\n        游戏规则：\n        - 当前第 1 轮\n        - 你有 10 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给所有玩家\n        - 你的投入范围：0 到 10\n\n        你的记忆：\n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–10之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "LLM调用失败: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************IncA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}",
+              "reasoning": null,
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "error"
+            }
+          },
+          {
+            "timestamp": "2025-06-27T11:40:35.693092",
+            "debug_label": "决策阶段",
+            "duration_seconds": 1.139247,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_0\"。\n\n        游戏规则：\n        - 当前第 2 轮\n        - 你有 16 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给所有玩家\n        - 你的投入范围：0 到 16\n\n        你的记忆：\n\n历史投入记录：\n你的历史投入：\n  第1轮: 投入0/10 (0.0%), 收益16.0\n\n其他玩家历史投入：\n玩家1: 第1轮:0/10(0.0%) \n玩家2: 第1轮:0/10(0.0%) \n玩家3: 第1轮:0/10(0.0%) \n玩家4: 第1轮:0/10(0.0%) \n玩家5: 第1轮:0/10(0.0%) \n玩家6: 第1轮:0/10(0.0%) \n玩家7: 第1轮:0/10(0.0%) \n玩家8: 第1轮:10/10(100.0%) \n玩家9: 第1轮:10/10(100.0%) \n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–16之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "LLM调用失败: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************IncA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}",
+              "reasoning": null,
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "error"
+            }
+          },
+          {
+            "timestamp": "2025-06-27T11:40:45.110777",
+            "debug_label": "决策阶段",
+            "duration_seconds": 1.387836,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_0\"。\n\n        游戏规则：\n        - 当前第 3 轮\n        - 你有 22 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给所有玩家\n        - 你的投入范围：0 到 22\n\n        你的记忆：\n\n历史投入记录：\n你的历史投入：\n  第1轮: 投入0/10 (0.0%), 收益16.0\n  第2轮: 投入0/16 (0.0%), 收益22.0\n\n其他玩家历史投入：\n玩家1: 第1轮:0/10(0.0%) 第2轮:0/16(0.0%) \n玩家2: 第1轮:0/10(0.0%) 第2轮:0/16(0.0%) \n玩家3: 第1轮:0/10(0.0%) 第2轮:0/16(0.0%) \n玩家4: 第1轮:0/10(0.0%) 第2轮:0/16(0.0%) \n玩家5: 第1轮:0/10(0.0%) 第2轮:0/16(0.0%) \n玩家6: 第1轮:0/10(0.0%) 第2轮:0/16(0.0%) \n玩家7: 第1轮:0/10(0.0%) 第2轮:0/16(0.0%) \n玩家8: 第1轮:10/10(100.0%) 第2轮:10/10(100.0%) \n玩家9: 第1轮:10/10(100.0%) 第2轮:10/10(100.0%) \n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–22之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "LLM调用失败: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************IncA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}",
+              "reasoning": null,
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "error"
+            }
+          }
+        ]
+      },
+      "1": {
+        "agent_name": "Agent_1",
+        "personality_type": "neutral",
+        "total_interactions": 3,
+        "interactions": [
+          {
+            "timestamp": "2025-06-27T11:40:26.098322",
+            "debug_label": "决策阶段",
+            "duration_seconds": 1.282274,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_1\"。\n\n        游戏规则：\n        - 当前第 1 轮\n        - 你有 10 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给所有玩家\n        - 你的投入范围：0 到 10\n\n        你的记忆：\n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–10之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "LLM调用失败: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************IncA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}",
+              "reasoning": null,
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "error"
+            }
+          },
+          {
+            "timestamp": "2025-06-27T11:40:36.833711",
+            "debug_label": "决策阶段",
+            "duration_seconds": 1.257379,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_1\"。\n\n        游戏规则：\n        - 当前第 2 轮\n        - 你有 16 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给所有玩家\n        - 你的投入范围：0 到 16\n\n        你的记忆：\n\n历史投入记录：\n你的历史投入：\n  第1轮: 投入0/10 (0.0%), 收益16.0\n\n其他玩家历史投入：\n玩家0: 第1轮:0/10(0.0%) \n玩家2: 第1轮:0/10(0.0%) \n玩家3: 第1轮:0/10(0.0%) \n玩家4: 第1轮:0/10(0.0%) \n玩家5: 第1轮:0/10(0.0%) \n玩家6: 第1轮:0/10(0.0%) \n玩家7: 第1轮:0/10(0.0%) \n玩家8: 第1轮:10/10(100.0%) \n玩家9: 第1轮:10/10(100.0%) \n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–16之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "LLM调用失败: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************IncA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}",
+              "reasoning": null,
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "error"
+            }
+          },
+          {
+            "timestamp": "2025-06-27T11:40:46.500111",
+            "debug_label": "决策阶段",
+            "duration_seconds": 1.294327,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_1\"。\n\n        游戏规则：\n        - 当前第 3 轮\n        - 你有 22 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给所有玩家\n        - 你的投入范围：0 到 22\n\n        你的记忆：\n\n历史投入记录：\n你的历史投入：\n  第1轮: 投入0/10 (0.0%), 收益16.0\n  第2轮: 投入0/16 (0.0%), 收益22.0\n\n其他玩家历史投入：\n玩家0: 第1轮:0/10(0.0%) 第2轮:0/16(0.0%) \n玩家2: 第1轮:0/10(0.0%) 第2轮:0/16(0.0%) \n玩家3: 第1轮:0/10(0.0%) 第2轮:0/16(0.0%) \n玩家4: 第1轮:0/10(0.0%) 第2轮:0/16(0.0%) \n玩家5: 第1轮:0/10(0.0%) 第2轮:0/16(0.0%) \n玩家6: 第1轮:0/10(0.0%) 第2轮:0/16(0.0%) \n玩家7: 第1轮:0/10(0.0%) 第2轮:0/16(0.0%) \n玩家8: 第1轮:10/10(100.0%) 第2轮:10/10(100.0%) \n玩家9: 第1轮:10/10(100.0%) 第2轮:10/10(100.0%) \n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–22之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "LLM调用失败: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************IncA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}",
+              "reasoning": null,
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "error"
+            }
+          }
+        ]
+      },
+      "2": {
+        "agent_name": "Agent_2",
+        "personality_type": "neutral",
+        "total_interactions": 3,
+        "interactions": [
+          {
+            "timestamp": "2025-06-27T11:40:27.381669",
+            "debug_label": "决策阶段",
+            "duration_seconds": 2.321456,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_2\"。\n\n        游戏规则：\n        - 当前第 1 轮\n        - 你有 10 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给所有玩家\n        - 你的投入范围：0 到 10\n\n        你的记忆：\n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–10之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "LLM调用失败: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************IncA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}",
+              "reasoning": null,
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "error"
+            }
+          },
+          {
+            "timestamp": "2025-06-27T11:40:38.092657",
+            "debug_label": "决策阶段",
+            "duration_seconds": 1.118072,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_2\"。\n\n        游戏规则：\n        - 当前第 2 轮\n        - 你有 16 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给所有玩家\n        - 你的投入范围：0 到 16\n\n        你的记忆：\n\n历史投入记录：\n你的历史投入：\n  第1轮: 投入0/10 (0.0%), 收益16.0\n\n其他玩家历史投入：\n玩家0: 第1轮:0/10(0.0%) \n玩家1: 第1轮:0/10(0.0%) \n玩家3: 第1轮:0/10(0.0%) \n玩家4: 第1轮:0/10(0.0%) \n玩家5: 第1轮:0/10(0.0%) \n玩家6: 第1轮:0/10(0.0%) \n玩家7: 第1轮:0/10(0.0%) \n玩家8: 第1轮:10/10(100.0%) \n玩家9: 第1轮:10/10(100.0%) \n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–16之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "LLM调用失败: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************IncA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}",
+              "reasoning": null,
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "error"
+            }
+          },
+          {
+            "timestamp": "2025-06-27T11:40:47.795701",
+            "debug_label": "决策阶段",
+            "duration_seconds": 1.179402,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_2\"。\n\n        游戏规则：\n        - 当前第 3 轮\n        - 你有 22 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给所有玩家\n        - 你的投入范围：0 到 22\n\n        你的记忆：\n\n历史投入记录：\n你的历史投入：\n  第1轮: 投入0/10 (0.0%), 收益16.0\n  第2轮: 投入0/16 (0.0%), 收益22.0\n\n其他玩家历史投入：\n玩家0: 第1轮:0/10(0.0%) 第2轮:0/16(0.0%) \n玩家1: 第1轮:0/10(0.0%) 第2轮:0/16(0.0%) \n玩家3: 第1轮:0/10(0.0%) 第2轮:0/16(0.0%) \n玩家4: 第1轮:0/10(0.0%) 第2轮:0/16(0.0%) \n玩家5: 第1轮:0/10(0.0%) 第2轮:0/16(0.0%) \n玩家6: 第1轮:0/10(0.0%) 第2轮:0/16(0.0%) \n玩家7: 第1轮:0/10(0.0%) 第2轮:0/16(0.0%) \n玩家8: 第1轮:10/10(100.0%) 第2轮:10/10(100.0%) \n玩家9: 第1轮:10/10(100.0%) 第2轮:10/10(100.0%) \n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–22之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "LLM调用失败: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************IncA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}",
+              "reasoning": null,
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "error"
+            }
+          }
+        ]
+      },
+      "3": {
+        "agent_name": "Agent_3",
+        "personality_type": "neutral",
+        "total_interactions": 3,
+        "interactions": [
+          {
+            "timestamp": "2025-06-27T11:40:29.703495",
+            "debug_label": "决策阶段",
+            "duration_seconds": 1.144367,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_3\"。\n\n        游戏规则：\n        - 当前第 1 轮\n        - 你有 10 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给所有玩家\n        - 你的投入范围：0 到 10\n\n        你的记忆：\n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–10之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "LLM调用失败: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************IncA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}",
+              "reasoning": null,
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "error"
+            }
+          },
+          {
+            "timestamp": "2025-06-27T11:40:39.211993",
+            "debug_label": "决策阶段",
+            "duration_seconds": 1.242752,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_3\"。\n\n        游戏规则：\n        - 当前第 2 轮\n        - 你有 16 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给所有玩家\n        - 你的投入范围：0 到 16\n\n        你的记忆：\n\n历史投入记录：\n你的历史投入：\n  第1轮: 投入0/10 (0.0%), 收益16.0\n\n其他玩家历史投入：\n玩家0: 第1轮:0/10(0.0%) \n玩家1: 第1轮:0/10(0.0%) \n玩家2: 第1轮:0/10(0.0%) \n玩家4: 第1轮:0/10(0.0%) \n玩家5: 第1轮:0/10(0.0%) \n玩家6: 第1轮:0/10(0.0%) \n玩家7: 第1轮:0/10(0.0%) \n玩家8: 第1轮:10/10(100.0%) \n玩家9: 第1轮:10/10(100.0%) \n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–16之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "LLM调用失败: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************IncA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}",
+              "reasoning": null,
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "error"
+            }
+          },
+          {
+            "timestamp": "2025-06-27T11:40:48.976296",
+            "debug_label": "决策阶段",
+            "duration_seconds": 1.206753,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_3\"。\n\n        游戏规则：\n        - 当前第 3 轮\n        - 你有 22 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给所有玩家\n        - 你的投入范围：0 到 22\n\n        你的记忆：\n\n历史投入记录：\n你的历史投入：\n  第1轮: 投入0/10 (0.0%), 收益16.0\n  第2轮: 投入0/16 (0.0%), 收益22.0\n\n其他玩家历史投入：\n玩家0: 第1轮:0/10(0.0%) 第2轮:0/16(0.0%) \n玩家1: 第1轮:0/10(0.0%) 第2轮:0/16(0.0%) \n玩家2: 第1轮:0/10(0.0%) 第2轮:0/16(0.0%) \n玩家4: 第1轮:0/10(0.0%) 第2轮:0/16(0.0%) \n玩家5: 第1轮:0/10(0.0%) 第2轮:0/16(0.0%) \n玩家6: 第1轮:0/10(0.0%) 第2轮:0/16(0.0%) \n玩家7: 第1轮:0/10(0.0%) 第2轮:0/16(0.0%) \n玩家8: 第1轮:10/10(100.0%) 第2轮:10/10(100.0%) \n玩家9: 第1轮:10/10(100.0%) 第2轮:10/10(100.0%) \n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–22之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "LLM调用失败: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************IncA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}",
+              "reasoning": null,
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "error"
+            }
+          }
+        ]
+      },
+      "4": {
+        "agent_name": "Agent_4",
+        "personality_type": "neutral",
+        "total_interactions": 2,
+        "interactions": [
+          {
+            "timestamp": "2025-06-27T11:40:30.850431",
+            "debug_label": "决策阶段",
+            "duration_seconds": 1.168179,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_4\"。\n\n        游戏规则：\n        - 当前第 1 轮\n        - 你有 10 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给所有玩家\n        - 你的投入范围：0 到 10\n\n        你的记忆：\n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–10之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "LLM调用失败: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************IncA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}",
+              "reasoning": null,
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "error"
+            }
+          },
+          {
+            "timestamp": "2025-06-27T11:40:40.455231",
+            "debug_label": "决策阶段",
+            "duration_seconds": 1.11114,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_4\"。\n\n        游戏规则：\n        - 当前第 2 轮\n        - 你有 16 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给所有玩家\n        - 你的投入范围：0 到 16\n\n        你的记忆：\n\n历史投入记录：\n你的历史投入：\n  第1轮: 投入0/10 (0.0%), 收益16.0\n\n其他玩家历史投入：\n玩家0: 第1轮:0/10(0.0%) \n玩家1: 第1轮:0/10(0.0%) \n玩家2: 第1轮:0/10(0.0%) \n玩家3: 第1轮:0/10(0.0%) \n玩家5: 第1轮:0/10(0.0%) \n玩家6: 第1轮:0/10(0.0%) \n玩家7: 第1轮:0/10(0.0%) \n玩家8: 第1轮:10/10(100.0%) \n玩家9: 第1轮:10/10(100.0%) \n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–16之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "LLM调用失败: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************IncA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}",
+              "reasoning": null,
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "error"
+            }
+          }
+        ]
+      },
+      "5": {
+        "agent_name": "Agent_5",
+        "personality_type": "neutral",
+        "total_interactions": 2,
+        "interactions": [
+          {
+            "timestamp": "2025-06-27T11:40:32.019846",
+            "debug_label": "决策阶段",
+            "duration_seconds": 1.274503,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_5\"。\n\n        游戏规则：\n        - 当前第 1 轮\n        - 你有 10 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给所有玩家\n        - 你的投入范围：0 到 10\n\n        你的记忆：\n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–10之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "LLM调用失败: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************IncA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}",
+              "reasoning": null,
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "error"
+            }
+          },
+          {
+            "timestamp": "2025-06-27T11:40:41.567754",
+            "debug_label": "决策阶段",
+            "duration_seconds": 1.243408,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_5\"。\n\n        游戏规则：\n        - 当前第 2 轮\n        - 你有 16 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给所有玩家\n        - 你的投入范围：0 到 16\n\n        你的记忆：\n\n历史投入记录：\n你的历史投入：\n  第1轮: 投入0/10 (0.0%), 收益16.0\n\n其他玩家历史投入：\n玩家0: 第1轮:0/10(0.0%) \n玩家1: 第1轮:0/10(0.0%) \n玩家2: 第1轮:0/10(0.0%) \n玩家3: 第1轮:0/10(0.0%) \n玩家4: 第1轮:0/10(0.0%) \n玩家6: 第1轮:0/10(0.0%) \n玩家7: 第1轮:0/10(0.0%) \n玩家8: 第1轮:10/10(100.0%) \n玩家9: 第1轮:10/10(100.0%) \n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–16之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "LLM调用失败: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************IncA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}",
+              "reasoning": null,
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "error"
+            }
+          }
+        ]
+      },
+      "6": {
+        "agent_name": "Agent_6",
+        "personality_type": "neutral",
+        "total_interactions": 2,
+        "interactions": [
+          {
+            "timestamp": "2025-06-27T11:40:33.294702",
+            "debug_label": "决策阶段",
+            "duration_seconds": 1.112474,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_6\"。\n\n        游戏规则：\n        - 当前第 1 轮\n        - 你有 10 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给所有玩家\n        - 你的投入范围：0 到 10\n\n        你的记忆：\n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–10之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "LLM调用失败: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************IncA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}",
+              "reasoning": null,
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "error"
+            }
+          },
+          {
+            "timestamp": "2025-06-27T11:40:42.812592",
+            "debug_label": "决策阶段",
+            "duration_seconds": 1.123512,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_6\"。\n\n        游戏规则：\n        - 当前第 2 轮\n        - 你有 16 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给所有玩家\n        - 你的投入范围：0 到 16\n\n        你的记忆：\n\n历史投入记录：\n你的历史投入：\n  第1轮: 投入0/10 (0.0%), 收益16.0\n\n其他玩家历史投入：\n玩家0: 第1轮:0/10(0.0%) \n玩家1: 第1轮:0/10(0.0%) \n玩家2: 第1轮:0/10(0.0%) \n玩家3: 第1轮:0/10(0.0%) \n玩家4: 第1轮:0/10(0.0%) \n玩家5: 第1轮:0/10(0.0%) \n玩家7: 第1轮:0/10(0.0%) \n玩家8: 第1轮:10/10(100.0%) \n玩家9: 第1轮:10/10(100.0%) \n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–16之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "LLM调用失败: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************IncA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}",
+              "reasoning": null,
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "error"
+            }
+          }
+        ]
+      },
+      "7": {
+        "agent_name": "Agent_7",
+        "personality_type": "neutral",
+        "total_interactions": 2,
+        "interactions": [
+          {
+            "timestamp": "2025-06-27T11:40:34.408169",
+            "debug_label": "决策阶段",
+            "duration_seconds": 1.283835,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_7\"。\n\n        游戏规则：\n        - 当前第 1 轮\n        - 你有 10 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给所有玩家\n        - 你的投入范围：0 到 10\n\n        你的记忆：\n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–10之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "LLM调用失败: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************IncA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}",
+              "reasoning": null,
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "error"
+            }
+          },
+          {
+            "timestamp": "2025-06-27T11:40:43.937109",
+            "debug_label": "决策阶段",
+            "duration_seconds": 1.171794,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"Agent_7\"。\n\n        游戏规则：\n        - 当前第 2 轮\n        - 你有 16 枚代币可投入公共池（包括初始禀赋和之前的收益）\n        - 公共池总额 × 3 后平分给所有玩家\n        - 你的投入范围：0 到 16\n\n        你的记忆：\n\n历史投入记录：\n你的历史投入：\n  第1轮: 投入0/10 (0.0%), 收益16.0\n\n其他玩家历史投入：\n玩家0: 第1轮:0/10(0.0%) \n玩家1: 第1轮:0/10(0.0%) \n玩家2: 第1轮:0/10(0.0%) \n玩家3: 第1轮:0/10(0.0%) \n玩家4: 第1轮:0/10(0.0%) \n玩家5: 第1轮:0/10(0.0%) \n玩家6: 第1轮:0/10(0.0%) \n玩家8: 第1轮:10/10(100.0%) \n玩家9: 第1轮:10/10(100.0%) \n\n请基于你的策略和信念，决定本轮投入金额。\n请输出决策理由和具体投入金额，必须在0–16之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "LLM调用失败: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************IncA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}",
+              "reasoning": null,
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "error"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "reasoning_summary": {
+    "0": {
+      "agent_name": "Agent_0",
+      "reasoning_by_type": {}
+    },
+    "1": {
+      "agent_name": "Agent_1",
+      "reasoning_by_type": {}
+    },
+    "2": {
+      "agent_name": "Agent_2",
+      "reasoning_by_type": {}
+    },
+    "3": {
+      "agent_name": "Agent_3",
+      "reasoning_by_type": {}
+    },
+    "4": {
+      "agent_name": "Agent_4",
+      "reasoning_by_type": {}
+    },
+    "5": {
+      "agent_name": "Agent_5",
+      "reasoning_by_type": {}
+    },
+    "6": {
+      "agent_name": "Agent_6",
+      "reasoning_by_type": {}
+    },
+    "7": {
+      "agent_name": "Agent_7",
+      "reasoning_by_type": {}
+    }
+  }
+}

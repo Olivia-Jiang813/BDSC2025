@@ -61,7 +61,7 @@ class Agent:
             provider: 模型提供商
         """
         self.id = agent_id
-        self.name = f"Agent_{agent_id}"
+        self.name = f"{int(agent_id) + 1}"  # 智能体名称，基于ID+1生成
         self.is_anchor = is_anchor
         self.personality_type = personality_type  # 保存性格类型
         self.debug_prompts = False  # 默认关闭调试
@@ -76,9 +76,9 @@ class Agent:
         
         # 记忆和历史
         self.history = []   # 存储每轮的基本数据
-        self.strategy_memory = []  # 策略记忆：每2轮更新，存储策略相关思考
-        self.belief_memory = []   # 信念记忆：每4轮更新，存储对合作的信念，影响系统提示
+        self.belief_memory = []   # 信念记忆：每轮更新，存储对自身身份/风格的宏观反思
         self.llm_interactions = []  # LLM交互记录：存储每次AI交互的完整输入输出
+        self.reasoning = []  # 用于存储每轮reasoning等短期记忆，替代short_term_memory
         self.current_endowment = GAME_CONFIG["endowment"]  # 当前禀赋
         self.current_total_money = GAME_CONFIG["endowment"]  # 当前总金额（初始禀赋 + 累计收益）
         
@@ -209,7 +209,9 @@ class Agent:
         
         # 添加到智能体的交互历史
         self.llm_interactions.append(interaction_record)
-        
+        # 自动写入reasoning记忆（只存字符串）
+        if reasoning:
+            self.reasoning.append(reasoning)
         return response_content
 
     def decide_contribution(self, round_number, r, num_players, all_history=None, mode="public"):
@@ -222,7 +224,7 @@ class Agent:
             all_history: 所有玩家的历史记录
             mode: 信息模式 ("public" 或 "anonymous")
         """
-        # 锚定智能体直接返回全部当前金额
+        # 锚定智能体直接返回全部当前金额（100%投入）
         if self.is_anchor:
             return self.current_total_money
 
@@ -232,15 +234,8 @@ class Agent:
         游戏规则：
         - 当前第 {round_number} 轮
         - 你有 {self.current_total_money} 枚代币可投入公共池（包括初始禀赋和之前的收益）
-        - 公共池总额 × {r} 后平分给 {num_players} 名玩家
-        - 你的投入范围：0 到 {self.current_total_money}
-
-        你的记忆："""
-
-        # 添加策略记忆（仅在有策略时显示）
-        if self.strategy_memory:
-            latest_strategy = self.get_latest_strategy()
-            base_prompt += f"\n当前策略：\n{latest_strategy}"
+        - 公共池总额 × {r} 后平分给所有玩家
+        - 你的投入范围：0 到 {self.current_total_money}"""
 
         # 根据模式添加历史信息
         if round_number > 1:
@@ -291,8 +286,6 @@ class Agent:
                     if round_count > 0:
                         avg_contrib = round_total / round_count
                         base_prompt += f"\n  第{r}轮: 他人平均贡献{avg_contrib:.1f}, 他人总贡献{round_total}"
-            
-        base_prompt += f"\n\n请基于你的策略和信念，决定本轮投入金额。"
         
         # 添加结构化输出说明
         base_prompt += f"\n请输出决策理由和具体投入金额，必须在0–{self.current_total_money}之间。"
@@ -345,12 +338,6 @@ class Agent:
         base_prompt = self.system_prompt if self.system_prompt else PERSONALITY_PROMPTS.get("neutral", "你是一名玩家。")
         return f"{base_prompt}\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
 
-    def get_latest_strategy(self):
-        """获取最新的策略记忆"""
-        if not self.strategy_memory:
-            return None
-        return f"策略总结: {self.strategy_memory[-1]['strategy']}"
-
     def get_latest_belief(self):
         """获取最新的信念记忆"""
         if not self.belief_memory:
@@ -382,26 +369,22 @@ class Agent:
             payoff: 收益
             total_money_before_round: 本轮开始前的总金额（投入范围）
         """
-        if self.is_anchor:
-            # anchor只记录最基本数据
-            round_data = {
-                'round': round_num,
-                'contribution': contribution,
-                'group_total': group_total,
-                'payoff': payoff,
-                'total_money_before_round': total_money_before_round or self.current_total_money
-            }
-            self.history.append(round_data)
-            return
-        
+        # 先记录本轮开始前的金额
         round_data = {
+            'id': self.id,
             'round': round_num,
-            'contribution': contribution,
+            'contribution': int(round(contribution)) if self.is_anchor else contribution,
             'group_total': group_total,
             'payoff': payoff,
-            'total_money_before_round': total_money_before_round or self.current_total_money
+            'total_money_before_round': int(round(total_money_before_round)) if self.is_anchor and total_money_before_round is not None else total_money_before_round if total_money_before_round is not None else self.current_total_money
         }
         self.history.append(round_data)
+        # 再结算本轮后的金额
+        if self.is_anchor:
+            self.current_total_money = int(round((total_money_before_round if total_money_before_round is not None else self.current_total_money) - contribution + payoff))
+        else:
+            self.current_total_money = (total_money_before_round if total_money_before_round is not None else self.current_total_money) - contribution + payoff
+        return round_data
 
     def set_debug_mode(self, debug=True):
         """设置是否输出调试信息（prompt内容）"""
@@ -429,109 +412,46 @@ class Agent:
         
         # 注意：策略和信念更新现在由游戏控制器统一管理，不在这里进行
 
-    def _update_strategy_memory(self, round_number, reveal_mode, all_history):
-        """更新策略记忆：每2轮总结投入策略"""
+    def _update_belief_memory(self, round_number, reveal_mode, all_history):
+        """每轮更新信念记忆，输入为最近reasoning，输出为更宏观的自我反思"""
         if self.is_anchor:
-            return  # anchor不更新策略，不调LLM
-        
-        # 确保有足够的历史数据（至少2轮）
-        if len(self.history) < 2:
-            return
-            
-        # 获取最近2轮的历史数据
-        recent_history = self.history[-2:]
-        
-        # 构建策略分析提示
-        prompt = f"""作为玩家 {self.name}，近两轮各玩家的投入情况如下：
-        {self._format_recent_rounds_info(round_number, reveal_mode, all_history)}
-
-        你当前的策略是：{self.get_latest_strategy() if self.strategy_memory else ""}
-
-        请基于以上信息，简要思考（1–2句），重点描述整体资源投入趋势及潜在风险或机会。"""
-
+            return  # anchor不更新信念
+        # 收集所有 reasoning，全部为字符串
+        recent_reasonings = "\n".join(self.reasoning[-3:])  # 取最近3轮，也可调整为全部
+        prompt = (
+            f"你是一名参与多轮决策的玩家。以下是你最近几轮的思考摘要：\n"
+            f"{recent_reasonings}\n\n"
+            "请基于这些思考，反思和描述你当前的行为风格、价值观或自我认知。"
+        )
         messages = [
             {"role": "system", "content": self.get_current_system_prompt()},
             {"role": "user", "content": prompt}
         ]
-        
-        # 调用LLM，使用结构化输出
+        # 调用 LLM，结构化输出
         if self.provider == "openai":
-            strategy = self._call_llm(messages, debug_label="策略记忆更新", structured_output=StrategyUpdate)
+            class BeliefUpdate(BaseModel):
+                reasoning: str = Field(..., description="简要说明你的反思过程")
+                output: str = Field(..., description="更新后的性格和合作倾向描述")
+            answer = self._call_llm(messages, debug_label="信念更新", structured_output=BeliefUpdate)
+            if hasattr(answer, "reasoning") and hasattr(answer, "output"):
+                reasoning = answer.reasoning
+                updated_personality = answer.output
+            else:
+                reasoning = ""
+                updated_personality = str(answer)
         else:
-            strategy = self._call_llm(messages, debug_label="策略记忆更新")
-        
-        # 记录到策略记忆
-        strategy_record = {
-            "rounds": [r['round'] for r in recent_history],
-            "end_round": round_number,
-            "timestamp": datetime.datetime.now().isoformat(),
-            "strategy": strategy,
-            "contributions_analyzed": [r['contribution'] for r in recent_history]
-        }
-        self.strategy_memory.append(strategy_record)
-
-    def _update_belief_memory(self, round_number, reveal_mode, all_history):
-        """更新信念记忆：每4轮更新对合作的信念，同时更新系统提示"""
-        if self.is_anchor:
-            return  # anchor不更新信念
-        # 确保有策略记录才进行信念更新
-        if not self.strategy_memory:
-            return
-            
-        # 获取最近的策略记忆作为参考
-        recent_strategies = []
-        if len(self.strategy_memory) >= 2:
-            recent_strategies = [mem['strategy'] for mem in self.strategy_memory[-2:]]
-        elif len(self.strategy_memory) == 1:
-            recent_strategies = [self.strategy_memory[-1]['strategy']]
-        
-        recent_strategy_text = " ".join(recent_strategies) if recent_strategies else "暂无策略记录"
-        
-        # 构建信念更新提示
-        prompt = f"""作为玩家 {self.name}，近期你的投入策略如下：
-        {recent_strategy_text}
-
-        请基于近期的策略，重新审视并更新你的身份描述，使其更准确地反映你在公共品博弈中的倾向以及当前对资源分配的看法。
-
-        要求：
-        - 保持"你是一个...玩家"的句式开头
-        - 描述你在公共品博弈中的行为特征
-        - 反映你对合作与竞争的态度
-        - 保持2-3句话的简洁描述
-
-        请直接输出更新后的身份描述，不要包含其他解释。"""
-
-        # 获取system_prompt，避免None
-        system_prompt = self.system_prompt if self.system_prompt else PERSONALITY_PROMPTS.get("neutral", "你是一名玩家。")
-        messages = [
-            {"role": "system", "content": system_prompt + "\n请更新你的身份认知，这将成为你新的行为指导原则。"},
-            {"role": "user", "content": prompt}
-        ]
-        
-        # 调用LLM，使用结构化输出
-        if self.provider == "openai":
-            updated_personality = self._call_llm(messages, debug_label="信念记忆更新", structured_output=BeliefUpdate)
-        else:
-            updated_personality = self._call_llm(messages, debug_label="信念记忆更新")
-
-        print(updated_personality)
-        
-        # 构建新的系统提示，保持原有格式
-        new_system_prompt = f"{updated_personality}\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
-        
-        # 记录到信念记忆
-        belief_record = {
-            "end_round": round_number,
-            "timestamp": datetime.datetime.now().isoformat(),
-            "original_system_prompt": self.system_prompt,
+            answer = self._call_llm(messages, debug_label="信念更新")
+            reasoning = ""
+            updated_personality = answer
+        # 记录信念记忆
+        self.belief_memory.append({
+            "round": round_number,
+            "reasoning": reasoning,
             "updated_personality": updated_personality,
-            "new_system_prompt": new_system_prompt,
-            "strategy_context": recent_strategy_text
-        }
-        self.belief_memory.append(belief_record)
-        
-        # 更新系统提示
-        self.system_prompt = new_system_prompt
+            "prompt": prompt
+        })
+        # 信念更新后自动更新system_prompt，自动将“我”替换为“你”
+        self.system_prompt = updated_personality.replace("我", "你")
 
     def make_final_decision(self, initial_endowment, r, num_players):
         """游戏结束后的一次性PGG决策
@@ -552,7 +472,7 @@ class Agent:
         游戏规则：
         - 当前是一轮独立的新游戏，你与 {num_players-1} 名陌生玩家进行一次性博弈
         - 你有 {initial_endowment} 枚代币可投入公共池（包括初始禀赋和之前的收益）
-        - 公共池总额 × {r} 后平分给{num_players} 名玩家
+        - 公共池总额 × {r} 后平分给所有玩家
         - 你的投入范围：0 到 {initial_endowment}
 
         请基于你在之前游戏中形成的策略和信念，决定在这个一次性博弈中的投入。"""
