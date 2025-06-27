@@ -212,11 +212,24 @@ class GameRecorder:
             lines.append(f"总贡献: {stats['total_contribution']}")
             lines.append(f"公共池: {stats['public_pool']}")
             lines.append(f"人均回报: {stats['share_per_player']}")
-            
             # 每个玩家的投入记录
             lines.append("\n各玩家投入:")
-            for agent_data in round_record["agents"]:
-                lines.append(f"玩家 {agent_data['id']}: {agent_data['contribution']}")
+            if game_config.get('reveal_mode', 'public') == 'anonymous':
+                # 匿名模式，输出他人平均贡献比例（基于每个玩家本轮初始金额）
+                agents_data = round_record["agents"]
+                ratios = []
+                for a in agents_data:
+                    initial_money = a.get('total_money_before_round', a.get('initial_total_money', a.get('initial_endowment', 10)))
+                    ratio = a['contribution'] / initial_money if initial_money else 0
+                    ratios.append(ratio)
+                avg_ratio = sum(ratios) / len(ratios) if ratios else 0
+                avg_contrib = sum(a['contribution'] for a in agents_data) / len(agents_data)
+                total_contrib = sum(a['contribution'] for a in agents_data)
+                lines.append(f"他人平均贡献: {avg_contrib:.2f} (平均贡献比例: {avg_ratio:.2%})")
+                lines.append(f"他人总贡献: {total_contrib:.2f}")
+            else:
+                for agent_data in round_record["agents"]:
+                    lines.append(f"玩家{agent_data['id']}贡献 {agent_data['contribution']}/{agent_data.get('total_money_before_round', game_config.get('endowment', 10))}")
             lines.append("-"*30)
 
         # === 4. 信念记录 ===

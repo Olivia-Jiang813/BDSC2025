@@ -113,69 +113,63 @@ class Agent:
                 print(f"调试输出错误: {debug_error}")
         
         try:
-            if self.provider == "openai":
-                if structured_output:
-                    # 使用结构化输出模式
-                    params = {
-                        "model": self.model,
-                        "input": messages,
-                        "text_format": structured_output
-                    }
-                    # if temperature is not None:
-                    #     params["temperature"] = temperature
-                    # if max_tokens is not None:
-                    #     params["max_tokens"] = max_tokens
-                        
-                    response = self.client.responses.parse(**params)
-                    # 保存原始响应和解析后的结果
-                    # raw_response = response.raw_output_text if hasattr(response, 'raw_output_text') else str(response.output_parsed)
-                    parsed_response = response.output_parsed
-                    
-                    # 从结构化输出中获取内容
-                    if hasattr(parsed_response, "reasoning") and hasattr(parsed_response, "output"):
-                        reasoning = parsed_response.reasoning  # 确保保存思考过程
-                        output = parsed_response.output
-                        # 根据输出类型构造最终返回的内容
-                        if isinstance(output, (int, float)):
-                            response_content = str(output)  # 对于决策阶段，直接返回数值
+            # LLM自动重试机制
+            max_retry = 10
+            retry_count = 0
+            while True:
+                try:
+                    if self.provider == "openai":
+                        if structured_output:
+                            params = {
+                                "model": self.model,
+                                "input": messages,
+                                "text_format": structured_output
+                            }
+                            response = self.client.responses.parse(**params)
+                            parsed_response = response.output_parsed
+                            if hasattr(parsed_response, "reasoning") and hasattr(parsed_response, "output"):
+                                reasoning = parsed_response.reasoning
+                                output = parsed_response.output
+                                if isinstance(output, (int, float)):
+                                    response_content = str(output)
+                                else:
+                                    response_content = output
+                            else:
+                                reasoning = None
+                                response_content = str(parsed_response)
                         else:
-                            response_content = output  # 对于策略和信念更新，返回字符串
-                    else:
-                        # 应对未预期的结构
+                            params = {
+                                "model": self.model,
+                                "input": messages
+                            }
+                            response = self.client.responses.create(**params)
+                            raw_response = response.output_text
+                            response_content = raw_response
+                            reasoning = None
+                    elif self.provider == "zhipuai":
+                        params = {
+                            "model": self.model,
+                            "messages": messages
+                        }
+                        if temperature is not None:
+                            params["temperature"] = temperature
+                        if max_tokens is not None:
+                            params["max_tokens"] = max_tokens
+                        response = self.client.chat.completions.create(**params)
+                        raw_response = response.choices[0].message.content.strip()
+                        response_content = raw_response
                         reasoning = None
-                        response_content = str(parsed_response)
-                else:
-                    # 普通文本输出模式
-                    params = {
-                        "model": self.model,
-                        "input": messages
-                    }
-                    # if temperature is not None:
-                    #     params["temperature"] = temperature
-                    # if max_tokens is not None:
-                    #     params["max_tokens"] = max_tokens
-                        
-                    response = self.client.responses.create(**params)
-                    raw_response = response.output_text
-                    response_content = raw_response
-                    reasoning = None
-            elif self.provider == "zhipuai":
-                params = {
-                    "model": self.model,
-                    "messages": messages
-                }
-                if temperature is not None:
-                    params["temperature"] = temperature
-                if max_tokens is not None:
-                    params["max_tokens"] = max_tokens
-                    
-                response = self.client.chat.completions.create(**params)
-                raw_response = response.choices[0].message.content.strip()
-                response_content = raw_response
-                reasoning = None
-            else:
-                raise ValueError(f"Unsupported provider: {self.provider}")
-        
+                    else:
+                        raise ValueError(f"Unsupported provider: {self.provider}")
+                    # 检查是否为连接失败
+                    if isinstance(response_content, str) and response_content.startswith("LLM调用失败: Connection error"):
+                        raise RuntimeError("LLM调用失败: Connection error")
+                    break
+                except Exception as e:
+                    retry_count += 1
+                    if retry_count >= max_retry:
+                        raise RuntimeError(f"LLM调用失败: Connection error, 已重试{max_retry}次仍未成功。最后错误: {e}")
+                    time.sleep(1)
         except Exception as e:
             raw_response = f"LLM调用失败: {str(e)}"
             response_content = raw_response
@@ -214,7 +208,7 @@ class Agent:
             self.reasoning.append(reasoning)
         return response_content
 
-    def decide_contribution(self, round_number, r, num_players, all_history=None, mode="public"):
+    def decide_contribution(self, round_number, r, num_players, all_history=None, mode="public", avg_contrib_ratio=None):
         """决定本轮的投入金额
         
         Args:
@@ -223,6 +217,7 @@ class Agent:
             num_players: 玩家总数
             all_history: 所有玩家的历史记录
             mode: 信息模式 ("public" 或 "anonymous")
+            avg_contrib_ratio: 匿名模式下上一轮的平均贡献比例
         """
         # 锚定智能体直接返回全部当前金额（100%投入）
         if self.is_anchor:
@@ -233,9 +228,9 @@ class Agent:
 
         游戏规则：
         - 当前第 {round_number} 轮
-        - 你有 {self.current_total_money} 枚代币可投入公共池（包括初始禀赋和之前的收益）
-        - 公共池总额 × {r} 后平分给所有玩家
-        - 你的投入范围：0 到 {self.current_total_money}"""
+        - 你有 {self.current_total_money} 枚代币可投入公共池（包括初始禀赋和之前的收益），你的投入范围：0 到 {self.current_total_money}
+        - 本轮公共池由所有玩家的投入累积形成
+        - 公共池总额 × {r} 后，将平均分配给所有玩家"""
 
         # 根据模式添加历史信息
         if round_number > 1:
@@ -251,6 +246,10 @@ class Agent:
                     my_total_before = history_entry.get('total_money_before_round', my_contrib + my_payoff)
                     my_ratio = (my_contrib / my_total_before * 100) if my_total_before > 0 else 0
                     base_prompt += f"\n  第{r}轮: 投入{my_contrib}/{my_total_before} ({my_ratio:.1f}%), 收益{my_payoff:.1f}"
+            
+            # 匿名模式下，加入上一轮平均贡献比例
+            # if mode == "anonymous" and avg_contrib_ratio is not None:
+            #     base_prompt += f"\n上一轮所有玩家平均贡献比例为: {avg_contrib_ratio:.1%}"
             
             # 根据模式添加其他玩家历史信息
             if all_history and mode == "public":
@@ -272,21 +271,33 @@ class Agent:
                                 else:
                                     base_prompt += f"第{r}轮:{contrib} "
             elif all_history and mode == "anonymous":
-                # 匿名模式：只显示平均值和汇总信息
+                # 匿名模式：显示每轮他人平均贡献比例
                 base_prompt += f"\n\n其他玩家汇总信息："
                 for r in range(1, round_number):
                     round_total = 0
+                    round_init_total = 0
                     round_count = 0
                     for player_id, player_data in all_history.items():
                         if player_id != self.id:
                             player_history = player_data.get('history', player_data)  # 兼容旧格式
                             if r <= len(player_history):
-                                round_total += player_history[r-1]['contribution']
-                                round_count += 1
-                    if round_count > 0:
-                        avg_contrib = round_total / round_count
-                        base_prompt += f"\n  第{r}轮: 他人平均贡献{avg_contrib:.1f}, 他人总贡献{round_total}"
-        
+                                contrib = player_history[r-1]['contribution']
+                                # 优先用init_amount，没有则用total_money_before_round，再没有用endowment
+                                init_amt = player_history[r-1].get('init_amount', None)
+                                if init_amt is None:
+                                    init_amt = player_history[r-1].get('total_money_before_round', None)
+                                if init_amt is None and r == 1:
+                                    from config import GAME_CONFIG
+                                    init_amt = GAME_CONFIG.get('endowment', 10)
+                                round_total += contrib
+                                if init_amt is not None and init_amt > 0:
+                                    round_init_total += init_amt
+                                    round_count += 1
+                    if round_count > 0 and round_init_total > 0:
+                        avg_contrib_ratio = (round_total / round_init_total) * 100
+                        base_prompt += f"\n  第{r}轮: 他人平均贡献比例{avg_contrib_ratio:.1f}%"
+                    else:
+                        base_prompt += f"\n  第{r}轮: 他人平均贡献比例--%"
         # 添加结构化输出说明
         base_prompt += f"\n请输出决策理由和具体投入金额，必须在0–{self.current_total_money}之间。"
         

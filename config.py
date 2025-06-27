@@ -29,7 +29,7 @@ API_KEYS = {
 # 模型配置
 MODEL_CONFIG = {
     "provider": "openai",          # 当前使用的模型提供商
-    "model": "gpt-4.1",        # 当前使用的具体模型
+    "model": "gpt-4.1-mini",        # 当前使用的具体模型
     "available_models": {
         "openai": ["gpt-4", "gpt-4.1", "gpt-4omini","gpt-4.1-mini"],
         "zhipuai": ["glm-4-flash", "glm-3-turbo"]

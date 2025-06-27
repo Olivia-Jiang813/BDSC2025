@@ -196,6 +196,16 @@ class GameController:
                 'current_total_money': initial_total_money[agent_id]
             }
         
+        # 计算上一轮平均贡献比例（仅anonymous模式下）
+        avg_contrib_ratio = None
+        if self.reveal_mode == 'anonymous' and self.current_round > 1:
+            prev_agents_data = self.recorder.round_records[-1]["agents"]
+            ratios = []
+            for a in prev_agents_data:
+                initial_money = a.get('total_money_before_round', a.get('initial_total_money', a.get('initial_endowment', 10)))
+                ratio = a['contribution'] / initial_money if initial_money else 0
+                ratios.append(ratio)
+            avg_contrib_ratio = sum(ratios) / len(ratios) if ratios else 0
         # 1. 收集贡献决策
         print("\n=== 各玩家本轮决策 ===")
         for agent in self.agents:
@@ -204,7 +214,8 @@ class GameController:
                 self.config["r"],
                 len(self.agents),
                 all_history_with_current_money,
-                self.reveal_mode
+                self.reveal_mode,
+                avg_contrib_ratio=avg_contrib_ratio
             )
             contribution = min(contribution, agent.current_total_money)  # 确保不超过当前总金额
             round_data['contributions'][agent.id] = contribution
