@@ -14,6 +14,7 @@ class GameController:
             config: Game configuration dictionary
         """
         self.config = config
+        print(f"[game_controller.py] 初始化时 config: {self.config}")
         self.agents = []
         self.current_round = 0
         self.reveal_mode = config["reveal_mode"]
@@ -85,7 +86,8 @@ class GameController:
                 "num_players": len(self.agents),
                 "reveal_mode": self.config["reveal_mode"],
                 "completed_rounds": self.current_round,
-                "final_decisions": final_decisions  # 添加最终决策数据
+                "final_decisions": final_decisions,  # 添加最终决策数据
+                "anchor_ratio": self.config.get("anchor_ratio", None)  # 确保anchor_ratio写入
             }
             self.recorder.save_game_history(game_config, self.agents, interrupted=interrupted)
             if interrupted:

@@ -1,0 +1,126 @@
+{
+  "game_config": {
+    "model": "gpt-4.1",
+    "personality_type": "neutral",
+    "endowment": 10,
+    "r": 3,
+    "rounds": 10,
+    "num_players": 10,
+    "reveal_mode": "anonymous",
+    "completed_rounds": 1,
+    "final_decisions": null
+  },
+  "game_status": "interrupted",
+  "rounds": [],
+  "agents": [
+    {
+      "id": "0",
+      "name": "1",
+      "personality_type": "neutral",
+      "is_anchor": false,
+      "game_history": [],
+      "belief_memory": [],
+      "current_total_money": 10,
+      "final_decision": null
+    },
+    {
+      "id": "1",
+      "name": "2",
+      "personality_type": "neutral",
+      "is_anchor": false,
+      "game_history": [],
+      "belief_memory": [],
+      "current_total_money": 10,
+      "final_decision": null
+    },
+    {
+      "id": "2",
+      "name": "3",
+      "personality_type": "neutral",
+      "is_anchor": false,
+      "game_history": [],
+      "belief_memory": [],
+      "current_total_money": 10,
+      "final_decision": null
+    },
+    {
+      "id": "3",
+      "name": "4",
+      "personality_type": "neutral",
+      "is_anchor": false,
+      "game_history": [],
+      "belief_memory": [],
+      "current_total_money": 10,
+      "final_decision": null
+    },
+    {
+      "id": "4",
+      "name": "5",
+      "personality_type": "neutral",
+      "is_anchor": false,
+      "game_history": [],
+      "belief_memory": [],
+      "current_total_money": 10,
+      "final_decision": null
+    },
+    {
+      "id": "5",
+      "name": "6",
+      "personality_type": "neutral",
+      "is_anchor": false,
+      "game_history": [],
+      "belief_memory": [],
+      "current_total_money": 10,
+      "final_decision": null
+    },
+    {
+      "id": "6",
+      "name": "7",
+      "personality_type": "neutral",
+      "is_anchor": false,
+      "game_history": [],
+      "belief_memory": [],
+      "current_total_money": 10,
+      "final_decision": null
+    },
+    {
+      "id": "7",
+      "name": "8",
+      "personality_type": "neutral",
+      "is_anchor": false,
+      "game_history": [],
+      "belief_memory": [],
+      "current_total_money": 10,
+      "final_decision": null
+    },
+    {
+      "id": "8",
+      "name": "9",
+      "personality_type": "anchor",
+      "is_anchor": true,
+      "game_history": [],
+      "belief_memory": [],
+      "current_total_money": 10,
+      "final_decision": null
+    },
+    {
+      "id": "9",
+      "name": "10",
+      "personality_type": "neutral",
+      "is_anchor": false,
+      "game_history": [],
+      "belief_memory": [],
+      "current_total_money": 10,
+      "final_decision": null
+    }
+  ],
+  "llm_interactions": {
+    "summary": {
+      "total_interactions": 0,
+      "agents_count": 10
+    },
+    "interactions_by_agent": {}
+  },
+  "reasoning_summary": {},
+  "anchor_ratio": null
+}

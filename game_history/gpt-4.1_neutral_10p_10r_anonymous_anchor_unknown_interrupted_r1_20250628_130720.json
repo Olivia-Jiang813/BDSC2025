@@ -1,0 +1,174 @@
+{
+  "game_config": {
+    "model": "gpt-4.1",
+    "personality_type": "neutral",
+    "endowment": 10,
+    "r": 3,
+    "rounds": 10,
+    "num_players": 10,
+    "reveal_mode": "anonymous",
+    "completed_rounds": 1,
+    "final_decisions": null
+  },
+  "game_status": "interrupted",
+  "rounds": [],
+  "agents": [
+    {
+      "id": "0",
+      "name": "1",
+      "personality_type": "neutral",
+      "is_anchor": false,
+      "game_history": [],
+      "belief_memory": [],
+      "current_total_money": 10,
+      "final_decision": null
+    },
+    {
+      "id": "1",
+      "name": "2",
+      "personality_type": "neutral",
+      "is_anchor": false,
+      "game_history": [],
+      "belief_memory": [],
+      "current_total_money": 10,
+      "final_decision": null
+    },
+    {
+      "id": "2",
+      "name": "3",
+      "personality_type": "neutral",
+      "is_anchor": false,
+      "game_history": [],
+      "belief_memory": [],
+      "current_total_money": 10,
+      "final_decision": null
+    },
+    {
+      "id": "3",
+      "name": "4",
+      "personality_type": "neutral",
+      "is_anchor": false,
+      "game_history": [],
+      "belief_memory": [],
+      "current_total_money": 10,
+      "final_decision": null
+    },
+    {
+      "id": "4",
+      "name": "5",
+      "personality_type": "anchor",
+      "is_anchor": true,
+      "game_history": [],
+      "belief_memory": [],
+      "current_total_money": 10,
+      "final_decision": null
+    },
+    {
+      "id": "5",
+      "name": "6",
+      "personality_type": "neutral",
+      "is_anchor": false,
+      "game_history": [],
+      "belief_memory": [],
+      "current_total_money": 10,
+      "final_decision": null
+    },
+    {
+      "id": "6",
+      "name": "7",
+      "personality_type": "anchor",
+      "is_anchor": true,
+      "game_history": [],
+      "belief_memory": [],
+      "current_total_money": 10,
+      "final_decision": null
+    },
+    {
+      "id": "7",
+      "name": "8",
+      "personality_type": "neutral",
+      "is_anchor": false,
+      "game_history": [],
+      "belief_memory": [],
+      "current_total_money": 10,
+      "final_decision": null
+    },
+    {
+      "id": "8",
+      "name": "9",
+      "personality_type": "neutral",
+      "is_anchor": false,
+      "game_history": [],
+      "belief_memory": [],
+      "current_total_money": 10,
+      "final_decision": null
+    },
+    {
+      "id": "9",
+      "name": "10",
+      "personality_type": "neutral",
+      "is_anchor": false,
+      "game_history": [],
+      "belief_memory": [],
+      "current_total_money": 10,
+      "final_decision": null
+    }
+  ],
+  "llm_interactions": {
+    "summary": {
+      "total_interactions": 1,
+      "agents_count": 10
+    },
+    "interactions_by_agent": {
+      "0": {
+        "agent_name": "1",
+        "personality_type": "neutral",
+        "total_interactions": 1,
+        "interactions": [
+          {
+            "timestamp": "2025-06-28T13:07:16.935485",
+            "debug_label": "决策阶段",
+            "duration_seconds": 2.862218,
+            "model": "gpt-4.1",
+            "provider": "openai",
+            "input": {
+              "messages": [
+                {
+                  "role": "system",
+                  "content": "你是一名玩家。\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+                },
+                {
+                  "role": "user",
+                  "content": "你是玩家\"1\"。\n\n        游戏规则：\n        - 当前第 1 轮\n        - 你有 10 枚代币可投入公共池（包括初始禀赋和之前的收益），你的投入范围：0 到 10\n        - 本轮公共池由所有玩家的投入累积形成\n        - 公共池总额 × 3 后，将平均分配给所有玩家\n请输出决策理由和具体投入金额，必须在0–10之间。"
+                }
+              ],
+              "parameters": {
+                "temperature": null,
+                "max_tokens": null
+              }
+            },
+            "output": {
+              "content": "2",
+              "reasoning": "这是第一轮，每个玩家都持有相同的初始代币数。理性自利玩家在一次性公共品博弈中通常会选择0以最大化自身收益，但如果每个人都选择不投入，所有人的收益都会受限。作为第一轮玩家，我不确定其他人的倾向，但通常有一种‘试探性’——投入少量既能规避被利用的风险，也表态愿意合作。选择投入2枚币，既控制自身损失，又测试其他玩家的合作意愿。以后可根据大家行为调整策略。",
+              "structured_output_type": "DynamicContributionDecision",
+              "status": "success"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "reasoning_summary": {
+    "0": {
+      "agent_name": "1",
+      "reasoning_by_type": {
+        "决策阶段": [
+          {
+            "timestamp": "2025-06-28T13:07:16.935485",
+            "reasoning": "这是第一轮，每个玩家都持有相同的初始代币数。理性自利玩家在一次性公共品博弈中通常会选择0以最大化自身收益，但如果每个人都选择不投入，所有人的收益都会受限。作为第一轮玩家，我不确定其他人的倾向，但通常有一种‘试探性’——投入少量既能规避被利用的风险，也表态愿意合作。选择投入2枚币，既控制自身损失，又测试其他玩家的合作意愿。以后可根据大家行为调整策略。"
+          }
+        ]
+      }
+    }
+  }
+}

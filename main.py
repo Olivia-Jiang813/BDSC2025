@@ -7,7 +7,7 @@ from game_controller import GameController
 from config import validate_config, GAME_CONFIG
 
 def main(endowment=None, rounds=None, r=None, num_players=None, personality_type=None, 
-         reveal_mode=None, debug_prompts=False):
+         reveal_mode=None, anchor_ratio=None, debug_prompts=False):
     """游戏主入口函数
     
     Args:
@@ -17,6 +17,7 @@ def main(endowment=None, rounds=None, r=None, num_players=None, personality_type
         num_players: 玩家数量
         personality_type: 性格类型
         reveal_mode: 信息公开模式
+        anchor_ratio: anchor智能体比例
         debug_prompts: 是否启用调试输出
     """
     
@@ -36,6 +37,9 @@ def main(endowment=None, rounds=None, r=None, num_players=None, personality_type
         game_config["personality_type"] = personality_type
     if reveal_mode is not None:
         game_config["reveal_mode"] = reveal_mode
+    if anchor_ratio is not None:
+        game_config["anchor_ratio"] = anchor_ratio
+    print(f"[main.py] 当前 game_config: {game_config}")
     
     try:
         # 显示当前配置

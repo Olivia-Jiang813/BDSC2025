@@ -111,12 +111,19 @@ class GameRecorder:
         total_rounds = game_config.get("rounds", "unknown")
         completed_rounds = game_config.get("completed_rounds", len(self.round_records))
         reveal_mode = game_config.get("reveal_mode", "unknown")
+        anchor_ratio = game_config.get("anchor_ratio", None)
+        print(f"[game_recorder.py] 保存前 anchor_ratio: {anchor_ratio}")
+        if anchor_ratio is None:
+            anchor_ratio = getattr(self, 'anchor_ratio', None)
+        anchor_str = f"anchor{int(float(anchor_ratio)*100)}pct" if anchor_ratio is not None else "anchor_unknown"
         # 移除讨论相关的文件名
         
         if interrupted:
-            filename = f"{model_name}_{personality}_{num_players}p_{total_rounds}r_{reveal_mode}_interrupted_r{completed_rounds}_{timestamp}.json"
+            filename = f"{model_name}_{personality}_{num_players}p_{total_rounds}r_{reveal_mode}_{anchor_str}_interrupted_r{completed_rounds}_{timestamp}.json"
         else:
-            filename = f"{model_name}_{personality}_{num_players}p_{total_rounds}r_{reveal_mode}_completed_{timestamp}.json"
+            filename = f"{model_name}_{personality}_{num_players}p_{total_rounds}r_{reveal_mode}_{anchor_str}_completed_{timestamp}.json"
+        # 确保anchor_ratio写入文件内容
+        game_record["anchor_ratio"] = anchor_ratio
         
         filepath = os.path.join(self.output_dir, filename)
         with open(filepath, "w", encoding="utf-8") as f:
