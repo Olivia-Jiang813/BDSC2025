@@ -90,13 +90,22 @@ class GameRecorder:
                 for interaction in agent.llm_interactions:
                     debug_label = interaction.get("debug_label", "未知")
                     reasoning = interaction.get("output", {}).get("reasoning")
+                    estimated_others_avg_ratio = interaction.get("output", {}).get("estimated_others_avg_ratio")
+                    output_ratio = interaction.get("output", {}).get("output_ratio")
                     if reasoning:
                         if debug_label not in reasoning_by_round:
                             reasoning_by_round[debug_label] = []
-                        reasoning_by_round[debug_label].append({
+                        entry = {
                             "timestamp": interaction.get("timestamp"),
                             "reasoning": reasoning
-                        })
+                        }
+                        # 如果有estimated_others_avg_ratio字段，也加入
+                        if estimated_others_avg_ratio is not None:
+                            entry["estimated_others_avg_ratio"] = estimated_others_avg_ratio
+                        # 如果有output_ratio字段，也加入
+                        if output_ratio is not None:
+                            entry["output_ratio"] = output_ratio
+                        reasoning_by_round[debug_label].append(entry)
                 
                 game_record["reasoning_summary"][agent.id] = {
                     "agent_name": agent.name,
@@ -111,6 +120,7 @@ class GameRecorder:
         total_rounds = game_config.get("rounds", "unknown")
         completed_rounds = game_config.get("completed_rounds", len(self.round_records))
         reveal_mode = game_config.get("reveal_mode", "unknown")
+        instruction_type = game_config.get("instruction_type", "certain")
         anchor_ratio = game_config.get("anchor_ratio", None)
         print(f"[game_recorder.py] 保存前 anchor_ratio: {anchor_ratio}")
         if anchor_ratio is None:
@@ -119,11 +129,12 @@ class GameRecorder:
         # 移除讨论相关的文件名
         
         if interrupted:
-            filename = f"{model_name}_{personality}_{num_players}p_{total_rounds}r_{reveal_mode}_{anchor_str}_interrupted_r{completed_rounds}_{timestamp}.json"
+            filename = f"{model_name}_{personality}_{num_players}p_{total_rounds}r_{reveal_mode}_{anchor_str}_{instruction_type}_interrupted_r{completed_rounds}_{timestamp}.json"
         else:
-            filename = f"{model_name}_{personality}_{num_players}p_{total_rounds}r_{reveal_mode}_{anchor_str}_completed_{timestamp}.json"
-        # 确保anchor_ratio写入文件内容
+            filename = f"{model_name}_{personality}_{num_players}p_{total_rounds}r_{reveal_mode}_{anchor_str}_{instruction_type}_completed_{timestamp}.json"
+        # 确保anchor_ratio和instruction_type写入文件内容
         game_record["anchor_ratio"] = anchor_ratio
+        game_record["instruction_type"] = instruction_type
         
         filepath = os.path.join(self.output_dir, filename)
         with open(filepath, "w", encoding="utf-8") as f:
@@ -332,12 +343,34 @@ class GameRecorder:
         # 4. History
         sections.append("\n" + "="*20 + " AI交互记录 " + "="*20)
         for agent_id, data in game_record["llm_interactions"]["interactions_by_agent"].items():
-            sections.append(f"\n[玩家 {agent_id} - {data['agent_name']}]")
-            sections.append(f"交互总次数: {data['total_interactions']}")
-            sections.append("\n各轮交互详情:")
+            sections.append(f"\n{'='*50}")
+            sections.append(f"玩家 {data['agent_name']}")
+            
+            # 统计每种类型的轮次
+            decision_round = 0
+            belief_round = 0
+            
             for interaction in data["interactions"]:
-                sections.append(f"\n时间: {interaction.get('timestamp', 'unknown')}")
-                sections.append(f"类型: {interaction.get('debug_label', 'unknown')}")
+                debug_label = interaction.get('debug_label', 'unknown')
+                
+                # 根据类型计数轮次
+                if debug_label == "决策阶段":
+                    decision_round += 1
+                    round_label = f"第 {decision_round} 轮"
+                elif debug_label == "信念更新":
+                    belief_round += 1
+                    round_label = f"第 {belief_round} 轮后"
+                elif debug_label == "最终一次性决策":
+                    round_label = "最终决策"
+                else:
+                    round_label = ""
+                
+                sections.append(f"\n{'-'*50}")
+                if round_label:
+                    sections.append(f"{round_label} - {debug_label}")
+                else:
+                    sections.append(f"{debug_label}")
+                sections.append(f"时间: {interaction.get('timestamp', 'unknown')}")
                 sections.append("输入:")
                 input_content = interaction.get("input", "")
                 if isinstance(input_content, dict):
@@ -356,15 +389,41 @@ class GameRecorder:
                     sections.append(str(input_content))
                 if "output" in interaction:
                     output = interaction["output"]
+                    debug_label = interaction.get('debug_label', '')
+                    
                     if isinstance(output, dict):
-                        sections.append("\nReasoning:")
-                        sections.append(str(output.get("reasoning", "无")))
-                        sections.append("\n输出:")
-                        sections.append(str(output.get("output", output.get("content", "无"))))
+                        # 根据交互类型决定输出格式
+                        if debug_label == "信念更新":
+                            # 信念更新：只显示自由文本内容
+                            content = output.get("content", "无")
+                            sections.append(f"\n输出:")
+                            sections.append(str(content))
+                        elif debug_label in ["决策阶段", "最终一次性决策"]:
+                            # 决策类交互：显示结构化字段
+                            # 显示预估他人比例（如果存在）
+                            estimated_others_ratio = output.get("estimated_others_avg_ratio")
+                            if estimated_others_ratio is not None:
+                                sections.append(f"\n预估其他玩家平均投入比例: {estimated_others_ratio}%")
+                            
+                            # 显示决策金额和比例
+                            decision = output.get("output", output.get("content", "无"))
+                            decision_ratio = output.get("output_ratio")
+                            if decision_ratio is not None:
+                                sections.append(f"\n决策投入金额: {decision} (比例: {decision_ratio}%)")
+                            else:
+                                sections.append(f"\n决策投入金额: {decision}")
+                            
+                            # 显示reasoning
+                            reasoning = output.get("reasoning", "无")
+                            sections.append(f"\n决策理由:")
+                            sections.append(str(reasoning))
+                        else:
+                            # 其他类型：通用处理
+                            sections.append("\n输出:")
+                            sections.append(str(output.get("content", output)))
                     else:
                         sections.append("\n输出:")
                         sections.append(str(output))
-                sections.append("-" * 40)
         
         
         return "\n".join(sections)

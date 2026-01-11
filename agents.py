@@ -1,10 +1,12 @@
-# agefrom openai import OpenAI
+# agents.py
+from openai import OpenAI
 from zhipuai import ZhipuAI
 from pydantic import BaseModel, Field
 from config import API_KEYS, GAME_CONFIG, MODEL_CONFIG
 from personality_traits import PERSONALITY_PROMPTS
 import datetime
 import time
+import json
 
 # 把公用的描述提取到一个变量里
 COMMON_REASONING_DESC = "思考过程：需要输出得到 output 的完整思考链路。"
@@ -45,6 +47,8 @@ import json
 import openai
 from openai import OpenAI
 from zhipuai import ZhipuAI
+from google import genai
+from google.genai import types
 from config import API_KEYS, MODEL_CONFIG, GAME_CONFIG
 from personality_traits import PERSONALITY_PROMPTS
 import datetime
@@ -91,8 +95,17 @@ class Agent:
             self.client = OpenAI(api_key=API_KEYS["openai"])
         elif self.provider == "zhipuai":
             self.client = ZhipuAI(api_key=API_KEYS["zhipuai"])
+        elif self.provider == "gemini":
+            # 使用新的Google GenAI SDK
+            self.client = genai.Client(api_key=API_KEYS["gemini"])
+        elif self.provider == "deepseek":
+            # DeepSeek使用OpenAI兼容的API
+            self.client = OpenAI(
+                api_key=API_KEYS["deepseek"],
+                base_url="https://api.deepseek.com"
+            )
 
-    def _call_llm(self, messages, temperature=None, max_tokens=None, debug_label="", structured_output=None): 
+    def _call_llm(self, messages, debug_label="", structured_output=None): 
         # 记录交互开始时间
         start_time = datetime.datetime.now()
         
@@ -100,7 +113,7 @@ class Agent:
         if self.debug_prompts:
             try:
                 print(f"\n{'='*80}")
-                print(f"【{self.name} - {self.personality_type}】{debug_label}")
+                print(f"【Agent {self.name} - {self.personality_type} - {self.provider}/{self.model}】{debug_label}")
                 print(f"{'='*80}")
                 for i, msg in enumerate(messages):
                     role_name = "系统消息" if msg["role"] == "system" else "用户消息"
@@ -130,12 +143,17 @@ class Agent:
                             if hasattr(parsed_response, "reasoning") and hasattr(parsed_response, "output"):
                                 reasoning = parsed_response.reasoning
                                 output = parsed_response.output
+                                # 提取estimated_others_avg_ratio和output_ratio（如果存在）
+                                estimated_others_avg_ratio = getattr(parsed_response, "estimated_others_avg_ratio", None)
+                                output_ratio = getattr(parsed_response, "output_ratio", None)
                                 if isinstance(output, (int, float)):
                                     response_content = str(output)
                                 else:
                                     response_content = output
                             else:
                                 reasoning = None
+                                estimated_others_avg_ratio = None
+                                output_ratio = None
                                 response_content = str(parsed_response)
                         else:
                             params = {
@@ -146,19 +164,133 @@ class Agent:
                             raw_response = response.output_text
                             response_content = raw_response
                             reasoning = None
-                    elif self.provider == "zhipuai":
-                        params = {
-                            "model": self.model,
-                            "messages": messages
+                            estimated_others_avg_ratio = None
+                            output_ratio = None
+                    elif self.provider == "gemini":
+                        # 使用新的Google GenAI SDK调用，支持system instruction
+                        system_instruction = ""
+                        user_content = ""
+                        
+                        for msg in messages:
+                            if msg["role"] == "system":
+                                system_instruction += msg["content"] + "\n\n"
+                            elif msg["role"] == "user":
+                                user_content += msg["content"] + "\n\n"
+                            elif msg["role"] == "assistant":
+                                user_content += f"[Previous response: {msg['content']}]\n\n"
+                        
+                        # 构建GenerateContentConfig
+                        config_kwargs = {
+                            "thinking_config": types.ThinkingConfig(thinking_budget=0)
                         }
-                        if temperature is not None:
-                            params["temperature"] = temperature
-                        if max_tokens is not None:
-                            params["max_tokens"] = max_tokens
-                        response = self.client.chat.completions.create(**params)
-                        raw_response = response.choices[0].message.content.strip()
-                        response_content = raw_response
-                        reasoning = None
+                        
+                        # 如果有system instruction，添加到config
+                        if system_instruction.strip():
+                            config_kwargs["system_instruction"] = system_instruction.strip()
+                        
+                        # 如果有structured_output要求，添加JSON schema
+                        if structured_output:
+                            config_kwargs["response_mime_type"] = "application/json"
+                            config_kwargs["response_schema"] = structured_output
+                        
+                        # 创建config对象
+                        config = types.GenerateContentConfig(**config_kwargs)
+                        
+                        # 调用Gemini API
+                        response = self.client.models.generate_content(
+                            model=self.model,
+                            contents=user_content.strip(),
+                            config=config
+                        )
+                        
+                        # 处理响应
+                        if structured_output:
+                            # 使用结构化输出
+                            parsed_response = response.parsed
+                            if hasattr(parsed_response, "reasoning") and hasattr(parsed_response, "output"):
+                                reasoning = parsed_response.reasoning
+                                output = parsed_response.output
+                                # 提取estimated_others_avg_ratio和output_ratio（如果存在）
+                                estimated_others_avg_ratio = getattr(parsed_response, "estimated_others_avg_ratio", None)
+                                output_ratio = getattr(parsed_response, "output_ratio", None)
+                                if isinstance(output, (int, float)):
+                                    response_content = str(output)
+                                else:
+                                    response_content = output
+                            else:
+                                reasoning = None
+                                estimated_others_avg_ratio = None
+                                output_ratio = None
+                                response_content = str(parsed_response)
+                        else:
+                            # 非结构化输出
+                            raw_response = response.text.strip()
+                            response_content = raw_response
+                            reasoning = None
+                            estimated_others_avg_ratio = None
+                            output_ratio = None
+                    elif self.provider == "deepseek":
+                        # DeepSeek使用OpenAI兼容API + JSON mode
+                        if structured_output:
+                            # DeepSeek需要在system prompt中说明JSON格式
+                            # 添加JSON输出格式说明到system message
+                            schema_instruction = f"\n\nPlease output your response in the following JSON format:\n{json.dumps(structured_output.model_json_schema(), indent=2)}\n\nIMPORTANT: Output ONLY valid JSON, no additional text."
+                            
+                            # 修改messages,将schema说明加入system prompt
+                            modified_messages = messages.copy()
+                            if modified_messages and modified_messages[0]["role"] == "system":
+                                modified_messages[0] = {
+                                    "role": "system",
+                                    "content": modified_messages[0]["content"] + schema_instruction
+                                }
+                            else:
+                                modified_messages.insert(0, {
+                                    "role": "system", 
+                                    "content": schema_instruction
+                                })
+                            
+                            # 使用JSON mode (简化格式)
+                            params = {
+                                "model": self.model,
+                                "messages": modified_messages,
+                                "response_format": {
+                                    "type": "json_object"  # DeepSeek使用简化的JSON mode
+                                }
+                            }
+                            
+                            response = self.client.chat.completions.create(**params)
+                            raw_json = response.choices[0].message.content.strip()
+                            
+                            # 解析JSON为Pydantic对象 (json已在文件顶部导入)
+                            parsed_data = json.loads(raw_json)
+                            parsed_response = structured_output(**parsed_data)
+                            
+                            if hasattr(parsed_response, "reasoning") and hasattr(parsed_response, "output"):
+                                reasoning = parsed_response.reasoning
+                                output = parsed_response.output
+                                estimated_others_avg_ratio = getattr(parsed_response, "estimated_others_avg_ratio", None)
+                                output_ratio = getattr(parsed_response, "output_ratio", None)
+                                if isinstance(output, (int, float)):
+                                    response_content = str(output)
+                                else:
+                                    response_content = output
+                            else:
+                                reasoning = None
+                                estimated_others_avg_ratio = None
+                                output_ratio = None
+                                response_content = str(parsed_response)
+                        else:
+                            # 非结构化输出
+                            params = {
+                                "model": self.model,
+                                "messages": messages
+                            }
+                            response = self.client.chat.completions.create(**params)
+                            raw_response = response.choices[0].message.content.strip()
+                            response_content = raw_response
+                            reasoning = None
+                            estimated_others_avg_ratio = None
+                            output_ratio = None
                     else:
                         raise ValueError(f"Unsupported provider: {self.provider}")
                     # 检查是否为连接失败
@@ -174,6 +306,8 @@ class Agent:
             raw_response = f"LLM调用失败: {str(e)}"
             response_content = raw_response
             reasoning = None
+            estimated_others_avg_ratio = None
+            output_ratio = None
         
         # 记录交互结束时间
         end_time = datetime.datetime.now()
@@ -186,16 +320,14 @@ class Agent:
             "model": self.model,
             "provider": self.provider,
             "input": {
-                "messages": messages,
-                "parameters": {
-                    "temperature": temperature,
-                    "max_tokens": max_tokens
-                }
+                "messages": messages
             },
             "output": {
                 # "raw_response": raw_response,
                 "content": response_content,
                 "reasoning": reasoning if reasoning else None,
+                "estimated_others_avg_ratio": estimated_others_avg_ratio if estimated_others_avg_ratio else None,
+                "output_ratio": output_ratio if output_ratio else None,
                 "structured_output_type": structured_output.__name__ if structured_output else None,
                 "status": "success" if not response_content.startswith("LLM调用失败") else "error"
             }
@@ -206,6 +338,30 @@ class Agent:
         # 自动写入reasoning记忆（只存字符串）
         if reasoning:
             self.reasoning.append(reasoning)
+        
+        # 添加调试输出：显示LLM返回结果
+        if self.debug_prompts:
+            try:
+                print(f"\n{'🤖'*40}")
+                print(f"【Agent {self.name} 的 LLM 返回结果】")
+                print(f"{'🤖'*40}")
+                print(f"模型: {self.provider}/{self.model}")
+                print(f"耗时: {(end_time - start_time).total_seconds():.2f}秒")
+                if structured_output:
+                    print(f"\n📊 结构化输出:")
+                    if estimated_others_avg_ratio is not None:
+                        print(f"  • 估算他人平均投入比例: {estimated_others_avg_ratio}%")
+                    if output_ratio is not None:
+                        print(f"  • 自己投入比例: {output_ratio}%")
+                    print(f"  • 投入金额: {response_content}")
+                    if reasoning:
+                        print(f"  • 推理过程: {reasoning[:200]}..." if len(reasoning) > 200 else f"  • 推理过程: {reasoning}")
+                else:
+                    print(f"\n📝 原始输出: {response_content}")
+                print(f"{'🤖'*40}\n")
+            except Exception as debug_error:
+                print(f"调试输出错误: {debug_error}")
+        
         return response_content
 
     def decide_contribution(self, round_number, r, num_players, all_history=None, mode="public", avg_contrib_ratio=None):
@@ -224,10 +380,19 @@ class Agent:
             return self.current_total_money
 
         # 构建提示信息
+        # 根据指导语类型确定轮数描述
+        instruction_type = GAME_CONFIG.get("instruction_type", "certain")
+        total_rounds = GAME_CONFIG.get("rounds", 10)
+        
+        if instruction_type == "certain":
+            round_info = f"当前第 {round_number} 轮，总共有 {total_rounds} 轮"
+        else:  # uncertain
+            round_info = f"当前第 {round_number} 轮，游戏将持续若干轮，可能在任意一轮结束"
+        
         base_prompt = f"""你是玩家"{self.name}"。
 
         游戏规则：
-        - 当前第 {round_number} 轮
+        - {round_info}
         - 你有 {self.current_total_money} 枚代币可投入公共池（包括初始禀赋和之前的收益），你的投入范围：0 到 {self.current_total_money}
         - 本轮公共池由所有玩家的投入累积形成
         - 公共池总额 × {r} 后，将平均分配给所有玩家"""
@@ -287,7 +452,6 @@ class Agent:
                                 if init_amt is None:
                                     init_amt = player_history[r-1].get('total_money_before_round', None)
                                 if init_amt is None and r == 1:
-                                    from config import GAME_CONFIG
                                     init_amt = GAME_CONFIG.get('endowment', 10)
                                 round_total += contrib
                                 if init_amt is not None and init_amt > 0:
@@ -299,7 +463,10 @@ class Agent:
                     else:
                         base_prompt += f"\n  第{r}轮: 他人平均贡献比例--%"
         # 添加结构化输出说明
-        base_prompt += f"\n请输出决策理由和具体投入金额，必须在0–{self.current_total_money}之间。"
+        base_prompt += f"\n\n请完成以下任务："
+        base_prompt += f"\n1. 估计其他玩家本轮的平均投入比例（0-100%之间，基于历史表现和当前情况）"
+        base_prompt += f"\n2. 决定你本轮的具体投入金额（必须在0–{self.current_total_money}之间的整数）"
+        base_prompt += f"\n3. 说明你的完整决策理由（包括：你如何认知其他玩家的行为、你考虑的边际收益和风险、以及你的博弈策略）"
         
         # 使用当前的系统提示（可能已被信念记忆更新）
         current_system_prompt = self.get_current_system_prompt()
@@ -311,9 +478,11 @@ class Agent:
         
         # 创建用于结构化输出的动态模型
         class DynamicContributionDecision(BaseModel):
-            reasoning: str = Field(
+            estimated_others_avg_ratio: float = Field(
                 ...,
-                description="思考过程：说明你决策时考虑的边际收益、风险以及博弈策略"
+                ge=0,
+                le=100,
+                description=f"估计其他玩家本轮的平均投入比例（0-100之间的百分比数值，例如50表示50%）"
             )
             output: int = Field(
                 ...,
@@ -321,12 +490,23 @@ class Agent:
                 le=self.current_total_money,
                 description=f"本轮投入金额，必须是 0–{self.current_total_money} 之间的整数"
             )
+            output_ratio: float = Field(
+                ...,
+                ge=0,
+                le=100,
+                description=f"本轮投入比例（0-100之间的百分比数值，应该等于 output/{self.current_total_money}*100）"
+            )
+            reasoning: str = Field(
+                ...,
+                description="完整决策理由：先说明你如何认知其他玩家（为什么估计他们会这样投入），再解释你自己的决策逻辑（考虑边际收益、风险以及博弈策略）"
+            )
         
         # 调用LLM，使用结构化输出
-        if self.provider == "openai":
+        if self.provider in ["openai", "gemini", "deepseek"]:
+            # OpenAI, Gemini和DeepSeek都支持结构化输出
             answer = self._call_llm(messages, debug_label="决策阶段", structured_output=DynamicContributionDecision)
         else:
-            # 非OpenAI提供商，使用普通输出
+            # 其他模型使用非结构化输出
             answer = self._call_llm(messages, debug_label="决策阶段")
             
         try:
@@ -347,7 +527,7 @@ class Agent:
                 return latest_belief['updated_system_prompt']
         # 兜底：如果system_prompt为None，返回neutral或默认提示
         base_prompt = self.system_prompt if self.system_prompt else PERSONALITY_PROMPTS.get("neutral", "你是一名玩家。")
-        return f"{base_prompt}\n你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
+        return f"{base_prompt} 你正在参与公共品博弈。请根据你的性格特征和场景做出合理决策。"
 
     def get_latest_belief(self):
         """获取最新的信念记忆"""
@@ -429,37 +609,32 @@ class Agent:
             return  # anchor不更新信念
         # 收集所有 reasoning，全部为字符串
         recent_reasonings = "\n".join(self.reasoning[-3:])  # 取最近3轮，也可调整为全部
-        prompt = (
-            f"你是一名参与多轮决策的玩家。以下是你最近几轮的思考摘要：\n"
-            f"{recent_reasonings}\n\n"
-            "请基于这些思考，反思和描述你当前的行为风格、价值观或自我认知。"
-        )
+        
+        # 构建system prompt
+        current_system = self.get_current_system_prompt()
+        system_prompt = f"""{current_system}
+
+你当前需要根据最近几轮的思考摘要，对你的信念进行更新：
+- 输出为一个简洁段落，不包含数字或轮次细节
+- 段落中体现行为风格、价值观、自我认知
+- 保持整体风格连贯"""
+        
+        # 构建user prompt
+        user_prompt = f"""以下是最近几轮的思考摘要：
+{recent_reasonings}"""
+        
         messages = [
-            {"role": "system", "content": self.get_current_system_prompt()},
-            {"role": "user", "content": prompt}
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": user_prompt}
         ]
-        # 调用 LLM，结构化输出
-        if self.provider == "openai":
-            class BeliefUpdate(BaseModel):
-                reasoning: str = Field(..., description="简要说明你的反思过程")
-                output: str = Field(..., description="更新后的性格和合作倾向描述")
-            answer = self._call_llm(messages, debug_label="信念更新", structured_output=BeliefUpdate)
-            if hasattr(answer, "reasoning") and hasattr(answer, "output"):
-                reasoning = answer.reasoning
-                updated_personality = answer.output
-            else:
-                reasoning = ""
-                updated_personality = str(answer)
-        else:
-            answer = self._call_llm(messages, debug_label="信念更新")
-            reasoning = ""
-            updated_personality = answer
+        # 调用 LLM，直接获取文本输出（不需要reasoning）
+        updated_personality = self._call_llm(messages, debug_label="信念更新")
+        
         # 记录信念记忆
         self.belief_memory.append({
             "round": round_number,
-            "reasoning": reasoning,
             "updated_personality": updated_personality,
-            "prompt": prompt
+            "prompt": user_prompt
         })
         # 信念更新后自动更新system_prompt，自动将“我”替换为“你”
         self.system_prompt = updated_personality.replace("我", "你")
@@ -507,9 +682,11 @@ class Agent:
             )
         
         # 调用LLM，使用结构化输出
-        if self.provider == "openai":
+        if self.provider in ["openai", "gemini", "deepseek"]:
+            # OpenAI, Gemini和DeepSeek都支持结构化输出
             answer = self._call_llm(messages, debug_label="最终一次性决策", structured_output=FinalDecision)
         else:
+            # 其他模型使用非结构化输出
             answer = self._call_llm(messages, debug_label="最终一次性决策")
             
         try:
@@ -548,7 +725,7 @@ class Agent:
                             if isinstance(history_entry, dict) and 'total_money_before_round' in history_entry:
                                 total_before = history_entry['total_money_before_round']
                                 ratio = (contrib / total_before * 100) if total_before > 0 else 0
-                                info_text += f"\n  玩家{player_id}: {contrib}/{total_before}({ratio:.1f}%)"
+                                info_text += f"\n  玩家{player_id}: {contrib}/{total_before}(投入比例：{ratio:.1f}%)"
                             else:
                                 # 如果没有total_money_before_round信息，只显示投入金额
                                 info_text += f"\n  玩家{player_id}: {contrib}"

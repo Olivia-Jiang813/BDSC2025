@@ -6,11 +6,12 @@ import copy
 from game_controller import GameController
 from config import validate_config, GAME_CONFIG
 
-def main(endowment=None, rounds=None, r=None, num_players=None, personality_type=None, 
-         reveal_mode=None, anchor_ratio=None, debug_prompts=False):
+def main(model=None, endowment=None, rounds=None, r=None, num_players=None, personality_type=None, 
+         reveal_mode=None, anchor_ratio=None, instruction_type=None, debug_prompts=False):
     """游戏主入口函数
     
     Args:
+        model: 使用的模型名称（如 "gemini-2.5-flash", "gpt-4.1"）
         endowment: 每轮初始代币数
         rounds: 游戏轮数
         r: 公共池倍数
@@ -18,6 +19,7 @@ def main(endowment=None, rounds=None, r=None, num_players=None, personality_type
         personality_type: 性格类型
         reveal_mode: 信息公开模式
         anchor_ratio: anchor智能体比例
+        instruction_type: 指导语类型 ("certain" 或 "uncertain")
         debug_prompts: 是否启用调试输出
     """
     
@@ -25,6 +27,17 @@ def main(endowment=None, rounds=None, r=None, num_players=None, personality_type
     game_config = copy.deepcopy(GAME_CONFIG)
     
     # 根据传入的参数更新配置
+    if model is not None:
+        game_config["model"] = model
+        # 根据模型名称自动识别provider
+        if "gpt" in model or "o1" in model:
+            game_config["provider"] = "openai"
+        elif "gemini" in model:
+            game_config["provider"] = "gemini"
+        elif "deepseek" in model:
+            game_config["provider"] = "deepseek"
+        elif "glm" in model:
+            game_config["provider"] = "zhipuai"
     if endowment is not None:
         game_config["endowment"] = endowment
     if rounds is not None:
@@ -39,21 +52,25 @@ def main(endowment=None, rounds=None, r=None, num_players=None, personality_type
         game_config["reveal_mode"] = reveal_mode
     if anchor_ratio is not None:
         game_config["anchor_ratio"] = anchor_ratio
-    print(f"[main.py] 当前 game_config: {game_config}")
+    if instruction_type is not None:
+        game_config["instruction_type"] = instruction_type
+    
+    print(f"\n{'='*80}")
+    print(f"🎮 游戏配置信息")
+    print(f"{'='*80}")
+    print(f"📊 模型: {game_config.get('provider', 'unknown')}/{game_config.get('model', 'unknown')}")
+    print(f"👥 玩家数: {game_config['num_players']} | 性格: {game_config['personality_type']}")
+    print(f"🎲 轮数: {game_config['rounds']} | 初始代币: {game_config['endowment']} | 倍数: {game_config['r']}")
+    print(f"🎭 模式: {game_config['reveal_mode']} | Anchor比例: {game_config.get('anchor_ratio', 0)*100:.0f}%")
+    print(f"📝 指导语: {game_config.get('instruction_type', 'certain')}")
+    print(f"{'='*80}\n")
     
     try:
-        # 显示当前配置
-        print(f"运行游戏 - endowment={game_config['endowment']}, rounds={game_config['rounds']}, "
-              f"r={game_config['r']}, players={game_config['num_players']}, "
-              f"personality={game_config['personality_type']}")
-        
-        # 验证配置
+        # 验证配置并更新全局配置
         print("正在验证游戏配置...")
-        # 临时更新全局配置用于验证
-        original_config = copy.deepcopy(GAME_CONFIG)
+        # 更新全局配置（不恢复，让agents可以读取到正确的配置）
         GAME_CONFIG.update(game_config)
         validate_config()
-        GAME_CONFIG.update(original_config)  # 恢复原始配置
         
         # 创建游戏控制器
         print("正在初始化游戏控制器...")

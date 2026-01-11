@@ -43,12 +43,16 @@ class GameController:
                 agent = Agent(
                     agent_id=str(i),
                     personality_type="anchor",
-                    is_anchor=True
+                    is_anchor=True,
+                    model=self.config.get("model"),
+                    provider=self.config.get("provider")
                 )
             else:
                 agent = Agent(
                     agent_id=str(i),
-                    personality_type=self.config["personality_type"]
+                    personality_type=self.config["personality_type"],
+                    model=self.config.get("model"),
+                    provider=self.config.get("provider")
                 )
             self.agents.append(agent)
 
@@ -78,7 +82,8 @@ class GameController:
         """保存当前游戏状态"""
         if self.current_round > 0:  # 只在游戏已经开始后保存
             game_config = {
-                "model": MODEL_CONFIG["model"],
+                "model": self.config["model"],  # ✅ 使用实际传入的model
+                "provider": self.config.get("provider", "openai"),  # ✅ 添加provider
                 "personality_type": self.config["personality_type"],
                 "endowment": self.config["endowment"],
                 "r": self.config["r"],
@@ -87,7 +92,8 @@ class GameController:
                 "reveal_mode": self.config["reveal_mode"],
                 "completed_rounds": self.current_round,
                 "final_decisions": final_decisions,  # 添加最终决策数据
-                "anchor_ratio": self.config.get("anchor_ratio", None)  # 确保anchor_ratio写入
+                "anchor_ratio": self.config.get("anchor_ratio", None),  # 确保anchor_ratio写入
+                "instruction_type": self.config.get("instruction_type", "certain")  # 确保instruction_type写入
             }
             self.recorder.save_game_history(game_config, self.agents, interrupted=interrupted)
             if interrupted:
@@ -254,44 +260,6 @@ class GameController:
         # 信念每轮都更新
         self._update_agents_memory(all_history)
         return round_data
-        
-    def _collect_measurements(self, agent):
-        """收集测量数据 - 评估其他玩家的平均投入"""
-        other_agents_count = len(self.agents) - 1
-        
-        # 获取最新的思考或反思来帮助评估
-        memory_context = ""
-        if agent.reasoning:
-            memory_context = f"你最近的思考：{agent.reasoning[-1]['thought']}"
-        elif agent.long_term_memory:
-            memory_context = f"你最新的反思：{agent.long_term_memory[-1]['reflection']}"
-        else:
-            memory_context = "这是第一轮游戏。"
-        
-        # 构建评估提示
-        prompt = f"""作为一个{agent.name}，请评估其他 {other_agents_count} 位玩家的平均投入会是多少？
-        
-        每个玩家的初始禀赋是 {self.config["endowment"]} 代币。
-        
-        {memory_context}
-        
-        请基于以上信息和你的性格特征，估计其他玩家的平均投入。
-        只需输出一个数字，范围 0-{self.config["endowment"]}。"""
-        
-        messages = [
-            {"role": "system", "content": agent.system_prompt},
-            {"role": "user", "content": prompt}
-        ]
-        
-        estimated_avg = agent._call_llm(messages, debug_label="测量阶段-估计他人投入")
-        try:
-            estimated_avg = float(estimated_avg)
-        except ValueError:
-            estimated_avg = self.config["endowment"] / 2  # 默认值
-            
-        return {
-            'estimated_avg_contribution': estimated_avg,
-        }
     
     def _update_agents_memory(self, all_history):
         """统一更新所有智能体的信念记忆（每轮都更新）"""
